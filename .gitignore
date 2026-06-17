@@ -1,0 +1,13 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# auto-generated web images (rebuilt from /photos on every deploy)
+public/generated/
+
+# editor / OS junk
+.DS_Store
+*.local
+.vscode/

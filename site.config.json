@@ -1,0 +1,14 @@
+{
+  "title": "Matas Savickis",
+  "tagline": "35mm film photography",
+  "about": "I shoot 35mm film. This is a collection of frames I've kept. Everything here was scanned from negatives — grain, dust, and all.",
+  "footer": "© Matas Savickis",
+  "links": [
+    { "label": "Instagram", "url": "https://instagram.com/" },
+    { "label": "Email", "url": "mailto:savickismatas@gmail.com" }
+  ],
+  "gallery": {
+    "sortBy": "date",
+    "sortDirection": "desc"
+  }
+}
