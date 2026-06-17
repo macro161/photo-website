@@ -13,7 +13,11 @@
       "Bash(mv \"sample-market.jpg\" \"sample-market@Sunday market@2026-05-05.jpg\")",
       "Bash(rm -f metadata.example.json)",
       "Bash(node -e \"const m=require\\('./src/generated/manifest.json'\\); m.filter\\(p=>p.file.startsWith\\('sample'\\)\\).forEach\\(p=>console.log\\(JSON.stringify\\({file:p.file,description:p.description,date:p.date}\\)\\)\\); console.log\\('total photos:', m.length\\); const noAt=m.find\\(p=>p.file==='0001_1A.jpg'\\); console.log\\('example real scan:', JSON.stringify\\({file:noAt.file,description:noAt.description,date:noAt.date}\\)\\)\")",
-      "Bash(node -e \"const m=require\\('./src/generated/manifest.json'\\); console.log\\('Xsample-hidden present:', m.some\\(p=>p.file==='Xsample-hidden.jpg'\\)\\); console.log\\('total:', m.length\\)\")"
+      "Bash(node -e \"const m=require\\('./src/generated/manifest.json'\\); console.log\\('Xsample-hidden present:', m.some\\(p=>p.file==='Xsample-hidden.jpg'\\)\\); console.log\\('total:', m.length\\)\")",
+      "Bash(npm install *)",
+      "Bash(npx vite *)",
+      "Read(//tmp/**)",
+      "Bash(kill %1)"
     ]
   }
 }
