@@ -58,13 +58,26 @@ egress charge and a 10 GB free tier (the whole library is well under 1 GB).
 ### Publishing photos
 
 ```bash
-# add
-cp ~/scans/*.jpg "photos/batch 3/"
+# add photos to a catalog (the folder is the catalog)
+cp ~/scans/*.jpg "photos/London 2026/"
 npm run sync
 
-# remove
-rm "photos/batch 1/0002_2A@London@2026.jpg"
+# remove one
+rm "photos/London 2026/0042.jpg"
 npm run sync
+```
+
+`sync:web` mirrors `public/generated/`, so removing a photo removes it from
+the site. `sync:originals` uses `rclone copy`, not `sync` — the originals
+bucket is **add-only**, so a local mistake can never destroy your archive.
+Prune it by hand if you genuinely want something gone.
+
+`sync:web` also carries `--max-delete 25`, which aborts the whole sync if it
+would remove more than 25 images. If you ever restructure on purpose and it
+trips, run rclone directly with a higher limit:
+
+```bash
+rclone sync public/generated r2:photos-web/generated --checksum --max-delete 500 --progress
 ```
 
 `npm run sync` resizes anything new (cached by size + mtime, so re-runs are

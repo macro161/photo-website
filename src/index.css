@@ -177,6 +177,111 @@ main {
   animation: fadeIn 0.5s var(--ease) both;
 }
 
+/* ---------- Catalog index (one card per folder in /photos) ---------- */
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(320px, 100%), 1fr));
+  gap: clamp(18px, 3vw, 40px);
+}
+
+.catalog-card {
+  display: block;
+  width: 100%;
+  padding: 0;
+  text-align: left;
+  /* scroll-reveal start state, matching .thumb */
+  opacity: 0;
+  transform: translateY(26px);
+  transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+}
+
+.catalog-card.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.catalog-cover {
+  position: relative;
+  display: block;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: #f3f3f1;
+}
+
+.catalog-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s var(--ease), transform 0.9s var(--ease);
+}
+
+.catalog-cover img.loaded {
+  opacity: 1;
+}
+
+.catalog-card:hover .catalog-cover img.loaded,
+.catalog-card:focus-visible .catalog-cover img.loaded {
+  transform: scale(1.035);
+}
+
+.catalog-cover-empty {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.catalog-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.9rem;
+  margin-top: 0.85rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.catalog-name {
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  letter-spacing: 0.01em;
+}
+
+.catalog-count {
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* ---------- Catalog view ---------- */
+.back-link {
+  display: inline-block;
+  margin-bottom: clamp(1rem, 2.5vw, 1.6rem);
+  padding: 0;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-strong);
+  transition: color 0.3s var(--ease);
+}
+
+.back-link:hover,
+.back-link:focus-visible {
+  color: var(--fg);
+}
+
 /* ---------- Sections (grouped by description) ---------- */
 .gallery-section {
   margin-bottom: clamp(2.75rem, 7vw, 5.5rem);
@@ -553,6 +658,31 @@ main {
     transform: none;
   }
   .thumb img {
+    opacity: 1;
+  }
+}
+
+/* ---------- Respect reduced-motion preferences ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  /* Reveal-on-scroll and fade-in-on-decode start from hidden, so make sure
+     they are visible rather than merely instant. */
+  .thumb,
+  .catalog-card {
+    opacity: 1;
+    transform: none;
+  }
+
+  .thumb img,
+  .catalog-cover img {
     opacity: 1;
   }
 }

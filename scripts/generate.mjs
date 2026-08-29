@@ -16,9 +16,17 @@
  *   "abcd@Paris@2026-05-05.jpg"   -> description "Paris", date 2026-05-05
  * (The part before the first "@" is ignored — name it however you like.)
  *
- * Subfolders are scanned too, so /photos/batch 1/roll@Paris.jpg works the
- * same as /photos/roll@Paris.jpg. Folder names are organisational only --
- * they do not affect the site.
+ * --- Catalogs ---
+ * The top-level folder a photo sits in becomes its catalog, and each catalog
+ * gets its own page on the site:
+ *   photos/London 2026/0001.jpg  -> catalog "London 2026"
+ *   photos/Swiss/day 2/0002.jpg  -> catalog "Swiss" (deeper folders are
+ *                                   yours to organise; only the first
+ *                                   level names the catalog)
+ *   photos/0003.jpg              -> catalog "Other" (loose photos)
+ *
+ * Adding a catalog means creating a folder. Nothing here or in the app needs
+ * to know its name in advance.
  *
  * Add a photo: drop a file in /photos. Remove one: delete it. That's all.
  *
@@ -42,6 +50,9 @@ const MANIFEST_PATH = path.join(ROOT, 'src', 'generated', 'manifest.json')
 const LARGE_WIDTH = 2200 // shown in the lightbox
 const THUMB_WIDTH = 800 // shown in the grid
 const QUALITY = 80
+
+// Catalog used for photos sitting directly in /photos rather than a folder.
+const LOOSE_CATALOG = 'Other'
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.tif', '.tiff'])
 
@@ -152,6 +163,10 @@ async function main() {
     // Description + date come straight from the filename (not the folder).
     const { description, date } = parseFilename(path.basename(file))
 
+    // The first path segment names the catalog; loose photos fall back.
+    const segments = file.split(path.sep)
+    const catalog = segments.length > 1 ? segments[0] : LOOSE_CATALOG
+
     manifest.push({
       id,
       file,
@@ -161,6 +176,8 @@ async function main() {
       thumb: `/generated/${thumbName}`,
       width: geometry.width,
       height: geometry.height,
+      catalog,
+      catalogSlug: slugify(catalog) || 'other',
       description,
       date,
     })
@@ -196,9 +213,15 @@ async function main() {
   // Clean up generated images whose source photo was deleted.
   await pruneOrphans(manifest)
 
+  const catalogNames = [...new Set(manifest.map((p) => p.catalog))]
   console.log(
-    `\n📸 Manifest written: ${manifest.length} photo(s) — ${processed} processed, ${cached} cached.`
+    `\n📸 Manifest written: ${manifest.length} photo(s) in ` +
+      `${catalogNames.length} catalog(s) — ${processed} processed, ${cached} cached.`
   )
+  for (const name of catalogNames) {
+    const n = manifest.filter((p) => p.catalog === name).length
+    console.log(`   ${name}: ${n}`)
+  }
   if (manifest.length === 0) {
     console.log('   (No photos yet. Drop image files into the /photos folder.)')
   }
