@@ -7,10 +7,15 @@
   "scripts": {
     "generate": "node scripts/generate.mjs",
     "dev": "npm run generate && vite",
-    "build": "npm run generate && vite build",
-    "preview": "vite preview --host"
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "sync:web": "rclone sync public/generated r2:photos-web/generated --checksum --progress",
+    "sync:originals": "rclone sync photos r2:photos-originals --checksum --progress",
+    "sync": "npm run generate && npm run sync:web && npm run sync:originals"
   },
   "dependencies": {
+    "@anthropic-ai/claude-code": "^2.1.251",
+    "claude": "^0.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

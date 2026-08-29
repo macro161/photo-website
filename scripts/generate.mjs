@@ -16,6 +16,10 @@
  *   "abcd@Paris@2026-05-05.jpg"   -> description "Paris", date 2026-05-05
  * (The part before the first "@" is ignored — name it however you like.)
  *
+ * Subfolders are scanned too, so /photos/batch 1/roll@Paris.jpg works the
+ * same as /photos/roll@Paris.jpg. Folder names are organisational only --
+ * they do not affect the site.
+ *
  * Add a photo: drop a file in /photos. Remove one: delete it. That's all.
  *
  * Processing is cached by file size + modified time, so re-runs only
@@ -89,13 +93,7 @@ async function main() {
   }
   const previousByFile = new Map(previous.map((p) => [p.file, p]))
 
-  const entries = await fs.readdir(PHOTOS_DIR)
-  const imageFiles = entries.filter(
-    (f) =>
-      IMAGE_EXTENSIONS.has(path.extname(f).toLowerCase()) &&
-      // A leading capital "X" hides the photo (e.g. "Xroll3@draft.jpg").
-      !f.startsWith('X')
-  )
+  const imageFiles = await collectImages(PHOTOS_DIR)
 
   const manifest = []
   const usedSlugs = new Set()
@@ -151,8 +149,8 @@ async function main() {
       console.log(`✓ processed ${file}`)
     }
 
-    // Description + date come straight from the filename.
-    const { description, date } = parseFilename(file)
+    // Description + date come straight from the filename (not the folder).
+    const { description, date } = parseFilename(path.basename(file))
 
     manifest.push({
       id,
@@ -166,6 +164,18 @@ async function main() {
       description,
       date,
     })
+  }
+
+  // Safety net: an empty scan next to a populated manifest almost always means
+  // the photos are somewhere unexpected, not that they were all deleted. Bail
+  // out rather than pruning every generated image.
+  if (manifest.length === 0 && previous.length > 0) {
+    console.error(
+      `\n\u26a0  Found 0 photos in ${PHOTOS_DIR}, but the existing manifest has ` +
+        `${previous.length}. Refusing to wipe it.\n` +
+        `   If you really did remove every photo, delete ${path.relative(ROOT, MANIFEST_PATH)} and re-run.`
+    )
+    process.exit(1)
   }
 
   // Sort the gallery.
@@ -192,6 +202,25 @@ async function main() {
   if (manifest.length === 0) {
     console.log('   (No photos yet. Drop image files into the /photos folder.)')
   }
+}
+
+/**
+ * Every image under /photos, at any depth, as paths relative to /photos.
+ * A leading capital "X" on a file or folder hides it (e.g. "Xdrafts/").
+ */
+async function collectImages(dir, prefix = '') {
+  const found = []
+  const entries = await fs.readdir(dir, { withFileTypes: true })
+  for (const entry of entries) {
+    if (entry.name.startsWith('X') || entry.name.startsWith('.')) continue
+    const rel = prefix ? path.join(prefix, entry.name) : entry.name
+    if (entry.isDirectory()) {
+      found.push(...(await collectImages(path.join(dir, entry.name), rel)))
+    } else if (IMAGE_EXTENSIONS.has(path.extname(entry.name).toLowerCase())) {
+      found.push(rel)
+    }
+  }
+  return found
 }
 
 async function loadSiteGalleryConfig() {

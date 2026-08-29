@@ -1,13 +1,54 @@
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useMemo } from 'react'
 import photos from './generated/manifest.json'
 import config from '../site.config.json'
 import Gallery from './components/Gallery.jsx'
 import Lightbox from './components/Lightbox.jsx'
 
+/**
+ * Group photos into sections by their description (e.g. all "@Paris" photos
+ * together, then all "@London", etc). Sections appear in the order their
+ * first photo appears in the manifest. Photos with no description are
+ * collected into a final, untitled section.
+ *
+ * Also returns `flat`: every photo in display (top-to-bottom) order, each
+ * tagged with the global index the lightbox uses to navigate across all
+ * photos regardless of section.
+ */
+function buildSections(list) {
+  const order = []
+  const groups = new Map()
+  for (const p of list) {
+    const key = p.description || '' // '' => no description
+    if (!groups.has(key)) {
+      groups.set(key, [])
+      order.push(key)
+    }
+    groups.get(key).push(p)
+  }
+
+  // Titled sections first (in first-appearance order), untitled last.
+  const keys = order.filter((k) => k !== '')
+  if (groups.has('')) keys.push('')
+
+  const flat = []
+  const sections = keys.map((key) => ({
+    title: key || null,
+    items: groups.get(key).map((photo) => {
+      const index = flat.length
+      flat.push(photo)
+      return { photo, index }
+    }),
+  }))
+
+  return { sections, flat }
+}
+
 export default function App() {
   const [view, setView] = useState('gallery') // 'gallery' | 'about'
   const [activeIndex, setActiveIndex] = useState(null)
   const [scrolled, setScrolled] = useState(false)
+
+  const { sections, flat } = useMemo(() => buildSections(photos), [])
 
   // Reveal the header divider once the page is scrolled.
   useEffect(() => {
@@ -16,18 +57,16 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
+  const total = flat.length
   const open = useCallback((i) => setActiveIndex(i), [])
   const close = useCallback(() => setActiveIndex(null), [])
   const next = useCallback(
-    () => setActiveIndex((i) => (i === null ? i : (i + 1) % photos.length)),
-    []
+    () => setActiveIndex((i) => (i === null ? i : (i + 1) % total)),
+    [total]
   )
   const prev = useCallback(
-    () =>
-      setActiveIndex((i) =>
-        i === null ? i : (i - 1 + photos.length) % photos.length
-      ),
-    []
+    () => setActiveIndex((i) => (i === null ? i : (i - 1 + total) % total)),
+    [total]
   )
 
   return (
@@ -74,7 +113,7 @@ export default function App() {
               </ul>
             )}
           </section>
-        ) : photos.length === 0 ? (
+        ) : total === 0 ? (
           <section className="empty">
             <h2>No photos yet</h2>
             <p>
@@ -84,7 +123,7 @@ export default function App() {
             </p>
           </section>
         ) : (
-          <Gallery photos={photos} onOpen={open} />
+          <Gallery sections={sections} onOpen={open} />
         )}
         </div>
       </main>
@@ -95,11 +134,11 @@ export default function App() {
 
       {activeIndex !== null && (
         <Lightbox
-          photo={photos[activeIndex]}
+          photo={flat[activeIndex]}
           onClose={close}
           onNext={next}
           onPrev={prev}
-          hasMultiple={photos.length > 1}
+          hasMultiple={total > 1}
         />
       )}
     </div>

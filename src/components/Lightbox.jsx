@@ -3,6 +3,7 @@
  * Shows the description and date from the filename, exactly as written.
  */
 import { useEffect } from 'react'
+import { imageUrl } from '../imageUrl.js'
 
 export default function Lightbox({ photo, onClose, onNext, onPrev, hasMultiple }) {
   useEffect(() => {
@@ -55,7 +56,7 @@ export default function Lightbox({ photo, onClose, onNext, onPrev, hasMultiple }
       <figure className="lb-figure" onClick={(e) => e.stopPropagation()}>
         <img
           key={photo.src}
-          src={photo.src}
+          src={imageUrl(photo.src)}
           alt={photo.description || photo.file}
         />
         {(photo.description || date) && (
