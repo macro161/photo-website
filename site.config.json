@@ -10,6 +10,8 @@
   "imageBaseUrl": "https://pub-1b99187faf2e44d7bd572b98ca82ba63.r2.dev",
   "gallery": {
     "sortBy": "date",
-    "sortDirection": "desc"
+    "sortDirection": "desc",
+    "catalogOrder": [],
+    "covers": {}
   }
 }

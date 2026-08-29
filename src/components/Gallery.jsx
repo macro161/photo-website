@@ -1,8 +1,7 @@
 /**
- * Gallery grouped into sections by description. Each section has a heading
- * (the description) followed by a masonry grid of its photos. Mixed
- * portrait/landscape 35mm frames pack naturally via CSS columns. Each frame
- * fades and rises into view as it scrolls in; the image fades in once decoded.
+ * Masonry grid of one catalog's photos. Mixed portrait/landscape 35mm frames
+ * pack naturally via CSS columns. Each frame fades and rises into view as it
+ * scrolls in; the image fades in once decoded.
  */
 import { useState, useEffect, useRef } from 'react'
 import { imageUrl } from '../imageUrl.js'
@@ -57,23 +56,11 @@ function Thumb({ photo, index, onOpen }) {
   )
 }
 
-export default function Gallery({ sections, onOpen }) {
+export default function Gallery({ items, onOpen }) {
   return (
-    <div className="gallery-sections">
-      {sections.map((section, i) => (
-        <section className="gallery-section" key={section.title ?? `__untitled-${i}`}>
-          {section.title && (
-            <h2 className="section-title">
-              {section.title}
-              <span className="section-count">{section.items.length}</span>
-            </h2>
-          )}
-          <div className="gallery">
-            {section.items.map(({ photo, index }) => (
-              <Thumb key={photo.id} photo={photo} index={index} onOpen={onOpen} />
-            ))}
-          </div>
-        </section>
+    <div className="gallery">
+      {items.map(({ photo, index }) => (
+        <Thumb key={photo.id} photo={photo} index={index} onOpen={onOpen} />
       ))}
     </div>
   )
