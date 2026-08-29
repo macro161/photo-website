@@ -177,6 +177,37 @@ main {
   animation: fadeIn 0.5s var(--ease) both;
 }
 
+/* ---------- Sections (grouped by description) ---------- */
+.gallery-section {
+  margin-bottom: clamp(2.75rem, 7vw, 5.5rem);
+}
+
+.gallery-section:last-child {
+  margin-bottom: 0;
+}
+
+.section-title {
+  display: flex;
+  align-items: baseline;
+  gap: 0.9rem;
+  margin: 0 0 clamp(1.2rem, 3vw, 2rem);
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--serif);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 3.4vw, 2.3rem);
+  letter-spacing: 0.01em;
+}
+
+.section-count {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+  transform: translateY(-0.35em);
+}
+
 /* ---------- Gallery (masonry via CSS columns) ---------- */
 .gallery {
   column-count: 3;

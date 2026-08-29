@@ -1,9 +1,11 @@
 /**
- * Masonry-style gallery grid. Uses CSS columns so mixed portrait/landscape
- * 35mm frames pack naturally. Each frame fades and rises into view as it
- * scrolls into the viewport, and the image itself fades in once decoded.
+ * Gallery grouped into sections by description. Each section has a heading
+ * (the description) followed by a masonry grid of its photos. Mixed
+ * portrait/landscape 35mm frames pack naturally via CSS columns. Each frame
+ * fades and rises into view as it scrolls in; the image fades in once decoded.
  */
 import { useState, useEffect, useRef } from 'react'
+import { imageUrl } from '../imageUrl.js'
 
 function Thumb({ photo, index, onOpen }) {
   const [loaded, setLoaded] = useState(false)
@@ -34,16 +36,12 @@ function Thumb({ photo, index, onOpen }) {
     <button
       ref={ref}
       className={`thumb${revealed ? ' revealed' : ''}`}
-      style={{
-        aspectRatio: ratio,
-        // small stagger for frames already on screen at load
-        transitionDelay: `${Math.min(index, 6) * 70}ms`,
-      }}
+      style={{ aspectRatio: ratio }}
       onClick={() => onOpen(index)}
       aria-label={photo.description || photo.file}
     >
       <img
-        src={photo.thumb}
+        src={imageUrl(photo.thumb)}
         alt={photo.description || photo.file}
         loading="lazy"
         decoding="async"
@@ -59,11 +57,23 @@ function Thumb({ photo, index, onOpen }) {
   )
 }
 
-export default function Gallery({ photos, onOpen }) {
+export default function Gallery({ sections, onOpen }) {
   return (
-    <div className="gallery">
-      {photos.map((photo, i) => (
-        <Thumb key={photo.id} photo={photo} index={i} onOpen={onOpen} />
+    <div className="gallery-sections">
+      {sections.map((section, i) => (
+        <section className="gallery-section" key={section.title ?? `__untitled-${i}`}>
+          {section.title && (
+            <h2 className="section-title">
+              {section.title}
+              <span className="section-count">{section.items.length}</span>
+            </h2>
+          )}
+          <div className="gallery">
+            {section.items.map(({ photo, index }) => (
+              <Thumb key={photo.id} photo={photo} index={index} onOpen={onOpen} />
+            ))}
+          </div>
+        </section>
       ))}
     </div>
   )
