@@ -171,14 +171,26 @@ export default function App() {
                 {catalog.name}
                 <span className="section-count">{catalog.count}</span>
               </h2>
+              {/* Only label the groups when both are present; a catalog
+                  that is all albums or all photos needs no explaining. */}
               {catalog.albums.length > 0 && (
-                <CatalogIndex
-                  catalogs={catalog.albums}
-                  onOpen={(slug) => go(`/c/${catalog.slug}/${slug}`)}
-                />
+                <>
+                  {catalog.items.length > 0 && (
+                    <h3 className="group-label">Albums</h3>
+                  )}
+                  <CatalogIndex
+                    catalogs={catalog.albums}
+                    onOpen={(slug) => go(`/c/${catalog.slug}/${slug}`)}
+                  />
+                </>
               )}
               {catalog.items.length > 0 && (
-                <Gallery items={catalog.items} onOpen={open} />
+                <>
+                  {catalog.albums.length > 0 && (
+                    <h3 className="group-label">Photos</h3>
+                  )}
+                  <Gallery items={catalog.items} onOpen={open} />
+                </>
               )}
             </section>
           ) : (
