@@ -1,9 +1,9 @@
 /**
  * Turns the flat photo manifest into catalogs — one per top-level folder in
- * /photos, as recorded by scripts/generate.mjs.
+ * the photos-web R2 bucket, as recorded by scripts/index.mjs.
  *
  * Nothing here knows any catalog by name. Creating a folder creates a
- * catalog; the site picks it up on the next `npm run generate`.
+ * catalog; the site picks it up on the next `npm run index`.
  *
  * Ordering: catalogs listed in `order` come first, in that order. Everything
  * else follows, newest photo first, so a freshly added folder surfaces at the

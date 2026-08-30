@@ -126,9 +126,9 @@ export default function App() {
             <section className="empty">
               <h2>No photos yet</h2>
               <p>
-                Make a folder in <code>photos/</code> — say{' '}
-                <code>London 2026</code> — drop image files in, then run{' '}
-                <code>npm run sync</code>. Each folder becomes a catalog here.
+                Upload photos to the <code>photos-web</code> bucket in a folder
+                — say <code>London 2026</code> — then run{' '}
+                <code>npm run index</code>. Each folder becomes a catalog here.
               </p>
             </section>
           ) : view === 'catalog' ? (

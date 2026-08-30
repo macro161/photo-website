@@ -4,13 +4,10 @@ node_modules/
 # build output
 dist/
 
-# your photo library — lives in Cloudflare R2, never in Git.
-# Originals sync to the private photos-originals bucket via `npm run sync`.
+# photos live in the Cloudflare R2 bucket, never in Git.
+# This folder is left over from the old local-resizing workflow; nothing
+# reads it now, but it stays ignored in case you keep scans here.
 photos/
-
-# auto-generated web images (rebuilt from /photos by `npm run generate`,
-# uploaded to the public photos-web bucket by `npm run sync`)
-public/generated/
 
 # editor / OS junk
 .DS_Store
