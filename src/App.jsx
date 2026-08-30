@@ -9,16 +9,23 @@ import Lightbox from './components/Lightbox.jsx'
 /**
  * Routing lives in the URL hash so catalogs are linkable and the browser's
  * back button works:
- *   #/               all catalogs
- *   #/c/london-2026  one catalog
- *   #/about          about
+ *   #/                          all catalogs
+ *   #/c/swiss                   one catalog (album cards, or its grid)
+ *   #/c/swiss/le-chasseron      one album inside a catalog
+ *   #/about                     about
  */
 function parseHash(hash) {
   const path = hash.replace(/^#\/?/, '')
-  if (path === 'about') return { view: 'about', slug: null }
-  const match = path.match(/^c\/(.+)$/)
-  if (match) return { view: 'catalog', slug: decodeURIComponent(match[1]) }
-  return { view: 'catalogs', slug: null }
+  if (path === 'about') return { view: 'about', catalog: null, album: null }
+  const match = path.match(/^c\/([^/]+)(?:\/(.+))?$/)
+  if (match) {
+    return {
+      view: match[2] ? 'album' : 'catalog',
+      catalog: decodeURIComponent(match[1]),
+      album: match[2] ? decodeURIComponent(match[2]) : null,
+    }
+  }
+  return { view: 'catalogs', catalog: null, album: null }
 }
 
 function useHashRoute() {
@@ -49,24 +56,31 @@ export default function App() {
     []
   )
 
-  const active = catalogs.find((c) => c.slug === route.slug) || null
-  // An unknown slug falls back to the index rather than a blank page.
-  const view = route.view === 'catalog' && !active ? 'catalogs' : route.view
+  const catalog = catalogs.find((c) => c.slug === route.catalog) || null
+  const album = catalog?.albums.find((a) => a.slug === route.album) || null
 
-  // Reveal the header divider once the page is scrolled.
+  // An unknown slug falls back to the nearest real page rather than a blank one.
+  let view = route.view
+  if (view === 'album' && !album) view = catalog ? 'catalog' : 'catalogs'
+  if (view === 'catalog' && !catalog) view = 'catalogs'
+
+  // Whichever grid is on screen is what the lightbox pages through.
+  const shownItems =
+    view === 'album' ? album.items : view === 'catalog' ? catalog.items : []
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
     window.addEventListener('scroll', onScroll, { passive: true })
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Leaving a catalog must not leave the lightbox open behind it.
+  // Changing page must not leave the lightbox open behind it.
   useEffect(() => {
     setActiveIndex(null)
     window.scrollTo(0, 0)
-  }, [route.view, route.slug])
+  }, [route.view, route.catalog, route.album])
 
-  const total = active ? active.items.length : 0
+  const total = shownItems.length
   const open = useCallback((i) => setActiveIndex(i), [])
   const close = useCallback(() => setActiveIndex(null), [])
   const next = useCallback(
@@ -106,7 +120,10 @@ export default function App() {
       </header>
 
       <main>
-        <div className="view" key={`${view}:${route.slug ?? ''}`}>
+        <div
+          className="view"
+          key={`${view}:${route.catalog ?? ''}:${route.album ?? ''}`}
+        >
           {view === 'about' ? (
             <section className="about">
               <p className="about-text">{config.about}</p>
@@ -131,16 +148,38 @@ export default function App() {
                 <code>npm run index</code>. Each folder becomes a catalog here.
               </p>
             </section>
+          ) : view === 'album' ? (
+            <section className="catalog-view">
+              <button
+                className="back-link"
+                onClick={() => go(`/c/${catalog.slug}`)}
+              >
+                ← {catalog.name}
+              </button>
+              <h2 className="section-title">
+                {album.name}
+                <span className="section-count">{album.count}</span>
+              </h2>
+              <Gallery items={album.items} onOpen={open} />
+            </section>
           ) : view === 'catalog' ? (
             <section className="catalog-view">
               <button className="back-link" onClick={() => go('/')}>
                 ← All catalogs
               </button>
               <h2 className="section-title">
-                {active.name}
-                <span className="section-count">{active.count}</span>
+                {catalog.name}
+                <span className="section-count">{catalog.count}</span>
               </h2>
-              <Gallery items={active.items} onOpen={open} />
+              {catalog.albums.length > 0 && (
+                <CatalogIndex
+                  catalogs={catalog.albums}
+                  onOpen={(slug) => go(`/c/${catalog.slug}/${slug}`)}
+                />
+              )}
+              {catalog.items.length > 0 && (
+                <Gallery items={catalog.items} onOpen={open} />
+              )}
             </section>
           ) : (
             <CatalogIndex catalogs={catalogs} onOpen={(slug) => go(`/c/${slug}`)} />
@@ -152,9 +191,9 @@ export default function App() {
         <span>{config.footer}</span>
       </footer>
 
-      {activeIndex !== null && active && (
+      {activeIndex !== null && shownItems[activeIndex] && (
         <Lightbox
-          photo={active.items[activeIndex].photo}
+          photo={shownItems[activeIndex].photo}
           onClose={close}
           onNext={next}
           onPrev={prev}

@@ -4,10 +4,14 @@
  * You upload photos straight into the public R2 bucket, one folder per
  * catalog:
  *
- *   photos-web/London 2026/0042.jpg   -> catalog "London 2026"
- *   photos-web/Swiss/day 2/0007.jpg   -> catalog "Swiss" (deeper folders are
- *                                        yours; only the first level names
- *                                        the catalog)
+ *   photos-web/London 2026/0042.jpg      -> catalog "London 2026"
+ *   photos-web/Swiss/Le Chasseron/07.jpg -> catalog "Swiss", album
+ *                                           "Le Chasseron"
+ *
+ * The first folder is the catalog, the second is an album inside it. A
+ * catalog with albums shows album cards; one without opens straight to its
+ * grid. Folders deeper than two levels are yours to organise and do not
+ * affect the site.
  *
  * This script lists the bucket and writes src/generated/manifest.json. It
  * never downloads a whole photo: to lay the grid out without the page
@@ -47,14 +51,24 @@ const IGNORED_PREFIXES = ['generated/']
 
 const LOOSE_CATALOG = 'Other'
 
-function slugify(name) {
+/**
+ * URL-safe slug. Accents are folded rather than dropped, so "Mont Pèlerin"
+ * becomes "mont-pelerin" instead of "mont-p-lerin".
+ */
+function slugifyName(name) {
   return (
     name
+      .normalize('NFD')
+      .replace(/[̀-ͯ]/g, '')
       .toLowerCase()
-      .replace(/\.[^.]+$/, '')
       .replace(/[^a-z0-9]+/g, '-')
-      .replace(/^-+|-+$/g, '') || 'photo'
+      .replace(/^-+|-+$/g, '') || 'untitled'
   )
+}
+
+/** Same, but drops a file extension first. Used for photo ids. */
+function slugifyPath(key) {
+  return slugifyName(key.replace(/\.[^.]+$/, '')) || 'photo'
 }
 
 function parseFilename(file) {
@@ -168,10 +182,13 @@ async function main() {
   for (const obj of objects.sort((a, b) => a.Path.localeCompare(b.Path))) {
     const key = obj.Path
     const segments = key.split('/')
-    const catalog = segments.length > 1 ? segments[0] : LOOSE_CATALOG
     const filename = segments[segments.length - 1]
+    // First folder = catalog, second = album within it. Anything deeper is
+    // yours to organise and does not affect the site.
+    const catalog = segments.length > 1 ? segments[0] : LOOSE_CATALOG
+    const album = segments.length > 2 ? segments[1] : null
 
-    let id = slugify(key)
+    let id = slugifyPath(key)
     let n = 2
     const baseId = id
     while (usedIds.has(id)) id = `${baseId}-${n++}`
@@ -213,7 +230,9 @@ async function main() {
       width,
       height,
       catalog,
-      catalogSlug: slugify(catalog) || 'other',
+      catalogSlug: slugifyName(catalog),
+      album,
+      albumSlug: album ? slugifyName(album) : null,
       description: override.description ?? fromName.description,
       date: override.date ?? fromName.date,
     })
@@ -246,7 +265,12 @@ async function main() {
       `catalog(s) — ${measured} measured, ${cached} cached.`
   )
   for (const name of catalogNames) {
-    console.log(`   ${name}: ${manifest.filter((p) => p.catalog === name).length}`)
+    const inCatalog = manifest.filter((p) => p.catalog === name)
+    const albums = [...new Set(inCatalog.map((p) => p.album).filter(Boolean))]
+    console.log(`   ${name}: ${inCatalog.length}`)
+    for (const a of albums) {
+      console.log(`      ${a}: ${inCatalog.filter((p) => p.album === a).length}`)
+    }
   }
   if (failures.length) {
     console.log(`\n⚠  Could not read dimensions for ${failures.length} photo(s):`)

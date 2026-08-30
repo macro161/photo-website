@@ -9,14 +9,22 @@ masonry grid with a full-screen lightbox and keyboard navigation.
 
 ## Adding photos and catalogs
 
-Each top-level folder in the `photos-web` bucket is a catalog. **Creating a
-folder creates a catalog** — nothing in the code needs to know its name.
+Each top-level folder in the `photos-web` bucket is a catalog, and a folder
+inside one is an album. **Creating a folder creates a catalog or album** —
+nothing in the code needs to know its name.
 
 ```
 photos-web/
-  London 2026/   -> catalog "London 2026"
-  Swiss/         -> catalog "Swiss"
+  London 2026/               -> catalog "London 2026", opens to its grid
+  Swiss/
+    Le Chasseron/            -> catalog "Swiss" -> album "Le Chasseron"
+    Mont Pèlerin/            -> catalog "Swiss" -> album "Mont Pèlerin"
 ```
+
+A catalog with albums shows album cards; one without opens straight to its
+photos. A catalog can have both — loose photos appear below its album cards.
+Folders deeper than two levels are yours to organise and don't affect the
+site.
 
 **1. Upload** web-sized exports into a catalog folder, via the Cloudflare
 dashboard or rclone:
@@ -53,16 +61,19 @@ photo. Override any of that in [`site.config.json`](site.config.json):
 ```json
 "gallery": {
   "catalogOrder": ["London 2026", "Swiss"],
-  "covers": { "London 2026": "MATAS PORTRA400 6740.webp" },
+  "covers": {
+    "London 2026": "image_9.jpg",
+    "Swiss/Le Chasseron": "0025_25.jpg"
+  },
   "captions": {
     "London 2026/0042.jpg": { "description": "Rue de Rivoli", "date": "2026-05-05" }
   }
 }
 ```
 
-`covers` takes a filename; `captions` takes the full key including the catalog
-folder. Catalogs you don't list simply follow, so this never needs updating
-when you add one.
+`covers` takes a filename, keyed by catalog name or `Catalog/Album`;
+`captions` takes the full key including folders. Catalogs and albums you don't
+list simply follow, so this never needs updating when you add one.
 
 Captions and dates can also come from the filename, using `@` as a separator:
 `0042@Rue de Rivoli@2026-05-05.jpg`. A leading capital `X` on a file or folder

@@ -34,7 +34,8 @@ egress charge and a 10 GB free tier.
    rclone copy ~/exports/london r2:"photos-web/London 2026" --progress
    ```
 
-   Use `<Catalog>/<file>.jpg` — no extra prefix. A key like
+   Use `<Catalog>/<file>.jpg`, or `<Catalog>/<Album>/<file>.jpg` to group a
+   catalog into albums. No extra prefix — a key like
    `photos/London 2026/x.jpg` would create a catalog called "photos".
 
    Nothing resizes these. Export around 2000px on the long edge; a 7 MB scan

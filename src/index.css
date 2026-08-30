@@ -265,6 +265,11 @@ main {
 }
 
 /* ---------- Catalog view ---------- */
+/* A catalog can hold albums and loose photos at once; keep them apart. */
+.catalog-grid + .gallery {
+  margin-top: clamp(2.5rem, 6vw, 4.5rem);
+}
+
 .back-link {
   display: inline-block;
   margin-bottom: clamp(1rem, 2.5vw, 1.6rem);
