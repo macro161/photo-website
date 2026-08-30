@@ -1,8 +1,8 @@
 /**
- * Landing view: one card per catalog, showing its cover photo, name and
- * count. Clicking a card opens that catalog.
+ * A grid of cover cards. Used for the catalog index and, one level down, for
+ * the albums inside a catalog — both are the same shape, so both render here.
  *
- * Catalogs come from folder names, so this renders however many exist —
+ * Entries come from folder names, so this renders however many exist —
  * adding a folder adds a card, with no change here.
  */
 import { useState, useEffect, useRef } from 'react'
@@ -36,7 +36,7 @@ function CatalogCard({ catalog, onOpen }) {
       ref={ref}
       className={`catalog-card${revealed ? ' revealed' : ''}`}
       onClick={() => onOpen(catalog.slug)}
-      aria-label={`${catalog.name} — ${catalog.count} photos`}
+      aria-label={`${catalog.name} — ${catalog.label}`}
     >
       <span className="catalog-cover">
         {cover ? (
@@ -54,9 +54,7 @@ function CatalogCard({ catalog, onOpen }) {
       </span>
       <span className="catalog-meta">
         <span className="catalog-name">{catalog.name}</span>
-        <span className="catalog-count">
-          {catalog.count} {catalog.count === 1 ? 'photo' : 'photos'}
-        </span>
+        <span className="catalog-count">{catalog.label}</span>
       </span>
     </button>
   )
