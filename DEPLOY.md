@@ -16,92 +16,74 @@ There are two ways to deploy. Pick one.
 
 ## Photo storage: Cloudflare R2
 
-Photos are **not** stored in Git. The repo holds code plus a 40 KB
-`manifest.json`; the images themselves live in Cloudflare R2, which has no
-egress charge and a 10 GB free tier (the whole library is well under 1 GB).
+Photos are **not** stored in Git. The repo holds code plus a small
+`manifest.json`; the photos themselves live in Cloudflare R2, which has no
+egress charge and a 10 GB free tier.
 
 | Bucket | Access | Holds |
 |--------|--------|-------|
-| `photos-originals` | private | full-resolution scans — your offsite backup |
-| `photos-web` | public, via `img.matassavickis.com` | the generated WebP the site links to |
-
-### One-time setup
-
-1. **Create both buckets.** Dashboard -> R2 -> Create bucket.
-2. **Make `photos-web` public.** Bucket -> Settings -> Public access ->
-   *Custom Domains* -> Connect Domain -> `img.matassavickis.com`. DNS and the
-   certificate are issued automatically. (The *R2.dev subdomain* toggle in the
-   same panel is a different thing: it is rate-limited and not CDN-cached, so
-   use it only for testing.)
-3. **Create an API token.** R2 -> Manage API Tokens -> Create, with
-   Object Read & Write. Note the access key, secret, and the endpoint
-   `https://<account-id>.r2.cloudflarestorage.com`.
-4. **Configure rclone.**
-
-   ```bash
-   sudo apt install rclone     # or: brew install rclone
-   rclone config
-   ```
-
-   Choose `n` (new remote), name it **`r2`**, storage type `s3`, provider
-   `Cloudflare R2`, then paste the access key, secret, and endpoint. Leave
-   region blank. Verify with `rclone lsd r2:`.
-5. **Point the site at the bucket.** `imageBaseUrl` in
-   [`site.config.json`](site.config.json).
-
-   > **Currently set to the `pub-*.r2.dev` development URL.** That URL works,
-   > but Cloudflare rate-limits it and does not CDN-cache it — and this
-   > gallery loads ~187 thumbnails per visit, which is exactly the traffic
-   > shape it handles worst. Connect `img.matassavickis.com` (step 2) and
-   > change this value before treating the site as live.
+| `photos-web` | public, via the r2.dev URL (or a custom domain) | your photos, one folder per catalog |
+| `photos-originals` | private | archive of full-resolution scans; the site never reads it |
 
 ### Publishing photos
 
-```bash
-# add photos to a catalog (the folder is the catalog)
-cp ~/scans/*.jpg "photos/London 2026/"
-npm run sync
+1. **Upload** web-sized exports into `photos-web`, one folder per catalog,
+   using the Cloudflare dashboard or rclone:
 
-# remove one
-rm "photos/London 2026/0042.jpg"
-npm run sync
-```
+   ```bash
+   rclone copy ~/exports/london r2:"photos-web/London 2026" --progress
+   ```
 
-`sync:web` mirrors `public/generated/`, so removing a photo removes it from
-the site. `sync:originals` uses `rclone copy`, not `sync` — the originals
-bucket is **add-only**, so a local mistake can never destroy your archive.
-Prune it by hand if you genuinely want something gone.
+   Use `<Catalog>/<file>.jpg` — no extra prefix. A key like
+   `photos/London 2026/x.jpg` would create a catalog called "photos".
 
-`sync:web` also carries `--max-delete 25`, which aborts the whole sync if it
-would remove more than 25 images. If you ever restructure on purpose and it
-trips, run rclone directly with a higher limit:
+   Nothing resizes these. Export around 2000px on the long edge; a 7 MB scan
+   is a 7 MB download for every visitor.
 
-```bash
-rclone sync public/generated r2:photos-web/generated --checksum --max-delete 500 --progress
-```
+2. **Index and publish:**
 
-`npm run sync` resizes anything new (cached by size + mtime, so re-runs are
-fast), mirrors `public/generated/` into `photos-web`, and mirrors `photos/`
-into `photos-originals`. Because it uses `rclone sync` rather than `copy`,
-deleting a file locally deletes it from R2 too.
+   ```bash
+   npm run index
+   git add src/generated/manifest.json && git commit -m "Add London 2026" && git push
+   ```
 
-Then commit the manifest — text only, a few KB:
+`npm run index` lists the bucket and records each photo's catalog, caption,
+date and pixel dimensions. Dimensions come from a ranged request that reads
+only the file header, and are cached by size + modified time, so re-runs are
+fast and cheap.
 
-```bash
-git add src/generated/manifest.json && git commit -m "Add batch 3" && git push
-```
+**Deleting** a photo is the reverse: remove it from the bucket, re-run
+`npm run index`, commit and push.
 
-Pages rebuilds in about a minute. The images are already live the moment
-`npm run sync` finishes.
+### One-time setup
 
-### How the URLs work
+`npm run index` lists the bucket, which needs credentials (reading photos does
+not — they're public).
 
-`manifest.json` stores site-relative paths (`/generated/foo.webp`).
-[`src/imageUrl.js`](src/imageUrl.js) prefixes them with `imageBaseUrl` in a
-production build, and leaves them alone during `npm run dev` so local photos
-are served straight off your disk. Set `VITE_IMAGE_BASE` to override either
-default — useful for testing against the `r2.dev` URL before the custom
-domain is connected.
+1. **Create an API token.** R2 → Manage API Tokens → Create, with
+   Object Read & Write. Note the access key, secret, and the endpoint
+   `https://<account-id>.r2.cloudflarestorage.com`.
+2. **Configure rclone.**
+
+   ```bash
+   sudo apt install rclone     # or: brew install rclone
+   rclone config create r2 s3 \
+     provider=Cloudflare \
+     access_key_id=YOUR_KEY \
+     secret_access_key=YOUR_SECRET \
+     endpoint=https://YOUR_ACCOUNT_ID.r2.cloudflarestorage.com \
+     acl=private
+   ```
+
+   Verify with `rclone lsd r2:`. The remote name is set by `r2Remote` in
+   [`site.config.json`](site.config.json).
+3. **Make `photos-web` public.** Bucket → Settings → Public access →
+   *Custom Domains* → Connect Domain → `img.matassavickis.com`, and set
+   `imageBaseUrl` in [`site.config.json`](site.config.json) to match.
+
+   > **Currently set to the `pub-*.r2.dev` development URL.** That works, but
+   > Cloudflare rate-limits it and does not CDN-cache it. Connect the custom
+   > domain before treating the site as live.
 
 ---
 
@@ -135,12 +117,9 @@ git branch -M main
 git push -u origin main
 ```
 
-> **Note on photo size.** This workflow stores your original photos in the
-> Git repo. That's fine for a normal film library (hundreds of MB to a couple
-> of GB). GitHub rejects any **single file over 100 MB**, so keep individual
-> scans under that (JPEG exports are typically 2–15 MB — no problem). If you
-> expect a very large library, use **Option B** instead, which keeps originals
-> off the internet entirely.
+> **Note.** Photos are not in this repo — they live in the `photos-web` R2
+> bucket (see above). Only code and a small `manifest.json` are pushed, so the
+> repo stays small no matter how large your library gets.
 
 ### 2. Create the Pages project
 
@@ -160,13 +139,9 @@ git push -u origin main
 ### 3. From now on
 
 ```bash
-# add a photo
-cp ~/scans/new-frame.jpg "photos/"
-git add . && git commit -m "Add new frame" && git push
-
-# remove a photo
-git rm "photos/old-frame.jpg"
-git commit -m "Remove frame" && git push
+# upload photos to the bucket (dashboard or rclone), then:
+npm run index
+git add src/generated/manifest.json && git commit -m "Add photos" && git push
 ```
 
 Each push triggers an automatic rebuild. Your changes are live in ~1–2 minutes.
@@ -192,8 +167,8 @@ wrangler pages deploy dist --project-name=photography
 ```
 
 The first run creates the project and prints your live `*.pages.dev` URL.
-Adding/removing a photo = edit the `photos/` folder, then run those two
-commands again.
+Adding/removing a photo = change the `photos-web` bucket, run
+`npm run index`, then run those two commands again.
 
 ---
 
@@ -217,13 +192,22 @@ If it deployed as a **Pages** project (its URL ends in `*.pages.dev`):
 
 ## Troubleshooting
 
-- **Build fails on `sharp`.** Make sure `NODE_VERSION` is `20`. Cloudflare's
-  Linux build image installs `sharp`'s prebuilt binary automatically.
-- **Photos didn't update.** Confirm the file is actually in `photos/` and was
-  committed/pushed (Option A) or that you re-ran `npm run build` before
-  deploying (Option B).
-- **A photo is rotated wrong.** The build auto-orients using EXIF. If a scan
-  has no orientation tag, rotate the source file and re-deploy.
+- **`npm run index` says it cannot list the bucket.** rclone isn't configured,
+  or the remote name doesn't match `r2Remote` in `site.config.json`. Check
+  with `rclone lsd r2:`.
+- **A photo doesn't appear.** Confirm it's in the bucket under
+  `<Catalog>/<file>`, that you re-ran `npm run index`, and that the updated
+  `manifest.json` was committed and pushed. Files or folders starting with a
+  capital `X` are hidden on purpose.
+- **A catalog called "photos" or similar appeared.** Something was uploaded
+  with an extra prefix; the first folder level always names the catalog.
+- **The page jumps around as photos load.** `npm run index` couldn't read
+  those files' dimensions — it prints which ones. Usually an unusual or
+  truncated file; re-export and re-upload.
+- **A photo is rotated wrong.** The index honours EXIF orientation when it can
+  read it. If a scan has no orientation tag, rotate the file and re-upload.
+- **Photos load slowly.** Nothing resizes them for you — check what you
+  uploaded. Around 2000px on the long edge is plenty for the web.
 - **Want a different look.** Colors and layout live in
   [`src/index.css`](src/index.css); text and links in
   [`site.config.json`](site.config.json).

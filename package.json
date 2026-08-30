@@ -5,17 +5,12 @@
   "type": "module",
   "description": "A self-hosted gallery for 35mm photography",
   "scripts": {
-    "generate": "node scripts/generate.mjs",
-    "dev": "npm run generate && vite",
+    "index": "node scripts/index.mjs",
+    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --host",
-    "sync:web": "rclone sync public/generated r2:photos-web/generated --checksum --max-delete 25 --progress",
-    "sync:originals": "rclone copy photos r2:photos-originals --checksum --progress",
-    "sync": "npm run generate && npm run sync:web && npm run sync:originals"
+    "preview": "vite preview --host"
   },
   "dependencies": {
-    "@anthropic-ai/claude-code": "^2.1.251",
-    "claude": "^0.1.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },

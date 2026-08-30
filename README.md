@@ -1,19 +1,18 @@
 # Photography website
 
 A self-hosted gallery for 35mm film photography. Plain React (Vite) — no
-CMS, no database, no monthly bill. You own all of it.
+CMS, no database, no monthly bill. Photos live in a Cloudflare R2 bucket;
+the repo holds only code and a small index.
 
-- **Add a catalog** → make a folder in [`photos/`](photos/), e.g. `London 2026`
-- **Add a photo** → drop an image file into one of those folders
-- **Remove a photo** → delete it from [`photos/`](photos/)
-- **Display** → a responsive masonry gallery with a full-screen lightbox and
-  keyboard navigation
-- **Describe** → put the caption and date right in the filename with `@`
-  (e.g. `roll3@Rue de Rivoli@2026-05-05.jpg`) — see [photos/README.md](photos/README.md)
+- **Add a catalog** → create a folder in the `photos-web` R2 bucket
+- **Add a photo** → upload a web-sized export into that folder
+- **Publish** → `npm run index`, then commit and push
+- **Display** → catalog cards on the front page, each opening a masonry grid
+  with a full-screen lightbox and keyboard navigation
 
-A build step automatically creates fast, optimized web versions of every
-photo. You upload full-resolution scans; visitors get small WebP images. You
-never touch a list of files or write any code.
+Nothing is resized for you: upload images already sized for the web (around
+2000px on the long edge is plenty). The index reads each photo's dimensions
+straight from the bucket so the grid can reserve space without jumping.
 
 ---
 
@@ -23,12 +22,13 @@ Requires [Node.js](https://nodejs.org) 18 or newer.
 
 ```bash
 npm install      # once
-npm run dev      # start the dev server (processes photos, then serves)
+npm run index    # list the R2 bucket, write src/generated/manifest.json
+npm run dev      # start the dev server
 ```
 
-Open the URL it prints (usually http://localhost:5173). During `npm run dev`
-photos are served from your own disk, so the gallery works offline and shows
-photos before you've uploaded them.
+Open the URL it prints (usually http://localhost:5173). Photos load from R2
+in both dev and production, so you need `npm run index` to have run at least
+once (and an internet connection).
 
 ```bash
 npm run build    # produce the deployable site in dist/
@@ -42,43 +42,48 @@ text, social links, and gallery sort order. No code required.
 
 ## Catalogs
 
-Each top-level folder in `photos/` is a catalog with its own page:
+Each top-level folder in the `photos-web` bucket is a catalog with its own
+page:
 
 ```
-photos/
+photos-web/
   London 2026/   -> catalog "London 2026"
   Swiss/         -> catalog "Swiss"
   Lithuania/     -> catalog "Lithuania"
 ```
 
-The site's front page lists one cover card per catalog; clicking a card opens
-that catalog's grid. Nothing in the code knows these names — **creating a
-folder creates a catalog**, and it appears on the next `npm run generate`.
+The front page lists one cover card per catalog; clicking a card opens that
+catalog's grid. Nothing in the code knows these names — **creating a folder
+creates a catalog**, and it appears on the next `npm run index`.
 
-Catalogs are ordered newest-photo-first, and the cover is the catalog's first
+Catalogs are ordered newest-photo-first and the cover is the catalog's first
 photo. Override either in [`site.config.json`](site.config.json):
 
 ```json
 "gallery": {
   "catalogOrder": ["London 2026", "Swiss"],
-  "covers": { "Swiss": "0042.jpg" }
+  "covers": { "London 2026": "MATAS PORTRA400 6740.webp" },
+  "captions": {
+    "London 2026/0042.jpg": { "description": "Rue de Rivoli", "date": "2026-05-05" }
+  }
 }
 ```
 
-Catalogs you don't list simply follow, so the config never needs updating when
-you add one. Photos left loose in `photos/` land in a catalog called "Other",
-and folders nested deeper (`Swiss/day 2/`) are yours to organise — only the
-first level names the catalog.
+`covers` takes a filename; `captions` takes the full key including the
+catalog folder. Catalogs you don't list simply follow, so the config never
+needs updating when you add one. Photos uploaded to the bucket root land in a
+catalog called "Other", and folders nested deeper (`Swiss/day 2/`) are yours
+to organise — only the first level names the catalog.
 
-## Add a caption and date (optional)
+A leading capital `X` on a file or folder hides it (`XSwiss/`, `X0042.jpg`).
 
-Captions and dates come from the **filename**, using `@` as a separator:
+## Captions and dates from the filename
+
+As an alternative to the `captions` config, `@` in the filename still works:
 
 - `0042.jpg` → no caption
 - `0042@Rue de Rivoli.jpg` → caption "Rue de Rivoli"
 - `0042@Rue de Rivoli@2026-05-05.jpg` → caption + date
-
-Full details in [photos/README.md](photos/README.md).
 
 ## Deploy it
 
@@ -91,11 +96,14 @@ push to GitHub for automatic rebuilds, or one-command direct upload.
 
 | Path | What it is |
 |------|------------|
-| [`photos/`](photos/) | Your library — one folder per catalog. The source of truth. Git-ignored; lives in Cloudflare R2. |
+| `photos-web` R2 bucket | Your library, one folder per catalog. The source of truth. |
+| [`scripts/index.mjs`](scripts/index.mjs) | Lists the bucket, reads each photo's dimensions with a ranged request, writes the manifest. Never downloads whole photos except as a fallback. |
 | [`src/catalogs.js`](src/catalogs.js) | Groups the manifest into catalogs, applies ordering and covers. |
-| [`src/imageUrl.js`](src/imageUrl.js) | Points images at R2 in production, at your disk during `npm run dev`. |
-| [`scripts/generate.mjs`](scripts/generate.mjs) | Build step: makes WebP thumbnails + large versions, parses caption/date from filenames, writes the manifest, deletes orphaned images. Runs automatically before `dev`/`build`. |
-| [`src/`](src/) | The React app — gallery grid + lightbox. |
-| `src/generated/manifest.json` | Auto-generated list of photos. Don't edit by hand. |
-| `public/generated/` | Auto-generated web images. Git-ignored; uploaded to R2 by `npm run sync`. |
-| [`site.config.json`](site.config.json) | Your text and links. |
+| [`src/imageUrl.js`](src/imageUrl.js) | Prefixes manifest paths with `imageBaseUrl`. |
+| [`src/`](src/) | The React app — catalog index, grid, lightbox. |
+| `src/generated/manifest.json` | Auto-generated photo index. Don't edit by hand. |
+| [`site.config.json`](site.config.json) | Your text, links, catalog order, covers, captions. |
+
+Listing the bucket needs credentials, so `npm run index` requires rclone to be
+configured — see [DEPLOY.md](DEPLOY.md). Reading photos does not: they are
+public.
