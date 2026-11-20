@@ -535,6 +535,14 @@ main {
   justify-content: center;
   padding: clamp(1.5rem, 5vw, 4rem);
   animation: fadeIn 0.3s var(--ease);
+  /* Gestures are handled in Lightbox.jsx; stop the browser panning/zooming. */
+  touch-action: none;
+  overscroll-behavior: contain;
+}
+.lightbox.settle,
+.lb-figure.settle,
+.lb-zoom.settle {
+  transition: transform 0.25s var(--ease), opacity 0.25s var(--ease);
 }
 
 .lb-figure {
@@ -547,12 +555,43 @@ main {
   gap: 1.6rem;
 }
 
+.lb-zoom {
+  max-width: 100%;
+  will-change: transform;
+}
+
+/* Thumbnail and full image share one grid cell so the frame never collapses. */
+.lb-stack {
+  display: grid;
+  max-width: 100%;
+}
+
 .lb-figure img {
+  grid-area: 1 / 1;
   max-width: 100%;
   max-height: 76vh;
   object-fit: contain;
   box-shadow: 0 30px 80px rgba(0, 0, 0, 0.18);
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.lb-figure img.lb-full {
   animation: lbImg 0.55s var(--ease) both;
+}
+
+.lb-figure img.lb-thumb {
+  filter: blur(10px);
+  transition: opacity 0.4s var(--ease);
+}
+.lb-figure img.lb-thumb.done {
+  opacity: 0;
+}
+
+/* Hidden (but still loading) until decoded; the thumbnail shows meanwhile. */
+.lb-figure img.lb-full.pending {
+  opacity: 0;
+  animation: none;
 }
 
 @keyframes lbImg {
