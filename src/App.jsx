@@ -12,20 +12,42 @@ import Lightbox from './components/Lightbox.jsx'
  *   #/                          all catalogs
  *   #/c/swiss                   one catalog (album cards, or its grid)
  *   #/c/swiss/le-chasseron      one album inside a catalog
+ *   #/c/swiss/p/<photo-id>      a photo, open in the lightbox
+ *   #/c/swiss/le-chasseron/p/<photo-id>
  *   #/about                     about
+ * Opening a photo pushes one history entry (so Back closes the lightbox);
+ * stepping between photos replaces it.
  */
+function decode(part) {
+  try {
+    return decodeURIComponent(part)
+  } catch {
+    return part
+  }
+}
+
 function parseHash(hash) {
   const path = hash.replace(/^#\/?/, '')
-  if (path === 'about') return { view: 'about', catalog: null, album: null }
-  const match = path.match(/^c\/([^/]+)(?:\/(.+))?$/)
-  if (match) {
+  if (path === 'about') {
+    return { view: 'about', catalog: null, album: null, photo: null }
+  }
+  const parts = path.split('/').filter(Boolean).map(decode)
+  if (parts[0] === 'c' && parts[1]) {
+    let rest = parts.slice(2)
+    let photo = null
+    if (rest.length >= 2 && rest[rest.length - 2] === 'p') {
+      photo = rest[rest.length - 1]
+      rest = rest.slice(0, -2)
+    }
+    const album = rest.length ? rest.join('/') : null
     return {
-      view: match[2] ? 'album' : 'catalog',
-      catalog: decodeURIComponent(match[1]),
-      album: match[2] ? decodeURIComponent(match[2]) : null,
+      view: album ? 'album' : 'catalog',
+      catalog: parts[1],
+      album,
+      photo,
     }
   }
-  return { view: 'catalogs', catalog: null, album: null }
+  return { view: 'catalogs', catalog: null, album: null, photo: null }
 }
 
 function useHashRoute() {
@@ -42,9 +64,23 @@ const go = (path) => {
   window.location.hash = path
 }
 
+/** Change the hash without (replace) or with (push) a history entry. */
+function writeHash(path, mode) {
+  const state = mode === 'push' ? { lb: true } : window.history.state
+  window.history[mode === 'push' ? 'pushState' : 'replaceState'](
+    state,
+    '',
+    `#${path}`
+  )
+  // pushState/replaceState do not fire hashchange; the route hook listens.
+  window.dispatchEvent(new HashChangeEvent('hashchange'))
+}
+
+const photoPath = (p) =>
+  `/c/${p.catalogSlug}${p.albumSlug ? `/${p.albumSlug}` : ''}/p/${p.id}`
+
 export default function App() {
   const route = useHashRoute()
-  const [activeIndex, setActiveIndex] = useState(null)
   const [scrolled, setScrolled] = useState(false)
 
   const catalogs = useMemo(
@@ -74,23 +110,50 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  // Changing page must not leave the lightbox open behind it.
   useEffect(() => {
-    setActiveIndex(null)
     window.scrollTo(0, 0)
   }, [route.view, route.catalog, route.album])
 
+  // The lightbox is driven by the URL: the open photo is whatever the hash names.
   const total = shownItems.length
-  const open = useCallback((i) => setActiveIndex(i), [])
-  const close = useCallback(() => setActiveIndex(null), [])
-  const next = useCallback(
-    () => setActiveIndex((i) => (i === null ? i : (i + 1) % total)),
-    [total]
+  const activeIndex = route.photo
+    ? shownItems.findIndex((it) => it.photo.id === route.photo)
+    : -1
+  const basePath =
+    view === 'album'
+      ? `/c/${catalog.slug}/${album.slug}`
+      : view === 'catalog'
+        ? `/c/${catalog.slug}`
+        : '/'
+
+  // A photo id that is not on this page: if it exists elsewhere, go to its
+  // real home, otherwise drop it and show the page underneath.
+  useEffect(() => {
+    if (!route.photo || activeIndex >= 0) return
+    const found = photos.find((p) => p.id === route.photo)
+    writeHash(found && view !== 'about' ? photoPath(found) : basePath, 'replace')
+  }, [route.photo, activeIndex, basePath, view])
+
+  const open = useCallback(
+    (i) => writeHash(photoPath(shownItems[i].photo), 'push'),
+    [shownItems]
   )
-  const prev = useCallback(
-    () => setActiveIndex((i) => (i === null ? i : (i - 1 + total) % total)),
-    [total]
+  const close = useCallback(() => {
+    // Opened from this page: Back is the natural way out. Deep-linked in: no
+    // entry to go back to, so replace instead of leaving the site.
+    if (window.history.state?.lb) window.history.back()
+    else writeHash(basePath, 'replace')
+  }, [basePath])
+  const step = useCallback(
+    (delta) => {
+      if (activeIndex < 0) return
+      const to = shownItems[(activeIndex + delta + total) % total]
+      writeHash(photoPath(to.photo), 'replace')
+    },
+    [activeIndex, shownItems, total]
   )
+  const next = useCallback(() => step(1), [step])
+  const prev = useCallback(() => step(-1), [step])
 
   return (
     <div className="app">
@@ -203,9 +266,11 @@ export default function App() {
         <span>{config.footer}</span>
       </footer>
 
-      {activeIndex !== null && shownItems[activeIndex] && (
+      {activeIndex >= 0 && (
         <Lightbox
           photo={shownItems[activeIndex].photo}
+          prevPhoto={shownItems[(activeIndex - 1 + total) % total].photo}
+          nextPhoto={shownItems[(activeIndex + 1) % total].photo}
           onClose={close}
           onNext={next}
           onPrev={prev}
