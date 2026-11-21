@@ -319,5 +319,47 @@
     "approx": true,
     "source": "drive:2026-07-12 - Swiss Hikes + Ukraine + Random Shots 2026",
     "note": "Inferred from roll order: Ukraine frames follow the Tour du Mayan spring hike (17 May) on roll 04891 and precede Les Paccots (30 May) on roll 04888. Please confirm."
+  },
+  "swiss/barrhorn": {
+    "start": "2026-08-18",
+    "end": "2026-08-18",
+    "approx": true,
+    "source": "alltrails:11",
+    "note": "Matched to AllTrails \"Üssers Barrhorn\" (18 Aug); Drive folder dated 2026-09-21 (scan). Roll 1426; Drive copy is 1544 px; frame 035 (city terrace) left out."
+  },
+  "swiss/tour-de-l-argentine-lavaux-vineyard-terraces": {
+    "start": "2026-09-06",
+    "end": "2026-09-12",
+    "approx": true,
+    "source": "alltrails",
+    "note": "Roll R1-07693: Tour de l'Argentine (6 Sep) + Lavaux (12 Sep), two outings, not split."
+  },
+  "swiss/rochers-de-naye-tour-de-l-argentine": {
+    "start": "2026-08-22",
+    "end": "2026-09-06",
+    "approx": true,
+    "source": "alltrails",
+    "note": "Roll R1-07734: owner name; Rochers de Naye 22 Aug; Argentine in this roll is doubtful (see PHOTO_CONTEXT)."
+  },
+  "swiss/black-forest-cabane-de-valsorey": {
+    "start": "2026-07-25",
+    "end": "2026-08-02",
+    "approx": true,
+    "source": "alltrails",
+    "note": "Roll R1-07736: Sasbachwalden 25 Jul + Cabane de Valsorey 1-2 Aug, unsplit."
+  },
+  "spain-2026/picos-de-europa": {
+    "start": "2026-08-14",
+    "end": "2026-08-14",
+    "approx": true,
+    "source": "alltrails:12",
+    "note": "Roll R1-07737; AllTrails Canal del Texu 14 Aug."
+  },
+  "spain-2026/spain-tour-de-l-argentine": {
+    "start": "2026-08-12",
+    "end": "2026-09-06",
+    "approx": true,
+    "source": "guess",
+    "note": "Roll R1-07733: Spanish coast + Lausanne terrace; date range is a rough guess, please confirm."
   }
 }

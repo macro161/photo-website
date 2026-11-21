@@ -4,8 +4,14 @@
   "about": "I shoot 35mm film. This is a collection of frames I've kept. Everything here was scanned from negatives — grain, dust, and all.",
   "footer": "© Matas Savickis",
   "links": [
-    { "label": "Instagram", "url": "https://instagram.com/" },
-    { "label": "Email", "url": "mailto:savickismatas@gmail.com" }
+    {
+      "label": "Instagram",
+      "url": "https://instagram.com/"
+    },
+    {
+      "label": "Email",
+      "url": "mailto:savickismatas@gmail.com"
+    }
   ],
   "imageBaseUrl": "https://pub-1b99187faf2e44d7bd572b98ca82ba63.r2.dev",
   "r2Remote": "r2:photos-web",
@@ -40,7 +46,8 @@
       "Swiss/Pointe de Bellevue": "R1-04889-0007.JPG",
       "Swiss/Random": "R1-04890-0007.JPG",
       "Swiss/Tour du Mayan + Tour d'Ai": "R1-04892-030A.JPG",
-      "Swiss/Tour du Mayan Spring(failed)": "R1-04891-006A.JPG"
+      "Swiss/Tour du Mayan Spring(failed)": "R1-04891-006A.JPG",
+      "Swiss/Barrhorn": "14260020.JPG"
     },
     "captions": {}
   }
