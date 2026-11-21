@@ -11,6 +11,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { rollInfo, rollLine } from '../rolls.js'
 import { imageUrl, hasVariants, srcSet, variantUrl, widthAtMost, supportsAvif } from '../imageUrl.js'
+import { gridSources } from '../viewTransition.js'
 
 const MAX_SCALE = 5
 const DOUBLE_TAP_SCALE = 2.5
@@ -56,7 +57,9 @@ function LightboxImage({ photo }) {
   const variants = hasVariants(photo)
   const src = imageUrl(photo.src)
   // With variants: the small WebP is the instant placeholder, the 1600/2400 AVIF/WebP is the real image.
-  const thumb = variants ? variantUrl(photo, widthAtMost(photo, 480), 'webp') : imageUrl(photo.thumb)
+  // Opened from the grid: start from the very file the grid shows (already decoded, often sharper than 480).
+  const fromGrid = gridSources.get(photo.id)
+  const thumb = fromGrid || (variants ? variantUrl(photo, widthAtMost(photo, 480), 'webp') : imageUrl(photo.thumb))
   const alt = photo.description || photo.file
   const distinct = variants || thumb !== src
   const onLoad = (e) => {
@@ -67,10 +70,10 @@ function LightboxImage({ photo }) {
   }
 
   return (
-    <div className="lb-stack">
+    <div className="lb-stack" data-photo-id={photo.id}>
       {distinct && (
         <img
-          className={`lb-thumb${full ? ' done' : ''}`}
+          className={`lb-thumb${fromGrid ? ' from-grid' : ''}${full ? ' done' : ''}`}
           src={thumb}
           alt=""
           aria-hidden="true"

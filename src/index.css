@@ -34,6 +34,8 @@
 
 html {
   scroll-behavior: smooth;
+  /* Reserve the scrollbar's space so a grid growing past the fold (or the lightbox locking scroll) never changes the width rows are laid out for. */
+  scrollbar-gutter: stable;
 }
 
 html,
@@ -354,39 +356,21 @@ main {
   transform: translateY(-0.35em);
 }
 
-/* ---------- Gallery (masonry via CSS columns) ---------- */
+/* ---------- Gallery (justified rows; boxes are positioned in Gallery.jsx) ---------- */
 .gallery {
-  column-count: 3;
-  column-gap: clamp(12px, 2vw, 26px);
-}
-
-@media (max-width: 1000px) {
-  .gallery {
-    column-count: 2;
-  }
-}
-
-@media (max-width: 560px) {
-  .gallery {
-    column-count: 1;
-  }
+  position: relative;
 }
 
 .thumb-skel {
-  width: 100%;
-  aspect-ratio: 3 / 2;
-  margin: 0 0 clamp(12px, 2vw, 26px);
-  break-inside: avoid;
+  position: absolute;
   background: color-mix(in srgb, currentColor 7%, transparent);
 }
 
 .thumb {
-  position: relative;
+  position: absolute;
   display: block;
-  width: 100%;
-  margin: 0 0 clamp(12px, 2vw, 26px);
+  margin: 0;
   padding: 0;
-  break-inside: avoid;
   overflow: hidden;
   background: #f3f3f1;
   /* scroll-reveal start state */
@@ -403,7 +387,8 @@ main {
 .thumb img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover; /* the box already has the frame's ratio; this only hides sub-pixel rounding */
   opacity: 0;
   transition: opacity 0.35s var(--ease), transform 0.7s var(--ease);
 }
@@ -613,6 +598,9 @@ main {
 .lb-figure img.lb-thumb {
   filter: blur(10px);
   transition: opacity 0.4s var(--ease);
+}
+.lb-figure img.lb-thumb.from-grid {
+  filter: none; /* the grid's own file: sharp enough to show as is */
 }
 .lb-figure img.lb-thumb.done {
   opacity: 0;
@@ -976,4 +964,21 @@ main {
 }
 .empty .back-link {
   margin-top: 1.4rem;
+}
+
+/* ---------- Thumbnail <-> lightbox morph (src/viewTransition.js) ---------- */
+::view-transition-group(photo) {
+  animation-duration: 0.25s;
+  animation-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
+  z-index: 200; /* above the lightbox backdrop in both directions */
+}
+::view-transition-old(photo),
+::view-transition-new(photo) {
+  animation-duration: 0.25s;
+  /* Same frame, same ratio: keep it one image instead of a crossfade of two. */
+  height: 100%;
+}
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 0.25s;
 }

@@ -9,6 +9,7 @@ import Lab from './lab/Lab.jsx'
 import NotFound from './components/NotFound.jsx'
 import { rollInfo, rollLine } from './rolls.js'
 import DateFilter from './components/DateFilter.jsx'
+import { openPhoto, closePhoto } from './viewTransition.js'
 import { dateFor, inRange, formatRange, formatHike, yearsFor, sortByDate } from './dates.js'
 
 /**
@@ -344,16 +345,21 @@ export default function App() {
     }
   }, [route.photo, activeIndex, basePath, view, ready, catalogs, catalogLite, catalogPhotos])
 
-  const open = useCallback(
-    (i) => writeHash(photoPath(shownItems[i].photo), 'push'),
-    [shownItems]
-  )
+  // Opening and closing morph between the grid thumbnail and the lightbox (see viewTransition.js).
+  const open = useCallback((i) => {
+    const p = shownItems[i].photo
+    openPhoto(p.id, () => writeHash(photoPath(p), 'push'))
+  }, [shownItems])
   const close = useCallback(() => {
     // Opened from this page: Back is the natural way out. Deep-linked in: no
     // entry to go back to, so replace instead of leaving the site.
-    if (window.history.state?.lb) window.history.back()
-    else writeHash(basePath, 'replace')
-  }, [basePath])
+    const leave = () => {
+      if (window.history.state?.lb) window.history.back()
+      else writeHash(basePath, 'replace')
+    }
+    if (route.photo) closePhoto(route.photo, leave)
+    else leave()
+  }, [basePath, route.photo])
   const step = useCallback(
     (delta) => {
       if (activeIndex < 0) return
