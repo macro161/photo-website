@@ -1,0 +1,26 @@
+.lm-page { max-width: var(--maxw); margin: 0 auto; padding: 1.5rem 1.25rem 2rem; }
+.lm-head h2 { font-family: var(--serif); font-weight: 400; margin: 0 0 .4rem; }
+.lm-head p { margin: 0 0 .75rem; color: var(--muted-strong); font-size: .9rem; }
+.lm-legend { list-style: none; display: flex; gap: 1rem; padding: 0; margin: 0 0 1rem; font-size: .85rem; }
+.lm-legend li { display: flex; align-items: center; gap: .4rem; }
+.lm-legend span { width: .8rem; height: .8rem; border-radius: 50%; display: inline-block; }
+.lm-map { height: min(70vh, 720px); min-height: 360px; border: 1px solid var(--line); background: #e8e6e0; z-index: 0; }
+.lm-icon { background: none; border: 0; }
+.lm-pin { display: block; width: 26px; height: 26px; border-radius: 50% 50% 50% 0; transform: rotate(-45deg); border: 2px solid #fff; box-shadow: 0 1px 4px rgba(0,0,0,.45); }
+.lm-pin i { position: absolute; left: 7px; top: 7px; width: 8px; height: 8px; border-radius: 50%; background: #fff; }
+.lm-dot { display: block; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #fff; box-shadow: 0 0 3px rgba(0,0,0,.5); opacity: .85; }
+.lm-map .leaflet-popup-content { font-family: var(--sans); margin: 12px 14px; }
+.lm-map .leaflet-popup-content h3 { font-family: var(--serif); font-weight: 500; font-size: 1.05rem; margin: .4rem 0 .2rem; }
+.lm-map .leaflet-popup-content p { margin: .1rem 0; font-size: .85rem; }
+.lm-cover { display: block; width: 100%; height: 130px; object-fit: cover; background: #ddd; }
+.lm-note { color: #777; font-size: .72rem !important; margin-top: .4rem !important; }
+.lm-link { display: inline-block; margin-top: .4rem; font-size: .85rem; }
+@media (max-width: 600px) { .lm-page { padding: 1rem .75rem; } .lm-map { height: 65vh; } }
+@media (prefers-color-scheme: dark) {
+  /* Dim and invert the light OSM tiles; markers and popups stay untouched. */
+  .lm-map .leaflet-tile-pane { filter: invert(1) hue-rotate(180deg) brightness(.85) contrast(.9) saturate(.7); }
+  .lm-map { background: #1d1f22; border-color: #333; }
+  .lm-map .leaflet-popup-content-wrapper, .lm-map .leaflet-popup-tip { background: #1c1c1c; color: #eee; }
+  .lm-map .leaflet-popup-content a { color: #9cc9ff; }
+  .lm-note { color: #999; }
+}

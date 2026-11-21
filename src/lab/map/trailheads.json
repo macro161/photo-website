@@ -1,0 +1,346 @@
+[
+ {
+  "n": 1,
+  "lat": 46.597,
+  "lng": 7.1,
+  "source": "Approximate position of Enney from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 2,
+  "lat": 31.14,
+  "lng": -7.925,
+  "source": "Approximate position of Aremd, Imlil valley from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 3,
+  "lat": 31.14,
+  "lng": -7.925,
+  "source": "Approximate position of Aremd, Imlil valley from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 4,
+  "lat": 46.3948,
+  "lng": 7.6217,
+  "source": "Approximate position of Gemmi Pass from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 5,
+  "lat": 46.4953,
+  "lng": 7.6747,
+  "source": "Approximate position of Kandersteg from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 6,
+  "lat": 46.304,
+  "lng": 7.475,
+  "source": "Approximate position of Crans-Montana from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 7,
+  "lat": 46.473,
+  "lng": 6.796,
+  "source": "Approximate position of St-Saphorin from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 8,
+  "lat": 46.261,
+  "lng": 7.1,
+  "source": "Approximate position of Solalex (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 9,
+  "lat": 46.488,
+  "lng": 6.926,
+  "source": "Approximate position of Les Avants (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 10,
+  "lat": 46.9395,
+  "lng": 6.726,
+  "source": "Approximate position of Noiraigue from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 11,
+  "lat": 46.195,
+  "lng": 7.725,
+  "source": "Approximate position of Gruben, Turtmanntal (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "very low",
+  "guessed": true
+ },
+ {
+  "n": 12,
+  "lat": 43.253,
+  "lng": -4.826,
+  "source": "Approximate position of Poncebos from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 13,
+  "lat": 45.957,
+  "lng": 7.206,
+  "source": "Approximate position of Bourg-St-Pierre from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 14,
+  "lat": 45.957,
+  "lng": 7.206,
+  "source": "Approximate position of Bourg-St-Pierre from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 15,
+  "lat": 48.475,
+  "lng": 8.165,
+  "source": "Approximate position of Oppenau area, Black Forest (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "very low",
+  "guessed": true
+ },
+ {
+  "n": 16,
+  "lat": 46.195,
+  "lng": 7.725,
+  "source": "Approximate position of Gruben, Turtmanntal (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "very low",
+  "guessed": true
+ },
+ {
+  "n": 17,
+  "lat": 45.999,
+  "lng": 7.364,
+  "source": "Approximate position of Mauvoisin dam from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 18,
+  "lat": 45.999,
+  "lng": 7.364,
+  "source": "Approximate position of Mauvoisin dam from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 19,
+  "lat": 46.318,
+  "lng": 6.849,
+  "source": "Approximate position of Miex from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 20,
+  "lat": 46.343,
+  "lng": 7.012,
+  "source": "Approximate position of Leysin (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 21,
+  "lat": 46.488,
+  "lng": 6.926,
+  "source": "Approximate position of Les Avants from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 22,
+  "lat": 46.186,
+  "lng": 6.867,
+  "source": "Approximate position of Champery/Planachaux (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 23,
+  "lat": 46.514,
+  "lng": 6.97,
+  "source": "Approximate position of Les Paccots from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 24,
+  "lat": 46.343,
+  "lng": 7.012,
+  "source": "Approximate position of Leysin (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 25,
+  "lat": 46.229,
+  "lng": 7.359,
+  "source": "Approximate position of Sion from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 26,
+  "lat": 46.977,
+  "lng": 8.342,
+  "source": "Approximate position of Stansstad from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 27,
+  "lat": null,
+  "lng": null,
+  "source": "no trail name or location unknown; not placed",
+  "confidence": "none",
+  "guessed": true
+ },
+ {
+  "n": 28,
+  "lat": 46.797,
+  "lng": 6.465,
+  "source": "Approximate position of Vuiteboeuf from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 29,
+  "lat": 46.458,
+  "lng": 6.938,
+  "source": "Approximate position of Haut-de-Caux (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 30,
+  "lat": 46.493,
+  "lng": 6.818,
+  "source": "Approximate position of Mont Pelerin from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 31,
+  "lat": 46.488,
+  "lng": 6.926,
+  "source": "Approximate position of Les Avants from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 32,
+  "lat": null,
+  "lng": null,
+  "source": "no trail name or location unknown; not placed",
+  "confidence": "none",
+  "guessed": true
+ },
+ {
+  "n": 33,
+  "lat": null,
+  "lng": null,
+  "source": "no trail name or location unknown; not placed",
+  "confidence": "none",
+  "guessed": true
+ },
+ {
+  "n": 34,
+  "lat": 46.257,
+  "lng": 7.904,
+  "source": "Approximate position of Visperterminen from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 35,
+  "lat": 46.172,
+  "lng": 7.183,
+  "source": "Approximate position of Saillon from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 36,
+  "lat": 46.339,
+  "lng": 6.843,
+  "source": "Approximate position of Lac de Tanay (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 37,
+  "lat": 46.983,
+  "lng": 6.8,
+  "source": "Approximate position of Chambrelien from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 38,
+  "lat": 46.686,
+  "lng": 6.373,
+  "source": "Approximate position of Vaulion from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 39,
+  "lat": 46.9395,
+  "lng": 6.726,
+  "source": "Approximate position of Noiraigue from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 40,
+  "lat": 46.392,
+  "lng": 7.105,
+  "source": "Approximate position of Col des Mosses (guess) from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 41,
+  "lat": 46.488,
+  "lng": 6.926,
+  "source": "Approximate position of Les Avants from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ },
+ {
+  "n": 42,
+  "lat": 46.481,
+  "lng": 6.781,
+  "source": "Approximate position of Chexbres from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "medium",
+  "guessed": true
+ },
+ {
+  "n": 43,
+  "lat": 46.11,
+  "lng": 7.301,
+  "source": "Approximate position of Siviez from general geographic knowledge; AllTrails MCP confirmed trail name/region only (it returns no lat/lng)",
+  "confidence": "low",
+  "guessed": true
+ }
+]
