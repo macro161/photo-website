@@ -1,0 +1,25 @@
+.elv-page{max-width:var(--maxw);margin:0 auto;padding:2rem 1rem 4rem}
+.elv-page h2{font-family:var(--serif);font-weight:400;margin:0 0 .4rem}
+.elv-intro{color:var(--muted-strong);font-size:.9rem;margin:0 0 2rem;max-width:60ch}
+.elv-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,520px),1fr));gap:1.5rem}
+.elv-card{border:1px solid var(--line);padding:1rem 1rem .75rem;min-height:250px}
+.elv-card h3{font-family:var(--serif);font-weight:400;font-size:1.15rem;margin:0}
+.elv-meta{display:flex;flex-wrap:wrap;gap:.25rem .9rem;font-size:.78rem;color:var(--muted-strong);margin:.25rem 0 .9rem;font-variant-numeric:tabular-nums}
+.elv-chart{position:relative;height:170px;margin:0 0 .3rem 0}
+.elv-svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.elv-area{fill:var(--line)}
+.elv-line{fill:none;stroke:var(--fg);stroke-width:1.5;vector-effect:non-scaling-stroke}
+.elv-base{stroke:var(--muted);stroke-width:1;vector-effect:non-scaling-stroke}
+.elv-stem{stroke:var(--muted);stroke-width:1;vector-effect:non-scaling-stroke;stroke-dasharray:2 3}
+.elv-stem.on{stroke:var(--fg);stroke-dasharray:none}
+.elv-frame{position:absolute;width:30px;height:24px;transform:translate(-50%,-50%);background:#121212;padding:3px 2px;border-radius:2px;display:block;transition:transform .2s var(--ease);z-index:1}
+.elv-frame::before,.elv-frame::after{content:"";position:absolute;left:1px;right:1px;height:2px;background:repeating-linear-gradient(90deg,#9a9a9a 0 2px,transparent 2px 4px)}
+.elv-frame::before{top:0}.elv-frame::after{bottom:0}
+.elv-frame img{display:block;width:100%;height:100%;object-fit:cover;background:#333}
+.elv-frame.on,.elv-frame:focus-visible{transform:translate(-50%,-50%) scale(1.5);z-index:3;outline:2px solid var(--fg);outline-offset:1px}
+.elv-axis{display:flex;justify-content:space-between;font-size:.7rem;color:var(--muted);font-variant-numeric:tabular-nums}
+.elv-ylab{position:absolute;left:0;top:-2px;font-size:.68rem;color:var(--muted);pointer-events:none}
+.elv-foot{display:flex;flex-wrap:wrap;gap:.2rem .8rem;font-size:.68rem;color:var(--muted);margin-top:.4rem}
+.elv-preview{position:absolute;top:-6px;width:96px;background:#121212;padding:3px;z-index:4;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
+.elv-preview img{display:block;width:100%;height:auto}
+@media (prefers-reduced-motion:reduce){.elv-frame{transition:none}}
