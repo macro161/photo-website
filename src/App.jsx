@@ -7,7 +7,7 @@ import Gallery from './components/Gallery.jsx'
 import Lightbox from './components/Lightbox.jsx'
 import Lab from './lab/Lab.jsx'
 import DateFilter from './components/DateFilter.jsx'
-import { dateFor, inRange, formatRange, formatHike } from './dates.js'
+import { dateFor, inRange, formatRange, formatHike, yearsFor, sortByDate } from './dates.js'
 
 /**
  * Routing lives in the URL hash so catalogs are linkable and the browser's
@@ -117,6 +117,24 @@ export default function App() {
     window.addEventListener('hashchange', onHash)
     return () => window.removeEventListener('hashchange', onHash)
   }, [])
+  const [sortDir, setSortDir] = useState(() => {
+    try {
+      return window.localStorage.getItem('sortDir') === 'oldest' ? 'oldest' : 'newest'
+    } catch {
+      return 'newest'
+    }
+  })
+  const toggleSort = useCallback(() => {
+    setSortDir((d) => {
+      const next = d === 'oldest' ? 'newest' : 'oldest'
+      try {
+        window.localStorage.setItem('sortDir', next)
+      } catch {
+        /* storage unavailable: the choice just won't persist */
+      }
+      return next
+    })
+  }, [])
   const changeRange = useCallback((next) => {
     setRange(next)
     const q = new URLSearchParams()
@@ -139,11 +157,11 @@ export default function App() {
 
   const filtering = Boolean(range.from || range.to)
   const matches = (entry) => inRange(entry, range.from, range.to)
-  const visibleCatalogs = catalogs.filter((c) => matches(c.date))
+  const visibleCatalogs = sortByDate(catalogs.filter((c) => matches(c.date)), sortDir)
   const catalog = catalogs.find((c) => c.slug === route.catalog) || null
   const album = catalog?.albums.find((a) => a.slug === route.album) || null
   // Undated albums are hidden while a filter is active (and the filter says so).
-  const shownAlbums = catalog ? catalog.albums.filter((a) => matches(a.date)) : []
+  const shownAlbums = catalog ? sortByDate(catalog.albums.filter((a) => matches(a.date)), sortDir) : []
   const hiddenUndatedAlbums = catalog ? catalog.albums.filter((a) => !a.date).length : 0
   const showLoose = !catalog || catalog.albums.length === 0 || matches(catalog.date)
 
@@ -290,13 +308,16 @@ export default function App() {
                 <span className="section-count">{catalog.count}</span>
               </h2>
               <DateLine entry={catalog.date} />
-              {catalog.albums.length > 0 && (
+              {(catalog.albums.length > 1 || (filtering && catalog.albums.length > 0)) && (
                 <DateFilter
                   value={range}
                   onChange={changeRange}
+                  years={yearsFor(catalog.albums.map((a) => a.date))}
                   shown={shownAlbums.length}
                   total={catalog.albums.length}
                   hiddenUndated={hiddenUndatedAlbums}
+                  sort={sortDir}
+                  onSort={toggleSort}
                 />
               )}
               {/* Only label the groups when both are present; a catalog
@@ -329,14 +350,17 @@ export default function App() {
               <DateFilter
                 value={range}
                 onChange={changeRange}
+                years={yearsFor(catalogs.map((c) => c.date))}
                 shown={visibleCatalogs.length}
                 total={catalogs.length}
                 hiddenUndated={catalogs.filter((c) => !c.date).length}
+                sort={sortDir}
+                onSort={toggleSort}
               />
               {visibleCatalogs.length > 0 ? (
                 <CatalogIndex catalogs={visibleCatalogs} onOpen={(slug) => go(`/c/${slug}`)} />
               ) : (
-                <p className="df-empty">No catalogs in this date range.</p>
+                <p className="df-empty">No catalogs in this date range. Use the Dates menu to change or clear it.</p>
               )}
             </>
           )}

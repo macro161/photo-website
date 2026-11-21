@@ -751,7 +751,7 @@ main {
   }
 }
 
-/* ---------- Dates and date-range filter ---------- */
+/* ---------- Dates, sort and the collapsed date filter ---------- */
 .catalog-sub {
   display: flex;
   align-items: baseline;
@@ -783,14 +783,62 @@ main {
   letter-spacing: 0.06em;
 }
 
-.date-filter {
+.toolbar {
+  margin: 0 0 clamp(1.2rem, 3vw, 2rem);
+}
+
+.tb-row {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+.tb-spacer {
+  flex: 1;
+}
+
+.tb-btn,
+.tb-chip,
+.df-link {
+  padding: 0.2rem 0;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted-strong);
+  transition: color 0.3s var(--ease);
+}
+
+.tb-btn:hover,
+.tb-btn:focus-visible,
+.tb-btn.on,
+.tb-chip:hover,
+.tb-chip:focus-visible,
+.df-link:hover,
+.df-link:focus-visible {
+  color: var(--fg);
+}
+
+.tb-chip {
+  padding: 0.2rem 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--fg);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+
+.tb-caret {
+  font-size: 0.6rem;
+}
+
+.tb-panel {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-end;
   gap: 0.9rem 1.6rem;
-  margin: 0 0 clamp(1.4rem, 3vw, 2.2rem);
-  padding-bottom: 1rem;
-  border-bottom: 1px solid var(--line);
+  margin-top: 0.9rem;
+  padding: 1rem 0 0.2rem;
+  border-top: 1px solid var(--line);
 }
 
 .df-fields {
@@ -799,12 +847,12 @@ main {
   gap: 0.9rem 1.2rem;
 }
 
-.date-filter label {
+.tb-panel label {
   display: grid;
   gap: 0.3rem;
 }
 
-.date-filter label span {
+.tb-panel label span {
   font-size: 0.62rem;
   font-weight: 500;
   letter-spacing: 0.18em;
@@ -812,7 +860,7 @@ main {
   color: var(--muted);
 }
 
-.date-filter input[type='date'] {
+.tb-panel input[type='date'] {
   font: inherit;
   font-size: 0.85rem;
   padding: 0.4rem 0.55rem;
@@ -850,16 +898,20 @@ main {
   border-color: var(--fg);
 }
 
-.df-presets .df-clear {
-  border-style: dashed;
-}
-
 .df-status,
 .df-empty {
   flex-basis: 100%;
   margin: 0;
   font-size: 0.78rem;
   color: var(--muted-strong);
+}
+
+.df-link {
+  font-size: 0.72rem;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  letter-spacing: 0.08em;
+  text-transform: none;
 }
 
 .df-empty {

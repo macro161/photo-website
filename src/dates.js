@@ -62,12 +62,26 @@ export function inRange(entry, from, to) {
   return true
 }
 
-/** Years that have at least one dated entry, newest first (for presets). */
-export function yearsWithDates() {
+/** Years covered by the given entries, newest first (for the year shortcuts). */
+export function yearsFor(entries) {
   const years = new Set()
-  for (const e of Object.values(DATES)) {
+  for (const e of entries) {
     if (!e || !e.start) continue
     for (let y = +e.start.slice(0, 4); y <= +(e.end || e.start).slice(0, 4); y++) years.add(y)
   }
   return [...years].sort((a, b) => b - a)
+}
+
+/** Sort entries (anything with a `date`) by date; undated entries always go last. */
+export function sortByDate(list, dir) {
+  const key = (x) => x.date && x.date.start
+  return [...list].sort((a, b) => {
+    if (!key(a) || !key(b)) return key(a) ? -1 : key(b) ? 1 : 0
+    if (dir === 'oldest') {
+      return a.date.start < b.date.start ? -1 : a.date.start > b.date.start ? 1 : (a.date.end || a.date.start) < (b.date.end || b.date.start) ? -1 : 1
+    }
+    const ea = a.date.end || a.date.start
+    const eb = b.date.end || b.date.start
+    return ea < eb ? 1 : ea > eb ? -1 : a.date.start < b.date.start ? 1 : -1
+  })
 }
