@@ -9,6 +9,7 @@
  * through never lands on an empty frame.
  */
 import { useEffect, useRef, useState } from 'react'
+import { rollInfo, rollLine } from '../rolls.js'
 import { imageUrl, hasVariants, srcSet, variantUrl, widthAtMost, supportsAvif } from '../imageUrl.js'
 
 const MAX_SCALE = 5
@@ -30,6 +31,7 @@ function usePreload(photos) {
         .map((p) => {
           const img = new Image()
           img.decoding = 'async'
+          img.fetchPriority = 'low' // neighbours must not compete with the photo being shown
           if (hasVariants(p)) {
             // Same candidates and `sizes` as the displayed <picture>, so this warms the right file.
             img.sizes = '100vw'
@@ -358,6 +360,8 @@ export default function Lightbox({
   }
 
   const date = photo.date
+  const roll = rollInfo(photo.catalogSlug, photo.albumSlug, photo.id)
+  const rollText = rollLine(roll)
 
   return (
     <div
@@ -406,7 +410,7 @@ export default function Lightbox({
         <div className="lb-zoom" ref={zoomRef}>
           <LightboxImage key={photo.id} photo={photo} />
         </div>
-        {(photo.description || date) && (
+        {(photo.description || date || rollText || roll.notes) && (
           <figcaption className="lb-meta" key={photo.id}>
             {photo.description && <h2>{photo.description}</h2>}
             {date && (
@@ -414,6 +418,8 @@ export default function Lightbox({
                 <span>{date}</span>
               </div>
             )}
+            {rollText && <div className="lb-details lb-roll"><span>{rollText}</span></div>}
+            {roll.notes && <p className="lb-notes">{roll.notes}</p>}
           </figcaption>
         )}
       </figure>

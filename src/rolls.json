@@ -1,0 +1,11 @@
+{
+  "_readme": "Optional film roll info, shown quietly in the lightbox and album headers. Keys are 'catalogSlug', 'catalogSlug/albumSlug' or a photo id; more specific keys override less specific ones. All fields are optional: film, camera, lens, iso, lab, notes. Keys starting with '_' are ignored. See README.md ('Film roll info').",
+  "_example-catalog/example-album": {
+    "film": "Kodak Portra 400",
+    "camera": "Nikon FM2",
+    "lens": "50mm f/1.8",
+    "iso": 400,
+    "lab": "Home scan, Epson V600",
+    "notes": "Example entry (ignored because of the underscore). Copy it, rename the key to a real slug, and fill what you know."
+  }
+}

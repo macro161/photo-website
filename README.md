@@ -83,3 +83,14 @@ hides it.
 
 First-time setup (R2 buckets, rclone credentials, custom domain) and hosting
 are in **[DEPLOY.md](DEPLOY.md)**.
+
+## Film roll info
+
+`src/rolls.json` holds optional roll details (all fields optional): `film`, `camera`, `lens`, `iso`, `lab`, `notes`.
+Keys are a catalog slug (`swiss`), `catalogSlug/albumSlug` (`swiss/barrhorn`) or a photo id; more specific
+keys override less specific ones. Whatever is filled in shows quietly in the album header and in the lightbox;
+with no entry nothing is shown. Keys starting with `_` are ignored (the shipped example uses one).
+
+```json
+"swiss/barrhorn": { "film": "Kodak Portra 400", "camera": "Nikon FM2", "iso": 400 }
+```

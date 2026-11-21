@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useMemo } from 'react'
+import { useState, useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import catalogIndex from './generated/index.json'
 import config from '../site.config.json'
 import { buildCatalogsFromIndex, withPhotos } from './catalogs.js'
@@ -6,6 +6,8 @@ import CatalogIndex from './components/CatalogIndex.jsx'
 import Gallery, { GallerySkeleton } from './components/Gallery.jsx'
 import Lightbox from './components/Lightbox.jsx'
 import Lab from './lab/Lab.jsx'
+import NotFound from './components/NotFound.jsx'
+import { rollInfo, rollLine } from './rolls.js'
 import DateFilter from './components/DateFilter.jsx'
 import { dateFor, inRange, formatRange, formatHike, yearsFor, sortByDate } from './dates.js'
 
@@ -53,8 +55,27 @@ function parseHash(hash) {
       photo,
     }
   }
+  if (parts.length) return { view: 'notfound', catalog: null, album: null, photo: null }
   return { view: 'catalogs', catalog: null, album: null, photo: null }
 }
+
+/** Identifies the page on screen (the lightbox is not a page). Unknown album/catalog pages share the not-found key. */
+function pageKeyOf(r) {
+  return `${r.view}:${r.catalog ?? ''}:${r.album ?? ''}`
+}
+
+// Scroll memory. This listener is registered at import time, i.e. before React's own hashchange listener,
+// so it still sees the page being left (React may re-render between two listeners of one event).
+const scroll = { key: pageKeyOf(parseHash(window.location.hash)), saved: new Map(), pending: 0 }
+if ('scrollRestoration' in window.history) window.history.scrollRestoration = 'manual'
+window.addEventListener('hashchange', () => {
+  const nextKey = pageKeyOf(parseHash(window.location.hash))
+  if (nextKey === scroll.key) return
+  scroll.saved.set(scroll.key, window.scrollY)
+  scroll.key = nextKey
+  scroll.pending = forceTop ? 0 : scroll.saved.get(nextKey) || 0
+  forceTop = false
+})
 
 function useHashRoute() {
   const [route, setRoute] = useState(() => parseHash(window.location.hash))
@@ -66,7 +87,15 @@ function useHashRoute() {
   return route
 }
 
+// Forward navigation starts at the top of the page; going back (browser Back or a back link) restores
+// where you were. `forceTop` is read once per page change by the scroll handling in App.
+let forceTop = false
 const go = (path) => {
+  forceTop = true
+  window.location.hash = path
+}
+const goBack = (path) => {
+  forceTop = false
   window.location.hash = path
 }
 
@@ -116,19 +145,42 @@ function loadCatalogPhotos(slug) {
 
 /** The photos of one catalog, or null while they load (or when no catalog is open). */
 function useCatalogPhotos(slug) {
-  const [state, setState] = useState({ slug: null, photos: null })
+  const [state, setState] = useState({ slug: null, photos: null, failed: false })
+  const [attempt, setAttempt] = useState(0)
   useEffect(() => {
     if (!slug) return
     let live = true
+    setState((s) => (s.failed ? { slug, photos: null, failed: false } : s))
     loadCatalogPhotos(slug).then(
-      (photos) => live && setState({ slug, photos }),
-      () => live && setState({ slug, photos: [] })
+      (photos) => live && setState({ slug, photos, failed: false }),
+      () => live && setState({ slug, photos: null, failed: true })
     )
     return () => {
       live = false
     }
-  }, [slug])
-  return (slug && photoDone.get(slug)) || (state.slug === slug ? state.photos : null)
+  }, [slug, attempt])
+  const retry = useCallback(() => setAttempt((n) => n + 1), [])
+  const photos = (slug && photoDone.get(slug)) || (state.slug === slug ? state.photos : null)
+  return { photos, failed: Boolean(slug) && !photos && state.slug === slug && state.failed, retry }
+}
+
+/** Opens a random photo from the whole site: a catalog weighted by photo count, then one of its photos. */
+async function shuffle() {
+  const total = catalogIndex.reduce((n, c) => n + c.count, 0)
+  if (!total) return
+  let r = Math.random() * total
+  const cat = catalogIndex.find((c) => (r -= c.count) < 0) || catalogIndex[catalogIndex.length - 1]
+  try {
+    const list = await loadCatalogPhotos(cat.slug)
+    if (list.length) writeHash(photoPath(list[Math.floor(Math.random() * list.length)]), 'push')
+  } catch {
+    /* offline or rate-limited: the button simply does nothing */
+  }
+}
+
+function RollLine({ info }) {
+  const text = rollLine(info)
+  return text ? <p className="roll-line">{text}</p> : null
 }
 
 function DateLine({ entry }) {
@@ -208,7 +260,8 @@ export default function App() {
   const needsPhotos = Boolean(
     catalogLite && (route.album || route.photo || catalogLite.looseCount > 0)
   )
-  const catalogPhotos = useCatalogPhotos(needsPhotos ? catalogLite.slug : null)
+  const { photos: catalogPhotos, failed: loadFailed, retry } = useCatalogPhotos(needsPhotos ? catalogLite.slug : null)
+  const [notice, setNotice] = useState('')
   const catalog = useMemo(
     () => (catalogLite && catalogPhotos ? withPhotos(catalogLite, catalogPhotos) : catalogLite),
     [catalogLite, catalogPhotos]
@@ -223,12 +276,15 @@ export default function App() {
 
   // An unknown slug falls back to the nearest real page rather than a blank one.
   let view = route.view
-  if (view === 'album' && !album) view = catalog ? 'catalog' : 'catalogs'
-  if (view === 'catalog' && !catalog) view = 'catalogs'
+  // Unknown catalogs/albums get a real "not found" page; wait for the photos before judging an album.
+  if ((view === 'catalog' || view === 'album') && !catalogLite) view = 'notfound'
+  if (view === 'album' && !album) view = 'notfound'
+  if (view === 'album' && loadFailed) view = 'loadfailed'
 
   // Whichever grid is on screen is what the lightbox pages through.
   const shownItems =
     view === 'album' ? album.items : view === 'catalog' ? catalog.items : []
+  const pageKey = pageKeyOf(route)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8)
@@ -236,9 +292,23 @@ export default function App() {
     return () => window.removeEventListener('scroll', onScroll)
   }, [])
 
-  useEffect(() => {
-    window.scrollTo(0, 0)
-  }, [route.view, route.catalog, route.album])
+  // Scroll: remember each page's position and restore it when coming back (once its content has rendered).
+  useEffect(() => setNotice(''), [pageKey])
+  useLayoutEffect(() => {
+    const target = scroll.pending
+    if (!target) {
+      window.scrollTo(0, 0)
+      return
+    }
+    if (!ready) return // restore once the photos (and the real grid height) are in
+    scroll.pending = 0
+    let tries = 0
+    const attempt = () => {
+      window.scrollTo(0, target)
+      if (Math.abs(window.scrollY - target) > 2 && tries++ < 30) requestAnimationFrame(attempt)
+    }
+    attempt()
+  }, [pageKey, ready])
 
   // The lightbox is driven by the URL: the open photo is whatever the hash names.
   const total = shownItems.length
@@ -263,7 +333,9 @@ export default function App() {
     let live = true
     const own = catalogPhotos?.find((p) => p.id === route.photo)
     const done = (found) => {
-      if (live) writeHash(found && view !== 'about' ? photoPath(found) : basePath, 'replace')
+      if (!live) return
+      if (!found) setNotice("That photo couldn't be found, so here's the album instead.")
+      writeHash(found && view !== 'about' ? photoPath(found) : basePath, 'replace')
     }
     if (own || !owner) done(own)
     else loadCatalogPhotos(owner.slug).then((list) => done(list.find((p) => p.id === route.photo)), () => done(null))
@@ -317,16 +389,37 @@ export default function App() {
           >
             About
           </button>
+          <button onClick={shuffle} title="Open a random photo" aria-label="Open a random photo">
+            Shuffle
+          </button>
         </nav>
       </header>
 
       <main>
         <div
           className="view"
-          key={`${view}:${route.catalog ?? ''}:${route.album ?? ''}`}
+          key={pageKey}
         >
           {view === 'lab' ? (
             <Lab slug={route.labSlug} />
+          ) : view === 'notfound' ? (
+            <NotFound
+              message={
+                route.view === 'album' && catalogLite
+                  ? "That album doesn't exist (it may have been renamed)."
+                  : undefined
+              }
+              onHome={() => go('/')}
+              onBack={route.view === 'album' && catalogLite ? () => go(`/c/${catalogLite.slug}`) : undefined}
+              backLabel={route.view === 'album' && catalogLite ? `← ${catalogLite.name}` : undefined}
+            />
+          ) : view === 'loadfailed' ? (
+            <NotFound
+              title="Couldn't load these photos"
+              message="The photos didn't come through. Check your connection and try again."
+              onRetry={retry}
+              onHome={() => go('/')}
+            />
           ) : view === 'about' ? (
             <section className="about">
               <p className="about-text">{config.about}</p>
@@ -355,7 +448,7 @@ export default function App() {
             <section className="catalog-view">
               <button
                 className="back-link"
-                onClick={() => go(`/c/${catalog.slug}`)}
+                onClick={() => goBack(`/c/${catalog.slug}`)}
               >
                 ← {catalog.name}
               </button>
@@ -364,6 +457,8 @@ export default function App() {
                 <span className="section-count">{album.count}</span>
               </h2>
               <DateLine entry={album.date} />
+              <RollLine info={rollInfo(catalog.slug, album.slug)} />
+              {notice && <p className="notice">{notice}</p>}
               {ready ? (
                 <Gallery items={album.items} onOpen={open} />
               ) : (
@@ -372,7 +467,7 @@ export default function App() {
             </section>
           ) : view === 'catalog' ? (
             <section className="catalog-view">
-              <button className="back-link" onClick={() => go('/')}>
+              <button className="back-link" onClick={() => goBack('/')}>
                 ← All catalogs
               </button>
               <h2 className="section-title">
@@ -380,6 +475,8 @@ export default function App() {
                 <span className="section-count">{catalog.count}</span>
               </h2>
               <DateLine entry={catalog.date} />
+              <RollLine info={rollInfo(catalog.slug)} />
+              {notice && <p className="notice">{notice}</p>}
               {(catalog.albums.length > 1 || (filtering && catalog.albums.length > 0)) && (
                 <DateFilter
                   value={range}
@@ -413,7 +510,14 @@ export default function App() {
                   {shownAlbums.length > 0 && (
                     <h3 className="group-label">Photos</h3>
                   )}
-                  {ready ? (
+                  {loadFailed ? (
+                    <NotFound
+                      title="Couldn't load these photos"
+                      message="The photos didn't come through. Check your connection and try again."
+                      onRetry={retry}
+                      onHome={() => go('/')}
+                    />
+                  ) : ready ? (
                     <Gallery items={catalog.items} onOpen={open} />
                   ) : (
                     <GallerySkeleton count={catalog.looseCount} />
