@@ -1,9 +1,9 @@
 import { useState, useCallback, useEffect, useMemo } from 'react'
-import photos from './generated/manifest.json'
+import catalogIndex from './generated/index.json'
 import config from '../site.config.json'
-import { buildCatalogs } from './catalogs.js'
+import { buildCatalogsFromIndex, withPhotos } from './catalogs.js'
 import CatalogIndex from './components/CatalogIndex.jsx'
-import Gallery from './components/Gallery.jsx'
+import Gallery, { GallerySkeleton } from './components/Gallery.jsx'
 import Lightbox from './components/Lightbox.jsx'
 import Lab from './lab/Lab.jsx'
 import DateFilter from './components/DateFilter.jsx'
@@ -85,6 +85,52 @@ function writeHash(path, mode) {
 const photoPath = (p) =>
   `/c/${p.catalogSlug}${p.albumSlug ? `/${p.albumSlug}` : ''}/p/${p.id}`
 
+/**
+ * Each catalog's photos live in their own file (scripts/index.mjs) and are fetched when that catalog is
+ * opened. The main bundle only carries the small index: catalogs, albums, counts and covers.
+ */
+const photoLoaders = import.meta.glob('./generated/catalogs/*.json', { import: 'default' })
+const photoCache = new Map()
+const photoDone = new Map() // resolved lists, so a revisited catalog renders without a loading frame
+function loadCatalogPhotos(slug) {
+  if (!photoCache.has(slug)) {
+    const load = photoLoaders[`./generated/catalogs/${slug}.json`]
+    photoCache.set(
+      slug,
+      load
+        ? load().then(
+            (list) => {
+              photoDone.set(slug, list)
+              return list
+            },
+            (err) => {
+              photoCache.delete(slug) // allow a retry on the next visit
+              throw err
+            }
+          )
+        : Promise.resolve([])
+    )
+  }
+  return photoCache.get(slug)
+}
+
+/** The photos of one catalog, or null while they load (or when no catalog is open). */
+function useCatalogPhotos(slug) {
+  const [state, setState] = useState({ slug: null, photos: null })
+  useEffect(() => {
+    if (!slug) return
+    let live = true
+    loadCatalogPhotos(slug).then(
+      (photos) => live && setState({ slug, photos }),
+      () => live && setState({ slug, photos: [] })
+    )
+    return () => {
+      live = false
+    }
+  }, [slug])
+  return (slug && photoDone.get(slug)) || (state.slug === slug ? state.photos : null)
+}
+
 function DateLine({ entry }) {
   if (!entry) return null
   const hike = formatHike(entry)
@@ -147,9 +193,8 @@ export default function App() {
 
   const catalogs = useMemo(
     () =>
-      buildCatalogs(photos, {
+      buildCatalogsFromIndex(catalogIndex, {
         order: config.gallery?.catalogOrder,
-        covers: config.gallery?.covers,
         dateFor,
       }),
     []
@@ -158,7 +203,18 @@ export default function App() {
   const filtering = Boolean(range.from || range.to)
   const matches = (entry) => inRange(entry, range.from, range.to)
   const visibleCatalogs = sortByDate(catalogs.filter((c) => matches(c.date)), sortDir)
-  const catalog = catalogs.find((c) => c.slug === route.catalog) || null
+  const catalogLite = catalogs.find((c) => c.slug === route.catalog) || null
+  // The index alone draws the home page and a catalog's album cards; photos are fetched only when a grid or lightbox needs them.
+  const needsPhotos = Boolean(
+    catalogLite && (route.album || route.photo || catalogLite.looseCount > 0)
+  )
+  const catalogPhotos = useCatalogPhotos(needsPhotos ? catalogLite.slug : null)
+  const catalog = useMemo(
+    () => (catalogLite && catalogPhotos ? withPhotos(catalogLite, catalogPhotos) : catalogLite),
+    [catalogLite, catalogPhotos]
+  )
+  // True once whatever the current page needs is in hand (the index alone is enough for the home page).
+  const ready = !needsPhotos || catalogPhotos !== null
   const album = catalog?.albums.find((a) => a.slug === route.album) || null
   // Undated albums are hidden while a filter is active (and the filter says so).
   const shownAlbums = catalog ? sortByDate(catalog.albums.filter((a) => matches(a.date)), sortDir) : []
@@ -199,10 +255,22 @@ export default function App() {
   // A photo id that is not on this page: if it exists elsewhere, go to its
   // real home, otherwise drop it and show the page underneath.
   useEffect(() => {
-    if (!route.photo || activeIndex >= 0) return
-    const found = photos.find((p) => p.id === route.photo)
-    writeHash(found && view !== 'about' ? photoPath(found) : basePath, 'replace')
-  }, [route.photo, activeIndex, basePath, view])
+    if (!route.photo || activeIndex >= 0 || !ready) return
+    // Photo ids start with their catalog's slug, so an old link with the wrong catalog can still be found.
+    const owner = catalogs
+      .filter((c) => route.photo.startsWith(`${c.slug}-`) && c.slug !== catalogLite?.slug)
+      .sort((a, b) => b.slug.length - a.slug.length)[0]
+    let live = true
+    const own = catalogPhotos?.find((p) => p.id === route.photo)
+    const done = (found) => {
+      if (live) writeHash(found && view !== 'about' ? photoPath(found) : basePath, 'replace')
+    }
+    if (own || !owner) done(own)
+    else loadCatalogPhotos(owner.slug).then((list) => done(list.find((p) => p.id === route.photo)), () => done(null))
+    return () => {
+      live = false
+    }
+  }, [route.photo, activeIndex, basePath, view, ready, catalogs, catalogLite, catalogPhotos])
 
   const open = useCallback(
     (i) => writeHash(photoPath(shownItems[i].photo), 'push'),
@@ -274,7 +342,7 @@ export default function App() {
                 </ul>
               )}
             </section>
-          ) : photos.length === 0 ? (
+          ) : catalogIndex.length === 0 ? (
             <section className="empty">
               <h2>No photos yet</h2>
               <p>
@@ -296,7 +364,11 @@ export default function App() {
                 <span className="section-count">{album.count}</span>
               </h2>
               <DateLine entry={album.date} />
-              <Gallery items={album.items} onOpen={open} />
+              {ready ? (
+                <Gallery items={album.items} onOpen={open} />
+              ) : (
+                <GallerySkeleton count={album.count} />
+              )}
             </section>
           ) : view === 'catalog' ? (
             <section className="catalog-view">
@@ -324,7 +396,7 @@ export default function App() {
                   that is all albums or all photos needs no explaining. */}
               {shownAlbums.length > 0 && (
                 <>
-                  {showLoose && catalog.items.length > 0 && (
+                  {showLoose && catalog.looseCount > 0 && (
                     <h3 className="group-label">Albums</h3>
                   )}
                   <CatalogIndex
@@ -336,12 +408,16 @@ export default function App() {
               {filtering && catalog.albums.length > 0 && shownAlbums.length === 0 && !showLoose && (
                 <p className="df-empty">No albums in this date range.</p>
               )}
-              {showLoose && catalog.items.length > 0 && (
+              {showLoose && catalog.looseCount > 0 && (
                 <>
                   {shownAlbums.length > 0 && (
                     <h3 className="group-label">Photos</h3>
                   )}
-                  <Gallery items={catalog.items} onOpen={open} />
+                  {ready ? (
+                    <Gallery items={catalog.items} onOpen={open} />
+                  ) : (
+                    <GallerySkeleton count={catalog.looseCount} />
+                  )}
                 </>
               )}
             </section>

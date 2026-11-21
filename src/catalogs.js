@@ -72,6 +72,59 @@ export function buildCatalogs(photos, { order = [], covers = {}, dateFor = () =>
   return catalogs
 }
 
+/**
+ * The same catalogs, built from the small generated index (scripts/index.mjs) instead of every photo.
+ * Counts, covers and ordering are all there; `items` stay empty until the catalog's photos are loaded
+ * and passed through withPhotos().
+ */
+export function buildCatalogsFromIndex(index, { order = [], dateFor = () => null } = {}) {
+  const catalogs = index.map((c) => {
+    const albums = c.albums.map((a) => ({
+      name: a.name,
+      slug: a.slug,
+      items: [],
+      cover: a.cover,
+      count: a.count,
+      label: photoLabel(a.count),
+      newest: a.newest,
+      date: dateFor(c.slug, a.slug),
+    }))
+    sortByOrder(albums, order)
+    return {
+      name: c.name,
+      slug: c.slug,
+      albums,
+      items: [],
+      looseCount: c.looseCount,
+      cover: c.cover,
+      count: c.count,
+      label: catalogLabel(albums.length, c.looseCount, c.count),
+      newest: c.newest,
+      date: dateFor(c.slug, null),
+    }
+  })
+  sortByOrder(catalogs, order)
+  return catalogs
+}
+
+/** Fills a catalog from the index with its photos (the per-catalog file), keeping everything else. */
+export function withPhotos(catalog, photos) {
+  const byAlbum = new Map()
+  const loose = []
+  for (const p of photos) {
+    if (!p.albumSlug) loose.push(p)
+    else {
+      if (!byAlbum.has(p.albumSlug)) byAlbum.set(p.albumSlug, [])
+      byAlbum.get(p.albumSlug).push(p)
+    }
+  }
+  return {
+    ...catalog,
+    items: withIndices(loose),
+    albums: catalog.albums.map((a) => ({ ...a, items: withIndices(byAlbum.get(a.slug) || []) })),
+  }
+}
+
 /** Indices are local to the grid being shown; the lightbox pages within it. */
 function withIndices(list) {
   return list.map((photo, index) => ({ photo, index }))

@@ -42,6 +42,10 @@ const ROOT = path.resolve(__dirname, '..')
 const MANIFEST_PATH = path.join(ROOT, 'src', 'generated', 'manifest.json')
 // Written by scripts/optimize.mjs: which web-sized widths exist per photo, plus an average colour.
 const VARIANTS_PATH = path.join(ROOT, 'src', 'generated', 'variants.json')
+// What the browser actually loads: a small index (catalogs, albums, counts, covers) in the main bundle,
+// plus one file per catalog holding that catalog's photos, fetched on demand.
+const INDEX_PATH = path.join(ROOT, 'src', 'generated', 'index.json')
+const CATALOGS_DIR = path.join(ROOT, 'src', 'generated', 'catalogs')
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif'])
 
@@ -149,8 +153,103 @@ async function measure(buf) {
   }
 }
 
+/** A photo as shipped to the browser: no bucket bookkeeping, no null fields. */
+function slimPhoto(p) {
+  const out = {
+    id: p.id,
+    src: p.src,
+    width: p.width,
+    height: p.height,
+    catalog: p.catalog,
+    catalogSlug: p.catalogSlug,
+    album: p.album,
+    albumSlug: p.albumSlug,
+    file: p.file,
+  }
+  if (p.description) out.description = p.description
+  if (p.date) out.date = p.date
+  if (p.w) {
+    out.w = p.w
+    out.c = p.c
+  } else {
+    out.thumb = p.thumb
+  }
+  return out
+}
+
+function pickCover(list, covers, keys) {
+  for (const key of keys) {
+    const wanted = covers[key]
+    if (!wanted) continue
+    const match = list.find((p) => p.file.split('/').pop() === wanted)
+    if (match) return match
+  }
+  return list[0]
+}
+
+/** Writes src/generated/index.json and src/generated/catalogs/<slug>.json from the full manifest. */
+async function writeSplit(manifest, config) {
+  const covers = config.gallery?.covers || {}
+  const groups = new Map()
+  for (const p of manifest) {
+    if (!groups.has(p.catalog)) groups.set(p.catalog, [])
+    groups.get(p.catalog).push(p)
+  }
+  const newestOf = (list) => Math.max(...list.map((p) => dateValue(p.date)))
+
+  await fs.rm(CATALOGS_DIR, { recursive: true, force: true })
+  await fs.mkdir(CATALOGS_DIR, { recursive: true })
+
+  const catalogs = []
+  for (const [name, list] of groups) {
+    const slug = list[0].catalogSlug
+    const albumNames = []
+    const byAlbum = new Map()
+    let looseCount = 0
+    for (const p of list) {
+      if (!p.album) {
+        looseCount++
+        continue
+      }
+      if (!byAlbum.has(p.album)) {
+        byAlbum.set(p.album, [])
+        albumNames.push(p.album)
+      }
+      byAlbum.get(p.album).push(p)
+    }
+    catalogs.push({
+      name,
+      slug,
+      count: list.length,
+      looseCount,
+      newest: newestOf(list),
+      cover: slimPhoto(pickCover(list, covers, [name])),
+      albums: albumNames.map((albumName) => {
+        const items = byAlbum.get(albumName)
+        return {
+          name: albumName,
+          slug: items[0].albumSlug,
+          count: items.length,
+          newest: newestOf(items),
+          cover: slimPhoto(pickCover(items, covers, [`${name}/${albumName}`, albumName])),
+        }
+      }),
+    })
+    await fs.writeFile(path.join(CATALOGS_DIR, `${slug}.json`), JSON.stringify(list.map(slimPhoto)))
+  }
+  await fs.writeFile(INDEX_PATH, JSON.stringify(catalogs))
+  return catalogs.length
+}
+
 async function main() {
   const config = await loadConfig()
+  if (process.argv.includes('--split-only')) {
+    // Rebuild the split files from the existing manifest without listing the bucket.
+    const manifest = JSON.parse(await fs.readFile(MANIFEST_PATH, 'utf8'))
+    const n = await writeSplit(manifest, config)
+    console.log(`Split ${manifest.length} photos into index.json + ${n} catalog files.`)
+    return
+  }
   const remote = config.r2Remote || 'r2:photos-web'
   const base = (config.imageBaseUrl || '').replace(/\/+$/, '')
   if (!base) throw new Error('site.config.json needs imageBaseUrl')
@@ -270,6 +369,7 @@ async function main() {
   }
 
   await fs.writeFile(MANIFEST_PATH, JSON.stringify(manifest, null, 2))
+  await writeSplit(manifest, config)
 
   const catalogNames = [...new Set(manifest.map((p) => p.catalog))]
   console.log(

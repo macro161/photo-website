@@ -372,6 +372,14 @@ main {
   }
 }
 
+.thumb-skel {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  margin: 0 0 clamp(12px, 2vw, 26px);
+  break-inside: avoid;
+  background: color-mix(in srgb, currentColor 7%, transparent);
+}
+
 .thumb {
   position: relative;
   display: block;

@@ -67,3 +67,14 @@ export default function Gallery({ items, onOpen }) {
     </div>
   )
 }
+
+/** Holds the grid's place while a catalog's photos load: 3:2 tiles, the usual shape of a 35mm frame. */
+export function GallerySkeleton({ count }) {
+  return (
+    <div className="gallery gallery-skeleton" aria-busy="true" aria-label="Loading photos">
+      {Array.from({ length: Math.min(count || 12, 48) }, (_, i) => (
+        <div key={i} className="thumb-skel" />
+      ))}
+    </div>
+  )
+}
