@@ -9,9 +9,10 @@ import { useState, useEffect, useRef } from 'react'
 import Picture from './Picture.jsx'
 import { formatRange, formatHike } from '../dates.js'
 
-function CatalogCard({ catalog, onOpen }) {
+function CatalogCard({ catalog, onOpen, priority }) {
   const [loaded, setLoaded] = useState(false)
-  const [revealed, setRevealed] = useState(false)
+  // Above-the-fold cards start revealed so the likely LCP image isn't held back by the fade-in.
+  const [revealed, setRevealed] = useState(!!priority)
   const ref = useRef(null)
 
   useEffect(() => {
@@ -45,7 +46,8 @@ function CatalogCard({ catalog, onOpen }) {
             photo={cover}
             sizes="(max-width: 700px) 100vw, 480px"
             alt=""
-            loading="lazy"
+            loading={priority ? 'eager' : 'lazy'}
+            fetchPriority={priority ? 'high' : undefined}
             decoding="async"
             className={loaded ? 'loaded' : ''}
             onLoad={() => setLoaded(true)}
@@ -73,8 +75,8 @@ function CatalogCard({ catalog, onOpen }) {
 export default function CatalogIndex({ catalogs, onOpen }) {
   return (
     <div className="catalog-grid">
-      {catalogs.map((catalog) => (
-        <CatalogCard key={catalog.slug} catalog={catalog} onOpen={onOpen} />
+      {catalogs.map((catalog, i) => (
+        <CatalogCard key={catalog.slug} catalog={catalog} onOpen={onOpen} priority={i < 3} />
       ))}
     </div>
   )

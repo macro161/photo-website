@@ -8,7 +8,7 @@ import Picture from './Picture.jsx'
 
 function Thumb({ photo, index, onOpen }) {
   const [loaded, setLoaded] = useState(false)
-  const [revealed, setRevealed] = useState(false)
+  const [revealed, setRevealed] = useState(index < 3)
   const ref = useRef(null)
 
   // Reveal on scroll into view.

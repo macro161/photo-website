@@ -1,3 +1,19 @@
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/inter-latin-wght-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+}
+
 :root {
   --bg: #ffffff;
   --fg: #121212;
@@ -214,7 +230,7 @@ main {
   height: 100%;
   object-fit: cover;
   opacity: 0;
-  transition: opacity 0.7s var(--ease), transform 0.9s var(--ease);
+  transition: opacity 0.35s var(--ease), transform 0.9s var(--ease);
 }
 
 .catalog-cover img.loaded {
@@ -381,7 +397,7 @@ main {
   width: 100%;
   height: auto;
   opacity: 0;
-  transition: opacity 0.8s var(--ease), transform 0.7s var(--ease);
+  transition: opacity 0.35s var(--ease), transform 0.7s var(--ease);
 }
 
 .thumb img.loaded {
