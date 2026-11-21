@@ -1274,7 +1274,8 @@
    1600,
    2400
   ],
-  "c": "#a29f7c"
+  "c": "#a39f7d",
+  "v": 2
  },
  "Swiss/Les Paccots/R1-04888-028A.JPG": {
   "w": [
@@ -1301,7 +1302,8 @@
    1600,
    2400
   ],
-  "c": "#90927a"
+  "c": "#90917b",
+  "v": 2
  },
  "Swiss/Les Paccots/R1-04888-025A.JPG": {
   "w": [
@@ -1310,7 +1312,8 @@
    1600,
    2400
   ],
-  "c": "#a4a27c"
+  "c": "#a4a17c",
+  "v": 2
  },
  "Swiss/Les Paccots/R1-04888-024A.JPG": {
   "w": [
@@ -5534,7 +5537,8 @@
    1600,
    2400
   ],
-  "c": "#a4a078"
+  "c": "#a5a078",
+  "v": 2
  },
  "Swiss/Tour de l'Argentine + Lavaux Vineyard Terraces/R1-07693-030A.JPG": {
   "w": [
@@ -5642,7 +5646,8 @@
    1600,
    2400
   ],
-  "c": "#676c66"
+  "c": "#676b66",
+  "v": 2
  },
  "Swiss/Tour de l'Argentine + Lavaux Vineyard Terraces/R1-07693-018A.JPG": {
   "w": [
@@ -5651,7 +5656,8 @@
    1600,
    2400
   ],
-  "c": "#757a75"
+  "c": "#757a75",
+  "v": 2
  },
  "Swiss/Tour de l'Argentine + Lavaux Vineyard Terraces/R1-07693-017A.JPG": {
   "w": [
@@ -5750,7 +5756,8 @@
    1600,
    2400
   ],
-  "c": "#888156"
+  "c": "#888156",
+  "v": 2
  },
  "Swiss/Tour de l'Argentine + Lavaux Vineyard Terraces/R1-07693-006A.JPG": {
   "w": [
@@ -6002,7 +6009,8 @@
    1600,
    2400
   ],
-  "c": "#858b77"
+  "c": "#868a77",
+  "v": 2
  },
  "Swiss/Rochers de Naye + Tour de l'Argentine/R1-07734-013A.JPG": {
   "w": [
@@ -6029,7 +6037,8 @@
    1600,
    2400
   ],
-  "c": "#8c836d"
+  "c": "#8c836d",
+  "v": 2
  },
  "Swiss/Rochers de Naye + Tour de l'Argentine/R1-07734-010A.JPG": {
   "w": [
@@ -6101,7 +6110,8 @@
    1600,
    2400
   ],
-  "c": "#9e9371"
+  "c": "#9e9371",
+  "v": 2
  },
  "Swiss/Rochers de Naye + Tour de l'Argentine/R1-07734-002A.JPG": {
   "w": [
@@ -6137,7 +6147,8 @@
    1600,
    2400
   ],
-  "c": "#6d7475"
+  "c": "#6d7476",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-034A.JPG": {
   "w": [
@@ -6146,7 +6157,8 @@
    1600,
    2400
   ],
-  "c": "#7b7a6f"
+  "c": "#7b7a70",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-033A.JPG": {
   "w": [
@@ -6155,7 +6167,8 @@
    1600,
    2400
   ],
-  "c": "#7f7d71"
+  "c": "#807e72",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-031A.JPG": {
   "w": [
@@ -6209,7 +6222,8 @@
    1600,
    2400
   ],
-  "c": "#747951"
+  "c": "#747952",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-026A.JPG": {
   "w": [
@@ -6218,7 +6232,8 @@
    1600,
    2400
   ],
-  "c": "#757a5a"
+  "c": "#757a5a",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-025A.JPG": {
   "w": [
@@ -6236,7 +6251,8 @@
    1600,
    2400
   ],
-  "c": "#6e746d"
+  "c": "#6f746d",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-023A.JPG": {
   "w": [
@@ -6263,7 +6279,8 @@
    1600,
    2400
   ],
-  "c": "#9d9156"
+  "c": "#9e9057",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-019A.JPG": {
   "w": [
@@ -6344,7 +6361,8 @@
    1600,
    2400
   ],
-  "c": "#9c987f"
+  "c": "#9c987f",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-012A.JPG": {
   "w": [
@@ -6353,7 +6371,8 @@
    1600,
    2400
   ],
-  "c": "#a49e77"
+  "c": "#a49e78",
+  "v": 2
  },
  "Swiss/Black Forest + Cabane de Valsorey/R1-07736-010A.JPG": {
   "w": [
@@ -6600,42 +6619,48 @@
    480,
    960
   ],
-  "c": "#bbc3bf"
+  "c": "#7a7870",
+  "v": 2
  },
  "Swiss/Barrhorn/14260010.JPG": {
   "w": [
    480,
    960
   ],
-  "c": "#bdc7c6"
+  "c": "#67615d",
+  "v": 2
  },
  "Swiss/Barrhorn/14260011.JPG": {
   "w": [
    480,
    960
   ],
-  "c": "#c7d1d2"
+  "c": "#76726c",
+  "v": 2
  },
  "Swiss/Barrhorn/14260009.JPG": {
   "w": [
    480,
    960
   ],
-  "c": "#9e757b"
+  "c": "#9ebf86",
+  "v": 2
  },
  "Swiss/Barrhorn/14260008.JPG": {
   "w": [
    480,
    960
   ],
-  "c": "#cfdfd5"
+  "c": "#5c474b",
+  "v": 2
  },
  "Swiss/Barrhorn/14260007.JPG": {
   "w": [
    480,
    960
   ],
-  "c": "#9f7b7c"
+  "c": "#8eb97e",
+  "v": 2
  },
  "Swiss/Barrhorn/14260006.JPG": {
   "w": [
@@ -6656,7 +6681,8 @@
    480,
    960
   ],
-  "c": "#d6d9d9"
+  "c": "#6d634a",
+  "v": 2
  },
  "Swiss/Barrhorn/14260003.JPG": {
   "w": [
@@ -6686,7 +6712,8 @@
    1600,
    2400
   ],
-  "c": "#a1a8aa"
+  "c": "#a2a8aa",
+  "v": 2
  },
  "Spain 2026/Spain + Tour de l'Argentine/R1-07733-036A.JPG": {
   "w": [
@@ -6830,7 +6857,8 @@
    1600,
    2400
   ],
-  "c": "#959b7b"
+  "c": "#959a7c",
+  "v": 2
  },
  "Spain 2026/Spain + Tour de l'Argentine/R1-07733-0015.JPG": {
   "w": [
@@ -6848,7 +6876,8 @@
    1600,
    2400
   ],
-  "c": "#aca7a7"
+  "c": "#aca7a7",
+  "v": 2
  },
  "Spain 2026/Spain + Tour de l'Argentine/R1-07733-0012.JPG": {
   "w": [
@@ -7019,7 +7048,8 @@
    1600,
    2400
   ],
-  "c": "#a39e83"
+  "c": "#a39d83",
+  "v": 2
  },
  "Spain 2026/Picos de Europa/R1-07737-029A.JPG": {
   "w": [
@@ -7037,7 +7067,8 @@
    1600,
    2400
   ],
-  "c": "#8d8e82"
+  "c": "#8e8e81",
+  "v": 2
  },
  "Spain 2026/Picos de Europa/R1-07737-028A.JPG": {
   "w": [
@@ -7073,7 +7104,8 @@
    1600,
    2400
   ],
-  "c": "#696c5c"
+  "c": "#6a6c5c",
+  "v": 2
  },
  "Spain 2026/Picos de Europa/R1-07737-024A.JPG": {
   "w": [
@@ -7127,7 +7159,8 @@
    1600,
    2400
   ],
-  "c": "#989684"
+  "c": "#989684",
+  "v": 2
  },
  "Spain 2026/Picos de Europa/R1-07737-016A.JPG": {
   "w": [
@@ -7172,7 +7205,8 @@
    1600,
    2400
   ],
-  "c": "#b5ab9d"
+  "c": "#b5aa9e",
+  "v": 2
  },
  "Spain 2026/Picos de Europa/R1-07737-011A.JPG": {
   "w": [

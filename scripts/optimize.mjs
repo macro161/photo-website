@@ -38,6 +38,8 @@ const arg = (name) => {
   return i === -1 ? null : process.argv[i + 1] && !process.argv[i + 1].startsWith('--') ? process.argv[i + 1] : true
 }
 const only = arg('only')
+const onlyFile = arg('only-file') // newline-separated exact keys
+const onlySet = typeof onlyFile === 'string' ? new Set((await fs.readFile(onlyFile, 'utf8')).split('\n').filter(Boolean)) : null
 const force = Boolean(arg('force'))
 const dry = Boolean(arg('dry'))
 const noUpload = Boolean(arg('no-upload'))
@@ -84,6 +86,7 @@ async function main() {
 
   const todo = manifest.filter((p) => {
     if (only && !p.file.startsWith(only)) return false
+    if (onlySet && !onlySet.has(p.file)) return false
     if (force) return true
     const v = variants[p.file]
     if (!v || !v.c) return true
@@ -128,7 +131,7 @@ async function main() {
       // Average colour: a cheap placeholder shown while the image loads.
       const { data } = await base.clone().resize(1, 1).removeAlpha().raw().toBuffer({ resolveWithObject: true })
       const c = '#' + [...data.slice(0, 3)].map((v) => v.toString(16).padStart(2, '0')).join('')
-      variants[p.file] = { w: widths, c }
+      variants[p.file] = { ...variants[p.file], w: widths, c } // keeps a `v` cache-bust version if set
       origBytes += (await fs.stat(src)).size
       await fs.rm(src)
     } catch (err) {

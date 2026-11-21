@@ -32,7 +32,10 @@ const stripExt = (key) => key.replace(/\.[^.]+$/, '')
 export const hasVariants = (photo) => Array.isArray(photo.w) && photo.w.length > 0
 
 export function variantUrl(photo, width, fmt) {
-  return imageUrl(`/generated/${width}/${encodeURI(stripExt(photo.file))}.${fmt}`)
+  // `v` is a cache-bust version, set in variants.json when a photo's pixels were replaced (e.g. rotated),
+  // because variants are served with an immutable one-year cache.
+  const v = photo.v ? `?v=${photo.v}` : ''
+  return imageUrl(`/generated/${width}/${encodeURI(stripExt(photo.file))}.${fmt}${v}`)
 }
 
 /** Widths of a photo within [min, max]; always at least the closest one available. */

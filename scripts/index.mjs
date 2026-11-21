@@ -171,6 +171,7 @@ function slimPhoto(p) {
   if (p.w) {
     out.w = p.w
     out.c = p.c
+    if (p.v) out.v = p.v
   } else {
     out.thumb = p.thumb
   }
@@ -345,7 +346,7 @@ async function main() {
       description: override.description ?? fromName.description,
       date: override.date ?? fromName.date,
       // Web-sized copies (see scripts/optimize.mjs); absent = serve the original.
-      ...(variants[key] ? { w: variants[key].w, c: variants[key].c } : {}),
+      ...(variants[key] ? { w: variants[key].w, c: variants[key].c, ...(variants[key].v ? { v: variants[key].v } : {}) } : {}),
     })
   }
 
