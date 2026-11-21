@@ -750,3 +750,118 @@ main {
     opacity: 1;
   }
 }
+
+/* ---------- Dates and date-range filter ---------- */
+.catalog-sub {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.9rem;
+  margin-top: 0.5rem;
+  font-size: 0.78rem;
+  color: var(--muted-strong);
+}
+
+.catalog-hike {
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+.date-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin: -0.4rem 0 clamp(1rem, 2.5vw, 1.6rem);
+  font-size: 0.8rem;
+  color: var(--muted-strong);
+}
+
+.date-line-hike {
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.date-filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 0.9rem 1.6rem;
+  margin: 0 0 clamp(1.4rem, 3vw, 2.2rem);
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.df-fields {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem 1.2rem;
+}
+
+.date-filter label {
+  display: grid;
+  gap: 0.3rem;
+}
+
+.date-filter label span {
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.date-filter input[type='date'] {
+  font: inherit;
+  font-size: 0.85rem;
+  padding: 0.4rem 0.55rem;
+  color: var(--fg);
+  background: transparent;
+  border: 1px solid var(--line);
+  border-radius: 3px;
+}
+
+.df-presets {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.df-presets button {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  padding: 0.4rem 0.8rem;
+  color: var(--muted-strong);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: color 0.3s var(--ease), border-color 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+.df-presets button:hover,
+.df-presets button:focus-visible {
+  color: var(--fg);
+  border-color: var(--muted);
+}
+
+.df-presets button.on {
+  color: var(--bg);
+  background: var(--fg);
+  border-color: var(--fg);
+}
+
+.df-presets .df-clear {
+  border-style: dashed;
+}
+
+.df-status,
+.df-empty {
+  flex-basis: 100%;
+  margin: 0;
+  font-size: 0.78rem;
+  color: var(--muted-strong);
+}
+
+.df-empty {
+  padding: 2rem 0;
+}

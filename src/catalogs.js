@@ -16,7 +16,7 @@
  * else follows, newest photo first, so a freshly added folder surfaces at the
  * top without touching the config.
  */
-export function buildCatalogs(photos, { order = [], covers = {} } = {}) {
+export function buildCatalogs(photos, { order = [], covers = {}, dateFor = () => null } = {}) {
   const groups = new Map()
 
   for (const photo of photos) {
@@ -49,6 +49,7 @@ export function buildCatalogs(photos, { order = [], covers = {} } = {}) {
         count: items.length,
         label: photoLabel(items.length),
         newest: newestOf(items),
+        date: dateFor(items[0].catalogSlug, items[0].albumSlug),
       }
     })
 
@@ -63,6 +64,7 @@ export function buildCatalogs(photos, { order = [], covers = {} } = {}) {
       count: list.length,
       label: catalogLabel(albums.length, loose.length, list.length),
       newest: newestOf(list),
+      date: dateFor(list[0].catalogSlug, null),
     }
   })
 
@@ -106,6 +108,9 @@ function sortByOrder(entries, order) {
   }
   entries.sort((a, b) => {
     if (rank(a) !== rank(b)) return rank(a) - rank(b)
+    const ea = a.date?.end || a.date?.start || ''
+    const eb = b.date?.end || b.date?.start || ''
+    if (ea !== eb) return ea < eb ? 1 : -1 // dated entries: newest first, undated last
     if (a.newest !== b.newest) return b.newest - a.newest
     return a.name.localeCompare(b.name)
   })

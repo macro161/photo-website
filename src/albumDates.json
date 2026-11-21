@@ -1,0 +1,323 @@
+{
+  "30th-birthday": {
+    "start": "2026-09-13",
+    "end": "2026-09-21",
+    "approx": true,
+    "source": "drive:2026-09-23 - 30th Birthday + ...",
+    "note": "Birthday date not in any source. Rolls R1-07694..96 follow R1-07693 (Lavaux 12 Sep) and were scanned 21-22 Sep, so shot between those. Please confirm."
+  },
+  "eclipse": {
+    "start": "2026-08-12",
+    "end": "2026-08-12",
+    "approx": false,
+    "source": "notes",
+    "note": "Total solar eclipse 12 Aug 2026 (Spain); roll PORTRA400 6740. Roll could include other days."
+  },
+  "lithuania": {
+    "start": "2025-12-24",
+    "end": "2026-04-05",
+    "approx": true,
+    "source": "derived",
+    "note": "Albums + loose photos: Vilnius roll R1-09993 (scanned 2 Jan 2026) approx 24 Dec-2 Jan; Easter folder up to 5 Apr. Loose roll R1-04890 (21 photos, Lithuania/Šiauliai) could not be dated and may fall outside this range."
+  },
+  "lithuania/winter-2025": {
+    "start": "2025-12-24",
+    "end": "2026-04-03",
+    "approx": true,
+    "source": "drive:2025-12-30 - Lithuania Winter 2025 - 1",
+    "note": "Mixed: 3 frames from R1-09922 (scanned 30 Dec 2025, late Dec) and 17 frames from R1-02185 (Easter Lithuania, Drive folder 2026-04-01, scanned 3 Apr). Album could be split."
+  },
+  "london-2026": {
+    "start": "2026-04-27",
+    "end": "2026-05-16",
+    "approx": true,
+    "source": "drive:2026-05-15 London 2026",
+    "note": "Folders 2026-05-15 / 2026-05-18 are upload dates. No AllTrails activity between 26 Apr and 17 May, which fits a London trip; exact days unknown. Please confirm."
+  },
+  "netherlands-breda-2026": {
+    "start": "2026-02-15",
+    "end": "2026-02-17",
+    "approx": false,
+    "source": "drive:2026-02-15 - Netherlands Breda Carnaval 2026",
+    "note": "Carnival 2026 (Feb 15-17); original folder name '2026-02-15 to 17'."
+  },
+  "spain-2026": {
+    "start": "2026-08-03",
+    "end": "2026-08-15",
+    "approx": true,
+    "source": "derived",
+    "note": "Night Life Madrid album 3-10 Aug; loose frames: Madrid by day (scan batch 10 Aug) and roll EKTAR100 6741 (place unconfirmed, scanned with Eclipse roll); upper bound 15 Aug from the 14 Aug Picos de Europa hike. Unverified."
+  },
+  "spain-2026/night-life-madrid": {
+    "start": "2026-08-03",
+    "end": "2026-08-10",
+    "approx": true,
+    "source": "drive:2026-08-23 2 - Spain Night Photography + ...",
+    "note": "Files named 10_08_2026_*, same scan batch as Cabane de Valsorey (1-2 Aug), so shot after 2 Aug and probably before 10 Aug. Unverified."
+  },
+  "swiss": {
+    "start": "2026-01-18",
+    "end": "2026-08-02",
+    "approx": false,
+    "source": "derived",
+    "note": "min/max of albums; Random and unknown frames excluded."
+  },
+  "swiss/bisse-de-lentine": {
+    "start": "2026-04-26",
+    "end": "2026-04-26",
+    "approx": false,
+    "source": "alltrails:25",
+    "hike": {
+      "n": 25,
+      "title": "Sion - Coméraz - Bisse de Lentine",
+      "km": 10.1,
+      "gain": 383,
+      "minutes": 199
+    }
+  },
+  "swiss/burgenstock": {
+    "start": "2026-04-18",
+    "end": "2026-04-18",
+    "approx": false,
+    "source": "alltrails:26",
+    "hike": {
+      "n": 26,
+      "title": "Stansstad via Ennetbürgen [CLOSED]",
+      "km": 14,
+      "gain": 873,
+      "minutes": 324
+    },
+    "note": "Matched to 'Stansstad via Ennetbürgen' (18 Apr); Drive folder is dated 2026-05-15 (upload date)."
+  },
+  "swiss/cabane-de-valsorey": {
+    "start": "2026-08-01",
+    "end": "2026-08-02",
+    "approx": false,
+    "source": "alltrails:13,14",
+    "hike": [
+      {
+        "n": 13,
+        "title": "Bourg-St-Pierre - Valsorey Hut - Pointe de Penne",
+        "km": 7.1,
+        "gain": 12,
+        "minutes": 210
+      },
+      {
+        "n": 14,
+        "title": "Bourg-St-Pierre - Valsorey Hut - Pointe de Penne",
+        "km": 8.4,
+        "gain": 1353,
+        "minutes": 294
+      }
+    ],
+    "note": "Roll scanned 10 Aug 2026 (file prefix 10_08_2026)."
+  },
+  "swiss/col-de-mollendruz": {
+    "start": "2026-01-25",
+    "end": "2026-01-25",
+    "approx": true,
+    "source": "alltrails:32",
+    "hike": {
+      "n": 32,
+      "title": "Activity - January 25, 2026 (no trail name)",
+      "km": 9.2,
+      "gain": 128,
+      "minutes": 180
+    },
+    "note": "Untitled 25 Jan 2026 9.2 km Jura loop is only a probable match (Drive folder '2026-01-25 Winter - La Montagnette + Col du Mollendruz'); frames follow La Montagnette in the same roll."
+  },
+  "swiss/cow-fights": {
+    "start": "2026-04-18",
+    "end": "2026-05-15",
+    "approx": true,
+    "source": "notes",
+    "note": "No AllTrails activity. Frames sit after the Bürgenstock frames (18 Apr) on one roll and before the 15 May upload; two rolls (2026-05-15 2 and 3). Exact fight date unknown (Hérens cow fight season, Valais)."
+  },
+  "swiss/dent-du-jaman-summer": {
+    "start": "2026-06-14",
+    "end": "2026-06-14",
+    "approx": false,
+    "source": "alltrails:21",
+    "hike": {
+      "n": 21,
+      "title": "Les Avants - Col de Jaman Pass - Dent de Jaman - Le Paccot",
+      "km": 14.6,
+      "gain": 929,
+      "minutes": 377
+    },
+    "note": "Some frames are on the Pointe de Bellevue roll (7 Jun) but follow it; matched to 14 Jun activity."
+  },
+  "swiss/dent-du-jaman-winter-failed": {
+    "start": "2026-03-08",
+    "end": "2026-03-08",
+    "approx": false,
+    "source": "alltrails:29",
+    "hike": {
+      "n": 29,
+      "title": "Dent de Jaman via Haut-de-Caux",
+      "km": 6,
+      "gain": 544,
+      "minutes": 273
+    },
+    "note": "Logged as snowshoeing in AllTrails."
+  },
+  "swiss/hasenmatt": {
+    "start": "2026-03-16",
+    "end": "2026-03-31",
+    "approx": true,
+    "source": "drive:2026-03-01 - Mont Pèlerin + Dent de Jaman + Le Chasseron",
+    "note": "No AllTrails match. Frames 0030-0035 sit after the Chasseron frames (15 Mar) in the same roll, so shot after 15 Mar; the untitled 21 Mar 2026 hike (alltrails:27) is a possible but unverified match. Place not otherwise confirmed."
+  },
+  "swiss/la-montagnette": {
+    "start": "2026-01-18",
+    "end": "2026-01-18",
+    "approx": false,
+    "source": "alltrails:33",
+    "hike": {
+      "n": 33,
+      "title": "Montagnetta trail: Pierre d'Avoin - La Montagnetta - L'Irette",
+      "km": 4.9,
+      "gain": 339,
+      "minutes": 183
+    }
+  },
+  "swiss/le-chasseron": {
+    "start": "2026-03-15",
+    "end": "2026-03-15",
+    "approx": false,
+    "source": "alltrails:28",
+    "hike": {
+      "n": 28,
+      "title": "Vuiteboeuf - Le Chasseron",
+      "km": 12.4,
+      "gain": 1069,
+      "minutes": 320
+    }
+  },
+  "swiss/le-grammot": {
+    "start": "2026-06-28",
+    "end": "2026-06-28",
+    "approx": false,
+    "source": "alltrails:19",
+    "hike": {
+      "n": 19,
+      "title": "Miex - Mont Grammont",
+      "km": 13.7,
+      "gain": 1198,
+      "minutes": 355
+    }
+  },
+  "swiss/les-paccots": {
+    "start": "2026-05-30",
+    "end": "2026-06-14",
+    "approx": true,
+    "source": "alltrails:23,21",
+    "hike": [
+      {
+        "n": 23,
+        "title": "Paccot-Dessus - Dent de Lys - Paccot-Dessous",
+        "km": 12.7,
+        "gain": 885,
+        "minutes": 312
+      },
+      {
+        "n": 21,
+        "title": "Les Avants - Col de Jaman Pass - Dent de Jaman - Le Paccot",
+        "km": 14.6,
+        "gain": 929,
+        "minutes": 377
+      }
+    ],
+    "note": "Roll 04888 frames = Paccot-Dessus - Dent de Lys (30 May); roll 04886 frames (6) likely the end of the 14 Jun Dent de Jaman - Le Paccot hike. hikeAlbums.json only had #23."
+  },
+  "swiss/mauvoisin": {
+    "start": "2026-07-19",
+    "end": "2026-07-19",
+    "approx": false,
+    "source": "alltrails:17,18",
+    "hike": [
+      {
+        "n": 17,
+        "title": "Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (evening)",
+        "km": 4.4,
+        "gain": 45,
+        "minutes": 137
+      },
+      {
+        "n": 18,
+        "title": "Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (afternoon)",
+        "km": 7.1,
+        "gain": 1059,
+        "minutes": 275
+      }
+    ],
+    "note": "Cabane Brunet stage 31 (19 Jul); Drive folder '2026-07-26 Wedding + Cabane Brunet' is an upload date. #16 same-day 'Barrhorn (short)' ignored."
+  },
+  "swiss/mont-pelerin": {
+    "start": "2026-03-01",
+    "end": "2026-03-01",
+    "approx": false,
+    "source": "alltrails:30",
+    "hike": {
+      "n": 30,
+      "title": "Mont Pèlerin",
+      "km": 5.5,
+      "gain": 288,
+      "minutes": 144
+    },
+    "note": "Logged as snowshoeing in AllTrails; Drive folder 2026-03-01."
+  },
+  "swiss/pointe-de-bellevue": {
+    "start": "2026-06-07",
+    "end": "2026-06-07",
+    "approx": false,
+    "source": "alltrails:22",
+    "hike": {
+      "n": 22,
+      "title": "Pointe de Bellevue - Portes de Culet",
+      "km": 5.5,
+      "gain": 427,
+      "minutes": 229
+    }
+  },
+  "swiss/random": {
+    "start": null,
+    "end": null,
+    "approx": false,
+    "source": "unknown",
+    "note": "Mixed frames from several rolls (R1-04890, image_N, 0001_1, 0008_8) spanning at least Jan-Jul 2026; cannot be dated."
+  },
+  "swiss/tour-du-mayan-spring-failed": {
+    "start": "2026-05-17",
+    "end": "2026-05-17",
+    "approx": false,
+    "source": "alltrails:24",
+    "hike": {
+      "n": 24,
+      "title": "Tour de Mayen",
+      "km": 13.7,
+      "gain": 944,
+      "minutes": 256
+    }
+  },
+  "swiss/tour-du-mayan-tour-d-ai": {
+    "start": "2026-06-21",
+    "end": "2026-06-21",
+    "approx": false,
+    "source": "alltrails:20",
+    "hike": {
+      "n": 20,
+      "title": "Tour de Mayen - Tour d'Aï - Lake Aï",
+      "km": 18.4,
+      "gain": 1308,
+      "minutes": 599
+    }
+  },
+  "ukraine": {
+    "start": "2026-05-17",
+    "end": "2026-05-30",
+    "approx": true,
+    "source": "drive:2026-07-12 - Swiss Hikes + Ukraine + Random Shots 2026",
+    "note": "Inferred from roll order: Ukraine frames follow the Tour du Mayan spring hike (17 May) on roll 04891 and precede Les Paccots (30 May) on roll 04888. Please confirm."
+  }
+}

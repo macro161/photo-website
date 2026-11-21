@@ -7,6 +7,7 @@
  */
 import { useState, useEffect, useRef } from 'react'
 import { imageUrl } from '../imageUrl.js'
+import { formatRange, formatHike } from '../dates.js'
 
 function CatalogCard({ catalog, onOpen }) {
   const [loaded, setLoaded] = useState(false)
@@ -56,6 +57,14 @@ function CatalogCard({ catalog, onOpen }) {
         <span className="catalog-name">{catalog.name}</span>
         <span className="catalog-count">{catalog.label}</span>
       </span>
+      {catalog.date && (
+        <span className="catalog-sub">
+          <span className="catalog-date">{formatRange(catalog.date)}</span>
+          {formatHike(catalog.date) && (
+            <span className="catalog-hike">{formatHike(catalog.date)}</span>
+          )}
+        </span>
+      )}
     </button>
   )
 }

@@ -6,6 +6,8 @@ import CatalogIndex from './components/CatalogIndex.jsx'
 import Gallery from './components/Gallery.jsx'
 import Lightbox from './components/Lightbox.jsx'
 import Lab from './lab/Lab.jsx'
+import DateFilter from './components/DateFilter.jsx'
+import { dateFor, inRange, formatRange, formatHike } from './dates.js'
 
 /**
  * Routing lives in the URL hash so catalogs are linkable and the browser's
@@ -28,7 +30,7 @@ function decode(part) {
 }
 
 function parseHash(hash) {
-  const path = hash.replace(/^#\/?/, '')
+  const path = hash.replace(/^#\/?/, '').split('?')[0]
   if (path === 'about') {
     return { view: 'about', catalog: null, album: null, photo: null }
   }
@@ -83,8 +85,46 @@ function writeHash(path, mode) {
 const photoPath = (p) =>
   `/c/${p.catalogSlug}${p.albumSlug ? `/${p.albumSlug}` : ''}/p/${p.id}`
 
+function DateLine({ entry }) {
+  if (!entry) return null
+  const hike = formatHike(entry)
+  return (
+    <p className="date-line">
+      <span>{formatRange(entry)}</span>
+      {hike && <span className="date-line-hike">{hike}</span>}
+    </p>
+  )
+}
+
 export default function App() {
   const route = useHashRoute()
+  // Date-range filter; also kept in the hash query (#/?from=...&to=...) so it survives a reload.
+  const [range, setRange] = useState(() => {
+    const q = new URLSearchParams(window.location.hash.split('?')[1] || '')
+    const ok = (v) => (/^\d{4}-\d{2}-\d{2}$/.test(v || '') ? v : '')
+    return { from: ok(q.get('from')), to: ok(q.get('to')) }
+  })
+  // A hash that carries a range (pasted or followed link) updates the filter; one without leaves it alone.
+  useEffect(() => {
+    const onHash = () => {
+      const raw = window.location.hash.split('?')[1]
+      if (raw == null) return
+      const q = new URLSearchParams(raw)
+      const ok = (v) => (/^\d{4}-\d{2}-\d{2}$/.test(v || '') ? v : '')
+      const next = { from: ok(q.get('from')), to: ok(q.get('to')) }
+      setRange((cur) => (cur.from === next.from && cur.to === next.to ? cur : next))
+    }
+    window.addEventListener('hashchange', onHash)
+    return () => window.removeEventListener('hashchange', onHash)
+  }, [])
+  const changeRange = useCallback((next) => {
+    setRange(next)
+    const q = new URLSearchParams()
+    if (next.from) q.set('from', next.from)
+    if (next.to) q.set('to', next.to)
+    const base = window.location.hash.replace(/^#/, '').split('?')[0] || '/'
+    window.history.replaceState(window.history.state, '', `#${base}${q.toString() ? `?${q}` : ''}`)
+  }, [])
   const [scrolled, setScrolled] = useState(false)
 
   const catalogs = useMemo(
@@ -92,12 +132,20 @@ export default function App() {
       buildCatalogs(photos, {
         order: config.gallery?.catalogOrder,
         covers: config.gallery?.covers,
+        dateFor,
       }),
     []
   )
 
+  const filtering = Boolean(range.from || range.to)
+  const matches = (entry) => inRange(entry, range.from, range.to)
+  const visibleCatalogs = catalogs.filter((c) => matches(c.date))
   const catalog = catalogs.find((c) => c.slug === route.catalog) || null
   const album = catalog?.albums.find((a) => a.slug === route.album) || null
+  // Undated albums are hidden while a filter is active (and the filter says so).
+  const shownAlbums = catalog ? catalog.albums.filter((a) => matches(a.date)) : []
+  const hiddenUndatedAlbums = catalog ? catalog.albums.filter((a) => !a.date).length : 0
+  const showLoose = !catalog || catalog.albums.length === 0 || matches(catalog.date)
 
   // An unknown slug falls back to the nearest real page rather than a blank one.
   let view = route.view
@@ -229,6 +277,7 @@ export default function App() {
                 {album.name}
                 <span className="section-count">{album.count}</span>
               </h2>
+              <DateLine entry={album.date} />
               <Gallery items={album.items} onOpen={open} />
             </section>
           ) : view === 'catalog' ? (
@@ -240,22 +289,35 @@ export default function App() {
                 {catalog.name}
                 <span className="section-count">{catalog.count}</span>
               </h2>
+              <DateLine entry={catalog.date} />
+              {catalog.albums.length > 0 && (
+                <DateFilter
+                  value={range}
+                  onChange={changeRange}
+                  shown={shownAlbums.length}
+                  total={catalog.albums.length}
+                  hiddenUndated={hiddenUndatedAlbums}
+                />
+              )}
               {/* Only label the groups when both are present; a catalog
                   that is all albums or all photos needs no explaining. */}
-              {catalog.albums.length > 0 && (
+              {shownAlbums.length > 0 && (
                 <>
-                  {catalog.items.length > 0 && (
+                  {showLoose && catalog.items.length > 0 && (
                     <h3 className="group-label">Albums</h3>
                   )}
                   <CatalogIndex
-                    catalogs={catalog.albums}
+                    catalogs={shownAlbums}
                     onOpen={(slug) => go(`/c/${catalog.slug}/${slug}`)}
                   />
                 </>
               )}
-              {catalog.items.length > 0 && (
+              {filtering && catalog.albums.length > 0 && shownAlbums.length === 0 && !showLoose && (
+                <p className="df-empty">No albums in this date range.</p>
+              )}
+              {showLoose && catalog.items.length > 0 && (
                 <>
-                  {catalog.albums.length > 0 && (
+                  {shownAlbums.length > 0 && (
                     <h3 className="group-label">Photos</h3>
                   )}
                   <Gallery items={catalog.items} onOpen={open} />
@@ -263,7 +325,20 @@ export default function App() {
               )}
             </section>
           ) : (
-            <CatalogIndex catalogs={catalogs} onOpen={(slug) => go(`/c/${slug}`)} />
+            <>
+              <DateFilter
+                value={range}
+                onChange={changeRange}
+                shown={visibleCatalogs.length}
+                total={catalogs.length}
+                hiddenUndated={catalogs.filter((c) => !c.date).length}
+              />
+              {visibleCatalogs.length > 0 ? (
+                <CatalogIndex catalogs={visibleCatalogs} onOpen={(slug) => go(`/c/${slug}`)} />
+              ) : (
+                <p className="df-empty">No catalogs in this date range.</p>
+              )}
+            </>
           )}
         </div>
       </main>
