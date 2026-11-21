@@ -36,3 +36,22 @@ Roughly 99% fewer bytes on every page. The first image appears in about 0.2 s (w
 3. Connect `img.matassavickis.com` to the bucket (Cloudflare dashboard, needs the owner), so images are CDN-cached.
 4. Find and fix the deep link layout shift; check whether the reveal animation delays LCP.
 5. Re-run `node perf/run.mjs --label after-phase<N> --runs 5 --md PERF_AFTER_<N>.md` after each step.
+
+## Phase 4: fonts, cache headers, CLS (PERF_AFTER_4.md, commit c84d84d)
+
+Changes: self-hosted subsetted Fraunces/Inter woff2 (85 KB total, preloaded, `font-display: swap`), removed both Google
+Fonts connections, `public/_headers` (`/assets/*` and `/fonts/*` immutable for a year, HTML `max-age=0`), preconnect to the image
+host, above-the-fold cards/thumbs start revealed (no fade-in delay) with `fetchpriority=high`, shorter image fade (0.35 s).
+
+| Metric (mobile Lighthouse, median of 5) | Phase 3 | Phase 4 |
+|---|---|---|
+| Deep link CLS | 0.131 | **0.000** (all scenarios 0.000) |
+| Home score / LCP | 83 / 4.6 s | 82 / 4.8 s |
+| Home FCP | n/a | 1.58 s |
+| Le Grammot score / LCP | 80 / 5.2 s | 82 / 4.8 s |
+| London grid score / LCP | 73 / 6.1 s | 78 / 5.8 s |
+| Deep link score / LCP | n/a / 4.3 s | 79 / 5.5 s |
+
+Result: the layout shift is gone (it was the Google Fonts swap) and `/assets/*` is now cached for a year. Mobile LCP did not
+move materially: it is dominated by downloading the first image from the rate-limited `r2.dev` host on simulated 4G, so the
+remaining fix is the `img.matassavickis.com` CDN domain (needs the Cloudflare dashboard). Mobile score is still 78 to 82 (target 90+).

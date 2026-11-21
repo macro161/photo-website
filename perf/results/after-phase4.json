@@ -1,0 +1,2301 @@
+{
+  "meta": {
+    "label": "after-phase4",
+    "baseUrl": "https://www.matassavickis.com",
+    "date": "2026-11-21T08:58:30.579Z",
+    "runs": 5,
+    "gitCommit": "c84d84dbad0bcd927e64e8c2c4d35ca4332eedf3",
+    "gitTree": "clean (tracked)",
+    "machine": "AMD Ryzen 7 5825U with Radeon Graphics x16, 13.5 GB RAM, linux 7.0.0-43-generic, node v18.19.1; load avg at start 0.34 0.51 0.36",
+    "note": "",
+    "chrome": "Chrome/158.0.8127.36",
+    "lighthouse": "11.7.1",
+    "cdpSetup": "Desktop 1366x900 headless Chrome, real (unthrottled) network except lightbox/deeplink (1.6 Mbps down, 750 kbps up, 150 ms RTT); fresh profile per run.",
+    "lhSetup": "Lighthouse performance category only; mobile = default (simulated Slow 4G + 4x CPU), desktop = lighthouse desktop preset; fresh profile per run.",
+    "deepLinkPhotoId": "swiss-le-grammot-r1-04887-032a",
+    "finished": "2026-11-21T09:08:23.667Z"
+  },
+  "scenarios": {
+    "home": {
+      "title": "Home `/#/`",
+      "url": "https://www.matassavickis.com/#/",
+      "kind": "load",
+      "lighthouse": {
+        "mobile": [
+          {
+            "score": 85,
+            "lcp": 4342.441000000001,
+            "fcp": 1226.3465,
+            "cls": 0,
+            "tbt": 0,
+            "si": 1226.3465,
+            "lhTotalBytes": 800988,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 82,
+            "lcp": 4785.44,
+            "fcp": 1589.9524999999999,
+            "cls": 0,
+            "tbt": 0,
+            "si": 1589.9524999999999,
+            "lhTotalBytes": 800611,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 83,
+            "lcp": 4728.160499999999,
+            "fcp": 1561.1439999999998,
+            "cls": 0,
+            "tbt": 0,
+            "si": 1561.1439999999998,
+            "lhTotalBytes": 801536,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 82,
+            "lcp": 4834.4295,
+            "fcp": 1611.7805,
+            "cls": 0,
+            "tbt": 0,
+            "si": 1611.7805,
+            "lhTotalBytes": 801548,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 82,
+            "lcp": 4762.2475,
+            "fcp": 1575.3055,
+            "cls": 0,
+            "tbt": 10.5,
+            "si": 1575.3055,
+            "lhTotalBytes": 801574,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ],
+        "desktop": [
+          {
+            "score": 99,
+            "lcp": 1000.0405,
+            "fcp": 465.844,
+            "cls": 0,
+            "tbt": 0,
+            "si": 465.844,
+            "lhTotalBytes": 402973,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 957.9580000000001,
+            "fcp": 432.183,
+            "cls": 0,
+            "tbt": 0,
+            "si": 477.6423184150579,
+            "lhTotalBytes": 402875,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 956.55875,
+            "fcp": 430.47149999999993,
+            "cls": 0,
+            "tbt": 0,
+            "si": 435.96817716564215,
+            "lhTotalBytes": 402891,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 974.4315000000001,
+            "fcp": 446.70250000000004,
+            "cls": 0,
+            "tbt": 0,
+            "si": 458.8895406666385,
+            "lhTotalBytes": 402945,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 945.817,
+            "fcp": 414.5,
+            "cls": 0,
+            "tbt": 0,
+            "si": 420.8664591661046,
+            "lhTotalBytes": 402921,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ]
+      },
+      "cdp": [
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 402943,
+            "imageBytes": 227888,
+            "requests": 14,
+            "imageRequests": 8,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 170.90000000596046,
+            "settleMs": 1805,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 905,
+            "imageBytes": 0,
+            "requests": 13,
+            "imageRequests": 8,
+            "cachedRequests": 12,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 88.5,
+            "settleMs": 1675,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 402925,
+            "imageBytes": 227888,
+            "requests": 14,
+            "imageRequests": 8,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 221.30000000447035,
+            "settleMs": 1846,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 915,
+            "imageBytes": 0,
+            "requests": 13,
+            "imageRequests": 8,
+            "cachedRequests": 12,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 111.69999999552965,
+            "settleMs": 1685,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 402913,
+            "imageBytes": 227888,
+            "requests": 14,
+            "imageRequests": 8,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 198.5,
+            "settleMs": 1829,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 945,
+            "imageBytes": 0,
+            "requests": 13,
+            "imageRequests": 8,
+            "cachedRequests": 12,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 104,
+            "settleMs": 1671,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 402921,
+            "imageBytes": 227888,
+            "requests": 14,
+            "imageRequests": 8,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 220.30000000447035,
+            "settleMs": 1835,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 908,
+            "imageBytes": 0,
+            "requests": 13,
+            "imageRequests": 8,
+            "cachedRequests": 12,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 78.79999999701977,
+            "settleMs": 1658,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 402931,
+            "imageBytes": 227888,
+            "requests": 14,
+            "imageRequests": 8,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 222.30000000447035,
+            "settleMs": 2011,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 911,
+            "imageBytes": 0,
+            "requests": 13,
+            "imageRequests": 8,
+            "cachedRequests": 12,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 112.89999999850988,
+            "settleMs": 1684,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        }
+      ]
+    },
+    "london-grid": {
+      "title": "Largest photo grid `/#/c/london-2026` (95 photos), scrolled to bottom",
+      "url": "https://www.matassavickis.com/#/c/london-2026",
+      "kind": "scroll",
+      "lighthouse": {
+        "mobile": [
+          {
+            "score": 79,
+            "lcp": 5661.32475,
+            "fcp": 1661.9244999999996,
+            "cls": 0,
+            "tbt": 32.5,
+            "si": 1661.9244999999996,
+            "lhTotalBytes": 1095037,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 78,
+            "lcp": 5800.29475,
+            "fcp": 1592.8035,
+            "cls": 0,
+            "tbt": 93,
+            "si": 1592.8035,
+            "lhTotalBytes": 1094969,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 78,
+            "lcp": 5810.018999999999,
+            "fcp": 1570.007,
+            "cls": 0,
+            "tbt": 38.5,
+            "si": 1570.007,
+            "lhTotalBytes": 1094956,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 84,
+            "lcp": 4401.904,
+            "fcp": 1556.3310000000001,
+            "cls": 0,
+            "tbt": 79,
+            "si": 1556.3310000000001,
+            "lhTotalBytes": 1095043,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 78,
+            "lcp": 5785.705999999998,
+            "fcp": 1554.5879999999997,
+            "cls": 0,
+            "tbt": 32.5,
+            "si": 1554.5879999999997,
+            "lhTotalBytes": 1095037,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ],
+        "desktop": [
+          {
+            "score": 99,
+            "lcp": 1038.5347499999998,
+            "fcp": 414.2365,
+            "cls": 0,
+            "tbt": 1.5,
+            "si": 513.7581124183849,
+            "lhTotalBytes": 937546,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 98,
+            "lcp": 1047.13425,
+            "fcp": 427.79650000000004,
+            "cls": 0,
+            "tbt": 0,
+            "si": 492.07737341689494,
+            "lhTotalBytes": 937602,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 880.7267499999999,
+            "fcp": 413.5584999999999,
+            "cls": 0,
+            "tbt": 0,
+            "si": 537.8691709165847,
+            "lhTotalBytes": 937551,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 98,
+            "lcp": 1064.11475,
+            "fcp": 441.4815,
+            "cls": 0,
+            "tbt": 0,
+            "si": 510.63113416606166,
+            "lhTotalBytes": 937616,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 991.6332500000001,
+            "fcp": 408.0645,
+            "cls": 0,
+            "tbt": 0,
+            "si": 462.7489881672881,
+            "lhTotalBytes": 937616,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ]
+      },
+      "cdp": [
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 2905762,
+            "imageBytes": 2730644,
+            "requests": 101,
+            "imageRequests": 95,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 229.70000000298023,
+            "settleMs": 9626,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 2905678,
+            "imageBytes": 2730644,
+            "requests": 101,
+            "imageRequests": 95,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 234.89999999850988,
+            "settleMs": 9620,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 2905680,
+            "imageBytes": 2730644,
+            "requests": 101,
+            "imageRequests": 95,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 212.89999999850988,
+            "settleMs": 9631,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 2905710,
+            "imageBytes": 2730644,
+            "requests": 101,
+            "imageRequests": 95,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 209.29999999701977,
+            "settleMs": 9624,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 2905780,
+            "imageBytes": 2730644,
+            "requests": 101,
+            "imageRequests": 95,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 194.39999999850988,
+            "settleMs": 9605,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        }
+      ]
+    },
+    "swiss-index": {
+      "title": "Album index `/#/c/swiss` (18 album cards)",
+      "url": "https://www.matassavickis.com/#/c/swiss",
+      "kind": "load",
+      "lighthouse": {
+        "mobile": [
+          {
+            "score": 80,
+            "lcp": 5286.274000000001,
+            "fcp": 1591.1019999999999,
+            "cls": 0,
+            "tbt": 35.5,
+            "si": 1591.1019999999999,
+            "lhTotalBytes": 938140,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 87,
+            "lcp": 3986.8289999999997,
+            "fcp": 1636.776,
+            "cls": 0,
+            "tbt": 28,
+            "si": 1636.776,
+            "lhTotalBytes": 938083,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 80,
+            "lcp": 5357.845,
+            "fcp": 1599.0245,
+            "cls": 0,
+            "tbt": 10,
+            "si": 1599.0245,
+            "lhTotalBytes": 938090,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 80,
+            "lcp": 5301.3904999999995,
+            "fcp": 1569.4425,
+            "cls": 0,
+            "tbt": 28.5,
+            "si": 1569.4425,
+            "lhTotalBytes": 938098,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 80,
+            "lcp": 5285.401,
+            "fcp": 1568.7305000000001,
+            "cls": 0,
+            "tbt": 10.5,
+            "si": 1568.7305000000001,
+            "lhTotalBytes": 938066,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ],
+        "desktop": [
+          {
+            "score": 98,
+            "lcp": 1065.8092499999998,
+            "fcp": 440.5295,
+            "cls": 0,
+            "tbt": 0,
+            "si": 481.6722069187873,
+            "lhTotalBytes": 668842,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 916.70625,
+            "fcp": 405.2505,
+            "cls": 0,
+            "tbt": 0,
+            "si": 455.17834816810034,
+            "lhTotalBytes": 668972,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 911.7575000000002,
+            "fcp": 399.86400000000003,
+            "cls": 0,
+            "tbt": 0,
+            "si": 509.7023259159027,
+            "lhTotalBytes": 668909,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 1008.691,
+            "fcp": 329.92,
+            "cls": 0,
+            "tbt": 0,
+            "si": 382.97300366791205,
+            "lhTotalBytes": 668296,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 997.7932500000002,
+            "fcp": 393.7615,
+            "cls": 0,
+            "tbt": 0,
+            "si": 423.5560646665076,
+            "lhTotalBytes": 668902,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ]
+      },
+      "cdp": [
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 595583,
+            "imageBytes": 420540,
+            "requests": 21,
+            "imageRequests": 15,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 167.30000000447035,
+            "settleMs": 1791,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 915,
+            "imageBytes": 0,
+            "requests": 20,
+            "imageRequests": 15,
+            "cachedRequests": 19,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 96,
+            "settleMs": 1664,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 595582,
+            "imageBytes": 420540,
+            "requests": 21,
+            "imageRequests": 15,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 227.40000000596046,
+            "settleMs": 1853,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 908,
+            "imageBytes": 0,
+            "requests": 20,
+            "imageRequests": 15,
+            "cachedRequests": 19,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 171.59999999403954,
+            "settleMs": 1722,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 595566,
+            "imageBytes": 420540,
+            "requests": 21,
+            "imageRequests": 15,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 206.70000000298023,
+            "settleMs": 1933,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 909,
+            "imageBytes": 0,
+            "requests": 20,
+            "imageRequests": 15,
+            "cachedRequests": 19,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 123.79999999701977,
+            "settleMs": 1674,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 595588,
+            "imageBytes": 420540,
+            "requests": 21,
+            "imageRequests": 15,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 226.89999999850988,
+            "settleMs": 1845,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 918,
+            "imageBytes": 0,
+            "requests": 20,
+            "imageRequests": 15,
+            "cachedRequests": 19,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 92.5,
+            "settleMs": 1658,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 595641,
+            "imageBytes": 420540,
+            "requests": 21,
+            "imageRequests": 15,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 208.10000000149012,
+            "settleMs": 1826,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 909,
+            "imageBytes": 0,
+            "requests": 20,
+            "imageRequests": 15,
+            "cachedRequests": 19,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 95.79999999701977,
+            "settleMs": 1659,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        }
+      ]
+    },
+    "album": {
+      "title": "Mid album `/#/c/swiss/le-grammot` (16 photos)",
+      "url": "https://www.matassavickis.com/#/c/swiss/le-grammot",
+      "kind": "load",
+      "lighthouse": {
+        "mobile": [
+          {
+            "score": 82,
+            "lcp": 4831.382999999999,
+            "fcp": 1537.6424999999997,
+            "cls": 0,
+            "tbt": 12,
+            "si": 1537.6424999999997,
+            "lhTotalBytes": 743473,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 82,
+            "lcp": 4874.273999999999,
+            "fcp": 1558.7914999999998,
+            "cls": 0,
+            "tbt": 26.5,
+            "si": 1558.7914999999998,
+            "lhTotalBytes": 743408,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 88,
+            "lcp": 3785.979,
+            "fcp": 1542.7275,
+            "cls": 0,
+            "tbt": 79.5,
+            "si": 1576.6057870037112,
+            "lhTotalBytes": 743385,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 82,
+            "lcp": 4875.416499999999,
+            "fcp": 1555.5679999999998,
+            "cls": 0,
+            "tbt": 34.5,
+            "si": 1555.5679999999998,
+            "lhTotalBytes": 743381,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 82,
+            "lcp": 4829.325000000001,
+            "fcp": 1562.7724999999998,
+            "cls": 0,
+            "tbt": 9.5,
+            "si": 1562.7724999999998,
+            "lhTotalBytes": 743029,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ],
+        "desktop": [
+          {
+            "score": 98,
+            "lcp": 1061.8015,
+            "fcp": 414.49199999999996,
+            "cls": 0,
+            "tbt": 0.5,
+            "si": 664.3136394209176,
+            "lhTotalBytes": 526673,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 1026.0674999999999,
+            "fcp": 440.62199999999996,
+            "cls": 0,
+            "tbt": 0,
+            "si": 524.4676374149922,
+            "lhTotalBytes": 526702,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 98,
+            "lcp": 1067.32125,
+            "fcp": 444.9465,
+            "cls": 0,
+            "tbt": 0,
+            "si": 483.9303706676958,
+            "lhTotalBytes": 526692,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 98,
+            "lcp": 1055.6347500000002,
+            "fcp": 454.93450000000007,
+            "cls": 0,
+            "tbt": 0,
+            "si": 590.0641412262555,
+            "lhTotalBytes": 526696,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 99,
+            "lcp": 987.7350000000001,
+            "fcp": 397.296,
+            "cls": 0,
+            "tbt": 0,
+            "si": 467.96564066468494,
+            "lhTotalBytes": 526655,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ]
+      },
+      "cdp": [
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 526714,
+            "imageBytes": 351654,
+            "requests": 22,
+            "imageRequests": 16,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 195.89999999850988,
+            "settleMs": 1916,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 909,
+            "imageBytes": 0,
+            "requests": 21,
+            "imageRequests": 16,
+            "cachedRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 132.20000000298023,
+            "settleMs": 1782,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 526617,
+            "imageBytes": 351654,
+            "requests": 22,
+            "imageRequests": 16,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 240.79999999701977,
+            "settleMs": 1946,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 910,
+            "imageBytes": 0,
+            "requests": 21,
+            "imageRequests": 16,
+            "cachedRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 126.5,
+            "settleMs": 1683,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 525689,
+            "imageBytes": 351654,
+            "requests": 22,
+            "imageRequests": 16,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 201.10000000149012,
+            "settleMs": 1912,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 905,
+            "imageBytes": 0,
+            "requests": 21,
+            "imageRequests": 16,
+            "cachedRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 124,
+            "settleMs": 1677,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 526690,
+            "imageBytes": 351654,
+            "requests": 22,
+            "imageRequests": 16,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 173.79999999701977,
+            "settleMs": 1803,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 910,
+            "imageBytes": 0,
+            "requests": 21,
+            "imageRequests": 16,
+            "cachedRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 97.60000000149012,
+            "settleMs": 1661,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "totalBytes": 526701,
+            "imageBytes": 351654,
+            "requests": 22,
+            "imageRequests": 16,
+            "cachedRequests": 0,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 235.39999999850988,
+            "settleMs": 1940,
+            "settled": true
+          },
+          "warm": {
+            "totalBytes": 910,
+            "imageBytes": 0,
+            "requests": 21,
+            "imageRequests": 16,
+            "cachedRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "firstImageMs": 128.5,
+            "settleMs": 1693,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        }
+      ]
+    },
+    "lightbox": {
+      "title": "Lightbox on throttled Slow-4G-like network (1.6 Mbps, 150 ms RTT)",
+      "url": "https://www.matassavickis.com/#/c/swiss/le-grammot",
+      "kind": "lightbox",
+      "lighthouse": {
+        "mobile": [],
+        "desktop": []
+      },
+      "cdp": [
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "steps": {
+              "openFirst": {
+                "ms": 1696.7999999970198,
+                "imageBytes": 108365,
+                "requestCount": 1,
+                "requestedBeforeAction": false,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "arrowRight": {
+                "ms": 10.699999995529652,
+                "imageBytes": 57082,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "coldOpen": {
+                "ms": 1267.8999999985099,
+                "imageBytes": 70323,
+                "requestCount": 2,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200,
+                  200
+                ]
+              },
+              "coldArrowRight": {
+                "ms": 16.899999998509884,
+                "imageBytes": 91304,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              }
+            },
+            "errors": [],
+            "http429": 0
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "steps": {
+              "openFirst": {
+                "ms": 1697.7000000029802,
+                "imageBytes": 108365,
+                "requestCount": 1,
+                "requestedBeforeAction": false,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "arrowRight": {
+                "ms": 10.100000001490116,
+                "imageBytes": 57082,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "coldOpen": {
+                "ms": 1264.8999999985099,
+                "imageBytes": 70323,
+                "requestCount": 2,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200,
+                  200
+                ]
+              },
+              "coldArrowRight": {
+                "ms": 7.199999995529652,
+                "imageBytes": 91304,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              }
+            },
+            "errors": [],
+            "http429": 0
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "steps": {
+              "openFirst": {
+                "ms": 1700.7999999970198,
+                "imageBytes": 108365,
+                "requestCount": 1,
+                "requestedBeforeAction": false,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "arrowRight": {
+                "ms": 26,
+                "imageBytes": 57082,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "coldOpen": {
+                "ms": 1274.7999999970198,
+                "imageBytes": 70323,
+                "requestCount": 2,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200,
+                  200
+                ]
+              },
+              "coldArrowRight": {
+                "ms": 6.5,
+                "imageBytes": 91304,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              }
+            },
+            "errors": [],
+            "http429": 0
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "steps": {
+              "openFirst": {
+                "ms": 1667.5,
+                "imageBytes": 108365,
+                "requestCount": 1,
+                "requestedBeforeAction": false,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "arrowRight": {
+                "ms": 12.100000001490116,
+                "imageBytes": 57082,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "coldOpen": {
+                "ms": 1266,
+                "imageBytes": 70323,
+                "requestCount": 2,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200,
+                  200
+                ]
+              },
+              "coldArrowRight": {
+                "ms": 13.200000002980232,
+                "imageBytes": 91304,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              }
+            },
+            "errors": [],
+            "http429": 0
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "steps": {
+              "openFirst": {
+                "ms": 1687.1999999955297,
+                "imageBytes": 108365,
+                "requestCount": 1,
+                "requestedBeforeAction": false,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "arrowRight": {
+                "ms": 12.600000001490116,
+                "imageBytes": 57082,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              },
+              "coldOpen": {
+                "ms": 1264,
+                "imageBytes": 70323,
+                "requestCount": 2,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200,
+                  200
+                ]
+              },
+              "coldArrowRight": {
+                "ms": 6.699999995529652,
+                "imageBytes": 91304,
+                "requestCount": 1,
+                "requestedBeforeAction": true,
+                "fromCache": false,
+                "status": [
+                  200
+                ]
+              }
+            },
+            "errors": [],
+            "http429": 0
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        }
+      ]
+    },
+    "deeplink": {
+      "title": "Deep link to a photo `/#/c/swiss/le-grammot/p/swiss-le-grammot-r1-04887-032a` (throttled 1.6 Mbps, 150 ms RTT)",
+      "url": "https://www.matassavickis.com/#/c/swiss/le-grammot/p/swiss-le-grammot-r1-04887-032a",
+      "kind": "deeplink",
+      "lighthouse": {
+        "mobile": [
+          {
+            "score": 80,
+            "lcp": 5336.876250000001,
+            "fcp": 1536.1085000000003,
+            "cls": 0,
+            "tbt": 9.5,
+            "si": 1536.1085000000003,
+            "lhTotalBytes": 1097298,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 79,
+            "lcp": 5696.63925,
+            "fcp": 1558.9005,
+            "cls": 0,
+            "tbt": 46,
+            "si": 1558.9005,
+            "lhTotalBytes": 1097275,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 79,
+            "lcp": 5708.219,
+            "fcp": 1558.4560000000001,
+            "cls": 0,
+            "tbt": 19.5,
+            "si": 1558.4560000000001,
+            "lhTotalBytes": 1097286,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 80,
+            "lcp": 5443.014499999999,
+            "fcp": 1543.6200000000001,
+            "cls": 0,
+            "tbt": 11,
+            "si": 1543.6200000000001,
+            "lhTotalBytes": 1097283,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 79,
+            "lcp": 5483.3727499999995,
+            "fcp": 1535.8445,
+            "cls": 0,
+            "tbt": 4.5,
+            "si": 1535.8445,
+            "lhTotalBytes": 1097224,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ],
+        "desktop": [
+          {
+            "score": 97,
+            "lcp": 1336.7017500000002,
+            "fcp": 489.85849999999994,
+            "cls": 0,
+            "tbt": 0,
+            "si": 668.3201061648722,
+            "lhTotalBytes": 880523,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 97,
+            "lcp": 1282.69825,
+            "fcp": 439.9145,
+            "cls": 0,
+            "tbt": 0,
+            "si": 637.3475389158225,
+            "lhTotalBytes": 880591,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 97,
+            "lcp": 1224.4265,
+            "fcp": 399.9,
+            "cls": 0,
+            "tbt": 0,
+            "si": 869.2347208222559,
+            "lhTotalBytes": 880587,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 97,
+            "lcp": 1290.25925,
+            "fcp": 428.87350000000004,
+            "cls": 0,
+            "tbt": 0,
+            "si": 538.6393064159802,
+            "lhTotalBytes": 880602,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          },
+          {
+            "score": 97,
+            "lcp": 1263.5722500000002,
+            "fcp": 435.2165,
+            "cls": 0,
+            "tbt": 0,
+            "si": 498.70063066454964,
+            "lhTotalBytes": 880536,
+            "errors": [],
+            "http429": 0,
+            "warnings": [],
+            "lhVersion": "11.7.1",
+            "attempt": 1,
+            "noisy": [],
+            "attempts": [
+              {
+                "attempt": 1,
+                "noisy": []
+              }
+            ]
+          }
+        ]
+      },
+      "cdp": [
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "lightboxImageMs": 4084.7000000029802,
+            "imageBytes": 705545,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": false,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 108365,
+            "totalBytes": 880606,
+            "requests": 26,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "warm": {
+            "lightboxImageMs": 242.59999999403954,
+            "imageBytes": 0,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": true,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 0,
+            "totalBytes": 910,
+            "requests": 25,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "lightboxImageMs": 4078.9000000059605,
+            "imageBytes": 705545,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": false,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 108365,
+            "totalBytes": 880578,
+            "requests": 26,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "warm": {
+            "lightboxImageMs": 306.29999999701977,
+            "imageBytes": 0,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": true,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 0,
+            "totalBytes": 914,
+            "requests": 25,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "lightboxImageMs": 4072.60000000149,
+            "imageBytes": 705545,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": false,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 108365,
+            "totalBytes": 880592,
+            "requests": 26,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "warm": {
+            "lightboxImageMs": 230.79999999701977,
+            "imageBytes": 0,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": true,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 0,
+            "totalBytes": 909,
+            "requests": 25,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "lightboxImageMs": 4079.5999999940395,
+            "imageBytes": 705545,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": false,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 108365,
+            "totalBytes": 879592,
+            "requests": 26,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "warm": {
+            "lightboxImageMs": 212.60000000149012,
+            "imageBytes": 0,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": true,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 0,
+            "totalBytes": 914,
+            "requests": 25,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        },
+        {
+          "version": "Chrome/158.0.8127.36",
+          "cold": {
+            "lightboxImageMs": 4416,
+            "imageBytes": 705545,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": false,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 108365,
+            "totalBytes": 880588,
+            "requests": 26,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "warm": {
+            "lightboxImageMs": 207.39999999850988,
+            "imageBytes": 0,
+            "requestCount": 1,
+            "requestedBeforeAction": false,
+            "fromCache": true,
+            "status": [
+              200
+            ],
+            "lightboxImageBytes": 0,
+            "totalBytes": 909,
+            "requests": 25,
+            "imageRequests": 20,
+            "errors": [],
+            "http429": 0,
+            "settled": true
+          },
+          "attempt": 1,
+          "noisy": [],
+          "attempts": [
+            {
+              "attempt": 1,
+              "noisy": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
