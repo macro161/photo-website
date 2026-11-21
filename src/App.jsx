@@ -5,6 +5,7 @@ import { buildCatalogs } from './catalogs.js'
 import CatalogIndex from './components/CatalogIndex.jsx'
 import Gallery from './components/Gallery.jsx'
 import Lightbox from './components/Lightbox.jsx'
+import Lab from './lab/Lab.jsx'
 
 /**
  * Routing lives in the URL hash so catalogs are linkable and the browser's
@@ -32,6 +33,9 @@ function parseHash(hash) {
     return { view: 'about', catalog: null, album: null, photo: null }
   }
   const parts = path.split('/').filter(Boolean).map(decode)
+  if (parts[0] === 'lab') {
+    return { view: 'lab', labSlug: parts[1] || null, catalog: null, album: null, photo: null }
+  }
   if (parts[0] === 'c' && parts[1]) {
     let rest = parts.slice(2)
     let photo = null
@@ -187,7 +191,9 @@ export default function App() {
           className="view"
           key={`${view}:${route.catalog ?? ''}:${route.album ?? ''}`}
         >
-          {view === 'about' ? (
+          {view === 'lab' ? (
+            <Lab slug={route.labSlug} />
+          ) : view === 'about' ? (
             <section className="about">
               <p className="about-text">{config.about}</p>
               {config.links?.length > 0 && (

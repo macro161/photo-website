@@ -1,0 +1,432 @@
+[
+ {
+  "n": 1,
+  "date": "2026-11-14",
+  "type": "Hiking",
+  "title": "Enney - Vudalla",
+  "km": 14.4,
+  "gain": 979,
+  "minutes": 358,
+  "match": "none yet (also in \"Completed\" as Enney - Vudalla)"
+ },
+ {
+  "n": 2,
+  "date": "2026-11-01",
+  "type": "Hiking",
+  "title": "Toubkal via Arumd-Sidi Chamarouch-CAF Refuge Trail",
+  "km": 9.7,
+  "gain": 15,
+  "minutes": 235,
+  "match": "none (Morocco; descent/partial)"
+ },
+ {
+  "n": 3,
+  "date": "2026-10-31",
+  "type": "Hiking",
+  "title": "Toubkal via Arumd-Sidi Chamarouch-CAF Refuge Trail",
+  "km": 11.3,
+  "gain": 1422,
+  "minutes": 311,
+  "match": "none (Morocco)"
+ },
+ {
+  "n": 4,
+  "date": "2026-10-04",
+  "type": "Hiking",
+  "title": "Gemmi Pass - Lämmeren Hut - Schwarzhorn",
+  "km": 13.9,
+  "gain": 961,
+  "minutes": 388,
+  "match": "none yet"
+ },
+ {
+  "n": 5,
+  "date": "2026-09-27",
+  "type": "Hiking",
+  "title": "Kandersteg - Lake Oeschinensee",
+  "km": 15.8,
+  "gain": 916,
+  "minutes": 333,
+  "match": "none yet"
+ },
+ {
+  "n": 6,
+  "date": "2026-09-13",
+  "type": "Hiking",
+  "title": "Bisse du Ro - Cry d'Er",
+  "km": 12.2,
+  "gain": 768,
+  "minutes": 341,
+  "match": "none yet"
+ },
+ {
+  "n": 7,
+  "date": "2026-09-12",
+  "type": "Hiking",
+  "title": "Lavaux Vineyard Terraces: St-Saphorin - Lutry",
+  "km": 19.8,
+  "gain": 966,
+  "minutes": 215,
+  "match": "Drive `2026-09-23/Tour de l'Argentine + Lavaux Vineyard Terraces` (R1-07693)"
+ },
+ {
+  "n": 8,
+  "date": "2026-09-06",
+  "type": "Hiking",
+  "title": "Tour de l'Argentine",
+  "km": 18.8,
+  "gain": 1642,
+  "minutes": 382,
+  "match": "Drive `2026-09-23/Tour de l'Argentine + Lavaux Vineyard Terraces` (R1-07693)"
+ },
+ {
+  "n": 9,
+  "date": "2026-08-22",
+  "type": "Hiking",
+  "title": "Rochers de Naye via Dent de Jaman",
+  "km": 4.1,
+  "gain": 319,
+  "minutes": 180,
+  "match": "Drive `2026-09-23/Rochers de Naye + Tour de l'Argentine` (R1-07734); site \"Dent du Jaman\" albums"
+ },
+ {
+  "n": 10,
+  "date": "2026-08-20",
+  "type": "Hiking",
+  "title": "Noiraigue - L'Areuse Canyon - Boudry",
+  "km": 12.1,
+  "gain": 222,
+  "minutes": 208,
+  "match": "none yet"
+ },
+ {
+  "n": 11,
+  "date": "2026-08-18",
+  "type": "Hiking",
+  "title": "Üssers Barrhorn",
+  "km": 22.1,
+  "gain": 2320,
+  "minutes": 677,
+  "match": "Drive `2026-09-21 - Barrhorn 2026` (roll 1426)"
+ },
+ {
+  "n": 12,
+  "date": "2026-08-14",
+  "type": "Hiking",
+  "title": "Canal del Texu Trail",
+  "km": 20.7,
+  "gain": 1778,
+  "minutes": 242,
+  "match": "Drive `2026-09-23/Spain + Picos de Europa` (roll R1-07737)"
+ },
+ {
+  "n": 13,
+  "date": "2026-08-02",
+  "type": "Hiking",
+  "title": "Bourg-St-Pierre - Valsorey Hut - Pointe de Penne",
+  "km": 7.1,
+  "gain": 12,
+  "minutes": 210,
+  "match": "Drive `2026 Cabane de Valsorey` / site `Swiss/Cabane de Valsorey`"
+ },
+ {
+  "n": 14,
+  "date": "2026-08-01",
+  "type": "Hiking",
+  "title": "Bourg-St-Pierre - Valsorey Hut - Pointe de Penne",
+  "km": 8.4,
+  "gain": 1353,
+  "minutes": 294,
+  "match": "same as #13 (also roll R1-07736 later frames)"
+ },
+ {
+  "n": 15,
+  "date": "2026-07-25",
+  "type": "Hiking",
+  "title": "Schnapsbrunnenweg 1 (evening)",
+  "km": 11.3,
+  "gain": 394,
+  "minutes": 202,
+  "match": "Drive `2026-09-23/Germany Black Forest Sasbachwalden...` (roll R1-07736)"
+ },
+ {
+  "n": 16,
+  "date": "2026-07-19",
+  "type": "Hiking",
+  "title": "Üssers Barrhorn (short)",
+  "km": 5.5,
+  "gain": 43,
+  "minutes": 73,
+  "match": "odd: same date as Brunet; likely not Barrhorn film"
+ },
+ {
+  "n": 17,
+  "date": "2026-07-19",
+  "type": "Hiking",
+  "title": "Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (evening)",
+  "km": 4.4,
+  "gain": 45,
+  "minutes": 137,
+  "match": "Drive `Cabane Brunet`, site `Swiss/Mauvoisin`"
+ },
+ {
+  "n": 18,
+  "date": "2026-07-19",
+  "type": "Hiking",
+  "title": "Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (afternoon)",
+  "km": 7.1,
+  "gain": 1059,
+  "minutes": 275,
+  "match": "same as #17"
+ },
+ {
+  "n": 19,
+  "date": "2026-06-28",
+  "type": "Hiking",
+  "title": "Miex - Mont Grammont",
+  "km": 13.7,
+  "gain": 1198,
+  "minutes": 355,
+  "match": "site `Swiss/Le Grammot` (Drive \"2026 Les Grammot\")"
+ },
+ {
+  "n": 20,
+  "date": "2026-06-21",
+  "type": "Hiking",
+  "title": "Tour de Mayen - Tour d'Aï - Lake Aï",
+  "km": 18.4,
+  "gain": 1308,
+  "minutes": 599,
+  "match": "site `Tour du Mayan + Tour d'Ai`"
+ },
+ {
+  "n": 21,
+  "date": "2026-06-14",
+  "type": "Hiking",
+  "title": "Les Avants - Col de Jaman Pass - Dent de Jaman - Le Paccot",
+  "km": 14.6,
+  "gain": 929,
+  "minutes": 377,
+  "match": "Drive \"Dent du Jaman Summer\", `Les Paccots`"
+ },
+ {
+  "n": 22,
+  "date": "2026-06-07",
+  "type": "Hiking",
+  "title": "Pointe de Bellevue - Portes de Culet",
+  "km": 5.5,
+  "gain": 427,
+  "minutes": 229,
+  "match": "site `Swiss/Pointe de Bellevue`"
+ },
+ {
+  "n": 23,
+  "date": "2026-05-30",
+  "type": "Hiking",
+  "title": "Paccot-Dessus - Dent de Lys - Paccot-Dessous",
+  "km": 12.7,
+  "gain": 885,
+  "minutes": 312,
+  "match": "site `Swiss/Les Paccots`"
+ },
+ {
+  "n": 24,
+  "date": "2026-05-17",
+  "type": "Hiking",
+  "title": "Tour de Mayen",
+  "km": 13.7,
+  "gain": 944,
+  "minutes": 256,
+  "match": "site `Tour du Mayan Spring(failed)` / `Tour du Mayan`"
+ },
+ {
+  "n": 25,
+  "date": "2026-04-26",
+  "type": "Hiking",
+  "title": "Sion - Coméraz - Bisse de Lentine",
+  "km": 10.1,
+  "gain": 383,
+  "minutes": 199,
+  "match": "site `Swiss/Bisse de Lentine`"
+ },
+ {
+  "n": 26,
+  "date": "2026-04-18",
+  "type": "Hiking",
+  "title": "Stansstad via Ennetbürgen [CLOSED]",
+  "km": 14.0,
+  "gain": 873,
+  "minutes": 324,
+  "match": "Drive `Swiss Lucerne Bürgenstock 2026` (site `Swiss/Bürgenstock`)"
+ },
+ {
+  "n": 27,
+  "date": "2026-03-21",
+  "type": "Hiking",
+  "title": "(untitled afternoon hike)",
+  "km": 3.4,
+  "gain": 333,
+  "minutes": 135,
+  "match": "unknown"
+ },
+ {
+  "n": 28,
+  "date": "2026-03-15",
+  "type": "Hiking",
+  "title": "Vuiteboeuf - Le Chasseron",
+  "km": 12.4,
+  "gain": 1069,
+  "minutes": 320,
+  "match": "Drive `2026-03-01 - Mont Pèlerin + Dent de Jaman + Le Chasseron`"
+ },
+ {
+  "n": 29,
+  "date": "2026-03-08",
+  "type": "Hiking (logged as snowshoeing in error)",
+  "title": "Dent de Jaman via Haut-de-Caux",
+  "km": 6.0,
+  "gain": 544,
+  "minutes": 273,
+  "match": "Drive `2026-03-01 - Mont Pèlerin + Dent de Jaman + Le Chasseron`"
+ },
+ {
+  "n": 30,
+  "date": "2026-03-01",
+  "type": "Hiking (logged as snowshoeing in error)",
+  "title": "Mont Pèlerin",
+  "km": 5.5,
+  "gain": 288,
+  "minutes": 144,
+  "match": "Drive `2026-03-01 - Mont Pèlerin + Dent de Jaman + Le Chasseron`"
+ },
+ {
+  "n": 31,
+  "date": "2026-02-01",
+  "type": "Snowshoeing",
+  "title": "Molard Trail via Les Avants (Cergniaule)",
+  "km": 9.5,
+  "gain": 535,
+  "minutes": 239,
+  "match": "none yet"
+ },
+ {
+  "n": 32,
+  "date": "2026-01-25",
+  "type": "Hiking",
+  "title": "Activity - January 25, 2026 (no trail name)",
+  "km": 9.2,
+  "gain": 128,
+  "minutes": 180,
+  "match": "Drive `2026 Winter - La Montagnette + Col du Mollendruz` (00001610), probable Col du Mollendruz"
+ },
+ {
+  "n": 33,
+  "date": "2026-01-18",
+  "type": "Hiking",
+  "title": "Montagnetta trail: Pierre d'Avoin - La Montagnetta - L'Irette",
+  "km": 4.9,
+  "gain": 339,
+  "minutes": 183,
+  "match": "Drive `2026 Winter - La Montagnette + Col du Mollendruz` (00001610); site `Swiss/La Montagnette`"
+ },
+ {
+  "n": 34,
+  "date": "2025-12-06",
+  "type": "Hiking",
+  "title": "Visperterminen - Brunnu - Bodma",
+  "km": 12.4,
+  "gain": 607,
+  "minutes": 170,
+  "match": "none yet"
+ },
+ {
+  "n": 35,
+  "date": "2025-11-09",
+  "type": "Hiking",
+  "title": "Passerelle à Farinet via Saillon",
+  "km": 13.0,
+  "gain": 770,
+  "minutes": 170,
+  "match": "none yet"
+ },
+ {
+  "n": 36,
+  "date": "2025-09-28",
+  "type": "Hiking",
+  "title": "Lake Taney",
+  "km": 5.7,
+  "gain": 456,
+  "minutes": 199,
+  "match": "none yet"
+ },
+ {
+  "n": 37,
+  "date": "2025-09-07",
+  "type": "Hiking",
+  "title": "Areuse Gorges via Chambrelien",
+  "km": 10.5,
+  "gain": 377,
+  "minutes": 231,
+  "match": "none yet"
+ },
+ {
+  "n": 38,
+  "date": "2025-08-31",
+  "type": "Hiking",
+  "title": "Dent de Vaulion",
+  "km": 6.8,
+  "gain": 382,
+  "minutes": 160,
+  "match": "none yet"
+ },
+ {
+  "n": 39,
+  "date": "2025-08-24",
+  "type": "Hiking",
+  "title": "Noiraigue - Creux-du-Van",
+  "km": 10.1,
+  "gain": 719,
+  "minutes": 325,
+  "match": "none yet"
+ },
+ {
+  "n": 40,
+  "date": "2025-07-18",
+  "type": "Hiking",
+  "title": "Pic Chaussy via Lac Lioson",
+  "km": 7.3,
+  "gain": 426,
+  "minutes": 229,
+  "match": "none yet"
+ },
+ {
+  "n": 41,
+  "date": "2025-07-06",
+  "type": "Hiking",
+  "title": "Narcissus Trail: Cubly Trail - Azot Trail",
+  "km": 1.5,
+  "gain": 236,
+  "minutes": 35,
+  "match": "none yet"
+ },
+ {
+  "n": 42,
+  "date": "2025-06-23",
+  "type": "Hiking",
+  "title": "Boucle Chexbres - Epesses",
+  "km": 11.1,
+  "gain": 583,
+  "minutes": 174,
+  "match": "none yet"
+ },
+ {
+  "n": 43,
+  "date": "2025-06-21",
+  "type": "Hiking",
+  "title": "Siviez - Lac de Cleuson",
+  "km": 7.5,
+  "gain": 329,
+  "minutes": 187,
+  "match": "none yet"
+ }
+]
