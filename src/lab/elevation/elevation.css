@@ -23,3 +23,7 @@
 .elv-preview{position:absolute;top:-6px;width:96px;background:#121212;padding:3px;z-index:4;pointer-events:none;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 .elv-preview img{display:block;width:100%;height:auto}
 @media (prefers-reduced-motion:reduce){.elv-frame{transition:none}}
+.elv-chart.gps,.elv-axis.gps{margin-left:2.8rem}
+.elv-grid-l{stroke:var(--line);stroke-width:1;vector-effect:non-scaling-stroke}
+.elv-tick{position:absolute;right:calc(100% + .35rem);transform:translateY(-50%);font-size:.66rem;color:var(--muted);font-variant-numeric:tabular-nums;pointer-events:none;white-space:nowrap}
+.elv-banner{margin:.5rem 0 .2rem;padding:.4rem .6rem;background:#c0392b;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.02em}
