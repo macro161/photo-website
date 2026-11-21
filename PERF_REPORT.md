@@ -55,3 +55,25 @@ host, above-the-fold cards/thumbs start revealed (no fade-in delay) with `fetchp
 Result: the layout shift is gone (it was the Google Fonts swap) and `/assets/*` is now cached for a year. Mobile LCP did not
 move materially: it is dominated by downloading the first image from the rate-limited `r2.dev` host on simulated 4G, so the
 remaining fix is the `img.matassavickis.com` CDN domain (needs the Cloudflare dashboard). Mobile score is still 78 to 82 (target 90+).
+
+## Phase 5: manifest split per catalog (PERF_AFTER_5.md, commit 157d7fa)
+
+Changes: `scripts/index.mjs` now also writes `src/generated/index.json` (13.5 KB: catalogs, albums, counts, covers) and one slimmed
+`src/generated/catalogs/<slug>.json` per catalog. The app loads a catalog's photos only when a photo grid or the lightbox needs them
+(home and a catalog's album cards need only the index), with a 3:2 skeleton grid while loading. Old links with the wrong catalog are
+still redirected to the photo's real home. The `#/lab/*` pages still use the full `manifest.json`, now in their own lazy chunk.
+
+| Metric | Phase 4 | Phase 5 |
+|---|---|---|
+| Main JS bundle (raw / gzip) | 554.9 KB / 90.7 KB | **195.6 KB / 62.4 KB** |
+| Swiss album index, cold transfer | 596 KB | **412 KB** |
+| Home, cold transfer | 403 KB | 385 KB |
+| Mid album, cold transfer | 527 KB | 517 KB |
+| Deep link, cold transfer | 881 KB | 871 KB |
+| Mobile Lighthouse home / album index / album / deep link | 82 / 80 / 82 / 79 | 83 / 82 / 82 / 80 |
+| Mobile LCP home | 4.8 s | 4.7 s |
+
+Per-catalog chunks are small once compressed (Swiss, the largest, is 129 KB raw / 8.6 KB gzip), and the main bundle no longer grows with
+every photo added. Mobile LCP is still set by the first image on the rate-limited `r2.dev` host, so the score is only 1-2 points up.
+Verified live: home, album grid, lightbox open/next/close, cold deep link, wrong-catalog and unknown-id links, date filter, lab strip page,
+no console errors.
