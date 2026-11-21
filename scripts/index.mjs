@@ -40,6 +40,8 @@ const execFileAsync = promisify(execFile)
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.resolve(__dirname, '..')
 const MANIFEST_PATH = path.join(ROOT, 'src', 'generated', 'manifest.json')
+// Written by scripts/optimize.mjs: which web-sized widths exist per photo, plus an average colour.
+const VARIANTS_PATH = path.join(ROOT, 'src', 'generated', 'variants.json')
 
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif'])
 
@@ -164,6 +166,14 @@ async function main() {
     }
   }
   const previousByKey = new Map(previous.map((p) => [p.file, p]))
+  let variants = {}
+  if (existsSync(VARIANTS_PATH)) {
+    try {
+      variants = JSON.parse(await fs.readFile(VARIANTS_PATH, 'utf8'))
+    } catch {
+      variants = {}
+    }
+  }
 
   const objects = (await listBucket(remote)).filter((o) => {
     const key = o.Path
@@ -235,6 +245,8 @@ async function main() {
       albumSlug: album ? slugifyName(album) : null,
       description: override.description ?? fromName.description,
       date: override.date ?? fromName.date,
+      // Web-sized copies (see scripts/optimize.mjs); absent = serve the original.
+      ...(variants[key] ? { w: variants[key].w, c: variants[key].c } : {}),
     })
   }
 

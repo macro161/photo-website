@@ -4,7 +4,7 @@
  * scrolls in; the image fades in once decoded.
  */
 import { useState, useEffect, useRef } from 'react'
-import { imageUrl } from '../imageUrl.js'
+import Picture from './Picture.jsx'
 
 function Thumb({ photo, index, onOpen }) {
   const [loaded, setLoaded] = useState(false)
@@ -35,14 +35,16 @@ function Thumb({ photo, index, onOpen }) {
     <button
       ref={ref}
       className={`thumb${revealed ? ' revealed' : ''}`}
-      style={{ aspectRatio: ratio }}
+      style={{ aspectRatio: ratio, ...(photo.c ? { backgroundColor: photo.c } : {}) }}
       onClick={() => onOpen(index)}
       aria-label={photo.description || photo.file}
     >
-      <img
-        src={imageUrl(photo.thumb)}
+      <Picture
+        photo={photo}
+        sizes="(max-width: 560px) 100vw, (max-width: 1000px) 50vw, 33vw"
         alt={photo.description || photo.file}
-        loading="lazy"
+        loading={index < 3 ? 'eager' : 'lazy'}
+        fetchPriority={index < 3 ? 'high' : undefined}
         decoding="async"
         width={photo.width}
         height={photo.height}

@@ -566,6 +566,12 @@ main {
   max-width: 100%;
 }
 
+.thumb picture,
+.catalog-cover picture,
+.lb-stack picture {
+  display: contents; /* keep the <img> a direct grid item of .lb-stack */
+}
+
 .lb-figure img {
   grid-area: 1 / 1;
   max-width: 100%;

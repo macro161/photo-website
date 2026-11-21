@@ -6,7 +6,7 @@
  * adding a folder adds a card, with no change here.
  */
 import { useState, useEffect, useRef } from 'react'
-import { imageUrl } from '../imageUrl.js'
+import Picture from './Picture.jsx'
 import { formatRange, formatHike } from '../dates.js'
 
 function CatalogCard({ catalog, onOpen }) {
@@ -39,10 +39,11 @@ function CatalogCard({ catalog, onOpen }) {
       onClick={() => onOpen(catalog.slug)}
       aria-label={`${catalog.name} — ${catalog.label}`}
     >
-      <span className="catalog-cover">
+      <span className="catalog-cover" style={cover?.c ? { backgroundColor: cover.c } : undefined}>
         {cover ? (
-          <img
-            src={imageUrl(cover.thumb)}
+          <Picture
+            photo={cover}
+            sizes="(max-width: 700px) 100vw, 480px"
             alt=""
             loading="lazy"
             decoding="async"

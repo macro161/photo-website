@@ -1,0 +1,1 @@
+{"name":"photo-perf","private":true,"type":"module","version":"1.0.0","scripts":{"bench":"node run.mjs"},"devDependencies":{"lighthouse":"^11.7.1","puppeteer-core":"^25.18.1"}}

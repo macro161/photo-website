@@ -9,7 +9,7 @@
  * through never lands on an empty frame.
  */
 import { useEffect, useRef, useState } from 'react'
-import { imageUrl } from '../imageUrl.js'
+import { imageUrl, hasVariants, srcSet, variantUrl, widthAtMost, supportsAvif } from '../imageUrl.js'
 
 const MAX_SCALE = 5
 const DOUBLE_TAP_SCALE = 2.5
@@ -22,15 +22,28 @@ function usePreload(photos) {
   const keep = useRef([])
   const key = photos.map((p) => p?.src).join('|')
   useEffect(() => {
-    keep.current = photos
-      .filter(Boolean)
-      .map((p) => {
-        const img = new Image()
-        img.decoding = 'async'
-        img.src = imageUrl(p.src)
-        img.decode?.().catch(() => {})
-        return img
-      })
+    let cancelled = false
+    supportsAvif().then((avif) => {
+      if (cancelled) return
+      keep.current = photos
+        .filter(Boolean)
+        .map((p) => {
+          const img = new Image()
+          img.decoding = 'async'
+          if (hasVariants(p)) {
+            // Same candidates and `sizes` as the displayed <picture>, so this warms the right file.
+            img.sizes = '100vw'
+            img.srcset = srcSet(p, avif ? 'avif' : 'webp', 1600, 2400)
+          } else {
+            img.src = imageUrl(p.src)
+          }
+          img.decode?.().catch(() => {})
+          return img
+        })
+    })
+    return () => {
+      cancelled = true
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [key])
 }
@@ -38,10 +51,18 @@ function usePreload(photos) {
 /** Thumbnail first (blurred, same box), full image on top once decoded. */
 function LightboxImage({ photo }) {
   const [full, setFull] = useState(false)
+  const variants = hasVariants(photo)
   const src = imageUrl(photo.src)
-  const thumb = imageUrl(photo.thumb)
+  // With variants: the small WebP is the instant placeholder, the 1600/2400 AVIF/WebP is the real image.
+  const thumb = variants ? variantUrl(photo, widthAtMost(photo, 480), 'webp') : imageUrl(photo.thumb)
   const alt = photo.description || photo.file
-  const distinct = thumb !== src
+  const distinct = variants || thumb !== src
+  const onLoad = (e) => {
+    const img = e.currentTarget
+    const done = () => setFull(true)
+    if (img.decode) img.decode().then(done, done)
+    else done()
+  }
 
   return (
     <div className="lb-stack">
@@ -54,19 +75,29 @@ function LightboxImage({ photo }) {
           draggable={false}
         />
       )}
-      <img
-        className={`lb-full${distinct && !full ? ' pending' : ''}`}
-        src={src}
-        alt={alt}
-        decoding="async"
-        draggable={false}
-        onLoad={(e) => {
-          const img = e.currentTarget
-          const done = () => setFull(true)
-          if (img.decode) img.decode().then(done, done)
-          else done()
-        }}
-      />
+      {variants ? (
+        <picture>
+          <source type="image/avif" srcSet={srcSet(photo, 'avif', 1600, 2400)} sizes="100vw" />
+          <source type="image/webp" srcSet={srcSet(photo, 'webp', 1600, 2400)} sizes="100vw" />
+          <img
+            className={`lb-full${!full ? ' pending' : ''}`}
+            src={variantUrl(photo, widthAtMost(photo, 1600), 'webp')}
+            alt={alt}
+            decoding="async"
+            draggable={false}
+            onLoad={onLoad}
+          />
+        </picture>
+      ) : (
+        <img
+          className={`lb-full${distinct && !full ? ' pending' : ''}`}
+          src={src}
+          alt={alt}
+          decoding="async"
+          draggable={false}
+          onLoad={onLoad}
+        />
+      )}
     </div>
   )
 }
