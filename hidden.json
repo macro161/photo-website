@@ -1,0 +1,65 @@
+{
+ "_about": "Photos left out of the site without deleting them from the bucket. 'npm run index' skips every file listed here. Remove an entry to bring the photo back.",
+ "hidden": [
+  {
+   "file": "Swiss/Barrhorn/14260010.JPG",
+   "note": "near-duplicate, group 1"
+  },
+  {
+   "file": "Swiss/Barrhorn/14260016.JPG",
+   "note": "near-duplicate, group 2"
+  },
+  {
+   "file": "Swiss/Barrhorn/14260017.JPG",
+   "note": "near-duplicate, group 2"
+  },
+  {
+   "file": "Swiss/Barrhorn/14260018.JPG",
+   "note": "near-duplicate, group 2"
+  },
+  {
+   "file": "Swiss/Barrhorn/14260028.JPG",
+   "note": "near-duplicate, group 3"
+  },
+  {
+   "file": "Swiss/Black Forest + Cabane de Valsorey/R1-07736-017A.JPG",
+   "note": "near-duplicate, group 4"
+  },
+  {
+   "file": "Swiss/Black Forest + Cabane de Valsorey/R1-07736-030A.JPG",
+   "note": "near-duplicate, group 5"
+  },
+  {
+   "file": "Ukraine/R1-04891-025A.JPG",
+   "note": "near-duplicate, group 6"
+  },
+  {
+   "file": "London 2026/0010_10A.jpg",
+   "note": "near-duplicate, group 7"
+  },
+  {
+   "file": "Swiss/Bisse de Lentine/image_10.jpg",
+   "note": "near-duplicate, group 9"
+  },
+  {
+   "file": "Swiss/Mauvoisin/0036_34.jpg",
+   "note": "near-duplicate, group 10"
+  },
+  {
+   "file": "Swiss/Les Paccots/R1-04886-0031.JPG",
+   "note": "near-duplicate, group 11"
+  },
+  {
+   "file": "Swiss/Les Paccots/R1-04886-0034.JPG",
+   "note": "near-duplicate, group 11"
+  },
+  {
+   "file": "Swiss/Tour du Mayan Spring(failed)/R1-04891-003A.JPG",
+   "note": "near-duplicate, group 12"
+  },
+  {
+   "file": "Swiss/Cabane de Valsorey/10_08_2026_0100.jpg",
+   "note": "near-duplicate, group 13"
+  }
+ ]
+}

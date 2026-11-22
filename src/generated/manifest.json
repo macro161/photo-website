@@ -144,30 +144,6 @@
     "v": 2
   },
   {
-    "id": "ukraine-r1-04891-025a",
-    "file": "Ukraine/R1-04891-025A.JPG",
-    "size": 5438302,
-    "modTime": "2026-08-30T13:49:47.164000000Z",
-    "src": "/Ukraine/R1-04891-025A.JPG",
-    "thumb": "/Ukraine/R1-04891-025A.JPG",
-    "width": 2433,
-    "height": 3601,
-    "catalog": "Ukraine",
-    "catalogSlug": "ukraine",
-    "album": null,
-    "albumSlug": null,
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#8e9690",
-    "v": 2
-  },
-  {
     "id": "ukraine-r1-04891-024a",
     "file": "Ukraine/R1-04891-024A.JPG",
     "size": 5550029,
@@ -885,30 +861,6 @@
       2400
     ],
     "c": "#9a9fa1",
-    "v": 2
-  },
-  {
-    "id": "swiss-tour-du-mayan-spring-failed-r1-04891-003a",
-    "file": "Swiss/Tour du Mayan Spring(failed)/R1-04891-003A.JPG",
-    "size": 4304413,
-    "modTime": "2026-08-30T13:50:48.725000000Z",
-    "src": "/Swiss/Tour%20du%20Mayan%20Spring(failed)/R1-04891-003A.JPG",
-    "thumb": "/Swiss/Tour%20du%20Mayan%20Spring(failed)/R1-04891-003A.JPG",
-    "width": 3601,
-    "height": 2433,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Tour du Mayan Spring(failed)",
-    "albumSlug": "tour-du-mayan-spring-failed",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#9da7ac",
     "v": 2
   },
   {
@@ -4221,30 +4173,6 @@
     "v": 2
   },
   {
-    "id": "swiss-mauvoisin-0036-34",
-    "file": "Swiss/Mauvoisin/0036_34.jpg",
-    "size": 3912110,
-    "modTime": "2026-08-30T13:36:23.462000000Z",
-    "src": "/Swiss/Mauvoisin/0036_34.jpg",
-    "thumb": "/Swiss/Mauvoisin/0036_34.jpg",
-    "width": 3130,
-    "height": 2075,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Mauvoisin",
-    "albumSlug": "mauvoisin",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#a0aaa4",
-    "v": 2
-  },
-  {
     "id": "swiss-mauvoisin-0035-33",
     "file": "Swiss/Mauvoisin/0035_33.jpg",
     "size": 3995433,
@@ -4986,30 +4914,6 @@
     "v": 2
   },
   {
-    "id": "swiss-les-paccots-r1-04886-0034",
-    "file": "Swiss/Les Paccots/R1-04886-0034.JPG",
-    "size": 4147272,
-    "modTime": "2026-08-30T14:07:35.144000000Z",
-    "src": "/Swiss/Les%20Paccots/R1-04886-0034.JPG",
-    "thumb": "/Swiss/Les%20Paccots/R1-04886-0034.JPG",
-    "width": 2433,
-    "height": 3601,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Les Paccots",
-    "albumSlug": "les-paccots",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#7a8b99",
-    "v": 2
-  },
-  {
     "id": "swiss-les-paccots-r1-04886-0033",
     "file": "Swiss/Les Paccots/R1-04886-0033.JPG",
     "size": 3773684,
@@ -5055,30 +4959,6 @@
       2400
     ],
     "c": "#7b94aa",
-    "v": 2
-  },
-  {
-    "id": "swiss-les-paccots-r1-04886-0031",
-    "file": "Swiss/Les Paccots/R1-04886-0031.JPG",
-    "size": 4206199,
-    "modTime": "2026-08-30T14:07:35.205000000Z",
-    "src": "/Swiss/Les%20Paccots/R1-04886-0031.JPG",
-    "thumb": "/Swiss/Les%20Paccots/R1-04886-0031.JPG",
-    "width": 3601,
-    "height": 2433,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Les Paccots",
-    "albumSlug": "les-paccots",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#7d98b2",
     "v": 2
   },
   {
@@ -7403,30 +7283,6 @@
     "v": 2
   },
   {
-    "id": "swiss-cabane-de-valsorey-10-08-2026-0100",
-    "file": "Swiss/Cabane de Valsorey/10_08_2026_0100.jpg",
-    "size": 3312224,
-    "modTime": "2026-08-30T14:21:29.908000000Z",
-    "src": "/Swiss/Cabane%20de%20Valsorey/10_08_2026_0100.jpg",
-    "thumb": "/Swiss/Cabane%20de%20Valsorey/10_08_2026_0100.jpg",
-    "width": 3587,
-    "height": 2400,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Cabane de Valsorey",
-    "albumSlug": "cabane-de-valsorey",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#86846f",
-    "v": 2
-  },
-  {
     "id": "swiss-cabane-de-valsorey-10-08-2026-0099",
     "file": "Swiss/Cabane de Valsorey/10_08_2026_0099.jpg",
     "size": 3020797,
@@ -8357,30 +8213,6 @@
     "v": 2
   },
   {
-    "id": "swiss-black-forest-cabane-de-valsorey-r1-07736-030a",
-    "file": "Swiss/Black Forest + Cabane de Valsorey/R1-07736-030A.JPG",
-    "size": 3824794,
-    "modTime": "2026-11-21T09:52:59.800505059+01:00",
-    "src": "/Swiss/Black%20Forest%20+%20Cabane%20de%20Valsorey/R1-07736-030A.JPG",
-    "thumb": "/Swiss/Black%20Forest%20+%20Cabane%20de%20Valsorey/R1-07736-030A.JPG",
-    "width": 3601,
-    "height": 2433,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Black Forest + Cabane de Valsorey",
-    "albumSlug": "black-forest-cabane-de-valsorey",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#8a8e90",
-    "v": 2
-  },
-  {
     "id": "swiss-black-forest-cabane-de-valsorey-r1-07736-029a",
     "file": "Swiss/Black Forest + Cabane de Valsorey/R1-07736-029A.JPG",
     "size": 4519265,
@@ -8666,30 +8498,6 @@
       2400
     ],
     "c": "#a38473",
-    "v": 2
-  },
-  {
-    "id": "swiss-black-forest-cabane-de-valsorey-r1-07736-017a",
-    "file": "Swiss/Black Forest + Cabane de Valsorey/R1-07736-017A.JPG",
-    "size": 4153904,
-    "modTime": "2026-11-21T09:52:59.746505242+01:00",
-    "src": "/Swiss/Black%20Forest%20+%20Cabane%20de%20Valsorey/R1-07736-017A.JPG",
-    "thumb": "/Swiss/Black%20Forest%20+%20Cabane%20de%20Valsorey/R1-07736-017A.JPG",
-    "width": 3601,
-    "height": 2433,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Black Forest + Cabane de Valsorey",
-    "albumSlug": "black-forest-cabane-de-valsorey",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#a48b74",
     "v": 2
   },
   {
@@ -9101,30 +8909,6 @@
     "v": 2
   },
   {
-    "id": "swiss-bisse-de-lentine-image-10",
-    "file": "Swiss/Bisse de Lentine/image_10.jpg",
-    "size": 5409250,
-    "modTime": "2026-08-30T13:40:35.937000000Z",
-    "src": "/Swiss/Bisse%20de%20Lentine/image_10.jpg",
-    "thumb": "/Swiss/Bisse%20de%20Lentine/image_10.jpg",
-    "width": 3130,
-    "height": 2075,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Bisse de Lentine",
-    "albumSlug": "bisse-de-lentine",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#6b6253",
-    "v": 2
-  },
-  {
     "id": "swiss-barrhorn-14260037",
     "file": "Swiss/Barrhorn/14260037.JPG",
     "size": 1027612,
@@ -9291,27 +9075,6 @@
       960
     ],
     "c": "#8e938e"
-  },
-  {
-    "id": "swiss-barrhorn-14260028",
-    "file": "Swiss/Barrhorn/14260028.JPG",
-    "size": 1037503,
-    "modTime": "2026-11-21T09:52:59.967161430+01:00",
-    "src": "/Swiss/Barrhorn/14260028.JPG",
-    "thumb": "/Swiss/Barrhorn/14260028.JPG",
-    "width": 1544,
-    "height": 1024,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Barrhorn",
-    "albumSlug": "barrhorn",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960
-    ],
-    "c": "#959c98"
   },
   {
     "id": "swiss-barrhorn-14260027",
@@ -9503,69 +9266,6 @@
     "c": "#aeb3af"
   },
   {
-    "id": "swiss-barrhorn-14260018",
-    "file": "Swiss/Barrhorn/14260018.JPG",
-    "size": 1086508,
-    "modTime": "2026-11-21T09:52:59.950061613+01:00",
-    "src": "/Swiss/Barrhorn/14260018.JPG",
-    "thumb": "/Swiss/Barrhorn/14260018.JPG",
-    "width": 1544,
-    "height": 1024,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Barrhorn",
-    "albumSlug": "barrhorn",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960
-    ],
-    "c": "#abaea8"
-  },
-  {
-    "id": "swiss-barrhorn-14260017",
-    "file": "Swiss/Barrhorn/14260017.JPG",
-    "size": 1141753,
-    "modTime": "2026-11-21T09:52:59.947504561+01:00",
-    "src": "/Swiss/Barrhorn/14260017.JPG",
-    "thumb": "/Swiss/Barrhorn/14260017.JPG",
-    "width": 1544,
-    "height": 1024,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Barrhorn",
-    "albumSlug": "barrhorn",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960
-    ],
-    "c": "#979c96"
-  },
-  {
-    "id": "swiss-barrhorn-14260016",
-    "file": "Swiss/Barrhorn/14260016.JPG",
-    "size": 1143336,
-    "modTime": "2026-11-21T09:52:59.946510920+01:00",
-    "src": "/Swiss/Barrhorn/14260016.JPG",
-    "thumb": "/Swiss/Barrhorn/14260016.JPG",
-    "width": 1544,
-    "height": 1024,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Barrhorn",
-    "albumSlug": "barrhorn",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960
-    ],
-    "c": "#91958f"
-  },
-  {
     "id": "swiss-barrhorn-14260015",
     "file": "Swiss/Barrhorn/14260015.JPG",
     "size": 1164199,
@@ -9670,28 +9370,6 @@
       960
     ],
     "c": "#76726c",
-    "v": 2
-  },
-  {
-    "id": "swiss-barrhorn-14260010",
-    "file": "Swiss/Barrhorn/14260010.JPG",
-    "size": 388409,
-    "modTime": "2026-11-21T19:07:03.242095144+01:00",
-    "src": "/Swiss/Barrhorn/14260010.JPG",
-    "thumb": "/Swiss/Barrhorn/14260010.JPG",
-    "width": 1024,
-    "height": 1544,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Barrhorn",
-    "albumSlug": "barrhorn",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960
-    ],
-    "c": "#67615d",
     "v": 2
   },
   {
@@ -16080,30 +15758,6 @@
       1600
     ],
     "c": "#8f8b6b",
-    "v": 2
-  },
-  {
-    "id": "london-2026-0010-10a",
-    "file": "London 2026/0010_10A.jpg",
-    "size": 3257205,
-    "modTime": "2026-08-30T14:14:02.427000000Z",
-    "src": "/London%202026/0010_10A.jpg",
-    "thumb": "/London%202026/0010_10A.jpg",
-    "width": 3130,
-    "height": 2075,
-    "catalog": "London 2026",
-    "catalogSlug": "london-2026",
-    "album": null,
-    "albumSlug": null,
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#acb094",
     "v": 2
   },
   {

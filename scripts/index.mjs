@@ -47,6 +47,14 @@ const VARIANTS_PATH = path.join(ROOT, 'src', 'generated', 'variants.json')
 const INDEX_PATH = path.join(ROOT, 'src', 'generated', 'index.json')
 const CATALOGS_DIR = path.join(ROOT, 'src', 'generated', 'catalogs')
 
+// Photos kept in the bucket but left out of the site (hidden.json at the repo root).
+let HIDDEN = new Set()
+try {
+  HIDDEN = new Set(JSON.parse(await fs.readFile(path.join(ROOT, 'hidden.json'), 'utf8')).hidden.map((h) => h.file))
+} catch {
+  /* no hidden.json: nothing is hidden */
+}
+
 const IMAGE_EXTENSIONS = new Set(['.jpg', '.jpeg', '.png', '.webp', '.avif', '.gif'])
 
 // Enough of a JPEG/PNG/WebP header to contain the dimensions.
@@ -279,6 +287,7 @@ async function main() {
     const key = o.Path
     if (IGNORED_PREFIXES.some((p) => key.startsWith(p))) return false
     if (!IMAGE_EXTENSIONS.has(path.extname(key).toLowerCase())) return false
+    if (HIDDEN.has(key)) return false
     // A leading capital "X" on the file or its folder hides it.
     return !key.split('/').some((seg) => seg.startsWith('X') || seg.startsWith('.'))
   })
