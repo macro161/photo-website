@@ -3407,30 +3407,6 @@
     "v": 2
   },
   {
-    "id": "swiss-random-image-12",
-    "file": "Swiss/Random/image_12.jpg",
-    "size": 4579093,
-    "modTime": "2026-08-30T14:12:18.660000000Z",
-    "src": "/Swiss/Random/image_12.jpg",
-    "thumb": "/Swiss/Random/image_12.jpg",
-    "width": 3130,
-    "height": 2075,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Random",
-    "albumSlug": "random",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#d1d3d2",
-    "v": 2
-  },
-  {
     "id": "swiss-random-14260037",
     "file": "Swiss/Random/14260037.JPG",
     "size": 1027612,
@@ -8084,30 +8060,6 @@
     "v": 2
   },
   {
-    "id": "swiss-burgenstock-image-13",
-    "file": "Swiss/Bürgenstock/image_13.jpg",
-    "size": 4676336,
-    "modTime": "2026-08-30T13:27:59.083000000Z",
-    "src": "/Swiss/B%C3%BCrgenstock/image_13.jpg",
-    "thumb": "/Swiss/B%C3%BCrgenstock/image_13.jpg",
-    "width": 3130,
-    "height": 2075,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Bürgenstock",
-    "albumSlug": "burgenstock",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960,
-      1600,
-      2400
-    ],
-    "c": "#c6c4bf",
-    "v": 2
-  },
-  {
     "id": "swiss-burgenstock-image-11",
     "file": "Swiss/Bürgenstock/image_11.jpg",
     "size": 5931068,
@@ -9501,69 +9453,6 @@
     ],
     "c": "#6d634a",
     "v": 2
-  },
-  {
-    "id": "swiss-barrhorn-14260003",
-    "file": "Swiss/Barrhorn/14260003.JPG",
-    "size": 1106237,
-    "modTime": "2026-11-21T09:52:59.903504710+01:00",
-    "src": "/Swiss/Barrhorn/14260003.JPG",
-    "thumb": "/Swiss/Barrhorn/14260003.JPG",
-    "width": 1544,
-    "height": 1024,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Barrhorn",
-    "albumSlug": "barrhorn",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960
-    ],
-    "c": "#726d4b"
-  },
-  {
-    "id": "swiss-barrhorn-14260002",
-    "file": "Swiss/Barrhorn/14260002.JPG",
-    "size": 316810,
-    "modTime": "2026-11-21T09:52:59.901504717+01:00",
-    "src": "/Swiss/Barrhorn/14260002.JPG",
-    "thumb": "/Swiss/Barrhorn/14260002.JPG",
-    "width": 1544,
-    "height": 1024,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Barrhorn",
-    "albumSlug": "barrhorn",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960
-    ],
-    "c": "#e8e7e6"
-  },
-  {
-    "id": "swiss-barrhorn-14260001",
-    "file": "Swiss/Barrhorn/14260001.JPG",
-    "size": 1120931,
-    "modTime": "2026-11-21T09:52:59.899033919+01:00",
-    "src": "/Swiss/Barrhorn/14260001.JPG",
-    "thumb": "/Swiss/Barrhorn/14260001.JPG",
-    "width": 1544,
-    "height": 1024,
-    "catalog": "Swiss",
-    "catalogSlug": "swiss",
-    "album": "Barrhorn",
-    "albumSlug": "barrhorn",
-    "description": null,
-    "date": null,
-    "w": [
-      480,
-      960
-    ],
-    "c": "#bbbfb2"
   },
   {
     "id": "spain-2026-spain-tour-de-l-argentine-r1-07733-036a",

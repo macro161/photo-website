@@ -60,6 +60,26 @@
   {
    "file": "Swiss/Cabane de Valsorey/10_08_2026_0100.jpg",
    "note": "near-duplicate, group 13"
+  },
+  {
+   "file": "Swiss/Barrhorn/14260001.JPG",
+   "note": "junk frame (blank, black or fogged), roll start"
+  },
+  {
+   "file": "Swiss/Barrhorn/14260002.JPG",
+   "note": "junk frame (blank, black or fogged), roll start"
+  },
+  {
+   "file": "Swiss/Barrhorn/14260003.JPG",
+   "note": "junk frame (blank, black or fogged), roll start"
+  },
+  {
+   "file": "Swiss/Bürgenstock/image_13.jpg",
+   "note": "junk frame (almost empty sky)"
+  },
+  {
+   "file": "Swiss/Random/image_12.jpg",
+   "note": "junk frame (almost empty sky)"
   }
  ]
 }
