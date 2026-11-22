@@ -91,10 +91,10 @@ float lambert(vec3 n, float az) {
 }
 void main() {
   vec2 uv = vUV * 0.5 + 0.5;
-  vec4 t = texture(uDetail, uv, uCalm * 1.6);         // the backdrop reads coarser mip levels: the shape, not the texture
+  vec4 t = texture(uDetail, uv, uCalm * 0.7);         // the backdrop reads coarser mip levels: the shape, not the texture
   vec3 n = normalize(vec3(-t.x * uExag, 1.0, -t.y * uExag));
   float slope = length(t.xy);
-  float q = 1.0 - uCalm * 0.6;                       // the quiet backdrop keeps the structure but less of its contrast
+  float q = 1.0 - uCalm * 0.25;                       // the quiet backdrop keeps the structure but less of its contrast
   // Multi-directional hillshade: the main light from the north-west plus weaker ones from the west, north and south-west, so
   // ridges facing any way keep their form instead of going flat.
   float key = max(dot(n, uLight), 0.0);
@@ -107,10 +107,10 @@ void main() {
   float fw = max(fwidth(e), 0.001);
   float minor = contour(e, uMinor, fw, 1.0);
   float major = contour(e, uMajor, fw, 1.3);
-  g = mix(g, 1.0, uCalm * 0.2);
-  g -= (minor * 0.10 + major * 0.24) * (1.0 - uCalm * 0.55);
+  g = mix(g, 1.0, uCalm * 0.08);
+  g -= (minor * 0.10 + major * 0.24) * (1.0 - uCalm * 0.45);
   float fog = 1.0 - exp(-vDist * uFog);
-  g = mix(g, 1.0, fog * 0.8);
+  g = mix(g, 1.0, fog * mix(0.8, 0.65, uCalm));
   float edge = max(abs(vUV.x), abs(vUV.y));
   float a = 1.0 - smoothstep(0.7, 1.0, edge);
   g = clamp(g, 0.0, 1.0);
@@ -170,7 +170,7 @@ void main() {
   float g = n.y > 0.5 ? 0.93 : 0.62 + 0.3 * key;
   g -= 0.06 * (1.0 - vTop) * (1.0 - n.y);
   float fog = 1.0 - exp(-vDist * uFog);
-  g = mix(g, 1.0, fog * 0.8);
+  g = mix(g, 1.0, fog * mix(0.8, 0.65, uCalm));
   float e = max(abs(vUV.x), abs(vUV.y));
   float a = (1.0 - smoothstep(0.7, 1.0, e)) * vFade * (1.0 - uCalm * 0.55);   // faint in the photo backdrop
   o = vec4(vec3(clamp(g, 0.0, 1.0)) * a, a);
