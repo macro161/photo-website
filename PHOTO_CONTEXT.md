@@ -1,5 +1,11 @@
 # Photo categorization context
 
+> **Status: finished (owner, 2026-11-22).** `Film photos` re-checked: still 19 named folders, no loose files, no packed zips.
+> Optional leftovers, not needed: merge the two "Swiss cow fights 2026" folders (the site already has one album); split the mixed
+> roll folders (La Montagnette + Col du Mollendruz, Mont Pèlerin + Dent de Jaman + Le Chasseron, Wedding + Cabane Brunet, Germany/Valsorey);
+> resolve the two rolls both named "... + Tour de l'Argentine"; delete loose originals in the 2026-05-15 rolls if still there;
+> make the " - " separator consistent. Splitting on the site side is tracked in CLAUDE.md ("album splitting").
+
 Working notes for organizing the film scans in Google Drive and getting them
 onto this site. Started 2026-11-20. Keep this file updated as rolls get
 identified and sorted.

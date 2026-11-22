@@ -6,10 +6,9 @@ Catalogs and albums come from the bucket's folder structure. Run `npm run index`
 
 ## Ongoing work
 
-- **Photo categorization (current):** sorting the film scans in Google Drive → `Film photos`
-  by trip or place. Progress, folder IDs, roll identifications and the Drive
-  connector's limits (it can't move files, so we copy them instead) are in [PHOTO_CONTEXT.md](PHOTO_CONTEXT.md).
-  Read it before touching Drive, and update it after each roll you sort.
+- **Done (2026-11-22): photo categorization.** The Drive `Film photos` folder is sorted and named by trip or place.
+  Notes, folder IDs and the Drive connector's limits (it can't move files, so we copy them) are in
+  [PHOTO_CONTEXT.md](PHOTO_CONTEXT.md); only optional leftovers remain, listed there. Read it before touching Drive again.
 - **Done:** AllTrails recording links and OpenStreetMap links for the 15 hike albums with a route page (`src/albumLinks.json`, shown on the album page). Albums added to `hikeAlbums.json` later need an entry there too (recording URLs are in `gpx/CHECKLIST.md`).
 - **TODO: album splitting.** Some albums mix several hikes or trips (Tour de l'Argentine + Lavaux, Rochers de Naye,
   Black Forest + Valsorey, Barrhorn, Picos de Europa, Spain + Tour de l'Argentine...). Split them so each album has
