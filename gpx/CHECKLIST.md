@@ -33,7 +33,7 @@ Row numbers match `n` in `src/lab/activities.json`. Titles on AllTrails sometime
 | [x] | 23 | 2026-05-30 | Paccot-Dessus - Dent de Lys - Paccot-Dessous | 12.7 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-paccot-dessus-dent-de-lys-paccot-dessous-fa57939) |
 | [x] | 24 | 2026-05-17 | Tour de Mayen | 13.7 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-tour-de-mayen-cddbd6d) |
 | [x] | 25 | 2026-04-26 | Sion - Coméraz - Bisse de Lentine | 10.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-sion-comeraz-bisse-de-lentine-a248472) |
-| [ ] | 26 | 2026-04-18 | Stansstad via Ennetbürgen [CLOSED] | 14.0 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-stansstad-via-ennetburgen-closed-7d7062a) |
+| [x] | 26 | 2026-04-18 | Stansstad via Ennetbürgen [CLOSED] | 14.0 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-stansstad-via-ennetburgen-closed-7d7062a) |
 | [x] | 27 | 2026-03-21 | (untitled afternoon hike) | 3.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-73ffed4) |
 | [x] | 28 | 2026-03-15 | Vuiteboeuf - Le Chasseron | 12.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-vuiteboeuf-le-chasseron-93edb9e) |
 | [x] | 29 | 2026-03-08 | Dent de Jaman via Haut-de-Caux | 6.0 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-dent-de-jaman-via-haut-de-caux-b4c78f8) |
@@ -42,14 +42,14 @@ Row numbers match `n` in `src/lab/activities.json`. Titles on AllTrails sometime
 | [x] | 32 | 2026-01-25 | Activity - January 25, 2026 (no trail name) | 9.2 | [open](https://www.alltrails.com/explore/recording/activity-january-25-2026-5c1073e) |
 | [x] | 33 | 2026-01-18 | Montagnetta trail: Pierre d'Avoin - La Montagnetta - L'Irette | 4.9 | [open](https://www.alltrails.com/explore/recording/activity-january-18-2026-312e874) |
 | [x] | 34 | 2025-12-06 | Visperterminen - Brunnu - Bodma | 12.4 | [open](https://www.alltrails.com/explore/recording/activity-december-6-2025-6c6fce0) |
-| [ ] | 35 | 2025-11-09 | Passerelle à Farinet via Saillon | 13.0 | [open](https://www.alltrails.com/explore/recording/activity-november-9-2025-90c10d8) |
-| [ ] | 36 | 2025-09-28 | Lake Taney | 5.7 | [open](https://www.alltrails.com/explore/recording/activity-september-28-2025-e5c19d1) |
-| [ ] | 37 | 2025-09-07 | Areuse Gorges via Chambrelien | 10.5 | [open](https://www.alltrails.com/explore/recording/activity-september-7-2025-258e130-4) |
-| [ ] | 38 | 2025-08-31 | Dent de Vaulion | 6.8 | [open](https://www.alltrails.com/explore/recording/activity-august-31-2025-bdcc412) |
-| [ ] | 39 | 2025-08-24 | Noiraigue - Creux-du-Van | 10.1 | [open](https://www.alltrails.com/explore/recording/activity-august-24-2025-5fc34ed-4) |
-| [ ] | 40 | 2025-07-18 | Pic Chaussy via Lac Lioson | 7.3 | [open](https://www.alltrails.com/explore/recording/activity-july-18-2025-b7ee0d0-2) |
-| [ ] | 41 | 2025-07-06 | Narcissus Trail: Cubly Trail - Azot Trail | 1.5 | [open](https://www.alltrails.com/explore/recording/activity-july-6-2025-bcfa8a7-2) |
+| [x] | 35 | 2025-11-09 | Passerelle à Farinet via Saillon | 13.0 | [open](https://www.alltrails.com/explore/recording/activity-november-9-2025-90c10d8) |
+| [x] | 36 | 2025-09-28 | Lake Taney | 5.7 | [open](https://www.alltrails.com/explore/recording/activity-september-28-2025-e5c19d1) |
+| [x] | 37 | 2025-09-07 | Areuse Gorges via Chambrelien | 10.5 | [open](https://www.alltrails.com/explore/recording/activity-september-7-2025-258e130-4) |
+| [x] | 38 | 2025-08-31 | Dent de Vaulion | 6.8 | [open](https://www.alltrails.com/explore/recording/activity-august-31-2025-bdcc412) |
+| [x] | 39 | 2025-08-24 | Noiraigue - Creux-du-Van | 10.1 | [open](https://www.alltrails.com/explore/recording/activity-august-24-2025-5fc34ed-4) |
+| [x] | 40 | 2025-07-18 | Pic Chaussy via Lac Lioson | 7.3 | [open](https://www.alltrails.com/explore/recording/activity-july-18-2025-b7ee0d0-2) |
+| [x] | 41 | 2025-07-06 | Narcissus Trail: Cubly Trail - Azot Trail | 1.5 | [open](https://www.alltrails.com/explore/recording/activity-july-6-2025-bcfa8a7-2) |
 | [x] | 42 | 2025-06-23 | Boucle Chexbres - Epesses | 11.1 | [open](https://www.alltrails.com/explore/recording/activity-june-23-2025-05425f5-2) |
-| [ ] | 43 | 2025-06-21 | Siviez - Lac de Cleuson | 7.5 | [open](https://www.alltrails.com/explore/recording/activity-june-21-2025-5658477-4) |
+| [x] | 43 | 2025-06-21 | Siviez - Lac de Cleuson | 7.5 | [open](https://www.alltrails.com/explore/recording/activity-june-21-2025-5658477-4) |
 
 `[x]` = already in `gpx/` and converted to `src/lab/tracks/<n>.json`.
