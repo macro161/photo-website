@@ -94,3 +94,9 @@ with no entry nothing is shown. Keys starting with `_` are ignored (the shipped 
 ```json
 "swiss/barrhorn": { "film": "Kodak Portra 400", "camera": "Nikon FM2", "iso": 400 }
 ```
+
+## Hike links
+
+Hike albums (listed in `src/lab/hikeAlbums.json`) show a "Route and track" link, plus AllTrails and map links from
+[`src/albumLinks.json`](src/albumLinks.json), keyed by `catalog/album`: `alltrails` is a list of recording page URLs,
+`map` an OpenStreetMap link to the track start. These are plain outbound links; nothing third-party loads with the page.

@@ -1,0 +1,94 @@
+{
+ "swiss/bisse-de-lentine": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-sion-comeraz-bisse-de-lentine-a248472"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.22763&mlon=7.35906#map=14/46.22763/7.35906"
+ },
+ "swiss/burgenstock": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/evening-hike-at-stansstad-via-ennetburgen-closed-7d7062a"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.98524&mlon=8.41388#map=14/46.98524/8.41388"
+ },
+ "swiss/cabane-de-valsorey": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-bourge-saint-pierre-valsorey-hut-pointe-de-penne-3c8ad03",
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-bourge-saint-pierre-valsorey-hut-pointe-de-penne-adbc20c"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=45.95641&mlon=7.20946#map=14/45.95641/7.20946"
+ },
+ "swiss/le-chasseron": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-vuiteboeuf-le-chasseron-93edb9e"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.80792&mlon=6.55248#map=14/46.80792/6.55248"
+ },
+ "swiss/dent-du-jaman-summer": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/evening-hike-at-les-avants-col-de-jaman-pass-dent-de-jaman-le-paccot-f5de864"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.45329&mlon=6.94316#map=14/46.45329/6.94316"
+ },
+ "swiss/dent-du-jaman-winter-failed": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-dent-de-jaman-via-haut-de-caux-b4c78f8"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.43213&mlon=6.9435#map=14/46.43213/6.9435"
+ },
+ "swiss/la-montagnette": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/activity-january-18-2026-312e874"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.17546&mlon=7.57397#map=14/46.17546/7.57397"
+ },
+ "swiss/col-de-mollendruz": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/activity-january-25-2026-5c1073e"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.64984&mlon=6.36655#map=14/46.64984/6.36655"
+ },
+ "swiss/le-grammot": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-miex-mont-grammont-f77e259"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.33799&mlon=6.85106#map=14/46.33799/6.85106"
+ },
+ "swiss/les-paccots": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/evening-hike-at-paccot-dessus-dent-de-lys-paccot-dessous-fa57939"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.5218&mlon=6.94964#map=14/46.5218/6.94964"
+ },
+ "swiss/mauvoisin": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-alpine-passes-trail-stage-31-mauvoisin-cabane-de-brunet-hut-185923e",
+   "https://www.alltrails.com/explore/recording/evening-hike-at-alpine-passes-trail-stage-31-mauvoisin-cabane-de-brunet-hut-ccbbb2a"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.00248&mlon=7.34158#map=14/46.00248/7.34158"
+ },
+ "swiss/mont-pelerin": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-mont-pelerin-1dfefc7"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.4821&mlon=6.83147#map=14/46.4821/6.83147"
+ },
+ "swiss/pointe-de-bellevue": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-pointe-de-bellevue-portes-de-culet-016e2a8"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.24824&mlon=6.8701#map=14/46.24824/6.8701"
+ },
+ "swiss/tour-du-mayan-spring-failed": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/afternoon-hike-at-tour-de-mayen-cddbd6d"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.34457&mlon=7.00914#map=14/46.34457/7.00914"
+ },
+ "swiss/tour-du-mayan-tour-d-ai": {
+  "alltrails": [
+   "https://www.alltrails.com/explore/recording/evening-hike-at-tour-de-mayen-tour-d-ai-lake-ai-6188dd3"
+  ],
+  "map": "https://www.openstreetmap.org/?mlat=46.34476&mlon=7.00906#map=14/46.34476/7.00906"
+ }
+}

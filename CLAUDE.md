@@ -10,7 +10,7 @@ Catalogs and albums come from the bucket's folder structure. Run `npm run index`
   by trip or place. Progress, folder IDs, roll identifications and the Drive
   connector's limits (it can't move files, so we copy them instead) are in [PHOTO_CONTEXT.md](PHOTO_CONTEXT.md).
   Read it before touching Drive, and update it after each roll you sort.
-- **Planned:** AllTrails links and map links for the hike albums (see the end of PHOTO_CONTEXT.md).
+- **Done:** AllTrails recording links and OpenStreetMap links for the 15 hike albums with a route page (`src/albumLinks.json`, shown on the album page). Albums added to `hikeAlbums.json` later need an entry there too (recording URLs are in `gpx/CHECKLIST.md`).
 - **TODO: album splitting.** Some albums mix several hikes or trips (Tour de l'Argentine + Lavaux, Rochers de Naye,
   Black Forest + Valsorey, Barrhorn, Picos de Europa, Spain + Tour de l'Argentine...). Split them so each album has
   one GPX recording (two at most). Then add each new album to `src/lab/hikeAlbums.json` and run

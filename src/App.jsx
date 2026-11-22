@@ -9,6 +9,7 @@ import Lab from './lab/Lab.jsx'
 import NotFound from './components/NotFound.jsx'
 import { rollInfo, rollLine } from './rolls.js'
 import hikeAlbums from './lab/hikeAlbums.json'
+import albumLinks from './albumLinks.json'
 import DateFilter from './components/DateFilter.jsx'
 import { openPhoto, closePhoto } from './viewTransition.js'
 import { dateFor, inRange, formatRange, formatHike, yearsFor, sortByDate } from './dates.js'
@@ -468,6 +469,18 @@ export default function App() {
               {hikeAlbums[`${catalog.slug}/${album.slug}`] && (
                 <p className="roll-line">
                   <a href={`#/lab/route/${album.slug}`}>Route and track →</a>
+                  {albumLinks[`${catalog.slug}/${album.slug}`] && (
+                    <>
+                      {albumLinks[`${catalog.slug}/${album.slug}`].alltrails.map((u, i, all) => (
+                        <span key={u}>
+                          {' · '}
+                          <a href={u} target="_blank" rel="noreferrer">AllTrails{all.length > 1 ? ` ${i + 1}` : ''} ↗</a>
+                        </span>
+                      ))}
+                      {' · '}
+                      <a href={albumLinks[`${catalog.slug}/${album.slug}`].map} target="_blank" rel="noreferrer">Map ↗</a>
+                    </>
+                  )}
                 </p>
               )}
               {notice && <p className="notice">{notice}</p>}
