@@ -982,3 +982,12 @@ main {
 ::view-transition-new(root) {
   animation-duration: 0.25s;
 }
+
+/* Hike albums: Photos / Route switch and the AllTrails links under the title. */
+.hike-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem 1.4rem; margin: 0 0 1rem; }
+.hike-modes { display: inline-flex; border: 1px solid var(--line); background: var(--bg); }
+.hike-modes button { padding: 0.45rem 1rem; font-size: 0.85rem; cursor: pointer; }
+.hike-modes button.is-on { background: var(--fg); color: var(--bg); }
+.hike-modes button:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.hike-link { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); text-decoration: underline; text-underline-offset: 3px; }
+.hike-link:hover { color: var(--fg); }

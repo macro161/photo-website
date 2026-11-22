@@ -10,7 +10,7 @@ import NotFound from './components/NotFound.jsx'
 import { rollInfo, rollLine } from './rolls.js'
 import hikeAlbums from './lab/hikeAlbums.json'
 
-const RouteBackdrop = lazy(() => import('./lab/valsorey/Backdrop.jsx'))
+const HikeRoute = lazy(() => import('./route/HikeRoute.jsx'))
 import albumLinks from './albumLinks.json'
 import DateFilter from './components/DateFilter.jsx'
 import { openPhoto, closePhoto } from './viewTransition.js'
@@ -267,6 +267,9 @@ export default function App() {
   )
   const { photos: catalogPhotos, failed: loadFailed, retry } = useCatalogPhotos(needsPhotos ? catalogLite.slug : null)
   const [notice, setNotice] = useState('')
+  // Hike albums: the photo gallery or the route view. Back to the gallery whenever another album opens.
+  const [hikeMode, setHikeMode] = useState('photos')
+  useEffect(() => { setHikeMode('photos') }, [route.catalog, route.album])
   const catalog = useMemo(
     () => (catalogLite && catalogPhotos ? withPhotos(catalogLite, catalogPhotos) : catalogLite),
     [catalogLite, catalogPhotos]
@@ -456,11 +459,6 @@ export default function App() {
             </section>
           ) : view === 'album' ? (
             <>
-            {hikeAlbums[`${catalog.slug}/${album.slug}`] && (
-              <Suspense fallback={null}>
-                <RouteBackdrop slug={album.slug} />
-              </Suspense>
-            )}
             <section className="catalog-view" style={hikeAlbums[`${catalog.slug}/${album.slug}`] ? { position: 'relative', zIndex: 1 } : undefined}>
               <button
                 className="back-link"
@@ -475,24 +473,23 @@ export default function App() {
               <DateLine entry={album.date} />
               <RollLine info={rollInfo(catalog.slug, album.slug)} />
               {hikeAlbums[`${catalog.slug}/${album.slug}`] && (
-                <p className="roll-line">
-                  <a href={`#/lab/route/${album.slug}`}>Route and track →</a>
-                  {albumLinks[`${catalog.slug}/${album.slug}`] && (
-                    <>
-                      {albumLinks[`${catalog.slug}/${album.slug}`].alltrails.map((u, i, all) => (
-                        <span key={u}>
-                          {' · '}
-                          <a href={u} target="_blank" rel="noreferrer">AllTrails{all.length > 1 ? ` ${i + 1}` : ''} ↗</a>
-                        </span>
-                      ))}
-                      {' · '}
-                      <a href={albumLinks[`${catalog.slug}/${album.slug}`].map} target="_blank" rel="noreferrer">Map ↗</a>
-                    </>
-                  )}
-                </p>
+                <div className="hike-bar">
+                  <div className="hike-modes" role="group" aria-label="View">
+                    <button className={hikeMode === 'photos' ? 'is-on' : ''} aria-pressed={hikeMode === 'photos'} onClick={() => setHikeMode('photos')}>Photos</button>
+                    <button className={hikeMode === 'route' ? 'is-on' : ''} aria-pressed={hikeMode === 'route'} onClick={() => setHikeMode('route')}>Route</button>
+                  </div>
+                  {albumLinks[`${catalog.slug}/${album.slug}`]?.alltrails.map((u, i, all) => (
+                    <a key={u} className="hike-link" href={u} target="_blank" rel="noreferrer">AllTrails{all.length > 1 ? ` ${i + 1}` : ''} ↗</a>
+                  ))}
+                </div>
+              )}
+              {hikeAlbums[`${catalog.slug}/${album.slug}`] && ready && (
+                <Suspense fallback={null}>
+                  <HikeRoute slug={album.slug} mode={hikeMode} photos={album.items.map((it) => it.photo)} onOpen={open} />
+                </Suspense>
               )}
               {notice && <p className="notice">{notice}</p>}
-              {ready ? (
+              {hikeMode === 'route' && hikeAlbums[`${catalog.slug}/${album.slug}`] ? null : ready ? (
                 <Gallery items={album.items} onOpen={open} gutterScale={hikeAlbums[`${catalog.slug}/${album.slug}`] ? 2.3 : 1} />
               ) : (
                 <GallerySkeleton count={album.count} gutterScale={hikeAlbums[`${catalog.slug}/${album.slug}`] ? 2.3 : 1} />

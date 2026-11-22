@@ -1,28 +1,28 @@
 /**
- * Builds the data for every lab route page (#/lab/route/<album>): detailed track stats, a baked elevation
+ * Builds the data for every hike album's route view (the Route button on #/c/<catalog>/<album>): detailed track stats, a baked elevation
  * model and nearby names. Needs network (AWS Terrain Tiles, OpenStreetMap) and `sharp`.
- *   node scripts/build-routes.mjs            all albums in src/lab/hikeAlbums.json that have no data yet
+ *   node scripts/build-routes.mjs            all albums in src/lab/hikeAlbums.json (shared with the lab pages) that have no data yet
  *   node scripts/build-routes.mjs <slug>...  just these (rebuilds them)
- * Writes src/lab/routes/<slug>/{detail.json,terrain.json} and public/lab/routes/<slug>/dem.bin.
+ * Writes src/route/<slug>/{detail.json,terrain.json} and public/route/<slug>/dem.bin.
  */
 import { readFileSync, readdirSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 
-const albums = JSON.parse(readFileSync('src/lab/hikeAlbums.json', 'utf8'))
+const albums = JSON.parse(readFileSync('src/lab/hikeAlbums.json (shared with the lab pages)', 'utf8'))
 const acts = JSON.parse(readFileSync('src/lab/activities.json', 'utf8'))
 const files = readdirSync('gpx').filter((f) => f.endsWith('.gpx'))
 const args = process.argv.slice(2)
 const RELABEL = args.includes('--relabel') // keep the baked terrain and tracks, only redo the landmark labels
 const only = args.filter((a) => !a.startsWith('--'))
-const overrides = existsSync('src/lab/routes/overrides.json') ? JSON.parse(readFileSync('src/lab/routes/overrides.json', 'utf8')) : {}
+const overrides = existsSync('src/route/overrides.json') ? JSON.parse(readFileSync('src/route/overrides.json', 'utf8')) : {}
 const rad = (d) => (d * Math.PI) / 180
 const hav = (a, b) => 2 * 6371008.8 * Math.asin(Math.sqrt(Math.sin(rad(b[0] - a[0]) / 2) ** 2 + Math.cos(rad(a[0])) * Math.cos(rad(b[0])) * Math.sin(rad(b[1] - a[1]) / 2) ** 2))
 
 for (const [key, ns] of Object.entries(albums)) {
   const slug = key.split('/')[1]
-  if (only.length ? !only.includes(slug) : !RELABEL && existsSync(`src/lab/routes/${slug}/detail.json`)) continue
+  if (only.length ? !only.includes(slug) : !RELABEL && existsSync(`src/route/${slug}/detail.json`)) continue
   console.log(`\n== ${slug}`)
-  const dir = `src/lab/routes/${slug}`
+  const dir = `src/route/${slug}`
   mkdirSync(dir, { recursive: true })
   let detail
   if (RELABEL) detail = JSON.parse(readFileSync(`${dir}/detail.json`, 'utf8'))
@@ -59,7 +59,7 @@ for (const [key, ns] of Object.entries(albums)) {
     const box = [s0 - padLat, w0 - padLng, n0 + padLat, e0 + padLng]
     const widthM = (box[3] - box[1]) * 111320 * Math.cos(rad(s0)), heightM = (box[2] - box[0]) * 110574
     const target = Math.max(20, Math.ceil(Math.max(widthM, heightM) / 700))
-    execFileSync('node', ['scripts/bake-terrain.mjs', `routes/${slug}`, ...box.map((v) => v.toFixed(5)), '13', String(target)], { stdio: 'inherit' })
+    execFileSync('node', ['scripts/bake-terrain.mjs', `route/${slug}`, ...box.map((v) => v.toFixed(5)), '13', String(target)], { stdio: 'inherit' })
   }
 
   const T = detail.tracks

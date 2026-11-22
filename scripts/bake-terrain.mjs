@@ -2,9 +2,9 @@
  * Bakes a small elevation model (and nearby peak names) for a lab route page, so the page needs no third-party requests.
  *   node scripts/bake-terrain.mjs <name> <south> <west> <north> <east> [zoom=13] [targetMetres=20]
  * Writes:
- *   public/lab/<name>/dem.bin        gzip of width*height Int16 values: elevation in `unit` metres, each stored as the difference from the
+ *   public/<name>/dem.bin        gzip of width*height Int16 values: elevation in `unit` metres, each stored as the difference from the
  *                                    predictor left + up - upleft (row-major). ~100 KB for 540x500 cells.
- *   src/lab/<name>/terrain.json      { width, height, unit, bounds, metersPerPx, minEle, maxEle, peaks: [{name, kind, ele, lat, lng}] }
+ *   src/<name>/terrain.json      { width, height, unit, bounds, metersPerPx, minEle, maxEle, peaks: [{name, kind, ele, lat, lng}] }
  * Data: AWS Open Data "Terrain Tiles" (Mapzen terrarium; SRTM, EU-DEM, national sources), peaks from OpenStreetMap (ODbL). Needs `sharp`.
  */
 import { mkdirSync, writeFileSync } from 'node:fs'
@@ -81,10 +81,10 @@ for (let j = 0; j < ch; j++) {
     res[j * cw + i] = q[j * cw + i] - (a + b - c)
   }
 }
-mkdirSync(`public/lab/${name}`, { recursive: true })
-mkdirSync(`src/lab/${name}`, { recursive: true })
+mkdirSync(`public/${name}`, { recursive: true })
+mkdirSync(`src/${name}`, { recursive: true })
 const packed = gzipSync(Buffer.from(res.buffer), { level: 9 })
-writeFileSync(`public/lab/${name}/dem.bin`, packed)
+writeFileSync(`public/${name}/dem.bin`, packed)
 console.log(`dem.bin ${(packed.length / 1024).toFixed(0)} KB`)
 
 const bounds = { south: unpy(y0 + ch * step), north: unpy(y0), west: unpx(x0), east: unpx(x0 + cw * step) }
@@ -119,4 +119,4 @@ try {
 } catch (e) {
   console.warn('Overpass failed, no labels:', e.message)
 }
-writeFileSync(`src/lab/${name}/terrain.json`, JSON.stringify({ ...meta, peaks }, null, 1) + '\n')
+writeFileSync(`src/${name}/terrain.json`, JSON.stringify({ ...meta, peaks }, null, 1) + '\n')

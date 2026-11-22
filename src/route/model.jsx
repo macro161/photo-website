@@ -1,14 +1,14 @@
 /** Shared by the route page and the album-page backdrop: the per-album route model and the flat route backdrop. */
 import { createContext, useContext, useEffect, useRef } from 'react'
-import hikeAlbums from '../hikeAlbums.json'
+import hikeAlbums from '../lab/hikeAlbums.json'
 import { projectTracks, toPath, xyAt } from './geo.js'
-import './valsorey.css'
+import './route.css'
 
 const BG = { W: 1000, H: 700 }
 export const MAP = { W: 800, H: 600 }
 
-export const detailFiles = import.meta.glob('../routes/*/detail.json')
-export const terrainFiles = import.meta.glob('../routes/*/terrain.json')
+export const detailFiles = import.meta.glob('./*/detail.json')
+export const terrainFiles = import.meta.glob('./*/terrain.json')
 /** Albums that have a route page, as [catalog, album] by album slug. */
 export const ROUTES = Object.fromEntries(Object.keys(hikeAlbums).map((k) => [k.split('/')[1], k.split('/')[0]]))
 
@@ -29,7 +29,7 @@ export function buildModel(detail, meta, slug) {
     }
     return [0, 0]
   }
-  return { slug, detail, meta, demUrl: `/lab/routes/${slug}/dem.bin`, TRACKS, bgGeo, bgPaths: bgGeo.paths.map(toPath), mapGeo, mapPaths: mapGeo.paths.map(toPath), TOTAL_KM, journey }
+  return { slug, detail, meta, demUrl: `/route/${slug}/dem.bin`, TRACKS, bgGeo, bgPaths: bgGeo.paths.map(toPath), mapGeo, mapPaths: mapGeo.paths.map(toPath), TOTAL_KM, journey }
 }
 
 

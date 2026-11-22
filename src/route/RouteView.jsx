@@ -1,34 +1,14 @@
 /**
- * A hike album with its GPS recording(s): #/lab/route/<album>.
- * Photos mode: the album's gallery, photos first, with the terrain and the route as a calm greyscale backdrop (a flat hairline route until the 3D scene is ready, or where it can't run).
- * Route mode: the same scene comes forward as a map (2D or tilted 3D) with labels, stats, an elevation profile you can scrub, and the photos as a strip.
- * Everything per album (track stats, baked relief, landmark names) is built by scripts/build-routes.mjs into src/lab/routes/<album>/.
+ * Route mode of a hike album: the map (2D or tilted 3D, drawn by the shared terrain scene), stats, an elevation profile you can scrub, and the photos as a strip.
  */
-import { createContext, lazy, Suspense, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react'
-import { projectTracks, toPath, valueAt, xyAt, gradeAt, clock, duration } from '../valsorey/geo.js'
-import Gallery, { GallerySkeleton } from '../../components/Gallery.jsx'
-import Lightbox from '../../components/Lightbox.jsx'
-import Picture from '../../components/Picture.jsx'
-import '../valsorey/valsorey.css'
-import { MAP, ROUTES, RouteCtx, Background, buildModel, lowPower, detailFiles, terrainFiles } from '../valsorey/model.jsx'
-
-const Scene = lazy(() => import('../valsorey/Scene.jsx'))
+import { useContext, useMemo, useRef } from 'react'
+import { valueAt, xyAt, gradeAt, clock, duration, toPath } from './geo.js'
+import Picture from '../components/Picture.jsx'
+import { MAP, RouteCtx } from './model.jsx'
 
 const DATE_FMT = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', day: 'numeric', month: 'long', year: 'numeric' })
 const SHORT_FMT = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', day: 'numeric', month: 'short' })
-function useAlbum(catalog, albumSlug) {
-  const [photos, setPhotos] = useState(null)
-  const [failed, setFailed] = useState(false)
-  useEffect(() => {
-    let live = true
-    import(`../../generated/catalogs/${catalog}.json`).then(
-      (m) => live && setPhotos((m.default || m).filter((p) => p.albumSlug === albumSlug)),
-      () => live && setFailed(true),
-    )
-    return () => { live = false }
-  }, [catalog, albumSlug])
-  return { photos, failed }
-}
+export const showing = (which, n) => (which === 'both' ? Array.from({ length: n }, (_, i) => i) : [Number(which)])
 
 /* ---------- Route mode: map, stats, profile ---------- */
 const PROF = { W: 800, H: 240, l: 46, r: 14, t: 12, b: 28 }
@@ -198,7 +178,7 @@ function FlatMap({ shown, scrub }) {
   )
 }
 
-function RouteView({ photos, onOpen, ctl, setMapSlot, sceneFailed }) {
+export default function RouteView({ photos, onOpen, ctl, setMapSlot, sceneFailed }) {
   const { TRACKS } = useContext(RouteCtx)
   const { which, setWhich, scrub, view, setView, playing, setPlaying, onProfile, terrain } = ctl
   const shown = useMemo(() => showing(which, TRACKS.length), [which, TRACKS.length])
@@ -265,182 +245,3 @@ function RouteView({ photos, onOpen, ctl, setMapSlot, sceneFailed }) {
   )
 }
 
-/* ---------- Page ---------- */
-const showing = (which, n) => (which === 'both' ? Array.from({ length: n }, (_, i) => i) : [Number(which)])
-
-/** #/lab/route/<album>: loads that album's route data, then the page. */
-export default function RouteTrack({ slug }) {
-  const [state, setState] = useState({ slug: null, model: null, error: false })
-  useEffect(() => {
-    let live = true
-    const d = detailFiles[`../routes/${slug}/detail.json`], t = terrainFiles[`../routes/${slug}/terrain.json`]
-    if (!d || !t) { setState({ slug, model: null, error: true }); return undefined }
-    Promise.all([d(), t()]).then(
-      ([a, b]) => live && setState({ slug, model: buildModel(a.default || a, b.default || b, slug), error: false }),
-      () => live && setState({ slug, model: null, error: true }),
-    )
-    return () => { live = false }
-  }, [slug])
-  if (state.slug !== slug) return <p style={{ padding: '2rem', minHeight: '100vh' }}>Loading…</p>
-  if (state.error) return (
-    <section className="lab-index">
-      <a className="back-link" href="#/lab">← Lab</a>
-      <p className="notice">No route page for “{slug}”.</p>
-    </section>
-  )
-  return (
-    <RouteCtx.Provider value={state.model}>
-      <RoutePage key={slug} catalog={ROUTES[slug]} albumSlug={slug} />
-    </RouteCtx.Provider>
-  )
-}
-
-function RoutePage({ catalog, albumSlug }) {
-  const { TRACKS, detail, meta, demUrl } = useContext(RouteCtx)
-  const [mode, setMode] = useState('photos')
-  const { photos, failed } = useAlbum(catalog, albumSlug)
-  const [active, setActive] = useState(null)
-  const items = useMemo(() => (photos || []).map((photo, index) => ({ photo, index })), [photos])
-  const total = items.length
-
-  // Route-mode state lives up here because the 3D scene outlives the mode switch.
-  const [which, setWhich] = useState('both')
-  const [scrub, setScrub] = useState(null)
-  const [view, setView] = useState('3d')
-  const [playing, setPlaying] = useState(false)
-  const terrain = useRef(null)
-  const shown = useMemo(() => showing(which, TRACKS.length), [which, TRACKS.length])
-  const maxKm = Math.max(...shown.map((i) => TRACKS[i].stats.km))
-  const onProfile = useCallback((v) => { setPlaying(false); setScrub(v) }, [])
-
-  // "Fly along": advance the marker; the terrain follows it. Any touch of the map or profile stops it.
-  const scrubRef = useRef(null)
-  scrubRef.current = scrub
-  useEffect(() => {
-    if (!playing) return undefined
-    let raf = 0, last = performance.now()
-    let km = scrubRef.current != null && scrubRef.current < maxKm - 0.05 ? scrubRef.current : 0
-    const step = (now) => {
-      km += ((now - last) / 1000) * (maxKm / 30)
-      last = now
-      if (km >= maxKm) { setScrub(maxKm); setPlaying(false); return }
-      setScrub(km)
-      raf = requestAnimationFrame(step)
-    }
-    raf = requestAnimationFrame(step)
-    return () => cancelAnimationFrame(raf)
-  }, [playing, maxKm])
-  const stopFly = useCallback(() => setPlaying(false), [])
-
-  // The 3D scene: loaded only after the photos are on screen (idle time), or at once if Route is opened first.
-  const [want, setWant] = useState(false)
-  const [sceneReady, setSceneReady] = useState(false)
-  const [sceneFailed, setSceneFailed] = useState(false)
-  const [bgSlot, setBgSlot] = useState(null)
-  const [mapSlot, setMapSlot] = useState(null)
-  const bg3d = useMemo(() => !lowPower(), [])
-  useEffect(() => { if (mode === 'route') setWant(true) }, [mode])
-  useEffect(() => {
-    if (!photos || want || !bg3d) return undefined
-    let id = 0, t = 0
-    const start = () => {
-      cleanupInput()
-      if (window.requestIdleCallback) id = window.requestIdleCallback(() => setWant(true), { timeout: 3000 })
-      else setWant(true)
-    }
-    // The backdrop is decoration: it starts once the page has loaded and gone quiet (2.5 s), or at the first scroll or touch, whichever is first.
-    const events = ['scroll', 'pointerdown', 'keydown']
-    const cleanupInput = () => events.forEach((e) => window.removeEventListener(e, start))
-    const go = () => {
-      t = setTimeout(start, 2500)
-      events.forEach((e) => window.addEventListener(e, start, { once: true, passive: true }))
-    }
-    if (document.readyState === 'complete') go()
-    else window.addEventListener('load', go, { once: true })
-    return () => {
-      window.removeEventListener('load', go)
-      cleanupInput()
-      if (id) window.cancelIdleCallback?.(id)
-      clearTimeout(t)
-    }
-  }, [photos, want, bg3d])
-  const onFail = useCallback(() => setSceneFailed(true), [])
-  const onReady = useCallback(() => setSceneReady(true), [])
-
-  const open = useCallback((i) => setActive(i), [])
-  const close = useCallback(() => setActive(null), [])
-  const next = useCallback(() => setActive((i) => (i == null ? i : (i + 1) % total)), [total])
-  const prev = useCallback(() => setActive((i) => (i == null ? i : (i - 1 + total) % total)), [total])
-
-  useLayoutEffect(() => { window.scrollTo(0, 0) }, [mode])
-
-  const backdrop3d = bg3d && sceneReady && !sceneFailed
-  return (
-    <div className={`vt vt-${mode}`}>
-      {mode === 'photos' && <Background off={backdrop3d} />}
-      <div className="vt-bgslot" ref={setBgSlot} aria-hidden="true" />
-      {want && !sceneFailed && (
-        <Suspense fallback={null}>
-          <Scene
-            ref={terrain}
-            tracks={TRACKS}
-            meta={meta}
-            demUrl={demUrl}
-            labels={detail.labels}
-            mode={mode}
-            bgSlot={bg3d ? bgSlot : null}
-            mapSlot={mapSlot}
-            shown={shown}
-            view={view}
-            scrub={scrub}
-            fly={playing}
-            onUserMove={stopFly}
-            onFail={onFail}
-            onReady={onReady}
-          />
-        </Suspense>
-      )}
-      <div className="vt-content">
-        <a className="back-link" href="#/lab">← Lab</a>
-        <header className="vt-head">
-          <h2>{photos?.[0]?.album || albumSlug}</h2>
-          <p className="vt-sub">
-            {[...new Set(TRACKS.map((t) => DATE_FMT.format(new Date(t.start))))].join(' · ')} · {TRACKS.length > 1 ? TRACKS.map((t) => `${t.stats.km.toFixed(1)} km ${t.label.toLowerCase()}`).join(', ') : `${TRACKS[0].stats.km.toFixed(1)} km`} · {TRACKS[0].stats.gain.toLocaleString('en-US')} m climbed
-          </p>
-          <div className="vt-modes" role="group" aria-label="View">
-            <button className={mode === 'photos' ? 'is-on' : ''} aria-pressed={mode === 'photos'} onClick={() => setMode('photos')}>Photos</button>
-            <button className={mode === 'route' ? 'is-on' : ''} aria-pressed={mode === 'route'} onClick={() => setMode('route')}>Route</button>
-          </div>
-        </header>
-        {mode === 'photos' ? (
-          failed ? (
-            <p className="notice">Couldn't load the photos.</p>
-          ) : photos ? (
-            <Gallery items={items} onOpen={open} gutterScale={2.3} />
-          ) : (
-            <GallerySkeleton count={18} gutterScale={2.3} />
-          )
-        ) : (
-          <RouteView
-            photos={photos}
-            onOpen={open}
-            ctl={{ which, setWhich, scrub, view, setView, playing, setPlaying, onProfile, terrain }}
-            setMapSlot={setMapSlot}
-            sceneFailed={sceneFailed}
-          />
-        )}
-      </div>
-      {active != null && total > 0 && (
-        <Lightbox
-          photo={photos[active]}
-          prevPhoto={photos[(active - 1 + total) % total]}
-          nextPhoto={photos[(active + 1) % total]}
-          onClose={close}
-          onNext={next}
-          onPrev={prev}
-          hasMultiple={total > 1}
-        />
-      )}
-    </div>
-  )
-}

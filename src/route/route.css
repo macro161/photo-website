@@ -13,10 +13,10 @@
 .vt-modes button:focus-visible, .vt-tabs button:focus-visible, .vt-btn:focus-visible, .vt-strip-item:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 
 /* Background route: a drawing you notice on a second look. Fixed, behind the photos, never above them. */
-.vt-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; transition: opacity 1.2s ease; }
+.vt-bg { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; transition: opacity 1.2s ease; }
 .vt-bg.is-off { opacity: 0; }
 /* The 3D backdrop: one fixed layer behind the page content. Pointer events pass straight through to the photos. */
-.vt-bgslot { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.vt-bgslot { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
 .vt-bg-route { position: absolute; inset: 0; width: 100%; height: 100%; }
 .vt-bg-base, .vt-bg-done { fill: none; stroke: var(--fg); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .vt-bg-base { stroke-opacity: 0.1; }

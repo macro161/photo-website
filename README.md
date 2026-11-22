@@ -97,6 +97,9 @@ with no entry nothing is shown. Keys starting with `_` are ignored (the shipped 
 
 ## Hike links
 
-Hike albums (listed in `src/lab/hikeAlbums.json`) show a "Route and track" link, plus AllTrails and map links from
-[`src/albumLinks.json`](src/albumLinks.json), keyed by `catalog/album`: `alltrails` is a list of recording page URLs,
-`map` an OpenStreetMap link to the track start. These are plain outbound links; nothing third-party loads with the page.
+Hike albums (listed in `src/lab/hikeAlbums.json`) have the route feature on their normal album page: the terrain and the GPS
+route sit faintly behind the photos, and a Photos / Route switch under the title brings the map forward with stats and an
+elevation profile (code in `src/route/`, loaded only for those albums). Per-album data comes from
+`node scripts/build-routes.mjs <slug>` (needs the GPX in `gpx/` and network for the terrain bake). AllTrails links come from
+[`src/albumLinks.json`](src/albumLinks.json), keyed by `catalog/album`: `alltrails` is a list of recording page URLs. They are
+plain outbound links; nothing third-party loads with the page. The old `#/lab/route/<album>` URLs redirect to the album page.
