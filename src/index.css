@@ -602,6 +602,12 @@ main {
   filter: blur(10px);
   transition: opacity 0.4s var(--ease);
 }
+.lb-figure img.lb-thumb.reserve {
+  /* The frame's final size, known from the photo's own aspect ratio, so nothing moves when the small image arrives. */
+  aspect-ratio: var(--r);
+  width: min(calc(100vw - 2 * clamp(1.5rem, 5vw, 4rem)), calc(76vh * var(--r)));
+  height: auto;
+}
 .lb-figure img.lb-thumb.from-grid {
   filter: none; /* the grid's own file: sharp enough to show as is */
 }

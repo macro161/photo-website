@@ -79,7 +79,8 @@ function LightboxImage({ photo }) {
     <div className="lb-stack" data-photo-id={photo.id}>
       {distinct && (
         <img
-          className={`lb-thumb${fromGrid ? ' from-grid' : ''}${full ? ' done' : ''}`}
+          className={`lb-thumb${fromGrid ? ' from-grid' : ''}${full ? ' done' : ''}${!fromGrid && photo.width && photo.height ? ' reserve' : ''}`}
+          style={!fromGrid && photo.width && photo.height ? { '--r': photo.width / photo.height } : undefined}
           src={thumb}
           alt=""
           aria-hidden="true"
