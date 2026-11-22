@@ -1,16 +1,16 @@
 {
- "width": 357,
- "height": 456,
- "unit": 0.5,
+ "width": 1058,
+ "height": 1309,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.31344367866509,
+  "south": 46.316585085365894,
   "north": 46.39537,
   "west": 6.968899999999962,
-  "east": 7.061829750047366
+  "east": 7.06116341061886
  },
- "metersPerPx": 20,
- "minEle": 411,
- "maxEle": 2232,
+ "metersPerPx": 6.7,
+ "minEle": 412,
+ "maxEle": 2331,
  "peaks": [
   {
    "name": "Tour d'Aï",
@@ -18,27 +18,6 @@
    "ele": 2330,
    "lat": 46.3721033,
    "lng": 7.0019672
-  },
-  {
-   "name": "Grand Chamossaire",
-   "kind": "station",
-   "ele": null,
-   "lat": 46.3265788,
-   "lng": 7.0617777
-  },
-  {
-   "name": "Le Chamossaire",
-   "kind": "peak",
-   "ele": 2112,
-   "lat": 46.3268229,
-   "lng": 7.061344
-  },
-  {
-   "name": "Aigle-Parc Aventure",
-   "kind": "station",
-   "ele": 488,
-   "lat": 46.3154563,
-   "lng": 6.9860356
   },
   {
    "name": "Aigle-Château",
@@ -214,13 +193,6 @@
    "ele": null,
    "lat": 46.3171524,
    "lng": 6.9703207
-  },
-  {
-   "name": "Caveau du Cloître",
-   "kind": "poi",
-   "ele": null,
-   "lat": 46.3155894,
-   "lng": 6.9742578
   },
   {
    "name": "Solacyre",
@@ -664,13 +636,6 @@
    "lng": 7.0130943
   },
   {
-   "name": "Grand-Chamossaire",
-   "kind": "view",
-   "ele": null,
-   "lat": 46.3268571,
-   "lng": 7.0612535
-  },
-  {
    "name": "En Hautaz Crettaz",
    "kind": "place",
    "ele": null,
@@ -921,13 +886,6 @@
    "ele": null,
    "lat": 46.3763649,
    "lng": 7.0431688
-  },
-  {
-   "name": "Plan Chamois",
-   "kind": "place",
-   "ele": null,
-   "lat": 46.3163993,
-   "lng": 7.0495096
   },
   {
    "name": "Le Séléry",

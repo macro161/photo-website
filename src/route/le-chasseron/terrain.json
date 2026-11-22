@@ -1,16 +1,16 @@
 {
- "width": 375,
- "height": 547,
- "unit": 0.5,
+ "width": 1056,
+ "height": 1533,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.7793244336716,
+  "south": 46.77982475816137,
   "north": 46.87759999999999,
   "west": 6.499040000000008,
-  "east": 6.5975127771355915
+  "east": 6.597481760338155
  },
- "metersPerPx": 20,
- "minEle": 432,
- "maxEle": 1573,
+ "metersPerPx": 7.1,
+ "minEle": 434,
+ "maxEle": 1606,
  "peaks": [
   {
    "name": "Sainte-Croix",

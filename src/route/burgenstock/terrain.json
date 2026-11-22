@@ -1,16 +1,16 @@
 {
- "width": 612,
- "height": 417,
- "unit": 0.5,
+ "width": 1531,
+ "height": 1042,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.95402053029165,
+  "south": 46.95405648806493,
   "north": 47.02893999999999,
   "west": 8.31076999999999,
-  "east": 8.471967236431055
+  "east": 8.472072594101917
  },
- "metersPerPx": 20,
- "minEle": 412,
- "maxEle": 1478,
+ "metersPerPx": 8,
+ "minEle": 431,
+ "maxEle": 1522,
  "peaks": [
   {
    "name": "Bürgenstock",

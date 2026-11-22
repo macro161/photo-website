@@ -1,16 +1,16 @@
 {
- "width": 368,
- "height": 392,
- "unit": 0.5,
+ "width": 1098,
+ "height": 1171,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.45381213622634,
+  "south": 46.45376089912033,
   "north": 46.524240000000006,
   "west": 6.779500000000013,
-  "east": 6.875529908247188
+  "east": 6.875485546604807
  },
- "metersPerPx": 20,
- "minEle": 369,
- "maxEle": 1085,
+ "metersPerPx": 6.699999999999999,
+ "minEle": 372,
+ "maxEle": 1079,
  "peaks": [
   {
    "name": "Attalens",
@@ -179,13 +179,6 @@
    "ele": null,
    "lat": 46.4602965,
    "lng": 6.8409917
-  },
-  {
-   "name": "Café du Centre",
-   "kind": "poi",
-   "ele": null,
-   "lat": 46.472228,
-   "lng": 6.8755198
   },
   {
    "name": "Domaine de la Buritaz",

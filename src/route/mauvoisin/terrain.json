@@ -1,16 +1,16 @@
 {
- "width": 578,
- "height": 465,
- "unit": 0.5,
+ "width": 1411,
+ "height": 1136,
+ "unit": 0.25,
  "bounds": {
-  "south": 45.96696682028863,
+  "south": 45.96683017331089,
   "north": 46.05051,
   "west": 7.231869999999958,
-  "east": 7.38138450728664
+  "east": 7.381516431851878
  },
- "metersPerPx": 20,
- "minEle": 1063,
- "maxEle": 3670,
+ "metersPerPx": 8.2,
+ "minEle": 1041,
+ "maxEle": 3713,
  "peaks": [
   {
    "name": "Lourtier",

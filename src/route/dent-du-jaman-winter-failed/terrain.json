@@ -1,16 +1,16 @@
 {
- "width": 410,
- "height": 347,
- "unit": 0.5,
+ "width": 1224,
+ "height": 1036,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.403936944570006,
+  "south": 46.403926158623705,
   "north": 46.46628,
   "west": 6.90218999999999,
-  "east": 7.009073974713601
+  "east": 7.009084402418438
  },
- "metersPerPx": 20,
+ "metersPerPx": 6.7,
  "minEle": 370,
- "maxEle": 1992,
+ "maxEle": 2041,
  "peaks": [
   {
    "name": "Rochers de Naye",

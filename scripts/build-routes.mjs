@@ -5,7 +5,7 @@
  *   node scripts/build-routes.mjs <slug>...  just these (rebuilds them)
  *   node scripts/build-routes.mjs --detail-only [<slug>...]  redo track stats, names and labels from gpx/ (e.g. after scripts/clean-gpx.mjs), keep the baked terrain,
  *                                            and warn when a track no longer fits inside its baked terrain
- * Writes src/route/<slug>/{detail.json,terrain.json} and public/route/<slug>/dem.bin.
+ * Writes src/route/<slug>/{detail.json,terrain.json} and public/route/<slug>/{dem.bin,buildings.bin}.
  */
 import { readFileSync, readdirSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
@@ -61,8 +61,10 @@ for (const [key, ns] of Object.entries(albums)) {
     const padLat = Math.max(0.028, (n0 - s0) * 0.35), padLng = Math.max(0.04, (e0 - w0) * 0.35)
     const box = [s0 - padLat, w0 - padLng, n0 + padLat, e0 + padLng]
     const widthM = (box[3] - box[1]) * 111320 * Math.cos(rad(s0)), heightM = (box[2] - box[0]) * 110574
-    const target = Math.max(20, Math.ceil(Math.max(widthM, heightM) / 700))
-    if (!DETAIL_ONLY) execFileSync('node', ['scripts/bake-terrain.mjs', `route/${slug}`, ...box.map((v) => v.toFixed(5)), '13', String(target)], { stdio: 'inherit' })
+    // Cells of about 6.7 m: swissALTI3D (2 m LiDAR) holds real detail at that size (see bake-terrain.mjs). Large extents are coarsened to at most
+    // ~1.6 M cells, which keeps dem.bin under ~0.8 MB and the per-pixel detail texture affordable on phones. CELL=<m> overrides (e.g. CELL=13.4).
+    const target = Math.max(+(process.env.CELL || 6.7), Math.sqrt((widthM * heightM) / 1.6e6))
+    if (!DETAIL_ONLY) execFileSync('node', ['scripts/bake-terrain.mjs', `route/${slug}`, ...box.map((v) => v.toFixed(5)), '13', target.toFixed(1), `--tracks=${dir}/detail.json`], { stdio: 'inherit' })
     else {
       const b = JSON.parse(readFileSync(`${dir}/terrain.json`, 'utf8')).bounds
       const margin = 0.012 // about 1.3 km: the labels and the camera want some terrain around the route

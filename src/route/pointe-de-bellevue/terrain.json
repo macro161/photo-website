@@ -1,16 +1,16 @@
 {
- "width": 381,
- "height": 373,
- "unit": 0.5,
+ "width": 1139,
+ "height": 1115,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.22034575657941,
+  "south": 46.22025137587085,
   "north": 46.28736000000001,
   "west": 6.830070000000006,
-  "east": 6.9290650471365325
+  "east": 6.9292118508153635
  },
- "metersPerPx": 20,
- "minEle": 382,
- "maxEle": 2014,
+ "metersPerPx": 6.7,
+ "minEle": 384,
+ "maxEle": 2041,
  "peaks": [
   {
    "name": "Morgins",

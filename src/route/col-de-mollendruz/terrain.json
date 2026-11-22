@@ -1,16 +1,16 @@
 {
- "width": 452,
- "height": 448,
- "unit": 0.5,
+ "width": 1274,
+ "height": 1263,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.62196106214516,
+  "south": 46.621895436364895,
   "north": 46.70245000000002,
   "west": 6.326449999999966,
-  "east": 6.444776993217289
+  "east": 6.444847675270779
  },
- "metersPerPx": 20,
- "minEle": 607,
- "maxEle": 1444,
+ "metersPerPx": 7.1000000000000005,
+ "minEle": 603,
+ "maxEle": 1483,
  "peaks": [
   {
    "name": "Vaulion",

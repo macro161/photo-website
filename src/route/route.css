@@ -46,8 +46,8 @@
 .vt-3d-overlay { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 .vt-pin { position: absolute; left: 0; top: 0; margin-left: 0; display: flex; flex-direction: column; align-items: center; gap: 1px; opacity: 0; transition: opacity 0.25s var(--ease); will-change: transform; white-space: nowrap; }
 .vt-pin::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--fg); box-shadow: 0 0 0 2px var(--bg); order: 3; margin-top: 2px; }
-.vt-pin b { font: 500 11px/1.1 var(--sans); letter-spacing: 0.02em; color: var(--fg); text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg), 0 0 6px var(--bg); order: 1; }
-.vt-pin i { font: normal 400 10px/1.1 var(--sans); color: var(--muted-strong); text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg); order: 2; }
+.vt-pin b { font: 500 11px/1.1 var(--sans); letter-spacing: 0.02em; color: var(--fg); text-shadow: 0 0 2px var(--bg), 0 0 3px var(--bg), 0 0 3px var(--bg), 0 0 6px var(--bg); order: 1; }
+.vt-pin i { font: normal 400 10px/1.1 var(--sans); color: var(--muted-strong); text-shadow: 0 0 2px var(--bg), 0 0 3px var(--bg), 0 0 3px var(--bg), 0 0 6px var(--bg); order: 2; }
 .vt-pin { translate: -50% calc(-100% - 2px); }
 .vt-pin-peak::after { border-radius: 0; width: 6px; height: 6px; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
 .vt-pin-hut b, .vt-pin-place b { font-weight: 600; }

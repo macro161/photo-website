@@ -1,16 +1,16 @@
 {
- "width": 367,
- "height": 496,
- "unit": 0.5,
+ "width": 1096,
+ "height": 1481,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.19967719072011,
+  "south": 46.19965291652066,
   "north": 46.28879,
   "west": 7.317450000000008,
-  "east": 7.4127907631820165
+  "east": 7.412832328637364
  },
- "metersPerPx": 20,
- "minEle": 468,
- "maxEle": 2109,
+ "metersPerPx": 6.699999999999999,
+ "minEle": 478,
+ "maxEle": 2132,
  "peaks": [
   {
    "name": "Sion",

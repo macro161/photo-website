@@ -1,16 +1,16 @@
 {
- "width": 505,
- "height": 565,
- "unit": 0.5,
+ "width": 1205,
+ "height": 1338,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.11461045229682,
-  "north": 46.21612,
-  "west": 7.643139999999988,
-  "east": 7.774142766705637
+  "south": 46.11903636956392,
+  "north": 46.21399000000001,
+  "west": 7.650739999999985,
+  "east": 7.774215897859932
  },
- "metersPerPx": 20,
- "minEle": 1800,
- "maxEle": 4115,
+ "metersPerPx": 7.9,
+ "minEle": 1797,
+ "maxEle": 4106,
  "peaks": [
   {
    "name": "Gruben",
@@ -18,13 +18,6 @@
    "ele": null,
    "lat": 46.2112722,
    "lng": 7.7069255
-  },
-  {
-   "name": "Bishorn",
-   "kind": "peak",
-   "ele": 4149,
-   "lat": 46.1179218,
-   "lng": 7.7149611
   },
   {
    "name": "Col de Tracuit",
@@ -69,25 +62,11 @@
    "lng": 7.7064131
   },
   {
-   "name": "Waldesruh",
-   "kind": "poi",
-   "ele": null,
-   "lat": 46.2157061,
-   "lng": 7.7087889
-  },
-  {
    "name": "Augstbordpass",
    "kind": "pass",
    "ele": 2893,
    "lat": 46.208754,
    "lng": 7.7531945
-  },
-  {
-   "name": "Roc de la Vache",
-   "kind": "peak",
-   "ele": 2581,
-   "lat": 46.1189247,
-   "lng": 7.6451894
   },
   {
    "name": "Les Diablons",
@@ -139,13 +118,6 @@
    "lng": 7.6575926
   },
   {
-   "name": "Pointe Burnaby",
-   "kind": "peak",
-   "ele": 4134,
-   "lat": 46.1186922,
-   "lng": 7.7180243
-  },
-  {
    "name": "Üssers Schöllihorn",
    "kind": "place",
    "ele": 3435,
@@ -153,25 +125,11 @@
    "lng": 7.7329423
   },
   {
-   "name": "Tête de Milon",
-   "kind": "peak",
-   "ele": 3693,
-   "lat": 46.1185312,
-   "lng": 7.6903361
-  },
-  {
    "name": "Gigihorli",
    "kind": "peak",
    "ele": 2749,
    "lat": 46.2001077,
    "lng": 7.7195197
-  },
-  {
-   "name": "Le Toûno",
-   "kind": "peak",
-   "ele": 3018,
-   "lat": 46.207398,
-   "lng": 7.6500472
   },
   {
    "name": "Pointe de Tourtemagne",
@@ -284,13 +242,6 @@
    "ele": null,
    "lat": 46.1285045,
    "lng": 7.7507418
-  },
-  {
-   "name": "Gross Kastel",
-   "kind": "peak",
-   "ele": 2893,
-   "lat": 46.116822,
-   "lng": 7.7562189
   },
   {
    "name": "Gigi Mittelstafel",
@@ -550,20 +501,6 @@
    "ele": 2370,
    "lat": 46.2112835,
    "lng": 7.722474
-  },
-  {
-   "name": "P2752",
-   "kind": "place",
-   "ele": null,
-   "lat": 46.2147078,
-   "lng": 7.7353138
-  },
-  {
-   "name": "P2841",
-   "kind": "place",
-   "ele": null,
-   "lat": 46.2142587,
-   "lng": 7.7433336
   },
   {
    "name": "P3020",
@@ -902,13 +839,6 @@
    "lng": 7.6720659
   },
   {
-   "name": "Meiden",
-   "kind": "place",
-   "ele": null,
-   "lat": 46.2146171,
-   "lng": 7.6924285
-  },
-  {
    "name": "Meidu Oberstafil",
    "kind": "place",
    "ele": null,
@@ -935,13 +865,6 @@
    "ele": null,
    "lat": 46.1898551,
    "lng": 7.6794517
-  },
-  {
-   "name": "Weisshornjoch",
-   "kind": "pass",
-   "ele": 4061,
-   "lat": 46.1152778,
-   "lng": 7.7130362
   },
   {
    "name": "Spicherli",

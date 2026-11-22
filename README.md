@@ -99,7 +99,12 @@ with no entry nothing is shown. Keys starting with `_` are ignored (the shipped 
 
 Hike albums (listed in `src/lab/hikeAlbums.json`) have the route feature on their normal album page: the terrain and the GPS
 route sit faintly behind the photos, and a Photos / Route switch under the title brings the map forward with stats and an
-elevation profile (code in `src/route/`, loaded only for those albums). Per-album data comes from
+elevation profile (code in `src/route/`, loaded only for those albums). The relief is baked from swisstopo's swissALTI3D (2 m LiDAR
+terrain model, free geodata: use and processing allowed with the source credit "© swisstopo", shown under the map) at about 7–8 m cells,
+with AWS Terrain Tiles filling anything outside Switzerland; it is shaded per pixel from a full-resolution detail texture (multi-directional
+hillshade, slope, curvature, openness) on a decimated mesh of at most ~400k triangles. OpenStreetMap buildings (ODbL) within 1.8 km of the
+route are drawn as small light-grey blocks (`public/route/<album>/buildings.bin`). Per album `dem.bin` is 0.4–0.95 MB and everything is
+fetched only on that album's page; downloaded swissALTI3D tiles are cached in `~/.cache/photo-website-terrain/swissalti3d`. Per-album data comes from
 `node scripts/build-routes.mjs <slug>` (needs the GPX in `gpx/` and network for the terrain bake). AllTrails links come from
 [`src/albumLinks.json`](src/albumLinks.json), keyed by `catalog/album`: `alltrails` is a list of recording page URLs. They are
 plain outbound links; nothing third-party loads with the page. The old `#/lab/route/<album>` URLs redirect to the album page.

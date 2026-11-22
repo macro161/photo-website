@@ -1,16 +1,16 @@
 {
- "width": 345,
- "height": 389,
- "unit": 0.5,
+ "width": 1008,
+ "height": 1161,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.14744108533035,
+  "south": 46.14745277084815,
   "north": 46.21733,
-  "west": 7.527500000000003,
-  "east": 7.617024674294015
+  "west": 7.529539999999997,
+  "east": 7.617165194248145
  },
- "metersPerPx": 20,
- "minEle": 1077,
- "maxEle": 2919,
+ "metersPerPx": 6.7,
+ "minEle": 1058,
+ "maxEle": 2954,
  "peaks": [
   {
    "name": "Vissoie",
@@ -410,13 +410,6 @@
    "ele": null,
    "lat": 46.1800781,
    "lng": 7.5764908
-  },
-  {
-   "name": "Sex de la Brinta",
-   "kind": "peak",
-   "ele": 2693,
-   "lat": 46.2043824,
-   "lng": 7.5290309
   },
   {
    "name": "Basset de Lona",

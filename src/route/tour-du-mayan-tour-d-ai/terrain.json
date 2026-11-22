@@ -1,16 +1,16 @@
 {
- "width": 396,
- "height": 484,
- "unit": 0.5,
+ "width": 1149,
+ "height": 1405,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.316693229130536,
+  "south": 46.31656286982799,
   "north": 46.403649999999985,
   "west": 6.964010000000002,
-  "east": 7.067102483367421
+  "east": 7.0672079188617545
  },
- "metersPerPx": 20,
- "minEle": 404,
- "maxEle": 2232,
+ "metersPerPx": 6.9,
+ "minEle": 403,
+ "maxEle": 2330,
  "peaks": [
   {
    "name": "Tour d'Aï",
@@ -67,6 +67,13 @@
    "ele": null,
    "lat": 46.3438701,
    "lng": 7.0148403
+  },
+  {
+   "name": "Petit Chamossaire",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.3315048,
+   "lng": 7.0671268
   },
   {
    "name": "Lac Noir - Bretaye",

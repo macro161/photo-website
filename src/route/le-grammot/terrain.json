@@ -1,16 +1,16 @@
 {
- "width": 444,
- "height": 433,
- "unit": 0.5,
+ "width": 1288,
+ "height": 1255,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.30991595532245,
+  "south": 46.30992045009165,
   "north": 46.38770999999999,
   "west": 6.7759699999999725,
-  "east": 6.891534622549159
+  "east": 6.891628323594489
  },
- "metersPerPx": 20,
- "minEle": 369,
- "maxEle": 2373,
+ "metersPerPx": 6.900000000000001,
+ "minEle": 371,
+ "maxEle": 2431,
  "peaks": [
   {
    "name": "Vouvry",

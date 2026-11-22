@@ -87,11 +87,12 @@ const Scene = forwardRef(function Scene({ tracks, meta, demUrl, labels: landmark
     ;(async () => {
       try {
         const mod = await import('./terrain-gl.js')
-        const H = await mod.loadElevation(demUrl, meta)
+        const [H, buildings] = await Promise.all([mod.loadElevation(demUrl, meta), mod.loadBuildings(demUrl.replace(/dem\.bin$/, 'buildings.bin'))])
         if (dead) return
-        engine = await mod.createTerrain(host.canvas, meta, H, tracks)
+        engine = await mod.createTerrain(host.canvas, meta, H, tracks, buildings)
         if (dead) { engine.dispose(); engine = null; return }
         engineRef.current = engine
+        host.canvas._engine = engine // debug handle (headless screenshots, console)
         engine.onUserMove(() => cb.current.onUserMove?.())
         mq = window.matchMedia('(prefers-reduced-motion: reduce)')
         engine.setReducedMotion(mq.matches)

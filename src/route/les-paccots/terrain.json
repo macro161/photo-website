@@ -1,16 +1,16 @@
 {
- "width": 499,
- "height": 422,
- "unit": 0.5,
+ "width": 1377,
+ "height": 1173,
+ "unit": 0.25,
  "bounds": {
-  "south": 46.47398224428909,
+  "south": 46.47393190355654,
   "north": 46.549800000000005,
-  "west": 6.908260000000013,
-  "east": 7.038529251587903
+  "west": 6.909220000000005,
+  "east": 7.0386329727397765
  },
- "metersPerPx": 20,
- "minEle": 771,
- "maxEle": 1958,
+ "metersPerPx": 7.2,
+ "minEle": 741,
+ "maxEle": 2013,
  "peaks": [
   {
    "name": "Les Paccots",
@@ -473,13 +473,6 @@
    "ele": null,
    "lat": 46.513546,
    "lng": 6.9095875
-  },
-  {
-   "name": "En Villard",
-   "kind": "place",
-   "ele": null,
-   "lat": 46.5406243,
-   "lng": 6.9085578
   },
   {
    "name": "Entre deux Crêts",
@@ -1922,6 +1915,13 @@
    "ele": null,
    "lat": 46.5130509,
    "lng": 7.0339992
+  },
+  {
+   "name": "Sex d'Amont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5145644,
+   "lng": 7.0386018
   },
   {
    "name": "Beaucu",

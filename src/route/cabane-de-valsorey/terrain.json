@@ -1,16 +1,16 @@
 {
- "width": 554,
- "height": 493,
- "unit": 0.5,
+ "width": 1352,
+ "height": 1202,
+ "unit": 0.25,
  "bounds": {
-  "south": 45.89588624147767,
+  "south": 45.8959185346848,
   "north": 45.98446,
   "west": 7.1677899999999966,
-  "east": 7.310919014101103
+  "east": 7.311001804131223
  },
- "metersPerPx": 20,
- "minEle": 1298,
- "maxEle": 4271,
+ "metersPerPx": 8.2,
+ "minEle": 1289,
+ "maxEle": 4309,
  "peaks": [
   {
    "name": "Grand Combin de Grafeneire",

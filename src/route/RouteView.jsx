@@ -217,7 +217,7 @@ export default function RouteView({ photos, onOpen, ctl, setMapSlot, sceneFailed
             </div>
           )}
           <p className="vt-attrib">
-            Relief: AWS Terrain Tiles (SRTM, EU-DEM, national sources) · names © OpenStreetMap contributors · contours every 25 m, bold every 250 m
+            Relief: swissALTI3D © swisstopo, outside Switzerland AWS Terrain Tiles (SRTM, EU-DEM, national sources) · names and buildings © OpenStreetMap contributors (ODbL) · contours every 25 m, bold every 250 m
           </p>
         </div>
         <div className="vt-side">

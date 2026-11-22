@@ -49,57 +49,131 @@ const transform = (m, p) => {
 const TERRAIN_VS = `#version 300 es
 precision highp float;
 in vec3 aPos;
-in vec2 aSlope;
 uniform mat4 uVP;
 uniform float uExag;
 uniform vec2 uHalf;
 uniform vec3 uEye;
 out float vElev;
-out vec3 vN;
 out vec2 vUV;
 out float vDist;
 void main() {
   vec3 p = vec3(aPos.x, aPos.y * uExag, aPos.z);
   gl_Position = uVP * vec4(p, 1.0);
   vElev = aPos.y;
-  vN = normalize(vec3(-aSlope.x * uExag, 1.0, -aSlope.y * uExag));
   vUV = aPos.xz / uHalf;
   vDist = length(p - uEye);
 }`
 
+// The mesh is coarse (see createTerrain); the shading comes from full-resolution textures: uDetail = slope x, slope z, curvature, openness,
+// uResid = the height the mesh misses (so contours follow every gully).
 const TERRAIN_FS = `#version 300 es
 precision highp float;
 in float vElev;
-in vec3 vN;
 in vec2 vUV;
 in float vDist;
+uniform sampler2D uDetail;
+uniform sampler2D uResid;
 uniform vec3 uLight;
 uniform float uMinor;
 uniform float uMajor;
 uniform float uFog;
 uniform float uCalm;
+uniform float uExag;
 out vec4 o;
 float contour(float e, float step, float fw, float soft) {
   float d = abs(fract(e / step - 0.5) - 0.5) * step;
   float line = 1.0 - smoothstep(0.0, soft * fw, d);
   return line * (1.0 - smoothstep(step * 0.3, step * 0.75, fw));
 }
+float lambert(vec3 n, float az) {
+  // light from azimuth az (radians, clockwise from north), 45 degrees up; x east, z south
+  return max(dot(n, normalize(vec3(sin(az), 1.0, -cos(az)))), 0.0);
+}
 void main() {
-  vec3 n = normalize(vN);
-  float lit = max(dot(n, uLight), 0.0);
-  float g = mix(0.46, 1.02, pow(lit, 0.85));
-  g -= (1.0 - n.y) * 0.16;
-  float fw = max(fwidth(vElev), 0.001);
-  float minor = contour(vElev, uMinor, fw, 1.0);
-  float major = contour(vElev, uMajor, fw, 1.3);
-  g = mix(g, 1.0, uCalm * 0.12);
-  g -= (minor * 0.085 + major * 0.2) * (1.0 - uCalm * 0.55);
+  vec2 uv = vUV * 0.5 + 0.5;
+  vec4 t = texture(uDetail, uv, uCalm * 1.6);         // the backdrop reads coarser mip levels: the shape, not the texture
+  vec3 n = normalize(vec3(-t.x * uExag, 1.0, -t.y * uExag));
+  float slope = length(t.xy);
+  float q = 1.0 - uCalm * 0.6;                       // the quiet backdrop keeps the structure but less of its contrast
+  // Multi-directional hillshade: the main light from the north-west plus weaker ones from the west, north and south-west, so
+  // ridges facing any way keep their form instead of going flat.
+  float key = max(dot(n, uLight), 0.0);
+  float md = 0.45 * key + 0.2 * lambert(n, -1.571) + 0.2 * lambert(n, 0.0) + 0.15 * lambert(n, -2.356);
+  float g = mix(0.30, 1.06, pow(md, 0.9));
+  g += clamp(-t.z * 0.08, -1.0, 1.0) * 0.20 * q;     // ridges catch light, gullies close up
+  g -= smoothstep(0.75, 1.6, slope) * 0.22 * q;      // cliffs and rock faces read darker than the scree below them
+  g *= mix(1.0, 0.62 + 0.38 * smoothstep(0.55, 0.98, t.w), q);   // valleys and hollows sit deeper
+  float e = vElev + texture(uResid, uv).r;
+  float fw = max(fwidth(e), 0.001);
+  float minor = contour(e, uMinor, fw, 1.0);
+  float major = contour(e, uMajor, fw, 1.3);
+  g = mix(g, 1.0, uCalm * 0.2);
+  g -= (minor * 0.10 + major * 0.24) * (1.0 - uCalm * 0.55);
   float fog = 1.0 - exp(-vDist * uFog);
-  g = mix(g, 1.0, fog * mix(0.8, 0.8, uCalm));
-  float e = max(abs(vUV.x), abs(vUV.y));
-  float a = 1.0 - smoothstep(0.7, 1.0, e);
+  g = mix(g, 1.0, fog * 0.8);
+  float edge = max(abs(vUV.x), abs(vUV.y));
+  float a = 1.0 - smoothstep(0.7, 1.0, edge);
   g = clamp(g, 0.0, 1.0);
   o = vec4(vec3(g) * a, a);
+}`
+
+// Buildings: instanced boxes (centre, footprint, base and height per instance) draped on the terrain.
+const BLD_VS = `#version 300 es
+precision highp float;
+in vec3 aCube;     // unit box: x,z in -0.5..0.5, y in 0..1
+in vec3 aNormal;
+in vec3 aC;        // centre x, base y, centre z (metres)
+in vec3 aS;        // width, depth, height (metres)
+in float aAng;     // radians, clockwise from east
+uniform mat4 uVP;
+uniform float uExag;
+uniform vec3 uEye;
+uniform float uPx;     // metres per pixel per metre of distance
+uniform vec2 uHalf;
+out vec3 vN;
+out float vDist;
+out vec2 vUV;
+out float vTop;
+out float vFade;
+void main() {
+  float big = max(aS.x, aS.y);
+  float px = big / (uPx * length(vec3(aC.x, aC.y * uExag, aC.z) - uEye));   // footprint size on screen, device pixels
+  float s = clamp(2.5 / px, 1.0, 1.8);              // a little bigger when small, so a village still reads as blocks
+  vFade = smoothstep(0.8, 2.6, px * s);             // and gone once it would be under a couple of pixels (far zoom)
+  float c = cos(aAng), sn = sin(aAng);
+  vec2 l = vec2(aCube.x * aS.x * s, aCube.z * aS.y * s);
+  vec2 w = vec2(l.x * c - l.y * sn, -(l.x * sn + l.y * c));
+  vec3 p = vec3(aC.x + w.x, (aC.y + aCube.y * aS.z * s) * uExag, aC.z + w.y);
+  gl_Position = uVP * vec4(p, 1.0);
+  vN = vec3(aNormal.x * c - aNormal.z * sn, aNormal.y, -(aNormal.x * sn + aNormal.z * c));
+  vDist = length(p - uEye);
+  vUV = p.xz / uHalf;
+  vTop = aCube.y;
+}`
+
+const BLD_FS = `#version 300 es
+precision highp float;
+in vec3 vN;
+in float vDist;
+in vec2 vUV;
+in float vTop;
+in float vFade;
+uniform vec3 uLight;
+uniform float uFog;
+uniform float uCalm;
+out vec4 o;
+void main() {
+  if (vFade < 0.02) discard;
+  vec3 n = normalize(vN);
+  float key = max(dot(n, uLight), 0.0);
+  // light grey blocks: pale roofs, walls a step darker on the side away from the light
+  float g = n.y > 0.5 ? 0.93 : 0.62 + 0.3 * key;
+  g -= 0.06 * (1.0 - vTop) * (1.0 - n.y);
+  float fog = 1.0 - exp(-vDist * uFog);
+  g = mix(g, 1.0, fog * 0.8);
+  float e = max(abs(vUV.x), abs(vUV.y));
+  float a = (1.0 - smoothstep(0.7, 1.0, e)) * vFade * (1.0 - uCalm * 0.55);   // faint in the photo backdrop
+  o = vec4(vec3(clamp(g, 0.0, 1.0)) * a, a);
 }`
 
 const LINE_VS = `#version 300 es
@@ -168,9 +242,11 @@ export async function loadElevation(url, meta) {
   if (!res.ok) throw new Error(`elevation ${res.status}`)
   const body = res.body.pipeThrough(new DecompressionStream('gzip'))
   const buf = await new Response(body).arrayBuffer()
-  const resid = new Int16Array(buf)
   const { width: w, height: h, unit } = meta
-  if (resid.length !== w * h) throw new Error('elevation size mismatch')
+  if (buf.byteLength !== w * h * 2) throw new Error('elevation size mismatch')
+  // Residuals are zigzag-coded uint16, stored as a plane of low bytes followed by a plane of high bytes (see bake-terrain.mjs).
+  const bytes = new Uint8Array(buf), n = w * h, resid = new Int16Array(n)
+  for (let k = 0; k < n; k++) { const z = bytes[k] | (bytes[n + k] << 8); resid[k] = (z >> 1) ^ -(z & 1) }
   const q = new Int32Array(w * h), H = new Float32Array(w * h)
   for (let j = 0; j < h; j++) {
     for (let i = 0; i < w; i++) {
@@ -181,6 +257,82 @@ export async function loadElevation(url, meta) {
     }
   }
   return H
+}
+
+/** Fetches the baked buildings (see scripts/bake-terrain.mjs): 12-byte records. Returns [] if the file is missing. */
+export async function loadBuildings(url) {
+  try {
+    const res = await fetch(url)
+    if (!res.ok) return []
+    const buf = await new Response(res.body.pipeThrough(new DecompressionStream('gzip'))).arrayBuffer()
+    const dv = new DataView(buf), u8 = new Uint8Array(buf), out = []
+    for (let o = 0; o + 12 <= buf.byteLength; o += 12) {
+      out.push({ lat: dv.getInt32(o, true) / 1e6, lng: dv.getInt32(o + 4, true) / 1e6, w: u8[o + 8] / 2, d: u8[o + 9] / 2, h: u8[o + 10] / 2, ang: (u8[o + 11] / 256) * Math.PI })
+    }
+    return out
+  } catch { return [] }
+}
+
+/**
+ * Per-cell shading inputs from the elevation grid, as RGBA floats:
+ * slope dh/dx and dh/dz (Horn 3x3), curvature (the Laplacian at ~1 cell and ~25 m, so both small gullies and broad ridges register),
+ * and openness (how much sky each cell sees: horizon angles in 8 directions out to ~400 m; low in hollows and narrow valleys).
+ */
+async function buildDetail(H, cw, ch, mpp, yieldFn) {
+  const out = new Float32Array(cw * ch * 4)
+  const h = (i, j) => H[Math.min(ch - 1, Math.max(0, j)) * cw + Math.min(cw - 1, Math.max(0, i))]
+  const dirs = []
+  for (let k = 0; k < 8; k++) dirs.push([Math.cos((k * Math.PI) / 4), Math.sin((k * Math.PI) / 4)])
+  // Horizon search distances in cells (about 20, 45, 100, 200 and 400 m whatever the cell size).
+  const steps = [...new Set([20, 45, 100, 200, 400].map((m) => Math.max(1, Math.round(m / mpp))))]
+  const r3 = Math.max(2, Math.round(25 / mpp))
+  for (let j = 0; j < ch; j++) {
+    for (let i = 0; i < cw; i++) {
+      const o = (j * cw + i) * 4, c = H[j * cw + i]
+      const a = h(i - 1, j - 1), b = h(i, j - 1), cc = h(i + 1, j - 1), d = h(i - 1, j), f = h(i + 1, j), g = h(i - 1, j + 1), hh = h(i, j + 1), ii = h(i + 1, j + 1)
+      out[o] = ((cc + 2 * f + ii) - (a + 2 * d + g)) / (8 * mpp)
+      out[o + 1] = ((g + 2 * hh + ii) - (a + 2 * b + cc)) / (8 * mpp)
+      // Curvature in metres of height per (13 m)^2, so the shader's scale does not depend on the cell size.
+      const lap1 = (d + f + b + hh - 4 * c) / (mpp * mpp)
+      const lap3 = (h(i - r3, j) + h(i + r3, j) + h(i, j - r3) + h(i, j + r3) - 4 * c) / (r3 * r3 * mpp * mpp)
+      out[o + 2] = (lap1 * 0.25 + lap3 * 3.6) * 180
+      let open = 0
+      for (let k = 0; k < 8; k++) {
+        let m = 0
+        for (let q = 0; q < steps.length; q++) {
+          const st = steps[q]
+          const e = (h(Math.round(i + dirs[k][0] * st), Math.round(j + dirs[k][1] * st)) - c) / (st * mpp)
+          if (e > m) m = e
+        }
+        open += 1 - Math.atan(m) / (Math.PI / 2)
+      }
+      out[o + 3] = open / 8
+    }
+    if (j % 32 === 31) await yieldFn()
+  }
+  return out
+}
+
+/** Uploads a float texture with a box-filtered mip chain (half-float targets cannot use generateMipmap), so far terrain doesn't shimmer. */
+function floatTexture(gl, data, w, h, comps) {
+  const fmt = comps === 4 ? [gl.RGBA16F, gl.RGBA] : [gl.R16F, gl.RED]
+  const tex = gl.createTexture()
+  gl.bindTexture(gl.TEXTURE_2D, tex)
+  gl.pixelStorei(gl.UNPACK_ALIGNMENT, 1)
+  let level = 0, d = data, cw = w, ch = h
+  for (;;) {
+    gl.texImage2D(gl.TEXTURE_2D, level, fmt[0], cw, ch, 0, fmt[1], gl.FLOAT, d)
+    if (cw === 1 && ch === 1) break
+    const nw = Math.max(1, cw >> 1), nh = Math.max(1, ch >> 1), n = new Float32Array(nw * nh * comps)
+    for (let j = 0; j < nh; j++) for (let i = 0; i < nw; i++) {
+      const i0 = Math.min(cw - 1, i * 2), i1 = Math.min(cw - 1, i * 2 + 1), j0 = Math.min(ch - 1, j * 2), j1 = Math.min(ch - 1, j * 2 + 1)
+      for (let k = 0; k < comps; k++) n[(j * nw + i) * comps + k] = (d[(j0 * cw + i0) * comps + k] + d[(j0 * cw + i1) * comps + k] + d[(j1 * cw + i0) * comps + k] + d[(j1 * cw + i1) * comps + k]) / 4
+    }
+    d = n; cw = nw; ch = nh; level++
+  }
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR_MIPMAP_LINEAR); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
+  return tex
 }
 
 const mercY = (lat) => Math.log(Math.tan(Math.PI / 4 + (lat * D2R) / 2))
@@ -194,7 +346,7 @@ const mercY = (lat) => Math.log(Math.tan(Math.PI / 4 + (lat * D2R) / 2))
 /** Gives the browser a chance to paint and handle input between the heavy setup steps. */
 const yieldMain = () => new Promise((r) => (globalThis.scheduler?.yield ? globalThis.scheduler.yield().then(r) : setTimeout(r, 0)))
 
-export async function createTerrain(canvas, meta, H, tracks) {
+export async function createTerrain(canvas, meta, H, tracks, buildings = []) {
   const gl = canvas.getContext('webgl2', { antialias: true, alpha: true, premultipliedAlpha: true, powerPreference: 'high-performance' })
   if (!gl) throw new Error('WebGL2 unavailable')
   const { width: cw, height: ch, metersPerPx: mpp, bounds } = meta
@@ -213,25 +365,24 @@ export async function createTerrain(canvas, meta, H, tracks) {
     return (a * (1 - fx) + b * fx) * (1 - fz) + (c * (1 - fx) + d * fx) * fz
   }
 
-  /* ----- terrain mesh ----- */
-  const verts = new Float32Array(cw * ch * 5)
-  for (let j = 0; j < ch; j++) {
-    for (let i = 0; i < cw; i++) {
-      const k = j * cw + i, o = k * 5
-      const l = H[j * cw + Math.max(0, i - 1)], r = H[j * cw + Math.min(cw - 1, i + 1)]
-      const u = H[Math.max(0, j - 1) * cw + i], d = H[Math.min(ch - 1, j + 1) * cw + i]
+  /* ----- terrain mesh: decimated (every `stride`-th cell) so phones are not drawing a million triangles; shading uses the full-resolution detail texture ----- */
+  const stride = Math.max(1, Math.ceil(Math.sqrt((cw * ch * 2) / 400000)))   // at most ~400k triangles (every 3rd cell for a 1.6 M cell grid; the old full-res mesh had ~540k)
+  const gridIdx = (n) => { const a = []; for (let i = 0; i < n; i += stride) a.push(i); if (a[a.length - 1] !== n - 1) a.push(n - 1); return a }
+  const gx = gridIdx(cw), gy = gridIdx(ch), nx = gx.length, ny = gy.length
+  const verts = new Float32Array(nx * ny * 3)
+  for (let b = 0; b < ny; b++) {
+    for (let a = 0; a < nx; a++) {
+      const i = gx[a], j = gy[b], o = (b * nx + a) * 3
       verts[o] = (i + 0.5 - cw / 2) * mpp
-      verts[o + 1] = H[k]
+      verts[o + 1] = H[j * cw + i]
       verts[o + 2] = (j + 0.5 - ch / 2) * mpp
-      verts[o + 3] = (r - l) / ((Math.min(cw - 1, i + 1) - Math.max(0, i - 1)) * mpp)
-      verts[o + 4] = (d - u) / ((Math.min(ch - 1, j + 1) - Math.max(0, j - 1)) * mpp)
     }
   }
   await yieldMain()
-  const idx = new Uint32Array((cw - 1) * (ch - 1) * 6)
+  const idx = new Uint32Array((nx - 1) * (ny - 1) * 6)
   let t = 0
-  for (let j = 0; j < ch - 1; j++) for (let i = 0; i < cw - 1; i++) {
-    const a = j * cw + i, b = a + 1, c = a + cw, d = c + 1
+  for (let j = 0; j < ny - 1; j++) for (let i = 0; i < nx - 1; i++) {
+    const a = j * nx + i, b = a + 1, c = a + nx, d = c + 1
     idx[t++] = a; idx[t++] = c; idx[t++] = b; idx[t++] = b; idx[t++] = c; idx[t++] = d
   }
   await yieldMain()
@@ -240,18 +391,88 @@ export async function createTerrain(canvas, meta, H, tracks) {
   gl.bindVertexArray(tVao)
   const tvb = gl.createBuffer()
   gl.bindBuffer(gl.ARRAY_BUFFER, tvb); gl.bufferData(gl.ARRAY_BUFFER, verts, gl.STATIC_DRAW)
-  const aPos = gl.getAttribLocation(terrain.p, 'aPos'), aSlope = gl.getAttribLocation(terrain.p, 'aSlope')
-  gl.enableVertexAttribArray(aPos); gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 20, 0)
-  gl.enableVertexAttribArray(aSlope); gl.vertexAttribPointer(aSlope, 2, gl.FLOAT, false, 20, 12)
+  const aPos = gl.getAttribLocation(terrain.p, 'aPos')
+  gl.enableVertexAttribArray(aPos); gl.vertexAttribPointer(aPos, 3, gl.FLOAT, false, 12, 0)
   const tib = gl.createBuffer()
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, tib); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, idx, gl.STATIC_DRAW)
   gl.bindVertexArray(null)
+
+  const detail = await buildDetail(H, cw, ch, mpp, yieldMain)
+  const detailTex = floatTexture(gl, detail, cw, ch, 4)
+  // What the decimated mesh misses: full-resolution height minus the mesh's own (triangle-interpolated) height, added back per pixel
+  // so contour lines follow every gully instead of the coarse mesh.
+  const resid = new Float32Array(cw * ch)
+  for (let b = 0; b < ny - 1; b++) {
+    const j0 = gy[b], j1 = gy[b + 1]
+    for (let a = 0; a < nx - 1; a++) {
+      const i0 = gx[a], i1 = gx[a + 1]
+      const A = H[j0 * cw + i0], B = H[j0 * cw + i1], C = H[j1 * cw + i0], D = H[j1 * cw + i1]
+      for (let j = j0; j <= j1; j++) for (let i = i0; i <= i1; i++) {
+        const fx = (i - i0) / (i1 - i0), fy = (j - j0) / (j1 - j0)
+        const m = fx + fy <= 1 ? A + (B - A) * fx + (C - A) * fy : D + (C - D) * (1 - fx) + (B - D) * (1 - fy)
+        resid[j * cw + i] = H[j * cw + i] - m
+      }
+    }
+  }
+  const residTex = floatTexture(gl, resid, cw, ch, 1)
+  // The drawn surface is the coarse mesh, which in a gully can sit above the true ground: the route, buildings and labels go on
+  // whichever of the two is higher, so nothing ends up under the mesh.
+  const surfaceAt = (x, z) => {
+    const gx = Math.min(cw - 1.001, Math.max(0, x / mpp + cw / 2 - 0.5)), gz = Math.min(ch - 1.001, Math.max(0, z / mpp + ch / 2 - 0.5))
+    const i = Math.floor(gx), j = Math.floor(gz), fx = gx - i, fz = gz - j
+    const m = (k) => H[k] - Math.min(0, resid[k])
+    return (m(j * cw + i) * (1 - fx) + m(j * cw + i + 1) * fx) * (1 - fz) + (m((j + 1) * cw + i) * (1 - fx) + m((j + 1) * cw + i + 1) * fx) * fz
+  }
+  await yieldMain()
+
+  /* ----- buildings: one instanced box mesh, per-building centre / size / angle ----- */
+  const bld = program(gl, BLD_VS, BLD_FS)
+  const bldVao = gl.createVertexArray()
+  let bldCount = 0
+  {
+    // 5 faces (the bottom is never seen): position + normal
+    const faces = [
+      [[0, 1, 0], [[-.5, 1, -.5], [-.5, 1, .5], [.5, 1, .5], [.5, 1, -.5]]],
+      [[1, 0, 0], [[.5, 0, -.5], [.5, 1, -.5], [.5, 1, .5], [.5, 0, .5]]],
+      [[-1, 0, 0], [[-.5, 0, .5], [-.5, 1, .5], [-.5, 1, -.5], [-.5, 0, -.5]]],
+      [[0, 0, 1], [[.5, 0, .5], [.5, 1, .5], [-.5, 1, .5], [-.5, 0, .5]]],
+      [[0, 0, -1], [[-.5, 0, -.5], [-.5, 1, -.5], [.5, 1, -.5], [.5, 0, -.5]]],
+    ]
+    const cube = [], cubeIdx = []
+    faces.forEach(([n, quad], f) => { quad.forEach((q) => cube.push(...q, ...n)); const b = f * 4; cubeIdx.push(b, b + 1, b + 2, b, b + 2, b + 3) })
+    const inst = []
+    for (const b of buildings) {
+      const [x, z] = toWorld(b.lat, b.lng)
+      if (Math.abs(x) > halfX || Math.abs(z) > halfZ) continue
+      // Sit on the lowest ground under the footprint and reach down a little, so a slope never leaves a gap.
+      const c = Math.cos(b.ang), sn = Math.sin(b.ang)
+      let lo = Infinity, hi = -Infinity
+      for (const [u, v] of [[0, 0], [.5, .5], [.5, -.5], [-.5, .5], [-.5, -.5]]) {
+        const lx = u * b.w, ly = v * b.d
+        const px = x + lx * c - ly * sn, pz = z - (lx * sn + ly * c)
+        lo = Math.min(lo, heightAt(px, pz)); hi = Math.max(hi, surfaceAt(px, pz))
+      }
+      inst.push(x, lo - 2, z, b.w, b.d, hi - lo + 2 + b.h, b.ang)
+    }
+    bldCount = inst.length / 7
+    gl.bindVertexArray(bldVao)
+    const cvb = gl.createBuffer()
+    gl.bindBuffer(gl.ARRAY_BUFFER, cvb); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(cube), gl.STATIC_DRAW)
+    const attr = (name, size, stride, off, div = 0) => { const l = gl.getAttribLocation(bld.p, name); gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l, size, gl.FLOAT, false, stride, off); if (div) gl.vertexAttribDivisor(l, div) }
+    attr('aCube', 3, 24, 0); attr('aNormal', 3, 24, 12)
+    const ivb = gl.createBuffer()
+    gl.bindBuffer(gl.ARRAY_BUFFER, ivb); gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(inst), gl.STATIC_DRAW)
+    attr('aC', 3, 28, 0, 1); attr('aS', 3, 28, 12, 1); attr('aAng', 1, 28, 24, 1)
+    const cib = gl.createBuffer()
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, cib); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, new Uint16Array(cubeIdx), gl.STATIC_DRAW)
+    gl.bindVertexArray(null)
+  }
 
   await yieldMain()
   /* ----- tracks as screen-space ribbons draped on the terrain ----- */
   const line = program(gl, LINE_VS, LINE_FS)
   const lines = tracks.map((tr) => {
-    const pts = tr.points.map((p) => { const [x, z] = toWorld(p[0], p[1]); return { x, z, y: heightAt(x, z), km: p[3], ele: p[2] } })
+    const pts = tr.points.map((p) => { const [x, z] = toWorld(p[0], p[1]); return { x, z, y: surfaceAt(x, z), km: p[3], ele: p[2] } })
     const n = pts.length - 1
     const data = new Float32Array(n * 4 * 10)
     const index = new Uint16Array(n * 6)
@@ -340,8 +561,26 @@ export async function createTerrain(canvas, meta, H, tracks) {
     gl.uniform1f(terrain.u.uMajor, 250)
     gl.uniform1f(terrain.u.uFog, 0.00007 * (1 + calm.v * 0.6))
     gl.uniform1f(terrain.u.uCalm, calm.v)
+    gl.uniform1f(terrain.u.uExag, cam.exag)
+    gl.activeTexture(gl.TEXTURE0); gl.bindTexture(gl.TEXTURE_2D, detailTex); gl.uniform1i(terrain.u.uDetail, 0)
+    gl.activeTexture(gl.TEXTURE1); gl.bindTexture(gl.TEXTURE_2D, residTex); gl.uniform1i(terrain.u.uResid, 1)
     gl.bindVertexArray(tVao)
     gl.drawElements(gl.TRIANGLES, idx.length, gl.UNSIGNED_INT, 0)
+
+    if (bldCount) {
+      gl.useProgram(bld.p)
+      gl.uniformMatrix4fv(bld.u.uVP, false, vp)
+      gl.uniform1f(bld.u.uExag, cam.exag)
+      gl.uniform2f(bld.u.uHalf, halfX, halfZ)
+      gl.uniform3fv(bld.u.uEye, eye)
+      gl.uniform3fv(bld.u.uLight, light)
+      gl.uniform1f(bld.u.uFog, 0.00007 * (1 + calm.v * 0.6))
+      gl.uniform1f(bld.u.uCalm, calm.v)
+      gl.uniform1f(bld.u.uPx, (2 * Math.tan(FOV / 2)) / state.h)
+      gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA)
+      gl.bindVertexArray(bldVao)
+      gl.drawElementsInstanced(gl.TRIANGLES, 30, gl.UNSIGNED_SHORT, 0, bldCount)
+    }
 
     gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA)
     gl.depthMask(false)
@@ -361,12 +600,16 @@ export async function createTerrain(canvas, meta, H, tracks) {
       gl.uniform1f(line.u.uLift, 7 * cam.exag)
       gl.uniform1f(line.u.uDone, state.done[i])
       gl.uniform1f(line.u.uDash, 0)
-      // 1. faint trace where the relief hides the route
+      // 1. faint trace where the relief hides the route (with a soft halo, so it still reads over the detailed relief)
       gl.depthFunc(gl.GREATER)
       gl.uniform1f(line.u.uBias, 0)
-      gl.uniform1f(line.u.uWidth, w)
+      gl.uniform1f(line.u.uWidth, w * 0.8 + state.dpr * 3)
+      gl.uniform3f(line.u.uColor, 1, 1, 1)
+      gl.uniform1f(line.u.uAlpha, 0.45 * a)
+      gl.drawElements(gl.TRIANGLES, l.count, gl.UNSIGNED_SHORT, 0)
+      gl.uniform1f(line.u.uWidth, w * 0.8)
       gl.uniform3f(line.u.uColor, ink, ink, ink)
-      gl.uniform1f(line.u.uAlpha, 0.18 * a)
+      gl.uniform1f(line.u.uAlpha, 0.38 * a)
       gl.drawElements(gl.TRIANGLES, l.count, gl.UNSIGNED_SHORT, 0)
       gl.depthFunc(gl.LEQUAL)
       // 2. white halo
@@ -556,9 +799,9 @@ export async function createTerrain(canvas, meta, H, tracks) {
       while (b - a > 1) { const m = (a + b) >> 1; if (pts[m].km <= k) a = m; else b = m }
       const span2 = pts[b].km - pts[a].km, f = span2 > 0 ? (k - pts[a].km) / span2 : 0
       const x = pts[a].x + (pts[b].x - pts[a].x) * f, z = pts[a].z + (pts[b].z - pts[a].z) * f
-      return [x, heightAt(x, z), z]
+      return [x, surfaceAt(x, z), z]
     },
-    toWorld(lat, lng) { const [x, z] = toWorld(lat, lng); return [x, heightAt(x, z), z] },
+    toWorld(lat, lng) { const [x, z] = toWorld(lat, lng); return [x, surfaceAt(x, z), z] },
     /** Eases the camera centre to a world point (used when flying along the route). */
     follow(p) {
       goal.tx = p[0]; goal.tz = p[2]; goal.ty = p[1]
@@ -569,6 +812,8 @@ export async function createTerrain(canvas, meta, H, tracks) {
       if (dist) goal.dist = dist
       wake()
     },
+    /** Debug / scripting: set camera angles directly. */
+    setPose(o) { Object.assign(goal, o); wake() },
     spin(deg) { goal.yaw += deg; cam.yaw = goal.yaw; wake() },
     project,
     onFrame(fn) { listeners.add(fn); return () => listeners.delete(fn) },
