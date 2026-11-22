@@ -1,71 +1,102 @@
-.vt { position: relative; }
+/* Valsorey lab page. Same white, hairline, grey-ink language as the rest of the site. Ascent = black line, descent = mid-grey line. */
+.vt { position: relative; min-width: 0; }
 .vt-content { position: relative; z-index: 1; max-width: var(--maxw); margin: 0 auto; padding: 1.5rem clamp(12px, 2vw, 26px) 4rem; }
 .vt-head { margin: 0.5rem 0 1.5rem; max-width: 62ch; }
-/* Photos mode opens on a tall header so the route is seen large before the gallery covers it. */
-.vt-photos .vt-head { min-height: 52vh; display: flex; flex-direction: column; justify-content: flex-end; }
 .vt-head h2 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.8rem, 4vw, 2.8rem); margin: 0 0 0.4rem; }
 .vt-sub { color: var(--muted-strong); margin: 0 0 1rem; font-size: 0.95rem; }
 .vt-modes, .vt-tabs { display: inline-flex; border: 1px solid var(--line); background: var(--bg); }
 .vt-modes button, .vt-tabs button { padding: 0.45rem 1rem; font-size: 0.85rem; cursor: pointer; }
 .vt-modes button.is-on, .vt-tabs button.is-on { background: var(--fg); color: var(--bg); }
-.vt-modes button:focus-visible, .vt-tabs button:focus-visible { outline: 2px solid #c2410c; outline-offset: 2px; }
-.vt-legend { color: var(--muted-strong); font-size: 0.8rem; margin: 0.9rem 0 0; display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
-.vt-legend span::before { content: ""; display: inline-block; width: 1.4rem; height: 3px; background: var(--c); margin-right: 0.4rem; vertical-align: middle; }
+.vt-btn { padding: 0.45rem 1rem; font-size: 0.85rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); }
+.vt-btn:hover { border-color: var(--muted); }
+.vt-btn[aria-pressed="true"] { background: var(--fg); color: var(--bg); }
+.vt-modes button:focus-visible, .vt-tabs button:focus-visible, .vt-btn:focus-visible, .vt-strip-item:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 
-/* Background route */
+/* Background route: a drawing you notice on a second look. Fixed, behind the photos, never above them. */
 .vt-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .vt-bg-route { position: absolute; inset: 0; width: 100%; height: 100%; }
-@media (min-width: 900px) { .vt-bg-route { left: 26%; width: 74%; } }
-.vt-bg-base { fill: none; stroke: var(--c); stroke-opacity: 0.22; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
-.vt-bg-done { fill: none; stroke: var(--c); stroke-opacity: 0.7; stroke-width: 9; stroke-linecap: round; stroke-linejoin: round; }
-.vt-bg-dot { stroke: var(--bg); stroke-width: 3; }
-.vt-bg-ridge { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 20vh; }
-.vt-ridge-area { fill: var(--muted); fill-opacity: 0.1; }
-.vt-ridge-line { fill: none; stroke: var(--muted-strong); stroke-opacity: 0.35; stroke-width: 1.5; }
-.vt-ridge-dot { fill: var(--fg); }
+.vt-bg-base, .vt-bg-done { fill: none; stroke: var(--fg); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.vt-bg-base { stroke-opacity: 0.1; }
+.vt-bg-done { stroke-opacity: 0.28; }
+.vt-bg-dot { fill: var(--fg); fill-opacity: 0.3; }
 
-/* Foreground route view */
-.vt-route { display: flex; flex-direction: column; gap: 1.25rem; }
-.vt-grid-main { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr); gap: clamp(1rem, 2vw, 2rem); align-items: start; }
+/* Route mode */
+.vt-route { display: flex; flex-direction: column; gap: 1.25rem; min-width: 0; }
+.vt-route > * { min-width: 0; max-width: 100%; }
+.vt-toolbar { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; justify-content: space-between; }
+.vt-tools { display: flex; flex-wrap: wrap; gap: 0.5rem; align-items: center; }
+.vt-grid-main { display: grid; grid-template-columns: minmax(0, 2.1fr) minmax(250px, 1fr); gap: clamp(1rem, 2vw, 2rem); align-items: start; }
 .vt-map-wrap { border: 1px solid var(--line); background: var(--bg); }
+.vt-attrib { margin: 0; padding: 0.45rem 0.8rem; font-size: 0.68rem; color: var(--muted-strong); border-top: 1px solid var(--line); }
+
+/* WebGL terrain */
+.vt-3d { position: relative; width: 100%; aspect-ratio: 4 / 3; max-height: 78vh; min-height: 320px; overflow: hidden; background: var(--bg); }
+.vt-3d-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
+.vt-3d-canvas:active { cursor: grabbing; }
+.vt-3d-loading { position: absolute; inset: 0; display: grid; place-items: center; font-size: 0.8rem; color: var(--muted-strong); letter-spacing: 0.04em; }
+.vt-3d-overlay { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.vt-pin { position: absolute; left: 0; top: 0; margin-left: 0; display: flex; flex-direction: column; align-items: center; gap: 1px; opacity: 0; transition: opacity 0.25s var(--ease); will-change: transform; white-space: nowrap; }
+.vt-pin::after { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--fg); box-shadow: 0 0 0 2px var(--bg); order: 3; margin-top: 2px; }
+.vt-pin b { font: 500 11px/1.1 var(--sans); letter-spacing: 0.02em; color: var(--fg); text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg), 0 0 6px var(--bg); order: 1; }
+.vt-pin i { font: normal 400 10px/1.1 var(--sans); color: var(--muted-strong); text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg); order: 2; }
+.vt-pin { translate: -50% calc(-100% - 2px); }
+.vt-pin-peak::after { border-radius: 0; width: 6px; height: 6px; clip-path: polygon(50% 0, 100% 100%, 0 100%); }
+.vt-pin-hut b, .vt-pin-place b { font-weight: 600; }
+.vt-marker { position: absolute; left: 0; top: 0; width: 13px; height: 13px; margin: -6.5px 0 0 -6.5px; border-radius: 50%; background: var(--fg); border: 2.5px solid var(--bg); box-shadow: 0 0 0 1px var(--fg); opacity: 0; will-change: transform; }
+.vt-marker-descent { background: var(--muted); box-shadow: 0 0 0 1px var(--muted); }
+
+/* Flat fallback map */
 .vt-map { width: 100%; height: auto; display: block; }
-.vt-map-line { fill: none; stroke: var(--c); stroke-opacity: 0.18; stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; transition: stroke-opacity 0.3s var(--ease); }
+.vt-map-line { fill: none; stroke: var(--fg); stroke-opacity: 0.18; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transition: stroke-opacity 0.3s var(--ease); }
+.vt-map-line.is-descent { stroke: var(--muted); }
 .vt-map-line.is-on { stroke-opacity: 0.95; }
-.vt-end { fill: var(--bg); stroke: var(--muted-strong); stroke-width: 2.5; }
-.vt-end.is-fill { fill: var(--c); stroke: var(--bg); }
+.vt-end { fill: var(--bg); stroke: var(--fg); stroke-width: 2; }
+.vt-end.is-fill { fill: var(--fg); stroke: var(--bg); }
 .vt-label { font: 500 13px var(--sans); fill: var(--muted-strong); }
 .vt-scale line { stroke: var(--muted-strong); stroke-width: 2; }
 .vt-scale text { font: 500 12px var(--sans); fill: var(--muted-strong); }
-.vt-scrub-dot { stroke: var(--bg); stroke-width: 3; }
+.vt-scrub-dot { fill: var(--fg); stroke: var(--bg); stroke-width: 3; }
+
+/* Line samples: black = ascent, grey = descent. */
+.vt-sample { width: 1.6rem; height: 0.4rem; vertical-align: middle; margin-right: 0.5rem; overflow: visible; }
+.vt-sample line { stroke: var(--fg); stroke-width: 2; stroke-linecap: round; }
+.vt-sample .is-descent { stroke: var(--muted); }
+
 .vt-side { display: flex; flex-direction: column; gap: 1rem; }
-.vt-card { border: 1px solid var(--line); border-top: 3px solid var(--c); padding: 0.9rem 1rem 1rem; background: var(--bg); }
-.vt-card h3 { font-family: var(--serif); font-weight: 400; font-size: 1.25rem; margin: 0 0 0.7rem; display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: baseline; }
-.vt-card h3 span { font: 400 0.8rem var(--sans); color: var(--muted-strong); }
+.vt-card { border: 1px solid var(--line); padding: 0.9rem 1rem 1rem; background: var(--bg); }
+.vt-card h3 { font-family: var(--serif); font-weight: 400; font-size: 1.2rem; margin: 0 0 0.8rem; display: flex; justify-content: space-between; gap: 0.5rem 1rem; flex-wrap: wrap; align-items: baseline; }
+.vt-card h3 > span:last-child { font: 400 0.8rem var(--sans); color: var(--muted-strong); }
 .vt-card dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0.7rem 1rem; margin: 0; }
-.vt-stat dt { font-size: 0.7rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-strong); margin: 0 0 0.1rem; }
+.vt-stat dt { font-size: 0.68rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted-strong); margin: 0 0 0.1rem; }
 .vt-stat dd { margin: 0; font-size: 1rem; font-variant-numeric: tabular-nums; }
 .vt-stat small { color: var(--muted-strong); font-size: 0.75rem; }
+
 .vt-profile { width: 100%; height: auto; display: block; border: 1px solid var(--line); background: var(--bg); touch-action: pan-y; cursor: crosshair; }
 .vt-grid { stroke: var(--line); stroke-width: 1; }
 .vt-tick { font: 9px var(--sans); fill: var(--muted-strong); }
-.vt-prof-area { fill: var(--c); fill-opacity: 0.12; }
-.vt-prof-line { fill: none; stroke: var(--c); stroke-width: 2.5; stroke-linejoin: round; }
-.vt-scrub { stroke: var(--fg); stroke-opacity: 0.35; stroke-width: 1; stroke-dasharray: 3 3; }
+.vt-prof-area { fill: var(--fg); fill-opacity: 0.045; }
+.vt-prof-line { fill: none; stroke: var(--fg); stroke-width: 1.8; stroke-linejoin: round; }
+.vt-profile .is-descent .vt-prof-line { stroke: var(--muted); }
+.vt-profile .is-descent .vt-prof-area { fill: var(--muted); fill-opacity: 0.08; }
+.vt-scrub { stroke: var(--fg); stroke-opacity: 0.3; stroke-width: 1; stroke-dasharray: 3 3; }
+.vt-profile .vt-scrub-dot { stroke-width: 2.5; }
 .vt-readout, .vt-hint { min-height: 2.6rem; margin: 0; font-size: 0.9rem; font-variant-numeric: tabular-nums; }
 .vt-readout p { margin: 0 0 0.2rem; }
-.vt-readout b { color: var(--c); margin-right: 0.4rem; }
+.vt-readout b { font-weight: 600; margin-right: 0.4rem; }
 .vt-hint { color: var(--muted-strong); }
 .vt-strip { display: flex; gap: 8px; overflow-x: auto; padding-bottom: 0.4rem; }
 .vt-strip-item { flex: 0 0 auto; height: 94px; aspect-ratio: 3 / 2; position: relative; overflow: hidden; cursor: pointer; background: var(--line); }
 .vt-strip-item picture, .vt-strip-item img { display: block; width: 100%; height: 100%; object-fit: cover; }
-.vt-strip-item:focus-visible { outline: 2px solid #c2410c; outline-offset: 2px; }
 .vt-note { color: var(--muted-strong); font-size: 0.75rem; margin: 0; max-width: 80ch; }
 
 @media (max-width: 800px) {
   .vt-grid-main { grid-template-columns: 1fr; }
-  .vt-card dl { grid-template-columns: 1fr 1fr; }
-  .vt-bg-ridge { height: 14vh; }
+  .vt-3d { aspect-ratio: 1 / 1; max-height: 70vh; }
+  .vt-toolbar { flex-direction: column; align-items: stretch; }
+  .vt-tabs { display: flex; }
+  .vt-tabs button { flex: 1; padding-inline: 0.4rem; }
+  .vt-tools { justify-content: space-between; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .vt-map-line { transition: none; }
+  .vt-map-line, .vt-pin { transition: none; }
 }

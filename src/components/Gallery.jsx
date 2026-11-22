@@ -72,9 +72,9 @@ function useWidth() {
 }
 
 /** Absolute boxes for every frame, so a resize re-flows without remounting (and re-fading) any image. */
-function useLayout(ratios, width) {
+function useLayout(ratios, width, gutterScale = 1) {
   return useMemo(() => {
-    const gap = width ? gutter() : 0
+    const gap = width ? Math.round(gutter() * gutterScale) : 0
     const rows = justify(ratios, width, gap, targetHeight(width))
     const boxes = new Array(ratios.length)
     let top = 0
@@ -88,7 +88,7 @@ function useLayout(ratios, width) {
       top += row.height + gap
     })
     return { boxes, height: rows.length ? top - gap : 0 }
-  }, [ratios, width])
+  }, [ratios, width, gutterScale])
 }
 
 function Thumb({ photo, index, onOpen, box }) {
@@ -143,10 +143,11 @@ function Thumb({ photo, index, onOpen, box }) {
   )
 }
 
-export default function Gallery({ items, onOpen }) {
+/** `gutterScale` widens the gaps between frames (1 = the site's usual gutter). */
+export default function Gallery({ items, onOpen, gutterScale = 1 }) {
   const [ref, width] = useWidth()
   const ratios = useMemo(() => items.map(({ photo }) => ratioOf(photo)), [items])
-  const { boxes, height } = useLayout(ratios, width)
+  const { boxes, height } = useLayout(ratios, width, gutterScale)
 
   return (
     <div className="gallery" ref={ref} style={{ height }}>
@@ -159,10 +160,10 @@ export default function Gallery({ items, onOpen }) {
 }
 
 /** Holds the grid's place while a catalog's photos load: 3:2 tiles, the usual shape of a 35mm frame, in the same rows. */
-export function GallerySkeleton({ count }) {
+export function GallerySkeleton({ count, gutterScale = 1 }) {
   const [ref, width] = useWidth()
   const ratios = useMemo(() => new Array(Math.min(count || 12, 48)).fill(1.5), [count])
-  const { boxes, height } = useLayout(ratios, width)
+  const { boxes, height } = useLayout(ratios, width, gutterScale)
   return (
     <div className="gallery gallery-skeleton" ref={ref} style={{ height }} aria-busy="true" aria-label="Loading photos">
       {width > 0 &&
