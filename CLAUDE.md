@@ -15,12 +15,13 @@ Catalogs and albums come from the bucket's folder structure. Run `npm run index`
   one GPX recording (two at most). Then add each new album to `src/lab/hikeAlbums.json` and run
   `node scripts/build-routes.mjs <slug>` and an entry in `src/albumLinks.json`; the album page then gets the route feature. It exists today for the 15
   albums already listed in `hikeAlbums.json`.
-- **TODO: place maps in the route-map style** (same minimalist grey look as the hike route view):
-  1. On the Swiss catalog page (`#/c/swiss`): a map of Switzerland marking every spot photographed. Probably a 3D/2D terrain map
-     with a pin per album, linking to that album; needs a coordinate per album (the route albums already have track start points).
-  2. On the main page: a world map with all the places visited (catalogs such as London, Spain, Lithuania, Ukraine, Netherlands, Swiss).
-  Needs a place coordinate per catalog/album (a small config file like `src/albumLinks.json`), and the map code must load lazily
-  so the main bundle stays small. Open questions to settle first: pin per album or per photo, and a flat world map or a globe.
+- **Done: Swiss catalog map.** `#/c/swiss` has an Albums / Map switch: a faint relief of Switzerland behind the album cards, and a 2D/3D grey
+  map with a pin per hike album (code in `src/swissmap/`, lazy; relief baked by `scripts/bake-swiss.mjs` into `public/swissmap/`; pins in
+  `src/swissPlaces.json`, built by `scripts/build-swiss-places.mjs`). Albums that mix several places (Tour de l'Argentine + Lavaux, Rochers de
+  Naye + Argentine, Black Forest + Valsorey, Random) have no pin until they are split; after a split run the places script again.
+- **TODO: world map on the main page** in the same grey style, with all the places visited (catalogs such as London, Spain, Lithuania,
+  Ukraine, Netherlands, Swiss). Needs a place coordinate per catalog (a small config file like `src/swissPlaces.json`), lazy-loaded so the
+  main bundle stays small. Open question: a flat world map or a globe.
 
 ## Decisions (2026-11-21)
 

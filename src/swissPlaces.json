@@ -1,0 +1,160 @@
+{
+ "barrhorn": {
+  "label": "Barrhorn",
+  "kind": "hike",
+  "lat": 46.1856,
+  "lng": 7.6961,
+  "km": 22.3,
+  "gain": 2481,
+  "date": "2026-08-18"
+ },
+ "bisse-de-lentine": {
+  "label": "Bisse de Lentine",
+  "kind": "hike",
+  "lat": 46.2276,
+  "lng": 7.3591,
+  "km": 10.1,
+  "gain": 390,
+  "date": "2026-04-26"
+ },
+ "burgenstock": {
+  "label": "Bürgenstock",
+  "kind": "hike",
+  "lat": 46.9852,
+  "lng": 8.4139,
+  "km": 14.1,
+  "gain": 1117,
+  "date": "2026-04-18"
+ },
+ "cabane-de-valsorey": {
+  "label": "Cabane de Valsorey",
+  "kind": "hike",
+  "lat": 45.9564,
+  "lng": 7.2095,
+  "km": 15.7,
+  "gain": 1486,
+  "date": "2026-08-01"
+ },
+ "col-de-mollendruz": {
+  "label": "Col de Mollendruz",
+  "kind": "hike",
+  "lat": 46.6498,
+  "lng": 6.3666,
+  "km": 9.4,
+  "gain": 122,
+  "date": "2026-01-25"
+ },
+ "cow-fights": {
+  "label": "Cow fights",
+  "lat": 46.1721,
+  "lng": 7.4236,
+  "kind": "place",
+  "note": "Euseigne, Val d'Hérens"
+ },
+ "dent-du-jaman-summer": {
+  "label": "Dent du Jaman Summer",
+  "kind": "hike",
+  "lat": 46.4533,
+  "lng": 6.9432,
+  "km": 14.7,
+  "gain": 1052,
+  "date": "2026-06-14"
+ },
+ "dent-du-jaman-winter-failed": {
+  "label": "Dent du Jaman Winter(failed)",
+  "kind": "hike",
+  "lat": 46.4321,
+  "lng": 6.9435,
+  "km": 6,
+  "gain": 589,
+  "date": "2026-03-08"
+ },
+ "hasenmatt": {
+  "label": "Hasenmatt",
+  "lat": 47.2422,
+  "lng": 7.451,
+  "kind": "place",
+  "note": "Hasenmatt summit, Jura"
+ },
+ "la-montagnette": {
+  "label": "La Montagnette",
+  "kind": "hike",
+  "lat": 46.1755,
+  "lng": 7.574,
+  "km": 5.3,
+  "gain": 546,
+  "date": "2026-01-18"
+ },
+ "le-chasseron": {
+  "label": "Le Chasseron",
+  "kind": "hike",
+  "lat": 46.8079,
+  "lng": 6.5525,
+  "km": 13.2,
+  "gain": 1086,
+  "date": "2026-03-15"
+ },
+ "le-grammot": {
+  "label": "Le Grammot",
+  "kind": "hike",
+  "lat": 46.338,
+  "lng": 6.8511,
+  "km": 13.7,
+  "gain": 1274,
+  "date": "2026-06-28"
+ },
+ "les-paccots": {
+  "label": "Les Paccots",
+  "kind": "hike",
+  "lat": 46.5218,
+  "lng": 6.9496,
+  "km": 12.8,
+  "gain": 943,
+  "date": "2026-05-30"
+ },
+ "mauvoisin": {
+  "label": "Mauvoisin",
+  "kind": "hike",
+  "lat": 46.0025,
+  "lng": 7.3416,
+  "km": 11.7,
+  "gain": 1235,
+  "date": "2026-07-19"
+ },
+ "mont-pelerin": {
+  "label": "Mont Pèlerin",
+  "kind": "hike",
+  "lat": 46.4821,
+  "lng": 6.8315,
+  "km": 5.5,
+  "gain": 288,
+  "date": "2026-03-01"
+ },
+ "pointe-de-bellevue": {
+  "label": "Pointe de Bellevue",
+  "kind": "hike",
+  "lat": 46.2482,
+  "lng": 6.8701,
+  "km": 5.5,
+  "gain": 424,
+  "date": "2026-06-07"
+ },
+ "tour-du-mayan-spring-failed": {
+  "label": "Tour du Mayan Spring(failed)",
+  "kind": "hike",
+  "lat": 46.3446,
+  "lng": 7.0091,
+  "km": 13.7,
+  "gain": 1070,
+  "date": "2026-05-17"
+ },
+ "tour-du-mayan-tour-d-ai": {
+  "label": "Tour du Mayan + Tour d'Ai",
+  "kind": "hike",
+  "lat": 46.3448,
+  "lng": 7.0091,
+  "km": 18.5,
+  "gain": 1424,
+  "date": "2026-06-21"
+ }
+}

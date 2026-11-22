@@ -1,0 +1,87 @@
+/* Swiss catalog map: the same white, hairline, grey-ink language as the hike route view. */
+.sm-bg { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+.sm-bgslot { position: fixed; inset: 0; z-index: -1; pointer-events: none; overflow: hidden; }
+
+.sm-map-view { display: flex; flex-direction: column; gap: 1rem; min-width: 0; margin: 0 0 2rem; }
+.sm-toolbar { display: flex; flex-wrap: wrap; gap: 0.6rem 1rem; align-items: center; justify-content: flex-end; min-height: 2.1rem; }
+.sm-tabs { display: inline-flex; border: 1px solid var(--line); background: var(--bg); }
+.sm-tabs:empty { display: none; }
+.sm-tabs button { padding: 0.45rem 1rem; font-size: 0.85rem; cursor: pointer; }
+.sm-tabs button.is-on { background: var(--fg); color: var(--bg); }
+.sm-btn { padding: 0.45rem 1rem; font-size: 0.85rem; cursor: pointer; border: 1px solid var(--line); background: var(--bg); }
+.sm-btn:hover { border-color: var(--muted); }
+.sm-tabs button:focus-visible, .sm-btn:focus-visible, .sm-pin:focus-visible, .sm-list a:focus-visible, .sm-info:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
+.sm-grid { display: grid; grid-template-columns: minmax(0, 2.3fr) minmax(240px, 1fr); gap: clamp(1rem, 2vw, 2rem); align-items: start; }
+.sm-map-wrap { position: relative; border: 1px solid var(--line); background: var(--bg); min-width: 0; }
+.sm-attrib { margin: 0; padding: 0.45rem 0.8rem; font-size: 0.68rem; color: var(--muted-strong); border-top: 1px solid var(--line); }
+.sm-slot { position: relative; width: 100%; aspect-ratio: 16 / 10; max-height: 78vh; min-height: 300px; overflow: hidden; background: var(--bg); }
+.sm-slot-flat { display: grid; place-items: center; }
+.sm-loading { position: absolute; inset: 0; display: grid; place-items: center; font-size: 0.8rem; color: var(--muted-strong); letter-spacing: 0.04em; }
+
+/* One host holds the canvas and its overlay; it moves between the page backdrop and the map card. */
+.sm-host { position: absolute; inset: 0; overflow: hidden; }
+.sm-host.is-front { background: var(--bg); }
+.sm-host.is-bg { pointer-events: none; }
+.sm-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+.sm-host.is-front .sm-canvas { cursor: grab; }
+.sm-host.is-front .sm-canvas:active { cursor: grabbing; }
+.sm-host.is-bg .sm-canvas { pointer-events: none; }
+.sm-overlay { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.sm-border { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.sm-border path { fill: none; stroke: var(--fg); stroke-opacity: 0.35; stroke-width: 1.1; stroke-linejoin: round; }
+.sm-host.is-bg .sm-border, .sm-host.is-bg .sm-label { display: none; }
+
+.sm-label { position: absolute; left: 0; top: 0; display: flex; flex-direction: column; align-items: center; opacity: 0; will-change: transform; white-space: nowrap; translate: -50% -100%; transition: opacity 0.25s ease; }
+.sm-label b { font: 500 10.5px/1.1 var(--sans); letter-spacing: 0.02em; color: var(--muted-strong); text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg), 0 0 6px var(--bg); }
+.sm-label i { font: normal 400 9.5px/1.1 var(--sans); color: var(--muted); text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg); }
+.sm-label-town b { font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; font-size: 9.5px; }
+
+/* A pin: a dot with the album name above it. In the backdrop only a faint dot remains. */
+.sm-pin, .sm-list a, .sm-info { text-decoration: none; }
+.sm-pin { position: absolute; left: 0; top: 0; translate: -50% calc(-100% - 2px); display: flex; flex-direction: column; align-items: center; opacity: 0; will-change: transform; white-space: nowrap; pointer-events: none; transition: opacity 0.25s ease; }
+.sm-pin::after { content: ""; width: 7px; height: 7px; border-radius: 50%; background: var(--fg); box-shadow: 0 0 0 2px var(--bg); margin-top: 2px; transition: transform 0.15s ease; }
+.sm-pin b { font: 500 11px/1.1 var(--sans); color: var(--fg); text-shadow: 0 0 3px var(--bg), 0 0 3px var(--bg), 0 0 6px var(--bg); }
+.sm-host.is-front .sm-pin { pointer-events: auto; padding: 4px 6px 0; cursor: pointer; }
+.sm-host.is-front .sm-pin.is-on::after { transform: scale(1.6); }
+.sm-host.is-front .sm-pin.is-on b { font-weight: 700; }
+.sm-host.is-bg .sm-pin b, .sm-pin.no-label b { display: none; }
+.sm-host.is-bg .sm-pin::after { width: 5px; height: 5px; box-shadow: none; background: var(--muted); opacity: 0.5; }
+
+/* Flat fallback and the quiet outline shown before the 3D backdrop is ready */
+.sm-flat { width: 100%; height: auto; display: block; max-height: 100%; }
+.sm-bg .sm-flat { position: absolute; inset: 0; width: 100%; height: 100%; }
+.sm-flat-border { fill: none; stroke: var(--fg); stroke-width: 1.2; stroke-linejoin: round; stroke-opacity: 0.35; }
+.sm-flat.is-faint .sm-flat-border { stroke-opacity: 0.1; }
+.sm-flat-dot { fill: var(--fg); stroke: var(--bg); stroke-width: 2; transition: r 0.15s ease; }
+.sm-flat.is-faint .sm-flat-dot { fill: var(--muted); fill-opacity: 0.5; stroke: none; }
+.sm-flat-pin { cursor: pointer; }
+.sm-flat-label { font: 600 11px var(--sans); letter-spacing: 0.08em; text-transform: uppercase; fill: var(--muted-strong); }
+.sm-flat-pin-label { font: 500 12px var(--sans); fill: var(--fg); paint-order: stroke; stroke: var(--bg); stroke-width: 3px; }
+
+.sm-side { display: flex; flex-direction: column; gap: 1rem; min-width: 0; }
+.sm-hint { margin: 0; color: var(--muted-strong); font-size: 0.85rem; min-height: 5.5rem; display: flex; align-items: center; }
+.sm-info { display: flex; flex-direction: column; gap: 0.25rem; border: 1px solid var(--line); padding: 0.7rem; background: var(--bg); min-height: 5.5rem; }
+.sm-info-img { display: block; aspect-ratio: 3 / 2; overflow: hidden; margin-bottom: 0.4rem; }
+.sm-info-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.sm-info b { font-family: var(--serif); font-weight: 400; font-size: 1.2rem; }
+.sm-info span { font-size: 0.85rem; color: var(--muted-strong); }
+.sm-info i { font: normal 400 0.72rem var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--muted-strong); margin-top: 0.2rem; }
+.sm-list { list-style: none; margin: 0; padding: 0; max-height: 22rem; overflow: auto; border-top: 1px solid var(--line); }
+.sm-list a { display: flex; justify-content: space-between; gap: 1rem; padding: 0.4rem 0.2rem; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
+.sm-list a.is-on, .sm-list a:hover { background: var(--line); }
+.sm-list small { color: var(--muted-strong); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.sm-note { margin: 0; font-size: 0.72rem; color: var(--muted-strong); }
+
+@media (max-width: 760px) {
+  .sm-grid { grid-template-columns: minmax(0, 1fr); }
+  .sm-slot { aspect-ratio: 1 / 1; max-height: 70vh; }
+}
+@media (prefers-reduced-motion: reduce) { .sm-pin, .sm-label, .sm-pin::after { transition: none; } }
+
+/* Touch screens: the tapped album sits over the bottom of the map, so it is on screen where the finger is. */
+.sm-float { position: absolute; left: 0.5rem; right: 0.5rem; bottom: 2.6rem; z-index: 2; }
+.sm-info.is-compact { flex-direction: row; flex-wrap: wrap; align-items: center; gap: 0.1rem 0.8rem; min-height: 0; padding: 0.5rem; box-shadow: 0 2px 12px rgb(0 0 0 / 0.12); }
+.sm-info.is-compact .sm-info-img { width: 64px; margin: 0; flex: none; }
+.sm-info.is-compact b { font-size: 1.05rem; flex: 1 1 8rem; }
+.sm-info.is-compact span { flex: 1 1 100%; font-size: 0.78rem; margin-left: calc(64px + 0.8rem); margin-top: -1.2rem; }
+.sm-info.is-compact i { display: none; }

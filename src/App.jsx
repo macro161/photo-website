@@ -10,6 +10,7 @@ import NotFound from './components/NotFound.jsx'
 import { rollInfo, rollLine } from './rolls.js'
 import hikeAlbums from './lab/hikeAlbums.json'
 
+const SwissMap = lazy(() => import('./swissmap/SwissMap.jsx'))
 const HikeRoute = lazy(() => import('./route/HikeRoute.jsx'))
 import albumLinks from './albumLinks.json'
 import DateFilter from './components/DateFilter.jsx'
@@ -270,6 +271,9 @@ export default function App() {
   // Hike albums: the photo gallery or the route view. Back to the gallery whenever another album opens.
   const [hikeMode, setHikeMode] = useState('photos')
   useEffect(() => { setHikeMode('photos') }, [route.catalog, route.album])
+  // The Swiss catalog page: the album cards, or a map of where they were taken.
+  const [swissMode, setSwissMode] = useState('albums')
+  useEffect(() => { setSwissMode('albums') }, [route.catalog])
   const catalog = useMemo(
     () => (catalogLite && catalogPhotos ? withPhotos(catalogLite, catalogPhotos) : catalogLite),
     [catalogLite, catalogPhotos]
@@ -279,6 +283,7 @@ export default function App() {
   const album = catalog?.albums.find((a) => a.slug === route.album) || null
   // Undated albums are hidden while a filter is active (and the filter says so).
   const shownAlbums = catalog ? sortByDate(catalog.albums.filter((a) => matches(a.date)), sortDir) : []
+  const mapOn = catalog?.slug === 'swiss' && swissMode === 'map'
   const hiddenUndatedAlbums = catalog ? catalog.albums.filter((a) => !a.date).length : 0
   const showLoose = !catalog || catalog.albums.length === 0 || matches(catalog.date)
 
@@ -497,7 +502,7 @@ export default function App() {
             </section>
             </>
           ) : view === 'catalog' ? (
-            <section className="catalog-view">
+            <section className="catalog-view" style={catalog.slug === 'swiss' ? { position: 'relative', zIndex: 1 } : undefined}>
               <button className="back-link" onClick={() => goBack('/')}>
                 ← All catalogs
               </button>
@@ -508,7 +513,20 @@ export default function App() {
               <DateLine entry={catalog.date} />
               <RollLine info={rollInfo(catalog.slug)} />
               {notice && <p className="notice">{notice}</p>}
-              {(catalog.albums.length > 1 || (filtering && catalog.albums.length > 0)) && (
+              {catalog.slug === 'swiss' && (
+                <>
+                  <div className="hike-bar">
+                    <div className="hike-modes" role="group" aria-label="View">
+                      <button className={swissMode === 'albums' ? 'is-on' : ''} aria-pressed={swissMode === 'albums'} onClick={() => setSwissMode('albums')}>Albums</button>
+                      <button className={swissMode === 'map' ? 'is-on' : ''} aria-pressed={swissMode === 'map'} onClick={() => setSwissMode('map')}>Map</button>
+                    </div>
+                  </div>
+                  <Suspense fallback={null}>
+                    <SwissMap albums={catalog.albums} mode={swissMode} />
+                  </Suspense>
+                </>
+              )}
+              {!mapOn && (catalog.albums.length > 1 || (filtering && catalog.albums.length > 0)) && (
                 <DateFilter
                   value={range}
                   onChange={changeRange}
@@ -522,7 +540,7 @@ export default function App() {
               )}
               {/* Only label the groups when both are present; a catalog
                   that is all albums or all photos needs no explaining. */}
-              {shownAlbums.length > 0 && (
+              {!mapOn && shownAlbums.length > 0 && (
                 <>
                   {showLoose && catalog.looseCount > 0 && (
                     <h3 className="group-label">Albums</h3>
@@ -533,10 +551,10 @@ export default function App() {
                   />
                 </>
               )}
-              {filtering && catalog.albums.length > 0 && shownAlbums.length === 0 && !showLoose && (
+              {!mapOn && filtering && catalog.albums.length > 0 && shownAlbums.length === 0 && !showLoose && (
                 <p className="df-empty">No albums in this date range.</p>
               )}
-              {showLoose && catalog.looseCount > 0 && (
+              {!mapOn && showLoose && catalog.looseCount > 0 && (
                 <>
                   {shownAlbums.length > 0 && (
                     <h3 className="group-label">Photos</h3>
