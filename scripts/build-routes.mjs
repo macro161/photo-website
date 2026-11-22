@@ -8,7 +8,7 @@
 import { readFileSync, readdirSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
 import { execFileSync } from 'node:child_process'
 
-const albums = JSON.parse(readFileSync('src/lab/hikeAlbums.json (shared with the lab pages)', 'utf8'))
+const albums = JSON.parse(readFileSync('src/lab/hikeAlbums.json', 'utf8'))
 const acts = JSON.parse(readFileSync('src/lab/activities.json', 'utf8'))
 const files = readdirSync('gpx').filter((f) => f.endsWith('.gpx'))
 const args = process.argv.slice(2)

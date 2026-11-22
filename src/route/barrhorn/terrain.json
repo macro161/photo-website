@@ -1,0 +1,996 @@
+{
+ "width": 505,
+ "height": 565,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.11461045229682,
+  "north": 46.21612,
+  "west": 7.643139999999988,
+  "east": 7.774142766705637
+ },
+ "metersPerPx": 20,
+ "minEle": 1800,
+ "maxEle": 4115,
+ "peaks": [
+  {
+   "name": "Gruben",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2112722,
+   "lng": 7.7069255
+  },
+  {
+   "name": "Bishorn",
+   "kind": "peak",
+   "ele": 4149,
+   "lat": 46.1179218,
+   "lng": 7.7149611
+  },
+  {
+   "name": "Col de Tracuit",
+   "kind": "pass",
+   "ele": 3250,
+   "lat": 46.1307995,
+   "lng": 7.6782515
+  },
+  {
+   "name": "Schöllijoch",
+   "kind": "pass",
+   "ele": 3343,
+   "lat": 46.1445307,
+   "lng": 7.7336031
+  },
+  {
+   "name": "Üssers Barrhorn",
+   "kind": "peak",
+   "ele": 3610,
+   "lat": 46.1559086,
+   "lng": 7.7340924
+  },
+  {
+   "name": "Inners Barrhorn",
+   "kind": "peak",
+   "ele": 3583,
+   "lat": 46.149717,
+   "lng": 7.7372766
+  },
+  {
+   "name": "Wasulicke",
+   "kind": "pass",
+   "ele": 3114,
+   "lat": 46.175454,
+   "lng": 7.753957
+  },
+  {
+   "name": "Restaurant Schwarzhorn",
+   "kind": "poi",
+   "ele": 1825,
+   "lat": 46.2115625,
+   "lng": 7.7064131
+  },
+  {
+   "name": "Waldesruh",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2157061,
+   "lng": 7.7087889
+  },
+  {
+   "name": "Augstbordpass",
+   "kind": "pass",
+   "ele": 2893,
+   "lat": 46.208754,
+   "lng": 7.7531945
+  },
+  {
+   "name": "Roc de la Vache",
+   "kind": "peak",
+   "ele": 2581,
+   "lat": 46.1189247,
+   "lng": 7.6451894
+  },
+  {
+   "name": "Les Diablons",
+   "kind": "peak",
+   "ele": 3609,
+   "lat": 46.142452,
+   "lng": 7.670917
+  },
+  {
+   "name": "Sommet Nord (Les Diablons)",
+   "kind": "peak",
+   "ele": 3592,
+   "lat": 46.1463354,
+   "lng": 7.6668076
+  },
+  {
+   "name": "P. 3443",
+   "kind": "peak",
+   "ele": null,
+   "lat": 46.1503829,
+   "lng": 7.6646026
+  },
+  {
+   "name": "P3114",
+   "kind": "peak",
+   "ele": 3114,
+   "lat": 46.2043425,
+   "lng": 7.7542135
+  },
+  {
+   "name": "Brunegghorn",
+   "kind": "peak",
+   "ele": 3833,
+   "lat": 46.1257529,
+   "lng": 7.7458955
+  },
+  {
+   "name": "Schöllihorn",
+   "kind": "peak",
+   "ele": 3500,
+   "lat": 46.1382689,
+   "lng": 7.7377076
+  },
+  {
+   "name": "Forcletta",
+   "kind": "pass",
+   "ele": 2874,
+   "lat": 46.1807823,
+   "lng": 7.6575926
+  },
+  {
+   "name": "Pointe Burnaby",
+   "kind": "peak",
+   "ele": 4134,
+   "lat": 46.1186922,
+   "lng": 7.7180243
+  },
+  {
+   "name": "Üssers Schöllihorn",
+   "kind": "place",
+   "ele": 3435,
+   "lat": 46.1421598,
+   "lng": 7.7329423
+  },
+  {
+   "name": "Tête de Milon",
+   "kind": "peak",
+   "ele": 3693,
+   "lat": 46.1185312,
+   "lng": 7.6903361
+  },
+  {
+   "name": "Gigihorli",
+   "kind": "peak",
+   "ele": 2749,
+   "lat": 46.2001077,
+   "lng": 7.7195197
+  },
+  {
+   "name": "Le Toûno",
+   "kind": "peak",
+   "ele": 3018,
+   "lat": 46.207398,
+   "lng": 7.6500472
+  },
+  {
+   "name": "Pointe de Tourtemagne",
+   "kind": "peak",
+   "ele": 3080,
+   "lat": 46.2043686,
+   "lng": 7.6618339
+  },
+  {
+   "name": "Le Boudry",
+   "kind": "peak",
+   "ele": 3070,
+   "lat": 46.191811,
+   "lng": 7.6596345
+  },
+  {
+   "name": "Omen Roso",
+   "kind": "peak",
+   "ele": 3031,
+   "lat": 46.1743978,
+   "lng": 7.6603448
+  },
+  {
+   "name": "Frilihorn",
+   "kind": "peak",
+   "ele": 3144,
+   "lat": 46.17048,
+   "lng": 7.66628
+  },
+  {
+   "name": "P. 3405",
+   "kind": "peak",
+   "ele": 3405,
+   "lat": 46.1335191,
+   "lng": 7.6741671
+  },
+  {
+   "name": "Diablon des Dames",
+   "kind": "peak",
+   "ele": 3538,
+   "lat": 46.137249,
+   "lng": 7.671974
+  },
+  {
+   "name": "Stier",
+   "kind": "peak",
+   "ele": 3507,
+   "lat": 46.1353881,
+   "lng": 7.6966106
+  },
+  {
+   "name": "Adlerflüe",
+   "kind": "peak",
+   "ele": 2922,
+   "lat": 46.1464169,
+   "lng": 7.7004257
+  },
+  {
+   "name": "P. 3143",
+   "kind": "peak",
+   "ele": null,
+   "lat": 46.1546225,
+   "lng": 7.6570218
+  },
+  {
+   "name": "P. 3374",
+   "kind": "peak",
+   "ele": null,
+   "lat": 46.15175,
+   "lng": 7.6617532
+  },
+  {
+   "name": "P2956",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1448751,
+   "lng": 7.7494597
+  },
+  {
+   "name": "P2905",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1412178,
+   "lng": 7.7504468
+  },
+  {
+   "name": "Schwarzhorn",
+   "kind": "peak",
+   "ele": 3137,
+   "lat": 46.1353373,
+   "lng": 7.754277
+  },
+  {
+   "name": "Abbergjoch",
+   "kind": "pass",
+   "ele": 3109,
+   "lat": 46.1340288,
+   "lng": 7.7530539
+  },
+  {
+   "name": "P3418",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1316273,
+   "lng": 7.7453667
+  },
+  {
+   "name": "P3589",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1285045,
+   "lng": 7.7507418
+  },
+  {
+   "name": "Gross Kastel",
+   "kind": "peak",
+   "ele": 2893,
+   "lat": 46.116822,
+   "lng": 7.7562189
+  },
+  {
+   "name": "Gigi Mittelstafel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2020505,
+   "lng": 7.7067509
+  },
+  {
+   "name": "Gigi Oberstafel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2033073,
+   "lng": 7.711831
+  },
+  {
+   "name": "Brändji Mittelstafel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1932987,
+   "lng": 7.6994875
+  },
+  {
+   "name": "Hungerli Unnerstafel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1899825,
+   "lng": 7.6983985
+  },
+  {
+   "name": "Hungerli Mittelstafel",
+   "kind": "place",
+   "ele": 2235,
+   "lat": 46.192699,
+   "lng": 7.7062172
+  },
+  {
+   "name": "Brändji Oberstafel",
+   "kind": "place",
+   "ele": 2297,
+   "lat": 46.1863208,
+   "lng": 7.7052489
+  },
+  {
+   "name": "P2993",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1773715,
+   "lng": 7.7447069
+  },
+  {
+   "name": "P2151",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2113944,
+   "lng": 7.7164029
+  },
+  {
+   "name": "P2814",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.203285,
+   "lng": 7.7393639
+  },
+  {
+   "name": "Ritzuegg",
+   "kind": "peak",
+   "ele": 2976,
+   "lat": 46.2007603,
+   "lng": 7.735067
+  },
+  {
+   "name": "P2837",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1976711,
+   "lng": 7.7243757
+  },
+  {
+   "name": "Hungerli Oberstafel",
+   "kind": "place",
+   "ele": 2455,
+   "lat": 46.1911578,
+   "lng": 7.7127734
+  },
+  {
+   "name": "P2557",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1909425,
+   "lng": 7.716254
+  },
+  {
+   "name": "Hungerlihorli",
+   "kind": "peak",
+   "ele": 3007,
+   "lat": 46.1836337,
+   "lng": 7.724086
+  },
+  {
+   "name": "P2896",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1797413,
+   "lng": 7.724247
+  },
+  {
+   "name": "Pipjilicke",
+   "kind": "pass",
+   "ele": 3050,
+   "lat": 46.1683223,
+   "lng": 7.7303141
+  },
+  {
+   "name": "Pipjispitz",
+   "kind": "peak",
+   "ele": 3078,
+   "lat": 46.1684412,
+   "lng": 7.7287692
+  },
+  {
+   "name": "P2960",
+   "kind": "pass",
+   "ele": null,
+   "lat": 46.168352,
+   "lng": 7.7216291
+  },
+  {
+   "name": "Längi Egga West",
+   "kind": "peak",
+   "ele": 3028,
+   "lat": 46.1698752,
+   "lng": 7.7147519
+  },
+  {
+   "name": "Signal",
+   "kind": "peak",
+   "ele": 2932,
+   "lat": 46.1699866,
+   "lng": 7.7085614
+  },
+  {
+   "name": "P2623",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1631655,
+   "lng": 7.7081215
+  },
+  {
+   "name": "P2584",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1927008,
+   "lng": 7.7607391
+  },
+  {
+   "name": "P2708",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1829429,
+   "lng": 7.7627206
+  },
+  {
+   "name": "Sparruhorn",
+   "kind": "peak",
+   "ele": 2988,
+   "lat": 46.183552,
+   "lng": 7.7692115
+  },
+  {
+   "name": "Sparrulicke",
+   "kind": "pass",
+   "ele": 2882,
+   "lat": 46.180525,
+   "lng": 7.7694315
+  },
+  {
+   "name": "P3014",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1788647,
+   "lng": 7.7694476
+  },
+  {
+   "name": "P3088",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1778321,
+   "lng": 7.7673018
+  },
+  {
+   "name": "Festihorn Ost",
+   "kind": "peak",
+   "ele": 3092,
+   "lat": 46.1770632,
+   "lng": 7.7659124
+  },
+  {
+   "name": "Festihorn Mitte",
+   "kind": "peak",
+   "ele": 3195,
+   "lat": 46.1757928,
+   "lng": 7.7599364
+  },
+  {
+   "name": "Festihorn West",
+   "kind": "peak",
+   "ele": 3248,
+   "lat": 46.1765097,
+   "lng": 7.7565944
+  },
+  {
+   "name": "Stelline",
+   "kind": "place",
+   "ele": 2765,
+   "lat": 46.1648579,
+   "lng": 7.7569659
+  },
+  {
+   "name": "P2970",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1687161,
+   "lng": 7.7578497
+  },
+  {
+   "name": "Wasuhorn",
+   "kind": "peak",
+   "ele": 3343,
+   "lat": 46.1733709,
+   "lng": 7.7490842
+  },
+  {
+   "name": "Wasujoch",
+   "kind": "pass",
+   "ele": 3224,
+   "lat": 46.1721895,
+   "lng": 7.7435052
+  },
+  {
+   "name": "P3095",
+   "kind": "peak",
+   "ele": 3095,
+   "lat": 46.2017163,
+   "lng": 7.7651976
+  },
+  {
+   "name": "Steitalhorn",
+   "kind": "peak",
+   "ele": 3164,
+   "lat": 46.2037843,
+   "lng": 7.760324
+  },
+  {
+   "name": "Grüobu Oberstafil",
+   "kind": "place",
+   "ele": 2370,
+   "lat": 46.2112835,
+   "lng": 7.722474
+  },
+  {
+   "name": "P2752",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2147078,
+   "lng": 7.7353138
+  },
+  {
+   "name": "P2841",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2142587,
+   "lng": 7.7433336
+  },
+  {
+   "name": "P3020",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2138439,
+   "lng": 7.7531531
+  },
+  {
+   "name": "P3040",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2021489,
+   "lng": 7.7533196
+  },
+  {
+   "name": "Wyssegglicke",
+   "kind": "pass",
+   "ele": 2992,
+   "lat": 46.2014323,
+   "lng": 7.7524598
+  },
+  {
+   "name": "Wyssegga",
+   "kind": "peak",
+   "ele": 3168,
+   "lat": 46.198979,
+   "lng": 7.748403
+  },
+  {
+   "name": "P3063",
+   "kind": "pass",
+   "ele": null,
+   "lat": 46.198616,
+   "lng": 7.742546
+  },
+  {
+   "name": "Wyssegga West",
+   "kind": "peak",
+   "ele": 3137,
+   "lat": 46.197737,
+   "lng": 7.73995
+  },
+  {
+   "name": "Furggwangjoch",
+   "kind": "pass",
+   "ele": 3052,
+   "lat": 46.1967335,
+   "lng": 7.7367327
+  },
+  {
+   "name": "Furggwanghorn",
+   "kind": "peak",
+   "ele": 3162,
+   "lat": 46.1939587,
+   "lng": 7.7353433
+  },
+  {
+   "name": "Jungpass",
+   "kind": "pass",
+   "ele": 2990,
+   "lat": 46.1892834,
+   "lng": 7.7356155
+  },
+  {
+   "name": "Rothorn Nord",
+   "kind": "peak",
+   "ele": 3259,
+   "lat": 46.1835966,
+   "lng": 7.7352601
+  },
+  {
+   "name": "Rothorn",
+   "kind": "peak",
+   "ele": 3278,
+   "lat": 46.1812818,
+   "lng": 7.7327643
+  },
+  {
+   "name": "Rothornjoch",
+   "kind": "pass",
+   "ele": 3216,
+   "lat": 46.1788624,
+   "lng": 7.7322185
+  },
+  {
+   "name": "Inners Rothorn",
+   "kind": "peak",
+   "ele": 3258,
+   "lat": 46.1765236,
+   "lng": 7.7358408
+  },
+  {
+   "name": "Jungtaljoch",
+   "kind": "pass",
+   "ele": 3220,
+   "lat": 46.1753136,
+   "lng": 7.737483
+  },
+  {
+   "name": "Brändjihorn",
+   "kind": "peak",
+   "ele": 3308,
+   "lat": 46.1722481,
+   "lng": 7.7399265
+  },
+  {
+   "name": "Brändjijoch",
+   "kind": "pass",
+   "ele": 3280,
+   "lat": 46.1712613,
+   "lng": 7.7388208
+  },
+  {
+   "name": "Üssers Stellihorn",
+   "kind": "peak",
+   "ele": 3405,
+   "lat": 46.1697674,
+   "lng": 7.7374274
+  },
+  {
+   "name": "Stellijoch",
+   "kind": "pass",
+   "ele": 3315,
+   "lat": 46.1683687,
+   "lng": 7.7387014
+  },
+  {
+   "name": "Inners Stellihorn",
+   "kind": "peak",
+   "ele": 3410,
+   "lat": 46.1670424,
+   "lng": 7.7390501
+  },
+  {
+   "name": "Gässijoch",
+   "kind": "pass",
+   "ele": 3235,
+   "lat": 46.1623815,
+   "lng": 7.7361426
+  },
+  {
+   "name": "Gässispitz",
+   "kind": "peak",
+   "ele": 3411,
+   "lat": 46.1614852,
+   "lng": 7.7355699
+  },
+  {
+   "name": "Barrjoch",
+   "kind": "pass",
+   "ele": 3312,
+   "lat": 46.1601531,
+   "lng": 7.7346298
+  },
+  {
+   "name": "Üssers Barrhorn Nord",
+   "kind": "peak",
+   "ele": 3592,
+   "lat": 46.1564457,
+   "lng": 7.7354372
+  },
+  {
+   "name": "P3202",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1551767,
+   "lng": 7.7208084
+  },
+  {
+   "name": "P3099",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1569678,
+   "lng": 7.7152428
+  },
+  {
+   "name": "P3057",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1577667,
+   "lng": 7.7103049
+  },
+  {
+   "name": "Gässi",
+   "kind": "place",
+   "ele": 2641,
+   "lat": 46.1545079,
+   "lng": 7.7051899
+  },
+  {
+   "name": "P3392",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1442532,
+   "lng": 7.7333799
+  },
+  {
+   "name": "Bruneggjoch",
+   "kind": "pass",
+   "ele": 3365,
+   "lat": 46.1331961,
+   "lng": 7.7370626
+  },
+  {
+   "name": "Über den Mergasch",
+   "kind": "pass",
+   "ele": 3543,
+   "lat": 46.1297202,
+   "lng": 7.7098328
+  },
+  {
+   "name": "Chanzilti",
+   "kind": "peak",
+   "ele": 3075,
+   "lat": 46.1451055,
+   "lng": 7.7242497
+  },
+  {
+   "name": "Distulberg",
+   "kind": "peak",
+   "ele": 3285,
+   "lat": 46.1528059,
+   "lng": 7.746284
+  },
+  {
+   "name": "P2945",
+   "kind": "place",
+   "ele": 2945,
+   "lat": 46.1474358,
+   "lng": 7.7565837
+  },
+  {
+   "name": "P3020",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1476328,
+   "lng": 7.7502
+  },
+  {
+   "name": "P3182",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1431431,
+   "lng": 7.7428722
+  },
+  {
+   "name": "P3473",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1399075,
+   "lng": 7.7372007
+  },
+  {
+   "name": "Wängerhorn",
+   "kind": "peak",
+   "ele": 3096,
+   "lat": 46.1613748,
+   "lng": 7.673167
+  },
+  {
+   "name": "Col des Arpettes",
+   "kind": "pass",
+   "ele": 3004,
+   "lat": 46.1572911,
+   "lng": 7.6707937
+  },
+  {
+   "name": "Holustei",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1782599,
+   "lng": 7.6968303
+  },
+  {
+   "name": "Hirsihorn",
+   "kind": "peak",
+   "ele": 3077,
+   "lat": 46.1866479,
+   "lng": 7.6589156
+  },
+  {
+   "name": "Bisjoch",
+   "kind": "pass",
+   "ele": 3520,
+   "lat": 46.1207697,
+   "lng": 7.7315586
+  },
+  {
+   "name": "Gälus Häupt",
+   "kind": "peak",
+   "ele": 2917,
+   "lat": 46.206527,
+   "lng": 7.6682985
+  },
+  {
+   "name": "Brändjispitz",
+   "kind": "peak",
+   "ele": 2852,
+   "lat": 46.1825795,
+   "lng": 7.7169448
+  },
+  {
+   "name": "Meidhoru",
+   "kind": "peak",
+   "ele": 2876,
+   "lat": 46.2068121,
+   "lng": 7.6783152
+  },
+  {
+   "name": "Col de Vijivi",
+   "kind": "pass",
+   "ele": 2916,
+   "lat": 46.1949732,
+   "lng": 7.6609959
+  },
+  {
+   "name": "Gämschwart",
+   "kind": "pass",
+   "ele": 2790,
+   "lat": 46.2097164,
+   "lng": 7.6612891
+  },
+  {
+   "name": "Col de l'Omen Roso",
+   "kind": "pass",
+   "ele": 3000,
+   "lat": 46.1755702,
+   "lng": 7.6606839
+  },
+  {
+   "name": "Wängerjoch",
+   "kind": "pass",
+   "ele": 3026,
+   "lat": 46.1633673,
+   "lng": 7.6720659
+  },
+  {
+   "name": "Meiden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2146171,
+   "lng": 7.6924285
+  },
+  {
+   "name": "Meidu Oberstafil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.213473,
+   "lng": 7.6922488
+  },
+  {
+   "name": "Meidu Mittilstafil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2118813,
+   "lng": 7.6938302
+  },
+  {
+   "name": "Bitzu Oberstafel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1876987,
+   "lng": 7.687299
+  },
+  {
+   "name": "Kalter Berg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1898551,
+   "lng": 7.6794517
+  },
+  {
+   "name": "Weisshornjoch",
+   "kind": "pass",
+   "ele": 4061,
+   "lat": 46.1152778,
+   "lng": 7.7130362
+  },
+  {
+   "name": "Spicherli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1831023,
+   "lng": 7.69607
+  },
+  {
+   "name": "Wängeralpu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1629541,
+   "lng": 7.6862785
+  },
+  {
+   "name": "Grüobu Mittelstafil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2131448,
+   "lng": 7.717885
+  },
+  {
+   "name": "Pfaffuholz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.213429,
+   "lng": 7.7072492
+  },
+  {
+   "name": "Vorder Sänntum",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1857376,
+   "lng": 7.6949619
+  },
+  {
+   "name": "Blüomatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2023164,
+   "lng": 7.6981267
+  },
+  {
+   "name": "Pt. 2756",
+   "kind": "pass",
+   "ele": 2756,
+   "lat": 46.2062607,
+   "lng": 7.6745192
+  }
+ ]
+}
