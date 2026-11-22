@@ -31,6 +31,10 @@ const WORK = path.join(os.homedir(), '.cache', 'photo-website-optimize')
 
 export const WIDTHS = [480, 960, 1600, 2400]
 export const QUALITY = { avif: 55, webp: 78 } // chosen with scripts/quality-ladder.mjs
+// The large sizes are where film grain is visible at 100%; AVIF q55 smooths it into a waxy look,
+// q60 keeps noticeably more for ~30% more bytes (measured on 8 frames, 2400 px: 246 -> 319 KB).
+export const AVIF_QUALITY_LARGE = 60
+export const avifQuality = (w) => (w >= 1600 ? AVIF_QUALITY_LARGE : QUALITY.avif)
 export const AVIF_EFFORT = 4
 
 const arg = (name) => {
@@ -43,6 +47,10 @@ const onlySet = typeof onlyFile === 'string' ? new Set((await fs.readFile(onlyFi
 const force = Boolean(arg('force'))
 const dry = Boolean(arg('dry'))
 const noUpload = Boolean(arg('no-upload'))
+// Partial regeneration, e.g. after changing encoder settings: --only-widths 1600,2400 --only-fmt avif --bump-v
+const onlyWidths = typeof arg('only-widths') === 'string' ? new Set(arg('only-widths').split(',').map(Number)) : null
+const onlyFmt = typeof arg('only-fmt') === 'string' ? arg('only-fmt') : null
+const bumpV = Boolean(arg('bump-v')) // cache-bust: variants are served immutable for a year
 const concurrency = Number(arg('concurrency')) || 2
 
 const config = JSON.parse(await fs.readFile(path.join(ROOT, 'site.config.json'), 'utf8'))
@@ -116,13 +124,15 @@ async function main() {
       const base = sharp(src, { failOn: 'none' }).rotate() // honours EXIF orientation, drops metadata
 
       for (const w of widths) {
+        if (onlyWidths && !onlyWidths.has(w)) continue
         for (const fmt of ['avif', 'webp']) {
+          if (onlyFmt && fmt !== onlyFmt) continue
           const rel = outRel(p.file, w, fmt)
           const dest = path.join(stage, rel)
           await fs.mkdir(path.dirname(dest), { recursive: true })
           const img = base.clone().resize({ width: w, withoutEnlargement: true }).toColorspace('srgb')
           const buf = fmt === 'avif'
-            ? await img.avif({ quality: QUALITY.avif, effort: AVIF_EFFORT }).toBuffer()
+            ? await img.avif({ quality: avifQuality(w), effort: AVIF_EFFORT }).toBuffer()
             : await img.webp({ quality: QUALITY.webp, effort: 4 }).toBuffer()
           await fs.writeFile(dest, buf)
           bytes += buf.length
@@ -131,7 +141,9 @@ async function main() {
       // Average colour: a cheap placeholder shown while the image loads.
       const { data } = await base.clone().resize(1, 1).removeAlpha().raw().toBuffer({ resolveWithObject: true })
       const c = '#' + [...data.slice(0, 3)].map((v) => v.toString(16).padStart(2, '0')).join('')
-      variants[p.file] = { ...variants[p.file], w: widths, c } // keeps a `v` cache-bust version if set
+      const encoded = widths.some((w) => !onlyWidths || onlyWidths.has(w))
+      const v = bumpV && encoded ? (variants[p.file]?.v || 1) + 1 : variants[p.file]?.v
+      variants[p.file] = { ...variants[p.file], w: widths, c, ...(v ? { v } : {}) } // `v` = cache-bust version
       origBytes += (await fs.stat(src)).size
       await fs.rm(src)
     } catch (err) {
