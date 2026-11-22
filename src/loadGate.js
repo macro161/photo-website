@@ -42,6 +42,9 @@ export function firstScreenLoaded() {
   setTimeout(go, 600)
 }
 
+/** True once below-the-fold work has been released. */
+export const gateIsOpen = () => open
+
 /** Runs `fn` as soon as below-the-fold images may start loading; returns a cleanup function. */
 export function whenGateOpen(fn) {
   if (open) {
@@ -52,12 +55,14 @@ export function whenGateOpen(fn) {
   if (!armed && typeof window !== 'undefined') {
     armed = true
     // Fallbacks so a failed or very slow first image never holds the rest back.
-    const events = ['scroll', 'wheel', 'touchstart', 'keydown', 'pointerdown']
-    const go = () => {
-      events.forEach((e) => window.removeEventListener(e, go))
+    // Only real input counts: a programmatic scroll (the page resetting its scroll position) must not open the gate early.
+    const events = ['wheel', 'touchstart', 'keydown', 'pointerdown']
+    const go = (e) => {
+      if (e && e.isTrusted === false) return
+      events.forEach((n) => window.removeEventListener(n, go))
       release()
     }
-    events.forEach((e) => window.addEventListener(e, go, { passive: true, once: true }))
+    events.forEach((e) => window.addEventListener(e, go, { passive: true }))
     setTimeout(release, 3000)
   }
   return () => waiting.delete(fn)

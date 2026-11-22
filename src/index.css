@@ -548,6 +548,9 @@ main {
   touch-action: none;
   overscroll-behavior: contain;
 }
+.lightbox.instant {
+  animation: none;
+}
 .lightbox.settle,
 .lb-figure.settle,
 .lb-zoom.settle {

@@ -12,7 +12,7 @@ import { useEffect, useRef, useState } from 'react'
 import { rollInfo, rollLine } from '../rolls.js'
 import { imageUrl, hasVariants, srcSet, variantUrl, widthAtMost, supportsAvif } from '../imageUrl.js'
 import { gridSources } from '../viewTransition.js'
-import { firstScreenLoaded, useAfterFirstScreen } from '../loadGate.js'
+import { firstScreenLoaded, gateIsOpen, useAfterFirstScreen } from '../loadGate.js'
 
 const MAX_SCALE = 5
 const DOUBLE_TAP_SCALE = 2.5
@@ -126,6 +126,8 @@ export default function Lightbox({
   hasMultiple,
 }) {
   const rootRef = useRef(null)
+  // Opened by a link at page load (nothing on screen yet to fade from): show it at once, so its photo is the first thing painted.
+  const [instant] = useState(() => !gateIsOpen())
   const figureRef = useRef(null)
   const zoomRef = useRef(null)
   const latest = useRef({})
@@ -377,7 +379,7 @@ export default function Lightbox({
 
   return (
     <div
-      className="lightbox"
+      className={`lightbox${instant ? ' instant' : ''}`}
       ref={rootRef}
       onClick={onBackdropClick}
       onPointerDown={onPointerDown}
