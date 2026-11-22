@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="45.92376" minlon="7.20779" maxlat="45.95649" maxlon="7.27109"/>
+    <bounds minlat="45.92393" minlon="7.20779" maxlat="45.95649" maxlon="7.27109"/>
   </metadata>
   <wpt lat="45.9293094" lon="7.2696532">
     <name><![CDATA[]]></name>
@@ -1085,10 +1085,6 @@
       <trkpt lat="45.9249" lon="7.25747">
         <ele>2422.41</ele>
         <time>2026-08-01T12:00:13Z</time>
-      </trkpt>
-      <trkpt lat="45.92376" lon="7.25953">
-        <ele>2489.52</ele>
-        <time>2026-08-01T12:06:40Z</time>
       </trkpt>
       <trkpt lat="45.92398" lon="7.25928">
         <ele>2487.46</ele>

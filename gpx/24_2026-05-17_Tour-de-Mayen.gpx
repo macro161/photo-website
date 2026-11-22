@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.34143" minlon="7.0089" maxlat="46.36737" maxlon="7.02199"/>
+    <bounds minlat="46.34457" minlon="7.00890" maxlat="46.36737" maxlon="7.02119"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Tour de Mayen]]></name>
@@ -340,10 +340,6 @@
         <ele>1429.59</ele>
         <time>2026-05-17T08:51:07Z</time>
       </trkpt>
-      <trkpt lat="46.34143" lon="7.01929">
-        <ele>1254.64</ele>
-        <time>2026-05-17T08:52:36Z</time>
-      </trkpt>
       <trkpt lat="46.34866" lon="7.01251">
         <ele>1480.2</ele>
         <time>2026-05-17T08:53:48Z</time>
@@ -628,25 +624,9 @@
         <ele>1481.15</ele>
         <time>2026-05-17T09:01:25Z</time>
       </trkpt>
-      <trkpt lat="46.35236" lon="7.02198">
-        <ele>1336.92</ele>
-        <time>2026-05-17T09:02:19Z</time>
-      </trkpt>
-      <trkpt lat="46.351" lon="7.01967">
-        <ele>1343.54</ele>
-        <time>2026-05-17T09:02:51Z</time>
-      </trkpt>
-      <trkpt lat="46.35238" lon="7.02199">
-        <ele>1337.49</ele>
-        <time>2026-05-17T09:03:36Z</time>
-      </trkpt>
       <trkpt lat="46.35311" lon="7.0186">
         <ele>1408.87</ele>
         <time>2026-05-17T09:04:57Z</time>
-      </trkpt>
-      <trkpt lat="46.35349" lon="7.01915">
-        <ele>1419.55</ele>
-        <time>2026-05-17T09:05:17Z</time>
       </trkpt>
       <trkpt lat="46.35313" lon="7.0171">
         <ele>1454.75</ele>
@@ -699,10 +679,6 @@
       <trkpt lat="46.35347" lon="7.01874">
         <ele>1426.18</ele>
         <time>2026-05-17T09:07:39Z</time>
-      </trkpt>
-      <trkpt lat="46.3537" lon="7.01953">
-        <ele>1415.55</ele>
-        <time>2026-05-17T09:08:17Z</time>
       </trkpt>
       <trkpt lat="46.35373" lon="7.01826">
         <ele>1432.86</ele>

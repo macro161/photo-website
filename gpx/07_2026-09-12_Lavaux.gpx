@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.47259" minlon="6.6909" maxlat="46.50393" maxlon="6.79696"/>
+    <bounds minlat="46.47259" minlon="6.69090" maxlat="46.50393" maxlon="6.79696"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Lavaux Vineyard Terraces: St-Saphorin - Lutry]]></name>
@@ -228,22 +228,6 @@
         <ele>395.15</ele>
         <time>2026-09-12T12:04:57Z</time>
       </trkpt>
-      <trkpt lat="46.47414" lon="6.78373">
-        <ele>369.0</ele>
-        <time>2026-09-12T12:05:39Z</time>
-      </trkpt>
-      <trkpt lat="46.47435" lon="6.78824">
-        <ele>369.0</ele>
-        <time>2026-09-12T12:06:44Z</time>
-      </trkpt>
-      <trkpt lat="46.47445" lon="6.78997">
-        <ele>369.0</ele>
-        <time>2026-09-12T12:06:45Z</time>
-      </trkpt>
-      <trkpt lat="46.4745" lon="6.79112">
-        <ele>369.19</ele>
-        <time>2026-09-12T12:06:46Z</time>
-      </trkpt>
       <trkpt lat="46.47454" lon="6.79234">
         <ele>402.2</ele>
         <time>2026-09-12T12:06:48Z</time>
@@ -273,12 +257,8 @@
         <time>2026-09-12T12:07:03Z</time>
       </trkpt>
       <trkpt lat="46.47418" lon="6.78399">
-        <ele>369.55</ele>
+        <ele>413.94</ele>
         <time>2026-09-12T12:12:29Z</time>
-      </trkpt>
-      <trkpt lat="46.47538" lon="6.78476">
-        <ele>413.33</ele>
-        <time>2026-09-12T12:18:10Z</time>
       </trkpt>
       <trkpt lat="46.47557" lon="6.78581">
         <ele>410.77</ele>
@@ -456,33 +436,13 @@
         <ele>456.08</ele>
         <time>2026-09-12T12:24:18Z</time>
       </trkpt>
-      <trkpt lat="46.47915" lon="6.77739">
-        <ele>517.84</ele>
-        <time>2026-09-12T12:24:23Z</time>
-      </trkpt>
-      <trkpt lat="46.47688" lon="6.77885">
-        <ele>451.14</ele>
-        <time>2026-09-12T12:24:29Z</time>
-      </trkpt>
       <trkpt lat="46.47598" lon="6.77944">
         <ele>433.14</ele>
         <time>2026-09-12T12:24:41Z</time>
       </trkpt>
-      <trkpt lat="46.47937" lon="6.77694">
-        <ele>524.96</ele>
-        <time>2026-09-12T12:24:48Z</time>
-      </trkpt>
-      <trkpt lat="46.47715" lon="6.77853">
-        <ele>460.05</ele>
-        <time>2026-09-12T12:24:55Z</time>
-      </trkpt>
       <trkpt lat="46.47616" lon="6.77922">
         <ele>436.15</ele>
         <time>2026-09-12T12:25:03Z</time>
-      </trkpt>
-      <trkpt lat="46.47974" lon="6.7772">
-        <ele>546.17</ele>
-        <time>2026-09-12T12:25:27Z</time>
       </trkpt>
       <trkpt lat="46.47651" lon="6.7785">
         <ele>444.55</ele>
@@ -491,26 +451,6 @@
       <trkpt lat="46.47576" lon="6.77901">
         <ele>426.68</ele>
         <time>2026-09-12T12:26:07Z</time>
-      </trkpt>
-      <trkpt lat="46.47982" lon="6.77758">
-        <ele>545.45</ele>
-        <time>2026-09-12T12:27:04Z</time>
-      </trkpt>
-      <trkpt lat="46.47984" lon="6.777">
-        <ele>547.2</ele>
-        <time>2026-09-12T12:27:29Z</time>
-      </trkpt>
-      <trkpt lat="46.47619" lon="6.77782">
-        <ele>431.49</ele>
-        <time>2026-09-12T12:27:50Z</time>
-      </trkpt>
-      <trkpt lat="46.47574" lon="6.77827">
-        <ele>424.13</ele>
-        <time>2026-09-12T12:28:03Z</time>
-      </trkpt>
-      <trkpt lat="46.47577" lon="6.78276">
-        <ele>415.31</ele>
-        <time>2026-09-12T12:28:11Z</time>
       </trkpt>
       <trkpt lat="46.47585" lon="6.78342">
         <ele>425.62</ele>
@@ -588,33 +528,9 @@
         <ele>397.07</ele>
         <time>2026-09-12T12:29:10Z</time>
       </trkpt>
-      <trkpt lat="46.47477" lon="6.78354">
-        <ele>389.33</ele>
-        <time>2026-09-12T12:29:17Z</time>
-      </trkpt>
-      <trkpt lat="46.47424" lon="6.78368">
-        <ele>373.95</ele>
-        <time>2026-09-12T12:29:30Z</time>
-      </trkpt>
       <trkpt lat="46.47558" lon="6.78141">
         <ele>410.56</ele>
         <time>2026-09-12T12:29:37Z</time>
-      </trkpt>
-      <trkpt lat="46.47693" lon="6.7789">
-        <ele>451.49</ele>
-        <time>2026-09-12T12:29:49Z</time>
-      </trkpt>
-      <trkpt lat="46.47514" lon="6.78118">
-        <ele>404.02</ele>
-        <time>2026-09-12T12:30:00Z</time>
-      </trkpt>
-      <trkpt lat="46.47455" lon="6.78198">
-        <ele>394.95</ele>
-        <time>2026-09-12T12:30:07Z</time>
-      </trkpt>
-      <trkpt lat="46.47551" lon="6.78234">
-        <ele>407.24</ele>
-        <time>2026-09-12T12:30:27Z</time>
       </trkpt>
       <trkpt lat="46.47708" lon="6.77927">
         <ele>448.44</ele>
@@ -855,14 +771,6 @@
       <trkpt lat="46.47682" lon="6.77768">
         <ele>451.83</ele>
         <time>2026-09-12T12:43:38Z</time>
-      </trkpt>
-      <trkpt lat="46.47973" lon="6.7768">
-        <ele>540.61</ele>
-        <time>2026-09-12T12:43:50Z</time>
-      </trkpt>
-      <trkpt lat="46.47997" lon="6.77655">
-        <ele>544.62</ele>
-        <time>2026-09-12T12:43:58Z</time>
       </trkpt>
       <trkpt lat="46.47654" lon="6.77449">
         <ele>435.96</ele>

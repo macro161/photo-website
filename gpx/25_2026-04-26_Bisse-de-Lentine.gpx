@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.22763" minlon="7.35745" maxlat="46.26083" maxlon="7.3729"/>
+    <bounds minlat="46.22763" minlon="7.35745" maxlat="46.26083" maxlon="7.37290"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Sion - Coméraz - Bisse de Lentine]]></name>
@@ -215,10 +215,6 @@
       <trkpt lat="46.2324" lon="7.35864">
         <ele>523.82</ele>
         <time>2026-04-26T12:20:14Z</time>
-      </trkpt>
-      <trkpt lat="46.23242" lon="7.35868">
-        <ele>523.61</ele>
-        <time>2026-04-26T12:20:18Z</time>
       </trkpt>
       <trkpt lat="46.23192" lon="7.35889">
         <ele>518.26</ele>
@@ -599,10 +595,6 @@
       <trkpt lat="46.24082" lon="7.35762">
         <ele>594.53</ele>
         <time>2026-04-26T12:43:36Z</time>
-      </trkpt>
-      <trkpt lat="46.23832" lon="7.36053">
-        <ele>543.18</ele>
-        <time>2026-04-26T12:45:40Z</time>
       </trkpt>
       <trkpt lat="46.24011" lon="7.3615">
         <ele>569.46</ele>

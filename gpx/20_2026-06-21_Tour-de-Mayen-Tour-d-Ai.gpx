@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.34452" minlon="7.004" maxlat="46.37565" maxlon="7.02723"/>
+    <bounds minlat="46.34452" minlon="7.00400" maxlat="46.37565" maxlon="7.02723"/>
   </metadata>
   <trk>
     <name><![CDATA[Evening hike at Tour de Mayen - Tour d'Aï  - Lake Aï]]></name>
@@ -849,10 +849,6 @@
       <trkpt lat="46.35239" lon="7.02012">
         <ele>1362.3</ele>
         <time>2026-06-21T07:01:05Z</time>
-      </trkpt>
-      <trkpt lat="46.3524" lon="7.02016">
-        <ele>1361.22</ele>
-        <time>2026-06-21T07:01:15Z</time>
       </trkpt>
       <trkpt lat="46.35347" lon="7.02027">
         <ele>1393.22</ele>

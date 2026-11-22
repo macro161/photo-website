@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.14257" minlon="7.68314" maxlat="46.18812" maxlon="7.73428"/>
+    <bounds minlat="46.14696" minlon="7.69073" maxlat="46.18600" maxlon="7.73428"/>
   </metadata>
   <trk>
     <name><![CDATA[Evening hike at Üssers Barrhorn]]></name>
@@ -35,42 +35,6 @@
       <trkpt lat="46.18298" lon="7.69589">
         <ele>1952.97</ele>
         <time>2026-08-18T04:47:34Z</time>
-      </trkpt>
-      <trkpt lat="46.18812" lon="7.68381">
-        <ele>2394.14</ele>
-        <time>2026-08-18T04:58:38Z</time>
-      </trkpt>
-      <trkpt lat="46.18735" lon="7.68322">
-        <ele>2386.07</ele>
-        <time>2026-08-18T04:58:39Z</time>
-      </trkpt>
-      <trkpt lat="46.18695" lon="7.68314">
-        <ele>2377.04</ele>
-        <time>2026-08-18T04:58:40Z</time>
-      </trkpt>
-      <trkpt lat="46.18648" lon="7.68327">
-        <ele>2356.53</ele>
-        <time>2026-08-18T04:58:41Z</time>
-      </trkpt>
-      <trkpt lat="46.18129" lon="7.6881">
-        <ele>2305.59</ele>
-        <time>2026-08-18T04:58:48Z</time>
-      </trkpt>
-      <trkpt lat="46.18051" lon="7.69041">
-        <ele>2177.24</ele>
-        <time>2026-08-18T04:58:49Z</time>
-      </trkpt>
-      <trkpt lat="46.18003" lon="7.69191">
-        <ele>2078.92</ele>
-        <time>2026-08-18T04:58:50Z</time>
-      </trkpt>
-      <trkpt lat="46.17986" lon="7.6928">
-        <ele>2041.68</ele>
-        <time>2026-08-18T04:58:50Z</time>
-      </trkpt>
-      <trkpt lat="46.17968" lon="7.69372">
-        <ele>2034.81</ele>
-        <time>2026-08-18T04:58:52Z</time>
       </trkpt>
       <trkpt lat="46.17963" lon="7.69468">
         <ele>2089.33</ele>
@@ -977,30 +941,6 @@
       <trkpt lat="46.15999" lon="7.69962">
         <ele>2515.57</ele>
         <time>2026-08-18T07:38:30Z</time>
-      </trkpt>
-      <trkpt lat="46.14257" lon="7.70612">
-        <ele>2965.51</ele>
-        <time>2026-08-18T08:04:08Z</time>
-      </trkpt>
-      <trkpt lat="46.14854" lon="7.70584">
-        <ele>2741.85</ele>
-        <time>2026-08-18T08:05:23Z</time>
-      </trkpt>
-      <trkpt lat="46.15067" lon="7.70566">
-        <ele>2661.58</ele>
-        <time>2026-08-18T08:05:24Z</time>
-      </trkpt>
-      <trkpt lat="46.15175" lon="7.70557">
-        <ele>2639.94</ele>
-        <time>2026-08-18T08:05:25Z</time>
-      </trkpt>
-      <trkpt lat="46.15246" lon="7.70551">
-        <ele>2653.54</ele>
-        <time>2026-08-18T08:05:26Z</time>
-      </trkpt>
-      <trkpt lat="46.15386" lon="7.7054">
-        <ele>2639.91</ele>
-        <time>2026-08-18T08:05:33Z</time>
       </trkpt>
       <trkpt lat="46.15427" lon="7.70536">
         <ele>2638.78</ele>

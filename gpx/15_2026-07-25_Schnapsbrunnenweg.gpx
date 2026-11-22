@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="48.6151" minlon="8.11464" maxlat="48.62966" maxlon="8.14295"/>
+    <bounds minlat="48.61510" minlon="8.11904" maxlat="48.62966" maxlon="8.14295"/>
   </metadata>
   <trk>
     <name><![CDATA[Evening hike at Schnapsbrunnenweg 1]]></name>
@@ -1252,41 +1252,9 @@
         <ele>257.73</ele>
         <time>2026-07-25T12:41:19Z</time>
       </trkpt>
-      <trkpt lat="48.62422" lon="8.12066">
-        <ele>257.52</ele>
-        <time>2026-07-25T12:41:44Z</time>
-      </trkpt>
-      <trkpt lat="48.62016" lon="8.11464">
-        <ele>195.44</ele>
-        <time>2026-07-25T12:43:47Z</time>
-      </trkpt>
       <trkpt lat="48.62106" lon="8.12214">
         <ele>221.77</ele>
         <time>2026-07-25T12:43:55Z</time>
-      </trkpt>
-      <trkpt lat="48.62001" lon="8.12273">
-        <ele>222.41</ele>
-        <time>2026-07-25T12:44:43Z</time>
-      </trkpt>
-      <trkpt lat="48.62042" lon="8.12142">
-        <ele>213.43</ele>
-        <time>2026-07-25T12:46:17Z</time>
-      </trkpt>
-      <trkpt lat="48.6219" lon="8.12179">
-        <ele>223.74</ele>
-        <time>2026-07-25T12:46:19Z</time>
-      </trkpt>
-      <trkpt lat="48.62267" lon="8.12198">
-        <ele>238.0</ele>
-        <time>2026-07-25T12:46:20Z</time>
-      </trkpt>
-      <trkpt lat="48.62318" lon="8.12211">
-        <ele>252.18</ele>
-        <time>2026-07-25T12:46:20Z</time>
-      </trkpt>
-      <trkpt lat="48.62374" lon="8.12223">
-        <ele>266.7</ele>
-        <time>2026-07-25T12:46:21Z</time>
       </trkpt>
       <trkpt lat="48.62408" lon="8.12234">
         <ele>275.95</ele>

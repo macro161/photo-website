@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.47631" minlon="6.7437" maxlat="46.49328" maxlon="6.78017"/>
+    <bounds minlat="46.47631" minlon="6.74370" maxlat="46.49328" maxlon="6.78017"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Boucle Chexbres - Epesses]]></name>
@@ -533,7 +533,7 @@
         <time>2025-06-23T12:03:37Z</time>
       </trkpt>
       <trkpt lat="46.48521" lon="6.75366">
-        <ele>370.24</ele>
+        <ele>432.42</ele>
         <time>2025-06-23T12:05:46Z</time>
       </trkpt>
       <trkpt lat="46.48695" lon="6.7542">
@@ -563,10 +563,6 @@
       <trkpt lat="46.48696" lon="6.75394">
         <ele>427.36</ele>
         <time>2025-06-23T12:07:43Z</time>
-      </trkpt>
-      <trkpt lat="46.48618" lon="6.75412">
-        <ele>401.25</ele>
-        <time>2025-06-23T12:09:31Z</time>
       </trkpt>
       <trkpt lat="46.48567" lon="6.75426">
         <ele>384.98</ele>
@@ -647,10 +643,6 @@
       <trkpt lat="46.48421" lon="6.75477">
         <ele>369.82</ele>
         <time>2025-06-23T12:13:21Z</time>
-      </trkpt>
-      <trkpt lat="46.48334" lon="6.75661">
-        <ele>369.24</ele>
-        <time>2025-06-23T12:15:13Z</time>
       </trkpt>
       <trkpt lat="46.48338" lon="6.7573">
         <ele>379.91</ele>
@@ -2709,14 +2701,6 @@
       <trkpt lat="46.48469" lon="6.76427">
         <ele>642.63</ele>
         <time>2025-06-23T14:41:52Z</time>
-      </trkpt>
-      <trkpt lat="46.49007" lon="6.76598">
-        <ele>599.87</ele>
-        <time>2025-06-23T14:42:36Z</time>
-      </trkpt>
-      <trkpt lat="46.48765" lon="6.76708">
-        <ele>594.64</ele>
-        <time>2025-06-23T14:43:01Z</time>
       </trkpt>
       <trkpt lat="46.48533" lon="6.76337">
         <ele>638.2</ele>

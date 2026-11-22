@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="31.06401" minlon="-7.9376" maxlat="31.13758" maxlon="-7.91115"/>
+    <bounds minlat="31.06401" minlon="-7.93760" maxlat="31.13758" maxlon="-7.91115"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Toubkal via Arumd-Sidi Chamarouch-CAF Refuge Trail]]></name>
@@ -43,14 +43,6 @@
       <trkpt lat="31.13522" lon="-7.91567">
         <ele>1787.11</ele>
         <time>2026-10-31T11:57:42Z</time>
-      </trkpt>
-      <trkpt lat="31.13124" lon="-7.91957">
-        <ele>1826.55</ele>
-        <time>2026-10-31T12:21:07Z</time>
-      </trkpt>
-      <trkpt lat="31.12858" lon="-7.91759">
-        <ele>1881.04</ele>
-        <time>2026-10-31T12:21:08Z</time>
       </trkpt>
       <trkpt lat="31.12796" lon="-7.91724">
         <ele>1914.85</ele>
@@ -408,10 +400,6 @@
         <ele>2104.57</ele>
         <time>2026-10-31T13:24:13Z</time>
       </trkpt>
-      <trkpt lat="31.10002" lon="-7.9145">
-        <ele>2288.85</ele>
-        <time>2026-10-31T14:04:52Z</time>
-      </trkpt>
       <trkpt lat="31.09955" lon="-7.91425">
         <ele>2289.89</ele>
         <time>2026-10-31T14:04:53Z</time>
@@ -431,10 +419,6 @@
       <trkpt lat="31.09895" lon="-7.91378">
         <ele>2279.15</ele>
         <time>2026-10-31T14:04:57Z</time>
-      </trkpt>
-      <trkpt lat="31.09842" lon="-7.91298">
-        <ele>2299.16</ele>
-        <time>2026-10-31T14:05:00Z</time>
       </trkpt>
       <trkpt lat="31.09826" lon="-7.91264">
         <ele>2307.18</ele>
@@ -691,14 +675,6 @@
       <trkpt lat="31.08844" lon="-7.91459">
         <ele>2573.55</ele>
         <time>2026-10-31T15:56:47Z</time>
-      </trkpt>
-      <trkpt lat="31.0856" lon="-7.91846">
-        <ele>2685.93</ele>
-        <time>2026-10-31T16:09:41Z</time>
-      </trkpt>
-      <trkpt lat="31.08545" lon="-7.91931">
-        <ele>2716.19</ele>
-        <time>2026-10-31T16:09:42Z</time>
       </trkpt>
       <trkpt lat="31.08534" lon="-7.91971">
         <ele>2721.37</ele>
@@ -963,18 +939,6 @@
       <trkpt lat="31.08569" lon="-7.92234">
         <ele>2806.71</ele>
         <time>2026-10-31T16:34:27Z</time>
-      </trkpt>
-      <trkpt lat="31.08567" lon="-7.9223">
-        <ele>2806.71</ele>
-        <time>2026-10-31T16:34:28Z</time>
-      </trkpt>
-      <trkpt lat="31.08562" lon="-7.92236">
-        <ele>2809.19</ele>
-        <time>2026-10-31T16:34:30Z</time>
-      </trkpt>
-      <trkpt lat="31.08557" lon="-7.92244">
-        <ele>2799.21</ele>
-        <time>2026-10-31T16:34:31Z</time>
       </trkpt>
       <trkpt lat="31.08533" lon="-7.92278">
         <ele>2794.89</ele>

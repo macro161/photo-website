@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.2487" minlon="7.8989" maxlat="46.27172" maxlon="7.92093"/>
+    <bounds minlat="46.24870" minlon="7.90024" maxlat="46.27172" maxlon="7.92093"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Visperterminen - Brunnu - Bodma]]></name>
@@ -200,14 +200,6 @@
         <ele>1399.06</ele>
         <time>2025-12-06T10:40:27Z</time>
       </trkpt>
-      <trkpt lat="46.25819" lon="7.9042">
-        <ele>1381.33</ele>
-        <time>2025-12-06T10:40:42Z</time>
-      </trkpt>
-      <trkpt lat="46.25782" lon="7.90489">
-        <ele>1395.41</ele>
-        <time>2025-12-06T10:40:49Z</time>
-      </trkpt>
       <trkpt lat="46.25732" lon="7.90567">
         <ele>1418.92</ele>
         <time>2025-12-06T10:40:55Z</time>
@@ -251,18 +243,6 @@
       <trkpt lat="46.25884" lon="7.90595">
         <ele>1396.18</ele>
         <time>2025-12-06T10:43:32Z</time>
-      </trkpt>
-      <trkpt lat="46.25576" lon="7.89989">
-        <ele>1364.31</ele>
-        <time>2025-12-06T10:45:41Z</time>
-      </trkpt>
-      <trkpt lat="46.2559" lon="7.8989">
-        <ele>1355.63</ele>
-        <time>2025-12-06T10:48:20Z</time>
-      </trkpt>
-      <trkpt lat="46.25474" lon="7.90206">
-        <ele>1438.92</ele>
-        <time>2025-12-06T10:48:22Z</time>
       </trkpt>
       <trkpt lat="46.25432" lon="7.90305">
         <ele>1481.61</ele>
@@ -1040,10 +1020,6 @@
         <ele>1644.29</ele>
         <time>2025-12-06T11:41:47Z</time>
       </trkpt>
-      <trkpt lat="46.25561" lon="7.91212">
-        <ele>1638.04</ele>
-        <time>2025-12-06T11:43:39Z</time>
-      </trkpt>
       <trkpt lat="46.25614" lon="7.91291">
         <ele>1609.85</ele>
         <time>2025-12-06T11:43:41Z</time>
@@ -1260,14 +1236,6 @@
         <ele>1706.12</ele>
         <time>2025-12-06T11:55:00Z</time>
       </trkpt>
-      <trkpt lat="46.26084" lon="7.9139">
-        <ele>1705.4</ele>
-        <time>2025-12-06T11:55:06Z</time>
-      </trkpt>
-      <trkpt lat="46.26084" lon="7.91387">
-        <ele>1704.19</ele>
-        <time>2025-12-06T11:55:12Z</time>
-      </trkpt>
       <trkpt lat="46.26074" lon="7.91582">
         <ele>1755.41</ele>
         <time>2025-12-06T11:55:22Z</time>
@@ -1423,10 +1391,6 @@
       <trkpt lat="46.26069" lon="7.91675">
         <ele>1771.38</ele>
         <time>2025-12-06T11:56:37Z</time>
-      </trkpt>
-      <trkpt lat="46.26069" lon="7.91671">
-        <ele>1770.73</ele>
-        <time>2025-12-06T11:56:46Z</time>
       </trkpt>
       <trkpt lat="46.26168" lon="7.91626">
         <ele>1740.1</ele>
@@ -1607,14 +1571,6 @@
       <trkpt lat="46.26263" lon="7.9161">
         <ele>1681.56</ele>
         <time>2025-12-06T11:58:01Z</time>
-      </trkpt>
-      <trkpt lat="46.26167" lon="7.9145">
-        <ele>1713.53</ele>
-        <time>2025-12-06T11:58:05Z</time>
-      </trkpt>
-      <trkpt lat="46.26132" lon="7.91375">
-        <ele>1703.01</ele>
-        <time>2025-12-06T11:58:06Z</time>
       </trkpt>
       <trkpt lat="46.26116" lon="7.91329">
         <ele>1685.61</ele>

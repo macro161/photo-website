@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.1754" minlon="7.5675" maxlat="46.18933" maxlon="7.57725"/>
+    <bounds minlat="46.17540" minlon="7.56953" maxlat="46.18933" maxlon="7.57725"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Montagnetta trail: Pierre d'AvoinLa MontagnettaL'Irette]]></name>
@@ -1390,14 +1390,6 @@
       </trkpt>
     </trkseg>
     <trkseg>
-      <trkpt lat="46.18602" lon="7.5675">
-        <ele>2007.7</ele>
-        <time>2026-01-18T12:38:42Z</time>
-      </trkpt>
-      <trkpt lat="46.18698" lon="7.56995">
-        <ele>1941.67</ele>
-        <time>2026-01-18T12:38:43Z</time>
-      </trkpt>
       <trkpt lat="46.18752" lon="7.57131">
         <ele>1904.52</ele>
         <time>2026-01-18T12:38:45Z</time>

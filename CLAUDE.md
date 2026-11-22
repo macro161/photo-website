@@ -22,6 +22,7 @@ Catalogs and albums come from the bucket's folder structure. Run `npm run index`
 - **TODO: world map on the main page** in the same grey style, with all the places visited (catalogs such as London, Spain, Lithuania,
   Ukraine, Netherlands, Swiss). Needs a place coordinate per catalog (a small config file like `src/swissPlaces.json`), lazy-loaded so the
   main bundle stays small. Open question: a flat world map or a globe.
+- **Done:** GPX recordings are cleaned of GPS jumps (`scripts/clean-gpx.mjs`; originals in `gpx/original/`, details in `gpx/README.md`). Re-run it and `node scripts/build-routes.mjs --detail-only` after adding a recording.
 
 ## Decisions (2026-11-21)
 

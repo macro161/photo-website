@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.50189" minlon="6.94826" maxlat="46.52182" maxlon="6.99867"/>
+    <bounds minlat="46.50189" minlon="6.94920" maxlat="46.52182" maxlon="6.99867"/>
   </metadata>
   <trk>
     <name><![CDATA[Evening hike at Paccot-Dessus - Dent de Lys - Paccot-Dessous]]></name>
@@ -957,14 +957,6 @@
       <trkpt lat="46.51157" lon="6.95326">
         <ele>1220.74</ele>
         <time>2026-05-30T12:22:34Z</time>
-      </trkpt>
-      <trkpt lat="46.51301" lon="6.94967">
-        <ele>1222.21</ele>
-        <time>2026-05-30T12:22:41Z</time>
-      </trkpt>
-      <trkpt lat="46.51368" lon="6.94826">
-        <ele>1233.74</ele>
-        <time>2026-05-30T12:23:07Z</time>
       </trkpt>
       <trkpt lat="46.51033" lon="6.95629">
         <ele>1272.85</ele>

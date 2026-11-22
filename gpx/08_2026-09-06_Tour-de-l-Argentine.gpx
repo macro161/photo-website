@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.25888" minlon="7.09687" maxlat="46.29398" maxlon="7.16504"/>
+    <bounds minlat="46.26357" minlon="7.11189" maxlat="46.29398" maxlon="7.16504"/>
   </metadata>
   <trk>
     <name><![CDATA[Evening hike at Tour de l'Argentine]]></name>
@@ -1025,14 +1025,6 @@
       <trkpt lat="46.29366" lon="7.15513">
         <ele>1757.1</ele>
         <time>2026-09-06T10:07:08Z</time>
-      </trkpt>
-      <trkpt lat="46.29367" lon="7.15513">
-        <ele>1757.46</ele>
-        <time>2026-09-06T10:07:09Z</time>
-      </trkpt>
-      <trkpt lat="46.29367" lon="7.15513">
-        <ele>1757.46</ele>
-        <time>2026-09-06T10:07:10Z</time>
       </trkpt>
       <trkpt lat="46.29365" lon="7.15575">
         <ele>1769.92</ele>
@@ -6701,22 +6693,6 @@
       <trkpt lat="46.26765" lon="7.11815">
         <ele>1914.11</ele>
         <time>2026-09-06T15:44:16Z</time>
-      </trkpt>
-      <trkpt lat="46.25888" lon="7.09687">
-        <ele>1182.35</ele>
-        <time>2026-09-06T15:48:15Z</time>
-      </trkpt>
-      <trkpt lat="46.26433" lon="7.1072">
-        <ele>1528.97</ele>
-        <time>2026-09-06T15:48:18Z</time>
-      </trkpt>
-      <trkpt lat="46.26637" lon="7.11104">
-        <ele>1702.92</ele>
-        <time>2026-09-06T15:48:18Z</time>
-      </trkpt>
-      <trkpt lat="46.26759" lon="7.11333">
-        <ele>1807.74</ele>
-        <time>2026-09-06T15:48:19Z</time>
       </trkpt>
       <trkpt lat="46.26966" lon="7.11714">
         <ele>1928.79</ele>

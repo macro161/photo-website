@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.17097" minlon="7.18173" maxlat="46.19027" maxlon="7.21464"/>
+    <bounds minlat="46.17097" minlon="7.18173" maxlat="46.18968" maxlon="7.19488"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Passerelle a Farinet via Saillon]]></name>
@@ -179,10 +179,6 @@
       <trkpt lat="46.17384" lon="7.18945">
         <ele>465.59</ele>
         <time>2025-11-09T09:57:49Z</time>
-      </trkpt>
-      <trkpt lat="46.17374" lon="7.18946">
-        <ele>464.76</ele>
-        <time>2025-11-09T09:58:34Z</time>
       </trkpt>
       <trkpt lat="46.17344" lon="7.18908">
         <ele>468.01</ele>
@@ -769,14 +765,6 @@
       <trkpt lat="46.18936" lon="7.18713">
         <ele>838.9</ele>
         <time>2025-11-09T12:05:40Z</time>
-      </trkpt>
-      <trkpt lat="46.19027" lon="7.1915">
-        <ele>781.24</ele>
-        <time>2025-11-09T12:06:12Z</time>
-      </trkpt>
-      <trkpt lat="46.17286" lon="7.21464">
-        <ele>486.46</ele>
-        <time>2025-11-09T12:09:55Z</time>
       </trkpt>
       <trkpt lat="46.18951" lon="7.19243">
         <ele>762.8</ele>

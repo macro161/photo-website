@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.30803" minlon="7.4547" maxlat="46.34589" maxlon="7.47841"/>
+    <bounds minlat="46.30803" minlon="7.45470" maxlat="46.34589" maxlon="7.47841"/>
   </metadata>
   <trk>
     <name><![CDATA[Evening hike at Bisse du Ro - Cry d‘Er]]></name>
@@ -1608,14 +1608,6 @@
         <ele>2153.92</ele>
         <time>2026-09-13T12:53:27Z</time>
       </trkpt>
-      <trkpt lat="46.33955" lon="7.47733">
-        <ele>2240.49</ele>
-        <time>2026-09-13T12:57:10Z</time>
-      </trkpt>
-      <trkpt lat="46.33949" lon="7.47728">
-        <ele>2238.8</ele>
-        <time>2026-09-13T12:57:11Z</time>
-      </trkpt>
       <trkpt lat="46.33909" lon="7.47635">
         <ele>2202.42</ele>
         <time>2026-09-13T12:57:17Z</time>
@@ -1659,10 +1651,6 @@
       <trkpt lat="46.33894" lon="7.47664">
         <ele>2220.52</ele>
         <time>2026-09-13T13:01:38Z</time>
-      </trkpt>
-      <trkpt lat="46.33892" lon="7.4774">
-        <ele>2243.82</ele>
-        <time>2026-09-13T13:01:39Z</time>
       </trkpt>
       <trkpt lat="46.33894" lon="7.47688">
         <ele>2230.24</ele>

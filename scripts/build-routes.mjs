@@ -3,6 +3,8 @@
  * model and nearby names. Needs network (AWS Terrain Tiles, OpenStreetMap) and `sharp`.
  *   node scripts/build-routes.mjs            all albums in src/lab/hikeAlbums.json (shared with the lab pages) that have no data yet
  *   node scripts/build-routes.mjs <slug>...  just these (rebuilds them)
+ *   node scripts/build-routes.mjs --detail-only [<slug>...]  redo track stats, names and labels from gpx/ (e.g. after scripts/clean-gpx.mjs), keep the baked terrain,
+ *                                            and warn when a track no longer fits inside its baked terrain
  * Writes src/route/<slug>/{detail.json,terrain.json} and public/route/<slug>/dem.bin.
  */
 import { readFileSync, readdirSync, writeFileSync, existsSync, mkdirSync } from 'node:fs'
@@ -13,6 +15,7 @@ const acts = JSON.parse(readFileSync('src/lab/activities.json', 'utf8'))
 const files = readdirSync('gpx').filter((f) => f.endsWith('.gpx'))
 const args = process.argv.slice(2)
 const RELABEL = args.includes('--relabel') // keep the baked terrain and tracks, only redo the landmark labels
+const DETAIL_ONLY = args.includes('--detail-only')
 const only = args.filter((a) => !a.startsWith('--'))
 const overrides = existsSync('src/route/overrides.json') ? JSON.parse(readFileSync('src/route/overrides.json', 'utf8')) : {}
 const rad = (d) => (d * Math.PI) / 180
@@ -20,7 +23,7 @@ const hav = (a, b) => 2 * 6371008.8 * Math.asin(Math.sqrt(Math.sin(rad(b[0] - a[
 
 for (const [key, ns] of Object.entries(albums)) {
   const slug = key.split('/')[1]
-  if (only.length ? !only.includes(slug) : !RELABEL && existsSync(`src/route/${slug}/detail.json`)) continue
+  if (only.length ? !only.includes(slug) : !RELABEL && !DETAIL_ONLY && existsSync(`src/route/${slug}/detail.json`)) continue
   console.log(`\n== ${slug}`)
   const dir = `src/route/${slug}`
   mkdirSync(dir, { recursive: true })
@@ -59,7 +62,12 @@ for (const [key, ns] of Object.entries(albums)) {
     const box = [s0 - padLat, w0 - padLng, n0 + padLat, e0 + padLng]
     const widthM = (box[3] - box[1]) * 111320 * Math.cos(rad(s0)), heightM = (box[2] - box[0]) * 110574
     const target = Math.max(20, Math.ceil(Math.max(widthM, heightM) / 700))
-    execFileSync('node', ['scripts/bake-terrain.mjs', `route/${slug}`, ...box.map((v) => v.toFixed(5)), '13', String(target)], { stdio: 'inherit' })
+    if (!DETAIL_ONLY) execFileSync('node', ['scripts/bake-terrain.mjs', `route/${slug}`, ...box.map((v) => v.toFixed(5)), '13', String(target)], { stdio: 'inherit' })
+    else {
+      const b = JSON.parse(readFileSync(`${dir}/terrain.json`, 'utf8')).bounds
+      const margin = 0.012 // about 1.3 km: the labels and the camera want some terrain around the route
+      if (s0 < b.south + margin || n0 > b.north - margin || w0 < b.west + margin || e0 > b.east - margin) console.warn(`  ! track is within ${margin} deg of the baked terrain edge: consider re-baking ${slug}`)
+    }
   }
 
   const T = detail.tracks

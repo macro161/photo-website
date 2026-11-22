@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.49424" minlon="7.67096" maxlat="46.51005" maxlon="7.735"/>
+    <bounds minlat="46.49424" minlon="7.67096" maxlat="46.51005" maxlon="7.73500"/>
   </metadata>
   <trk>
     <name><![CDATA[Evening hike at Kandersteg - Lake Oeschinensee]]></name>
@@ -347,10 +347,6 @@
       <trkpt lat="46.49599" lon="7.67645">
         <ele>1181.03</ele>
         <time>2026-09-27T09:47:33Z</time>
-      </trkpt>
-      <trkpt lat="46.4952" lon="7.67686">
-        <ele>1178.98</ele>
-        <time>2026-09-27T09:47:40Z</time>
       </trkpt>
       <trkpt lat="46.49576" lon="7.67653">
         <ele>1179.37</ele>

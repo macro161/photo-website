@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.11168" minlon="7.3105" maxlat="46.1364" maxlon="7.32454"/>
+    <bounds minlat="46.11168" minlon="7.31050" maxlat="46.13640" maxlon="7.32454"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Siviez - Lac de Cleuson]]></name>
@@ -956,10 +956,6 @@
         <ele>2192.09</ele>
         <time>2025-06-21T12:07:04Z</time>
       </trkpt>
-      <trkpt lat="46.11381" lon="7.32417">
-        <ele>2194.65</ele>
-        <time>2025-06-21T12:08:15Z</time>
-      </trkpt>
       <trkpt lat="46.11411" lon="7.32435">
         <ele>2180.95</ele>
         <time>2025-06-21T12:08:16Z</time>
@@ -1211,10 +1207,6 @@
       <trkpt lat="46.11735" lon="7.32108">
         <ele>1991.62</ele>
         <time>2025-06-21T12:43:00Z</time>
-      </trkpt>
-      <trkpt lat="46.11745" lon="7.32149">
-        <ele>2016.0</ele>
-        <time>2025-06-21T12:45:28Z</time>
       </trkpt>
       <trkpt lat="46.11772" lon="7.32154">
         <ele>2026.95</ele>

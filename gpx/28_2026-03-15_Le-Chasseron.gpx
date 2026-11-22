@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="46.80723" minlon="6.53904" maxlat="46.8496" maxlon="6.55753"/>
+    <bounds minlat="46.80777" minlon="6.53904" maxlat="46.84960" maxlon="6.55753"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Vuiteboeuf - Le Chasseron]]></name>
@@ -312,10 +312,6 @@
         <ele>589.35</ele>
         <time>2026-03-15T10:01:32Z</time>
       </trkpt>
-      <trkpt lat="46.80847" lon="6.5475">
-        <ele>620.87</ele>
-        <time>2026-03-15T10:02:23Z</time>
-      </trkpt>
       <trkpt lat="46.80885" lon="6.54792">
         <ele>631.78</ele>
         <time>2026-03-15T10:02:24Z</time>
@@ -347,10 +343,6 @@
       <trkpt lat="46.80913" lon="6.54867">
         <ele>623.04</ele>
         <time>2026-03-15T10:02:51Z</time>
-      </trkpt>
-      <trkpt lat="46.80723" lon="6.55542">
-        <ele>589.54</ele>
-        <time>2026-03-15T10:04:20Z</time>
       </trkpt>
       <trkpt lat="46.81062" lon="6.54968">
         <ele>671.86</ele>
@@ -391,14 +383,6 @@
       <trkpt lat="46.81182" lon="6.55137">
         <ele>687.76</ele>
         <time>2026-03-15T10:15:09Z</time>
-      </trkpt>
-      <trkpt lat="46.81096" lon="6.54845">
-        <ele>697.43</ele>
-        <time>2026-03-15T10:20:09Z</time>
-      </trkpt>
-      <trkpt lat="46.81189" lon="6.54978">
-        <ele>711.36</ele>
-        <time>2026-03-15T10:20:20Z</time>
       </trkpt>
       <trkpt lat="46.81227" lon="6.55032">
         <ele>717.5</ele>
@@ -459,14 +443,6 @@
       <trkpt lat="46.81311" lon="6.55161">
         <ele>729.22</ele>
         <time>2026-03-15T10:21:43Z</time>
-      </trkpt>
-      <trkpt lat="46.8107" lon="6.54753">
-        <ele>707.61</ele>
-        <time>2026-03-15T10:22:02Z</time>
-      </trkpt>
-      <trkpt lat="46.81008" lon="6.54648">
-        <ele>697.54</ele>
-        <time>2026-03-15T10:22:09Z</time>
       </trkpt>
       <trkpt lat="46.8146" lon="6.5522">
         <ele>775.04</ele>

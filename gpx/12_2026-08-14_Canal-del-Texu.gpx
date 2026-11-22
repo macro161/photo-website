@@ -6,7 +6,7 @@
     <link href="http://www.alltrails.com">
       <text>AllTrails, LLC</text>
     </link>
-    <bounds minlat="43.2352" minlon="-4.83858" maxlat="43.30207" maxlon="-4.81728"/>
+    <bounds minlat="43.23520" minlon="-4.83796" maxlat="43.30207" maxlon="-4.81728"/>
   </metadata>
   <trk>
     <name><![CDATA[Afternoon hike at Canal del Texu Trail]]></name>
@@ -289,7 +289,7 @@
         <time>2026-08-14T10:06:12Z</time>
       </trkpt>
       <trkpt lat="43.26179" lon="-4.83053">
-        <ele>282.92</ele>
+        <ele>251.52</ele>
         <time>2026-08-14T10:07:03Z</time>
       </trkpt>
       <trkpt lat="43.26185" lon="-4.8308">
@@ -475,10 +475,6 @@
       <trkpt lat="43.25994" lon="-4.83074">
         <ele>234.47</ele>
         <time>2026-08-14T10:21:18Z</time>
-      </trkpt>
-      <trkpt lat="43.25866" lon="-4.83061">
-        <ele>226.72</ele>
-        <time>2026-08-14T10:21:57Z</time>
       </trkpt>
       <trkpt lat="43.25786" lon="-4.83054">
         <ele>225.83</ele>
@@ -1176,10 +1172,6 @@
         <ele>334.63</ele>
         <time>2026-08-14T11:05:08Z</time>
       </trkpt>
-      <trkpt lat="43.24887" lon="-4.83392">
-        <ele>393.01</ele>
-        <time>2026-08-14T11:09:39Z</time>
-      </trkpt>
       <trkpt lat="43.24852" lon="-4.83456">
         <ele>401.47</ele>
         <time>2026-08-14T11:09:40Z</time>
@@ -1223,14 +1215,6 @@
       <trkpt lat="43.24885" lon="-4.83413">
         <ele>385.48</ele>
         <time>2026-08-14T11:09:55Z</time>
-      </trkpt>
-      <trkpt lat="43.24723" lon="-4.83497">
-        <ele>594.15</ele>
-        <time>2026-08-14T11:12:35Z</time>
-      </trkpt>
-      <trkpt lat="43.24731" lon="-4.83499">
-        <ele>586.34</ele>
-        <time>2026-08-14T11:12:36Z</time>
       </trkpt>
       <trkpt lat="43.24916" lon="-4.83466">
         <ele>362.0</ele>
@@ -1588,10 +1572,6 @@
         <ele>524.62</ele>
         <time>2026-08-14T11:33:19Z</time>
       </trkpt>
-      <trkpt lat="43.24606" lon="-4.83075">
-        <ele>554.57</ele>
-        <time>2026-08-14T11:35:22Z</time>
-      </trkpt>
       <trkpt lat="43.24622" lon="-4.83193">
         <ele>484.79</ele>
         <time>2026-08-14T11:35:28Z</time>
@@ -1604,17 +1584,9 @@
         <ele>460.43</ele>
         <time>2026-08-14T11:35:30Z</time>
       </trkpt>
-      <trkpt lat="43.2464" lon="-4.83251">
-        <ele>452.73</ele>
-        <time>2026-08-14T11:35:31Z</time>
-      </trkpt>
       <trkpt lat="43.24624" lon="-4.83193">
         <ele>485.03</ele>
         <time>2026-08-14T11:35:32Z</time>
-      </trkpt>
-      <trkpt lat="43.24606" lon="-4.83139">
-        <ele>509.53</ele>
-        <time>2026-08-14T11:35:34Z</time>
       </trkpt>
       <trkpt lat="43.24464" lon="-4.83084">
         <ele>505.16</ele>
@@ -1779,14 +1751,6 @@
       <trkpt lat="43.2442" lon="-4.83068">
         <ele>530.56</ele>
         <time>2026-08-14T11:40:43Z</time>
-      </trkpt>
-      <trkpt lat="43.24166" lon="-4.83104">
-        <ele>561.51</ele>
-        <time>2026-08-14T11:44:19Z</time>
-      </trkpt>
-      <trkpt lat="43.2417" lon="-4.83097">
-        <ele>555.65</ele>
-        <time>2026-08-14T11:44:19Z</time>
       </trkpt>
       <trkpt lat="43.24261" lon="-4.8297">
         <ele>582.1</ele>
@@ -4375,14 +4339,6 @@
       <trkpt lat="43.24917" lon="-4.83796">
         <ele>516.02</ele>
         <time>2026-08-14T13:59:14Z</time>
-      </trkpt>
-      <trkpt lat="43.24826" lon="-4.83858">
-        <ele>643.33</ele>
-        <time>2026-08-14T14:01:57Z</time>
-      </trkpt>
-      <trkpt lat="43.24824" lon="-4.8385">
-        <ele>646.53</ele>
-        <time>2026-08-14T14:01:59Z</time>
       </trkpt>
       <trkpt lat="43.25115" lon="-4.83531">
         <ele>319.36</ele>
