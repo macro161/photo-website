@@ -92,10 +92,10 @@ void main() {
   float fw = max(fwidth(vElev), 0.001);
   float minor = contour(vElev, uMinor, fw, 1.0);
   float major = contour(vElev, uMajor, fw, 1.3);
-  g = mix(g, 1.0, uCalm * 0.28);
-  g -= (minor * 0.085 + major * 0.2) * (1.0 - uCalm * 0.78);
+  g = mix(g, 1.0, uCalm * 0.12);
+  g -= (minor * 0.085 + major * 0.2) * (1.0 - uCalm * 0.55);
   float fog = 1.0 - exp(-vDist * uFog);
-  g = mix(g, 1.0, fog * mix(0.8, 0.9, uCalm));
+  g = mix(g, 1.0, fog * mix(0.8, 0.8, uCalm));
   float e = max(abs(vUV.x), abs(vUV.y));
   float a = 1.0 - smoothstep(0.7, 1.0, e);
   g = clamp(g, 0.0, 1.0);

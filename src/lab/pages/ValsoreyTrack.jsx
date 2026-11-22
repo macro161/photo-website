@@ -439,9 +439,9 @@ export default function ValsoreyTrack() {
           failed ? (
             <p className="notice">Couldn't load the photos.</p>
           ) : photos ? (
-            <Gallery items={items} onOpen={open} gutterScale={1.7} />
+            <Gallery items={items} onOpen={open} gutterScale={2.3} />
           ) : (
-            <GallerySkeleton count={18} gutterScale={1.7} />
+            <GallerySkeleton count={18} gutterScale={2.3} />
           )
         ) : (
           <RouteView
