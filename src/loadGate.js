@@ -21,24 +21,25 @@ function release() {
 
 /**
  * Call when the main first-screen image (the LCP candidate) has loaded: the rest may start once it has been painted.
- * The browser reports that paint as a largest-contentful-paint entry for an image; without that API, a couple of frames later.
+ * Opens on the browser's largest-contentful-paint entry for an image when that arrives, and at the latest 600 ms after
+ * the call (time to decode, fade in and paint), so a missing entry can never hold the page back.
  */
 export function firstScreenLoaded() {
   if (open) return
-  let seen = false
+  let po = null
+  const go = () => {
+    po?.disconnect()
+    release()
+  }
   try {
-    const po = new PerformanceObserver((list) => {
-      if (list.getEntries().some((e) => e.url)) {
-        seen = true
-        po.disconnect()
-        setTimeout(release, 0)
-      }
+    po = new PerformanceObserver((list) => {
+      if (list.getEntries().some((e) => e.url)) setTimeout(go, 0)
     })
     po.observe({ type: 'largest-contentful-paint', buffered: true })
-    setTimeout(() => { if (!seen) { po.disconnect(); release() } }, 1000)
   } catch {
-    requestAnimationFrame(() => requestAnimationFrame(release))
+    po = null
   }
+  setTimeout(go, 600)
 }
 
 /** Runs `fn` as soon as below-the-fold images may start loading; returns a cleanup function. */
