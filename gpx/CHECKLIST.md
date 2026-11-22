@@ -23,25 +23,25 @@ Row numbers match `n` in `src/lab/activities.json`. Titles on AllTrails sometime
 | [x] | 13 | 2026-08-02 | Bourg-St-Pierre - Valsorey Hut - Pointe de Penne | 7.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-bourge-saint-pierre-valsorey-hut-pointe-de-penne-adbc20c) |
 | [x] | 14 | 2026-08-01 | Bourg-St-Pierre - Valsorey Hut - Pointe de Penne | 8.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-bourge-saint-pierre-valsorey-hut-pointe-de-penne-3c8ad03) |
 | [x] | 15 | 2026-07-25 | Schnapsbrunnenweg 1 (evening) | 11.3 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-schnapsbrunnenweg-1-d2e8ab4) |
-| [ ] | 16 | 2026-07-19 | Üssers Barrhorn (short) | 5.5 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-ussers-barrhorn-37ba8cf) |
-| [ ] | 17 | 2026-07-19 | Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (evening) | 4.4 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-alpine-passes-trail-stage-31-mauvoisin-cabane-de-brunet-hut-ccbbb2a) |
-| [ ] | 18 | 2026-07-19 | Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (afternoon) | 7.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-alpine-passes-trail-stage-31-mauvoisin-cabane-de-brunet-hut-185923e) |
-| [ ] | 19 | 2026-06-28 | Miex - Mont Grammont | 13.7 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-miex-mont-grammont-f77e259) |
-| [ ] | 20 | 2026-06-21 | Tour de Mayen - Tour d'Aï - Lake Aï | 18.4 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-tour-de-mayen-tour-d-ai-lake-ai-6188dd3) |
-| [ ] | 21 | 2026-06-14 | Les Avants - Col de Jaman Pass - Dent de Jaman - Le Paccot | 14.6 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-les-avants-col-de-jaman-pass-dent-de-jaman-le-paccot-f5de864) |
-| [ ] | 22 | 2026-06-07 | Pointe de Bellevue - Portes de Culet | 5.5 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-pointe-de-bellevue-portes-de-culet-016e2a8) |
-| [ ] | 23 | 2026-05-30 | Paccot-Dessus - Dent de Lys - Paccot-Dessous | 12.7 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-paccot-dessus-dent-de-lys-paccot-dessous-fa57939) |
-| [ ] | 24 | 2026-05-17 | Tour de Mayen | 13.7 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-tour-de-mayen-cddbd6d) |
-| [ ] | 25 | 2026-04-26 | Sion - Coméraz - Bisse de Lentine | 10.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-sion-comeraz-bisse-de-lentine-a248472) |
+| [x] | 16 | 2026-07-19 | Üssers Barrhorn (short) | 5.5 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-ussers-barrhorn-37ba8cf) |
+| [x] | 17 | 2026-07-19 | Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (evening) | 4.4 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-alpine-passes-trail-stage-31-mauvoisin-cabane-de-brunet-hut-ccbbb2a) |
+| [x] | 18 | 2026-07-19 | Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (afternoon) | 7.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-alpine-passes-trail-stage-31-mauvoisin-cabane-de-brunet-hut-185923e) |
+| [x] | 19 | 2026-06-28 | Miex - Mont Grammont | 13.7 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-miex-mont-grammont-f77e259) |
+| [x] | 20 | 2026-06-21 | Tour de Mayen - Tour d'Aï - Lake Aï | 18.4 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-tour-de-mayen-tour-d-ai-lake-ai-6188dd3) |
+| [x] | 21 | 2026-06-14 | Les Avants - Col de Jaman Pass - Dent de Jaman - Le Paccot | 14.6 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-les-avants-col-de-jaman-pass-dent-de-jaman-le-paccot-f5de864) |
+| [x] | 22 | 2026-06-07 | Pointe de Bellevue - Portes de Culet | 5.5 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-pointe-de-bellevue-portes-de-culet-016e2a8) |
+| [x] | 23 | 2026-05-30 | Paccot-Dessus - Dent de Lys - Paccot-Dessous | 12.7 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-paccot-dessus-dent-de-lys-paccot-dessous-fa57939) |
+| [x] | 24 | 2026-05-17 | Tour de Mayen | 13.7 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-tour-de-mayen-cddbd6d) |
+| [x] | 25 | 2026-04-26 | Sion - Coméraz - Bisse de Lentine | 10.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-sion-comeraz-bisse-de-lentine-a248472) |
 | [ ] | 26 | 2026-04-18 | Stansstad via Ennetbürgen [CLOSED] | 14.0 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-stansstad-via-ennetburgen-closed-7d7062a) |
-| [ ] | 27 | 2026-03-21 | (untitled afternoon hike) | 3.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-73ffed4) |
-| [ ] | 28 | 2026-03-15 | Vuiteboeuf - Le Chasseron | 12.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-vuiteboeuf-le-chasseron-93edb9e) |
-| [ ] | 29 | 2026-03-08 | Dent de Jaman via Haut-de-Caux | 6.0 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-dent-de-jaman-via-haut-de-caux-b4c78f8) |
-| [ ] | 30 | 2026-03-01 | Mont Pèlerin | 5.5 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-mont-pelerin-1dfefc7) |
-| [ ] | 31 | 2026-02-01 | Molard Trail via Les Avants (Cergniaule) | 9.5 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-molard-trail-via-les-avants-cergniaule-1959d1d) |
-| [ ] | 32 | 2026-01-25 | Activity - January 25, 2026 (no trail name) | 9.2 | [open](https://www.alltrails.com/explore/recording/activity-january-25-2026-5c1073e) |
-| [ ] | 33 | 2026-01-18 | Montagnetta trail: Pierre d'Avoin - La Montagnetta - L'Irette | 4.9 | [open](https://www.alltrails.com/explore/recording/activity-january-18-2026-312e874) |
-| [ ] | 34 | 2025-12-06 | Visperterminen - Brunnu - Bodma | 12.4 | [open](https://www.alltrails.com/explore/recording/activity-december-6-2025-6c6fce0) |
+| [x] | 27 | 2026-03-21 | (untitled afternoon hike) | 3.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-73ffed4) |
+| [x] | 28 | 2026-03-15 | Vuiteboeuf - Le Chasseron | 12.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-vuiteboeuf-le-chasseron-93edb9e) |
+| [x] | 29 | 2026-03-08 | Dent de Jaman via Haut-de-Caux | 6.0 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-dent-de-jaman-via-haut-de-caux-b4c78f8) |
+| [x] | 30 | 2026-03-01 | Mont Pèlerin | 5.5 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-mont-pelerin-1dfefc7) |
+| [x] | 31 | 2026-02-01 | Molard Trail via Les Avants (Cergniaule) | 9.5 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-molard-trail-via-les-avants-cergniaule-1959d1d) |
+| [x] | 32 | 2026-01-25 | Activity - January 25, 2026 (no trail name) | 9.2 | [open](https://www.alltrails.com/explore/recording/activity-january-25-2026-5c1073e) |
+| [x] | 33 | 2026-01-18 | Montagnetta trail: Pierre d'Avoin - La Montagnetta - L'Irette | 4.9 | [open](https://www.alltrails.com/explore/recording/activity-january-18-2026-312e874) |
+| [x] | 34 | 2025-12-06 | Visperterminen - Brunnu - Bodma | 12.4 | [open](https://www.alltrails.com/explore/recording/activity-december-6-2025-6c6fce0) |
 | [ ] | 35 | 2025-11-09 | Passerelle à Farinet via Saillon | 13.0 | [open](https://www.alltrails.com/explore/recording/activity-november-9-2025-90c10d8) |
 | [ ] | 36 | 2025-09-28 | Lake Taney | 5.7 | [open](https://www.alltrails.com/explore/recording/activity-september-28-2025-e5c19d1) |
 | [ ] | 37 | 2025-09-07 | Areuse Gorges via Chambrelien | 10.5 | [open](https://www.alltrails.com/explore/recording/activity-september-7-2025-258e130-4) |
