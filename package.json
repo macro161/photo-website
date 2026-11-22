@@ -12,11 +12,10 @@
   },
   "dependencies": {
     "leaflet": "^1.9.4",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "preact": "^11.2.0"
   },
   "devDependencies": {
-    "@vitejs/plugin-react": "^4.3.4",
+    "@preact/preset-vite": "^2.10.6",
     "sharp": "^0.33.4",
     "vite": "^6.0.0"
   }

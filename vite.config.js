@@ -1,6 +1,6 @@
 import { defineConfig, createServer } from 'vite'
 import { build as esbuild } from 'esbuild'
-import react from '@vitejs/plugin-react'
+import preact from '@preact/preset-vite'
 import { fileURLToPath } from 'node:url'
 
 const root = fileURLToPath(new URL('.', import.meta.url))
@@ -52,7 +52,7 @@ function firstScreenHints() {
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react(), firstScreenHints()],
+  plugins: [preact(), firstScreenHints()],
   build: {
     chunkSizeWarningLimit: 1500,
   },
