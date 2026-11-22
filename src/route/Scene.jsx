@@ -6,6 +6,7 @@
  */
 import { forwardRef, useEffect, useImperativeHandle, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
+import { versioned } from 'virtual:public-versions/route'
 const fmt = (n) => Math.round(n).toLocaleString('en-US')
 
 /** Which named places to print: the route's own landmarks (from build-routes) first, then the highest peaks around it, spaced apart. */
@@ -87,7 +88,7 @@ const Scene = forwardRef(function Scene({ tracks, meta, demUrl, labels: landmark
     ;(async () => {
       try {
         const mod = await import('./terrain-gl.js')
-        const [H, buildings] = await Promise.all([mod.loadElevation(demUrl, meta), mod.loadBuildings(demUrl.replace(/dem\.bin$/, 'buildings.bin'))])
+        const [H, buildings] = await Promise.all([mod.loadElevation(versioned(demUrl), meta), mod.loadBuildings(versioned(demUrl.replace(/dem\.bin$/, 'buildings.bin')))])
         if (dead) return
         engine = await mod.createTerrain(host.canvas, meta, H, tracks, buildings)
         if (dead) { engine.dispose(); engine = null; return }

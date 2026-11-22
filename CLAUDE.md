@@ -26,6 +26,9 @@ Catalogs and albums come from the bucket's folder structure. Run `npm run index`
   main bundle stays small. Open question: a flat world map or a globe.
 - **Done:** GPX recordings are cleaned of GPS jumps (`scripts/clean-gpx.mjs`; originals in `gpx/original/`, details in `gpx/README.md`). Re-run it and `node scripts/build-routes.mjs --detail-only` after adding a recording.
 
+- **Security headers (2026-11-22):** `public/_headers` has a strict CSP (scripts by hash, images only from the site and
+  `img.matassavickis.com`). Any new outside origin must be added there; see README "Security and cache headers".
+
 ## Decisions (2026-11-21)
 
 - **Barrhorn full-res:** dropped for good. The album stays at its 1544×1024 Drive source; don't ask about it again.

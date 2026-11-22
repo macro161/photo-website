@@ -13,9 +13,10 @@ import meta from './terrain.json'
 import places from '../swissPlaces.json'
 import Picture from '../components/Picture.jsx'
 import './swissmap.css'
+import { versioned } from 'virtual:public-versions/swissmap'
 
-const DEM_URL = '/swissmap/dem.bin'
-const WATER_URL = '/swissmap/water.bin'
+const DEM_URL = versioned('/swissmap/dem.bin')
+const WATER_URL = versioned('/swissmap/water.bin')
 const DATE_FMT = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', day: 'numeric', month: 'short', year: 'numeric' })
 const fmtDate = (d) => DATE_FMT.format(new Date(d + 'T12:00:00Z'))
 const fmt = (n) => Math.round(n).toLocaleString('en-US')

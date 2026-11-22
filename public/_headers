@@ -1,7 +1,27 @@
+# Cloudflare Pages response headers (copied into dist/ by Vite).
+# 'inline-script-hashes' in the CSP is replaced at build time with the sha256 of each inline <script> in index.html
+# (cspHashes in vite.config.js). Lab map tiles come from tile.openstreetmap.org; cloudflareinsights is Cloudflare Web Analytics.
+
+/*
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'inline-script-hashes' https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://img.matassavickis.com https://tile.openstreetmap.org; font-src 'self'; connect-src 'self' https://cloudflareinsights.com; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'; upgrade-insecure-requests
+  X-Content-Type-Options: nosniff
+  X-Frame-Options: DENY
+  Referrer-Policy: strict-origin-when-cross-origin
+  Cross-Origin-Opener-Policy: same-origin
+  Permissions-Policy: accelerometer=(), camera=(), geolocation=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), browsing-topics=()
+
 /assets/*
   Cache-Control: public, max-age=31536000, immutable
 
 /fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Terrain and relief: the app requests them as ?v=<content hash> (virtual:public-versions in vite.config.js).
+/route/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/swissmap/*
   Cache-Control: public, max-age=31536000, immutable
 
 /favicon.svg
