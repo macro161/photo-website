@@ -1,7 +1,7 @@
 /**
  * Cabane de Valsorey with its GPS tracks (ascent 1 Aug 2026, descent 2 Aug 2026).
- * Photos mode: the album's gallery, photos first, with the route as a barely-there drawing behind it.
- * Route mode: terrain relief in greys (2D or tilted 3D) with the route on it, stats, an elevation profile you can scrub, and the photos as a strip.
+ * Photos mode: the album's gallery, photos first, with the terrain and the route as a calm greyscale backdrop (a flat hairline route until the 3D scene is ready, or where it can't run).
+ * Route mode: the same scene comes forward as a map (2D or tilted 3D) with labels, stats, an elevation profile you can scrub, and the photos as a strip.
  * Track data comes from scripts/gpx-detail.mjs (src/lab/valsorey/detail.json); the relief from scripts/bake-terrain.mjs.
  */
 import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react'
@@ -13,7 +13,7 @@ import Lightbox from '../../components/Lightbox.jsx'
 import Picture from '../../components/Picture.jsx'
 import '../valsorey/valsorey.css'
 
-const Terrain3D = lazy(() => import('../valsorey/Terrain3D.jsx'))
+const Scene = lazy(() => import('../valsorey/Scene.jsx'))
 
 const TRACKS = detail.tracks // [ascent, descent]
 const MINUTES = { ascent: activities.find((a) => a.n === 14)?.minutes, descent: activities.find((a) => a.n === 13)?.minutes }
@@ -42,7 +42,7 @@ function useAlbum() {
 }
 
 /* ---------- Background: the route, barely there, filling in as you scroll ---------- */
-function Background() {
+function Background({ off }) {
   const doneRefs = useRef([])
   const dot = useRef(null)
 
@@ -73,7 +73,7 @@ function Background() {
   }, [])
 
   return (
-    <div className="vt-bg" aria-hidden="true">
+    <div className={`vt-bg${off ? ' is-off' : ''}`} aria-hidden="true">
       <svg className="vt-bg-route" viewBox={`0 0 ${BG.W} ${BG.H}`} preserveAspectRatio="xMidYMid meet">
         {bgPaths.map((d, i) => (
           <g key={i} className={i === 0 ? 'is-ascent' : 'is-descent'}>
@@ -252,35 +252,9 @@ function FlatMap({ shown, scrub }) {
   )
 }
 
-function RouteView({ photos, onOpen }) {
-  const [which, setWhich] = useState('both')
-  const [scrub, setScrub] = useState(null)
-  const [view, setView] = useState('3d')
-  const [flat, setFlat] = useState(false)
-  const [playing, setPlaying] = useState(false)
-  const terrain = useRef(null)
+function RouteView({ photos, onOpen, ctl, setMapSlot, sceneFailed }) {
+  const { which, setWhich, scrub, view, setView, playing, setPlaying, onProfile, terrain } = ctl
   const shown = useMemo(() => (which === 'both' ? [0, 1] : [which === 'ascent' ? 0 : 1]), [which])
-  const maxKm = Math.max(...shown.map((i) => TRACKS[i].stats.km))
-
-  // "Fly along": advance the marker; the terrain view follows it. Any touch of the map or profile stops it.
-  const scrubRef = useRef(null)
-  scrubRef.current = scrub
-  useEffect(() => {
-    if (!playing) return undefined
-    let raf = 0, last = performance.now()
-    let km = scrubRef.current != null && scrubRef.current < maxKm - 0.05 ? scrubRef.current : 0
-    const step = (now) => {
-      km += ((now - last) / 1000) * (maxKm / 30)
-      last = now
-      if (km >= maxKm) { setScrub(maxKm); setPlaying(false); return }
-      setScrub(km)
-      raf = requestAnimationFrame(step)
-    }
-    raf = requestAnimationFrame(step)
-    return () => cancelAnimationFrame(raf)
-  }, [playing, maxKm])
-  const stop = useCallback(() => setPlaying(false), [])
-  const onProfile = useCallback((v) => { setPlaying(false); setScrub(v) }, [])
 
   return (
     <div className="vt-route">
@@ -291,26 +265,26 @@ function RouteView({ photos, onOpen }) {
           ))}
         </div>
         <div className="vt-tools">
-          {!flat && (
+          {!sceneFailed && (
             <div className="vt-tabs" role="group" aria-label="Map view">
               {[['2d', '2D'], ['3d', '3D']].map(([k, label]) => (
                 <button key={k} className={view === k ? 'is-on' : ''} aria-pressed={view === k} onClick={() => setView(k)}>{label}</button>
               ))}
             </div>
           )}
-          {!flat && <button className="vt-btn" onClick={() => terrain.current?.reset()} aria-label="Reset the view">Reset view</button>}
+          {!sceneFailed && <button className="vt-btn" onClick={() => terrain.current?.reset()} aria-label="Reset the view">Reset view</button>}
           <button className="vt-btn" onClick={() => setPlaying((p) => !p)} aria-pressed={playing}>{playing ? 'Pause' : 'Fly along'}</button>
         </div>
       </div>
 
       <div className="vt-grid-main">
         <div className="vt-map-wrap">
-          {flat ? (
+          {sceneFailed ? (
             <FlatMap shown={shown} scrub={scrub} />
           ) : (
-            <Suspense fallback={<div className="vt-3d vt-3d-wait"><div className="vt-3d-loading">Loading terrain…</div></div>}>
-              <Terrain3D ref={terrain} tracks={TRACKS} shown={shown} view={view} scrub={scrub} fly={playing} onUserMove={stop} onFail={() => setFlat(true)} />
-            </Suspense>
+            <div className="vt-3d vt-3d-slot" ref={setMapSlot}>
+              <div className="vt-3d-loading">Loading terrain…</div>
+            </div>
           )}
           <p className="vt-attrib">
             Relief: AWS Terrain Tiles (SRTM, EU-DEM, national sources) · names © OpenStreetMap contributors · contours every 25 m, bold every 250 m
@@ -341,6 +315,12 @@ function RouteView({ photos, onOpen }) {
   )
 }
 
+/** Weak or battery-conscious devices keep the flat hairline backdrop (the 3D map is still there in Route mode). */
+const lowPower = () => {
+  const n = navigator
+  return (n.hardwareConcurrency || 8) <= 2 || (n.deviceMemory || 8) <= 2 || !!n.connection?.saveData
+}
+
 /* ---------- Page ---------- */
 export default function ValsoreyTrack() {
   const [mode, setMode] = useState('photos')
@@ -349,6 +329,70 @@ export default function ValsoreyTrack() {
   const items = useMemo(() => (photos || []).map((photo, index) => ({ photo, index })), [photos])
   const total = items.length
 
+  // Route-mode state lives up here because the 3D scene outlives the mode switch.
+  const [which, setWhich] = useState('both')
+  const [scrub, setScrub] = useState(null)
+  const [view, setView] = useState('3d')
+  const [playing, setPlaying] = useState(false)
+  const terrain = useRef(null)
+  const shown = useMemo(() => (which === 'both' ? [0, 1] : [which === 'ascent' ? 0 : 1]), [which])
+  const maxKm = Math.max(...shown.map((i) => TRACKS[i].stats.km))
+  const onProfile = useCallback((v) => { setPlaying(false); setScrub(v) }, [])
+
+  // "Fly along": advance the marker; the terrain follows it. Any touch of the map or profile stops it.
+  const scrubRef = useRef(null)
+  scrubRef.current = scrub
+  useEffect(() => {
+    if (!playing) return undefined
+    let raf = 0, last = performance.now()
+    let km = scrubRef.current != null && scrubRef.current < maxKm - 0.05 ? scrubRef.current : 0
+    const step = (now) => {
+      km += ((now - last) / 1000) * (maxKm / 30)
+      last = now
+      if (km >= maxKm) { setScrub(maxKm); setPlaying(false); return }
+      setScrub(km)
+      raf = requestAnimationFrame(step)
+    }
+    raf = requestAnimationFrame(step)
+    return () => cancelAnimationFrame(raf)
+  }, [playing, maxKm])
+  const stopFly = useCallback(() => setPlaying(false), [])
+
+  // The 3D scene: loaded only after the photos are on screen (idle time), or at once if Route is opened first.
+  const [want, setWant] = useState(false)
+  const [sceneReady, setSceneReady] = useState(false)
+  const [sceneFailed, setSceneFailed] = useState(false)
+  const [bgSlot, setBgSlot] = useState(null)
+  const [mapSlot, setMapSlot] = useState(null)
+  const bg3d = useMemo(() => !lowPower(), [])
+  useEffect(() => { if (mode === 'route') setWant(true) }, [mode])
+  useEffect(() => {
+    if (!photos || want || !bg3d) return undefined
+    let id = 0, t = 0
+    const start = () => {
+      cleanupInput()
+      if (window.requestIdleCallback) id = window.requestIdleCallback(() => setWant(true), { timeout: 3000 })
+      else setWant(true)
+    }
+    // The backdrop is decoration: it starts once the page has loaded and gone quiet (2.5 s), or at the first scroll or touch, whichever is first.
+    const events = ['scroll', 'pointerdown', 'keydown']
+    const cleanupInput = () => events.forEach((e) => window.removeEventListener(e, start))
+    const go = () => {
+      t = setTimeout(start, 2500)
+      events.forEach((e) => window.addEventListener(e, start, { once: true, passive: true }))
+    }
+    if (document.readyState === 'complete') go()
+    else window.addEventListener('load', go, { once: true })
+    return () => {
+      window.removeEventListener('load', go)
+      cleanupInput()
+      if (id) window.cancelIdleCallback?.(id)
+      clearTimeout(t)
+    }
+  }, [photos, want, bg3d])
+  const onFail = useCallback(() => setSceneFailed(true), [])
+  const onReady = useCallback(() => setSceneReady(true), [])
+
   const open = useCallback((i) => setActive(i), [])
   const close = useCallback(() => setActive(null), [])
   const next = useCallback(() => setActive((i) => (i == null ? i : (i + 1) % total)), [total])
@@ -356,9 +400,29 @@ export default function ValsoreyTrack() {
 
   useLayoutEffect(() => { window.scrollTo(0, 0) }, [mode])
 
+  const backdrop3d = bg3d && sceneReady && !sceneFailed
   return (
     <div className={`vt vt-${mode}`}>
-      {mode === 'photos' && <Background />}
+      {mode === 'photos' && <Background off={backdrop3d} />}
+      <div className="vt-bgslot" ref={setBgSlot} aria-hidden="true" />
+      {want && !sceneFailed && (
+        <Suspense fallback={null}>
+          <Scene
+            ref={terrain}
+            tracks={TRACKS}
+            mode={mode}
+            bgSlot={bg3d ? bgSlot : null}
+            mapSlot={mapSlot}
+            shown={shown}
+            view={view}
+            scrub={scrub}
+            fly={playing}
+            onUserMove={stopFly}
+            onFail={onFail}
+            onReady={onReady}
+          />
+        </Suspense>
+      )}
       <div className="vt-content">
         <a className="back-link" href="#/lab">← Lab</a>
         <header className="vt-head">
@@ -380,7 +444,13 @@ export default function ValsoreyTrack() {
             <GallerySkeleton count={18} gutterScale={1.7} />
           )
         ) : (
-          <RouteView photos={photos} onOpen={open} />
+          <RouteView
+            photos={photos}
+            onOpen={open}
+            ctl={{ which, setWhich, scrub, view, setView, playing, setPlaying, onProfile, terrain }}
+            setMapSlot={setMapSlot}
+            sceneFailed={sceneFailed}
+          />
         )}
       </div>
       {active != null && total > 0 && (

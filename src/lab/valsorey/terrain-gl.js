@@ -77,7 +77,7 @@ uniform vec3 uLight;
 uniform float uMinor;
 uniform float uMajor;
 uniform float uFog;
-uniform float uTopDown;
+uniform float uCalm;
 out vec4 o;
 float contour(float e, float step, float fw, float soft) {
   float d = abs(fract(e / step - 0.5) - 0.5) * step;
@@ -92,9 +92,10 @@ void main() {
   float fw = max(fwidth(vElev), 0.001);
   float minor = contour(vElev, uMinor, fw, 1.0);
   float major = contour(vElev, uMajor, fw, 1.3);
-  g -= minor * 0.085 + major * 0.2;
+  g = mix(g, 1.0, uCalm * 0.28);
+  g -= (minor * 0.085 + major * 0.2) * (1.0 - uCalm * 0.78);
   float fog = 1.0 - exp(-vDist * uFog);
-  g = mix(g, 1.0, fog * 0.8);
+  g = mix(g, 1.0, fog * mix(0.8, 0.9, uCalm));
   float e = max(abs(vUV.x), abs(vUV.y));
   float a = 1.0 - smoothstep(0.7, 1.0, e);
   g = clamp(g, 0.0, 1.0);
@@ -190,7 +191,10 @@ const mercY = (lat) => Math.log(Math.tan(Math.PI / 4 + (lat * D2R) / 2))
  * @param H        Float32Array elevation grid from loadElevation
  * @param tracks   [{ points: [[lat, lng, ele, km]...] }]
  */
-export function createTerrain(canvas, meta, H, tracks) {
+/** Gives the browser a chance to paint and handle input between the heavy setup steps. */
+const yieldMain = () => new Promise((r) => (globalThis.scheduler?.yield ? globalThis.scheduler.yield().then(r) : setTimeout(r, 0)))
+
+export async function createTerrain(canvas, meta, H, tracks) {
   const gl = canvas.getContext('webgl2', { antialias: true, alpha: true, premultipliedAlpha: true, powerPreference: 'high-performance' })
   if (!gl) throw new Error('WebGL2 unavailable')
   const { width: cw, height: ch, metersPerPx: mpp, bounds } = meta
@@ -223,12 +227,14 @@ export function createTerrain(canvas, meta, H, tracks) {
       verts[o + 4] = (d - u) / ((Math.min(ch - 1, j + 1) - Math.max(0, j - 1)) * mpp)
     }
   }
+  await yieldMain()
   const idx = new Uint32Array((cw - 1) * (ch - 1) * 6)
   let t = 0
   for (let j = 0; j < ch - 1; j++) for (let i = 0; i < cw - 1; i++) {
     const a = j * cw + i, b = a + 1, c = a + cw, d = c + 1
     idx[t++] = a; idx[t++] = c; idx[t++] = b; idx[t++] = b; idx[t++] = c; idx[t++] = d
   }
+  await yieldMain()
   const terrain = program(gl, TERRAIN_VS, TERRAIN_FS)
   const tVao = gl.createVertexArray()
   gl.bindVertexArray(tVao)
@@ -241,6 +247,7 @@ export function createTerrain(canvas, meta, H, tracks) {
   gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, tib); gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, idx, gl.STATIC_DRAW)
   gl.bindVertexArray(null)
 
+  await yieldMain()
   /* ----- tracks as screen-space ribbons draped on the terrain ----- */
   const line = program(gl, LINE_VS, LINE_FS)
   const lines = tracks.map((tr) => {
@@ -279,14 +286,20 @@ export function createTerrain(canvas, meta, H, tracks) {
   const VIEWS = {
     '2d': { yaw: 0, el: 90, exag: 1, dist: span * 2.1 },
     '3d': { yaw: -20, el: 33, exag: 1.5, dist: span * 2.35 },
+    // The quiet background pose: a little higher and further back, so the relief reads as a calm shape behind the photos.
+    bg: { yaw: -22, el: 42, exag: 1.45, dist: span * 3.5 },
   }
   const cam = { ...VIEWS['3d'], tx: cx, ty: cy, tz: cz }
   const goal = { ...cam }
   let mode = '3d'
+  let look = 'front'
+  const calm = { v: 0 }, calmGoal = { v: 0 }
+  let dprCap = 2, reduced = false, frames = 0
   const state = { alpha: lines.map(() => 1), alphaGoal: lines.map(() => 1), done: lines.map(() => -1), dpr: 1, w: 1, h: 1 }
   const FOV = 32 * D2R
   /** Portrait canvases are narrow, so pull back until the whole route still fits across. */
   const viewDist = (m) => VIEWS[m].dist * Math.max(1, 1.2 / (state.w / state.h))
+  const poseKey = () => (look === 'bg' ? 'bg' : mode)
   let dirty = true, raf = 0, last = 0, disposed = false
   const listeners = new Set()
   const light = norm([-0.62, 0.78, -0.55])
@@ -301,7 +314,7 @@ export function createTerrain(canvas, meta, H, tracks) {
   }
 
   const resize = () => {
-    const dpr = Math.min(2, window.devicePixelRatio || 1)
+    const dpr = Math.min(dprCap, window.devicePixelRatio || 1)
     const w = Math.max(1, Math.round(canvas.clientWidth * dpr)), h = Math.max(1, Math.round(canvas.clientHeight * dpr))
     if (canvas.width !== w || canvas.height !== h) { canvas.width = w; canvas.height = h; dirty = true }
     state.w = w; state.h = h; state.dpr = dpr
@@ -325,7 +338,8 @@ export function createTerrain(canvas, meta, H, tracks) {
     const closeness = Math.min(1, 3500 / cam.dist)
     gl.uniform1f(terrain.u.uMinor, closeness > 0.55 ? 25 : 50)
     gl.uniform1f(terrain.u.uMajor, 250)
-    gl.uniform1f(terrain.u.uFog, 0.00007)
+    gl.uniform1f(terrain.u.uFog, 0.00007 * (1 + calm.v * 0.6))
+    gl.uniform1f(terrain.u.uCalm, calm.v)
     gl.bindVertexArray(tVao)
     gl.drawElements(gl.TRIANGLES, idx.length, gl.UNSIGNED_INT, 0)
 
@@ -335,11 +349,12 @@ export function createTerrain(canvas, meta, H, tracks) {
     gl.uniformMatrix4fv(line.u.uVP, false, vp)
     gl.uniform2f(line.u.uRes, state.w, state.h)
     gl.uniform1f(line.u.uExag, cam.exag)
-    const wpx = state.dpr * 2.6
+    const wpx = state.dpr * 2.6 * (1 - calm.v * 0.3)
+    const calmA = 1 - calm.v * 0.3
     // The descent is drawn first (thinner, mid grey) so the ascent's black line sits on top where the two share the trail.
     ;[1, 0].forEach((i) => {
       const l = lines[i]
-      const a = state.alpha[i]
+      const a = state.alpha[i] * calmA
       if (a < 0.01) return
       const ink = i === 0 ? 0.07 : 0.5, w = i === 0 ? wpx : wpx * 0.8
       gl.bindVertexArray(l.vao)
@@ -369,6 +384,7 @@ export function createTerrain(canvas, meta, H, tracks) {
     })
     gl.bindVertexArray(null)
     gl.depthMask(true)
+    canvas.dataset.frames = String(++frames)
   }
 
   /** Screen position (CSS px) of a world point, and whether the relief hides it from the camera. */
@@ -394,13 +410,16 @@ export function createTerrain(canvas, meta, H, tracks) {
     if (disposed) return
     const dt = Math.min(0.05, (now - last) / 1000 || 0.016)
     last = now
-    const k = 1 - Math.exp(-dt * 9)
+    const k = reduced ? 1 : 1 - Math.exp(-dt * 9)
     let moving = false
-    const ease = (obj, goalObj, key, rate = k) => {
+    const ease = (obj, goalObj, key, eps, rate = k) => {
       const d = goalObj[key] - obj[key]
-      if (Math.abs(d) > Math.abs(goalObj[key]) * 1e-4 + 1e-4) { obj[key] += d * rate; moving = true } else obj[key] = goalObj[key]
+      if (Math.abs(d) > eps) { obj[key] += d * rate; moving = true } else obj[key] = goalObj[key]
     }
-    ;['yaw', 'el', 'exag', 'dist', 'tx', 'ty', 'tz'].forEach((key) => ease(cam, goal, key))
+    // Settle within imperceptible distances, so the loop stops (and the GPU rests) soon after a move.
+    ease(cam, goal, 'yaw', 0.05); ease(cam, goal, 'el', 0.05); ease(cam, goal, 'exag', 0.004)
+    ease(cam, goal, 'dist', goal.dist * 0.002); ease(cam, goal, 'tx', 3); ease(cam, goal, 'ty', 3); ease(cam, goal, 'tz', 3)
+    ease(calm, calmGoal, 'v', 0.004, reduced ? 1 : k * 0.6)
     state.alpha.forEach((_, i) => {
       const d = state.alphaGoal[i] - state.alpha[i]
       if (Math.abs(d) > 0.005) { state.alpha[i] += d * Math.min(1, k * 1.2); moving = true } else state.alpha[i] = state.alphaGoal[i]
@@ -481,12 +500,42 @@ export function createTerrain(canvas, meta, H, tracks) {
     /** Camera view of the whole route: '2d' (north up, flat) or '3d' (tilted, exaggerated relief). */
     setMode(m) {
       mode = m
+      if (look === 'bg') return
       Object.assign(goal, { yaw: VIEWS[m].yaw, el: VIEWS[m].el, exag: VIEWS[m].exag, dist: viewDist(m) })
       wake()
     },
+    /**
+     * 'bg' = the quiet backdrop behind a page (soft contrast, contours almost gone, thinner route, low pixel ratio);
+     * 'front' = the full map. The camera and look ease between the two.
+     */
+    setLook(l, snap = false) {
+      look = l
+      calmGoal.v = l === 'bg' ? 1 : 0
+      dprCap = l === 'bg' ? 1.25 : 2
+      const key = poseKey()
+      Object.assign(goal, { yaw: VIEWS[key].yaw, el: VIEWS[key].el, exag: VIEWS[key].exag, dist: viewDist(key), tx: cx, ty: cy, tz: cz })
+      if (snap) { Object.assign(cam, goal); calm.v = calmGoal.v }
+      wake()
+    },
+    get look() { return look },
+    /** Page scroll progress 0..1 in the backdrop: the camera swings a little and the route draws itself on. */
+    setScroll(p, snap = false) {
+      if (look !== 'bg') return
+      goal.yaw = VIEWS.bg.yaw + (p - 0.5) * 26
+      goal.el = VIEWS.bg.el + (p - 0.5) * -6
+      const total = lines.reduce((t, l) => t + l.km, 0)
+      const u = Math.min(1, p * 1.15) * total
+      const k0 = lines[0].km
+      state.done = lines.map((l, i) => (i === 0 ? Math.min(u, k0) : Math.max(0, u - k0)))
+      if (snap) { cam.yaw = goal.yaw; cam.el = goal.el }
+      wake()
+    },
+    setReducedMotion(b) { reduced = !!b; wake() },
+    get frames() { return frames },
     get mode() { return mode },
     resetView() {
-      Object.assign(goal, VIEWS[mode], { dist: viewDist(mode), tx: cx, ty: cy, tz: cz })
+      const key = poseKey()
+      Object.assign(goal, VIEWS[key], { dist: viewDist(key), tx: cx, ty: cy, tz: cz })
       wake()
     },
     /** Which tracks are emphasised (the others fade right back). */

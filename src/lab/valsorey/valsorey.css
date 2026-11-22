@@ -13,7 +13,10 @@
 .vt-modes button:focus-visible, .vt-tabs button:focus-visible, .vt-btn:focus-visible, .vt-strip-item:focus-visible { outline: 2px solid var(--fg); outline-offset: 2px; }
 
 /* Background route: a drawing you notice on a second look. Fixed, behind the photos, never above them. */
-.vt-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.vt-bg { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; transition: opacity 1.2s ease; }
+.vt-bg.is-off { opacity: 0; }
+/* The 3D backdrop: one fixed layer behind the page content. Pointer events pass straight through to the photos. */
+.vt-bgslot { position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
 .vt-bg-route { position: absolute; inset: 0; width: 100%; height: 100%; }
 .vt-bg-base, .vt-bg-done { fill: none; stroke: var(--fg); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .vt-bg-base { stroke-opacity: 0.1; }
@@ -29,10 +32,16 @@
 .vt-map-wrap { border: 1px solid var(--line); background: var(--bg); }
 .vt-attrib { margin: 0; padding: 0.45rem 0.8rem; font-size: 0.68rem; color: var(--muted-strong); border-top: 1px solid var(--line); }
 
-/* WebGL terrain */
-.vt-3d { position: relative; width: 100%; aspect-ratio: 4 / 3; max-height: 78vh; min-height: 320px; overflow: hidden; background: var(--bg); }
-.vt-3d-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; cursor: grab; }
-.vt-3d-canvas:active { cursor: grabbing; }
+/* WebGL terrain. One host element holds the canvas and the labels; it moves between the page backdrop and the map card. */
+.vt-3d-slot { position: relative; width: 100%; aspect-ratio: 4 / 3; max-height: 78vh; min-height: 320px; overflow: hidden; background: var(--bg); }
+.vt-3d-host { position: absolute; inset: 0; width: auto; aspect-ratio: auto; max-height: none; min-height: 0; overflow: hidden; }
+.vt-3d-host.is-front { background: var(--bg); }
+.vt-3d-host.is-bg { pointer-events: none; }
+.vt-3d-host.is-bg .vt-3d-overlay { display: none; }
+.vt-3d-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; touch-action: none; }
+.vt-3d-host.is-front .vt-3d-canvas { cursor: grab; }
+.vt-3d-host.is-front .vt-3d-canvas:active { cursor: grabbing; }
+.vt-3d-host.is-bg .vt-3d-canvas { pointer-events: none; }
 .vt-3d-loading { position: absolute; inset: 0; display: grid; place-items: center; font-size: 0.8rem; color: var(--muted-strong); letter-spacing: 0.04em; }
 .vt-3d-overlay { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
 .vt-pin { position: absolute; left: 0; top: 0; margin-left: 0; display: flex; flex-direction: column; align-items: center; gap: 1px; opacity: 0; transition: opacity 0.25s var(--ease); will-change: transform; white-space: nowrap; }
@@ -91,7 +100,7 @@
 
 @media (max-width: 800px) {
   .vt-grid-main { grid-template-columns: 1fr; }
-  .vt-3d { aspect-ratio: 1 / 1; max-height: 70vh; }
+  .vt-3d-slot { aspect-ratio: 1 / 1; max-height: 70vh; }
   .vt-toolbar { flex-direction: column; align-items: stretch; }
   .vt-tabs { display: flex; }
   .vt-tabs button { flex: 1; padding-inline: 0.4rem; }
