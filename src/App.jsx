@@ -276,6 +276,8 @@ export default function App() {
   useEffect(() => { setHikeMode('photos') }, [route.catalog, route.album])
   // The Swiss catalog page: the album cards, or a map of where they were taken.
   const [swissMode, setSwissMode] = useState('albums')
+  // The map layer is decoration behind the album cards: its code and data load once the first screen's cover is on screen.
+  const swissAfterFirstScreen = useAfterFirstScreen(swissMode === 'map')
   useEffect(() => { setSwissMode('albums') }, [route.catalog])
   const catalog = useMemo(
     () => (catalogLite && catalogPhotos ? withPhotos(catalogLite, catalogPhotos) : catalogLite),
@@ -524,9 +526,11 @@ export default function App() {
                       <button className={swissMode === 'map' ? 'is-on' : ''} aria-pressed={swissMode === 'map'} onClick={() => setSwissMode('map')}>Map</button>
                     </div>
                   </div>
-                  <Suspense fallback={null}>
-                    <SwissMap albums={catalog.albums} mode={swissMode} />
-                  </Suspense>
+                  {swissAfterFirstScreen && (
+                    <Suspense fallback={null}>
+                      <SwissMap albums={catalog.albums} mode={swissMode} />
+                    </Suspense>
+                  )}
                 </>
               )}
               {!mapOn && (catalog.albums.length > 1 || (filtering && catalog.albums.length > 0)) && (
