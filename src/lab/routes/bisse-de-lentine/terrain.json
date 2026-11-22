@@ -13,6 +13,13 @@
  "maxEle": 2109,
  "peaks": [
   {
+   "name": "Sion",
+   "kind": "place",
+   "ele": 515,
+   "lat": 46.2311749,
+   "lng": 7.3588795
+  },
+  {
    "name": "Les Agettes",
    "kind": "place",
    "ele": 1002,
@@ -55,6 +62,20 @@
    "lng": 7.3834555
   },
   {
+   "name": "Trattoria des Crêtes",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2615101,
+   "lng": 7.3877539
+  },
+  {
+   "name": "Restaurant du Lac - Le Pascali's",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2808522,
+   "lng": 7.3825435
+  },
+  {
    "name": "Les Prasses",
    "kind": "place",
    "ele": null,
@@ -62,11 +83,39 @@
    "lng": 7.3958926
   },
   {
+   "name": "Coppet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.286608,
+   "lng": 7.3248944
+  },
+  {
    "name": "Savièse",
    "kind": "place",
    "ele": null,
    "lat": 46.2535351,
    "lng": 7.3477598
+  },
+  {
+   "name": "Au Vieux Valais",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.23301,
+   "lng": 7.3594844
+  },
+  {
+   "name": "Café des Chateaux",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2339373,
+   "lng": 7.3607926
+  },
+  {
+   "name": "L'Enclos de Valère",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2346744,
+   "lng": 7.3627718
   },
   {
    "name": "Chandolin",
@@ -83,11 +132,25 @@
    "lng": 7.3340714
   },
   {
+   "name": "L'agora",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2374741,
+   "lng": 7.3615265
+  },
+  {
    "name": "Baar (Nendaz)",
    "kind": "place",
    "ele": null,
    "lat": 46.203733,
    "lng": 7.3291669
+  },
+  {
+   "name": "Le Bargeot",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2053428,
+   "lng": 7.3323998
   },
   {
    "name": "Grimisuat",
@@ -104,6 +167,20 @@
    "lng": 7.370919
   },
   {
+   "name": "Parking de la Cible",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.235884,
+   "lng": 7.3614879
+  },
+  {
+   "name": "Brasserie du Grand-Pont",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2335961,
+   "lng": 7.3606775
+  },
+  {
    "name": "Saint-Germain",
    "kind": "place",
    "ele": null,
@@ -111,11 +188,109 @@
    "lng": 7.3502056
   },
   {
+   "name": "Il Pulcinella",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2402383,
+   "lng": 7.3634766
+  },
+  {
+   "name": "La Glacière",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2358807,
+   "lng": 7.3603015
+  },
+  {
+   "name": "Restaurant Valaisanne",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2412446,
+   "lng": 7.3609109
+  },
+  {
+   "name": "Coucou Sushi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2321262,
+   "lng": 7.3620193
+  },
+  {
+   "name": "La Sitterie",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.240255,
+   "lng": 7.3599185
+  },
+  {
+   "name": "Chez Lin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2283926,
+   "lng": 7.359813
+  },
+  {
+   "name": "Stella Marina",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2354693,
+   "lng": 7.3586405
+  },
+  {
+   "name": "Restaurant des Aviateurs",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2191324,
+   "lng": 7.3355205
+  },
+  {
    "name": "Molignon",
    "kind": "place",
    "ele": null,
    "lat": 46.2504276,
    "lng": 7.3923715
+  },
+  {
+   "name": "Pizzeria du pont du Rhône",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2281122,
+   "lng": 7.3700792
+  },
+  {
+   "name": "La Désalpe",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2280858,
+   "lng": 7.3568486
+  },
+  {
+   "name": "Pizzeria de la Poste",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2281803,
+   "lng": 7.3581555
+  },
+  {
+   "name": "restaurant des îles",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2115464,
+   "lng": 7.3215278
+  },
+  {
+   "name": "Sion",
+   "kind": "station",
+   "ele": 491,
+   "lat": 46.2274616,
+   "lng": 7.3593303
+  },
+  {
+   "name": "Restaurant de la Piscine",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2246224,
+   "lng": 7.3557383
   },
   {
    "name": "Les Fermes",
@@ -132,11 +307,39 @@
    "lng": 7.3731659
   },
   {
+   "name": "Sawasdee Thai",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2317601,
+   "lng": 7.3571429
+  },
+  {
+   "name": "Casa do Benfica de Sion",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2228924,
+   "lng": 7.3690747
+  },
+  {
+   "name": "Le Rallye",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2300102,
+   "lng": 7.3486231
+  },
+  {
    "name": "Ypresse",
    "kind": "place",
    "ele": null,
    "lat": 46.2111142,
    "lng": 7.3847268
+  },
+  {
+   "name": "Les Crêtes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2149329,
+   "lng": 7.3912728
   },
   {
    "name": "La Place (Ayent)",
@@ -174,6 +377,34 @@
    "lng": 7.3991498
   },
   {
+   "name": "Entrée Parking souterrain",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2306826,
+   "lng": 7.3488351
+  },
+  {
+   "name": "l'quat sous",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2261642,
+   "lng": 7.3557232
+  },
+  {
+   "name": "Trattorie d'Italia",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.226474,
+   "lng": 7.3607872
+  },
+  {
+   "name": "Migros Restaurant",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2286894,
+   "lng": 7.3564594
+  },
+  {
    "name": "Granois",
    "kind": "place",
    "ele": null,
@@ -209,6 +440,13 @@
    "lng": 7.3539537
   },
   {
+   "name": "La Tonnella",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2317385,
+   "lng": 7.3615171
+  },
+  {
    "name": "Drône",
    "kind": "place",
    "ele": null,
@@ -230,11 +468,102 @@
    "lng": 7.3704076
   },
   {
+   "name": "Cafe Restaurant du Bisse",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2025276,
+   "lng": 7.373592
+  },
+  {
+   "name": "Núcleo Sportinguista de Sion",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.223857,
+   "lng": 7.3667515
+  },
+  {
+   "name": "Le Midi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2312437,
+   "lng": 7.3612271
+  },
+  {
+   "name": "Don Carlos",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2314781,
+   "lng": 7.359824
+  },
+  {
+   "name": "Resto Verso",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2283953,
+   "lng": 7.3551953
+  },
+  {
+   "name": "Café de la Place",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.231777,
+   "lng": 7.3616329
+  },
+  {
+   "name": "Manor",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2310673,
+   "lng": 7.3593014
+  },
+  {
+   "name": "Coop Restaurant",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2317753,
+   "lng": 7.3631627
+  },
+  {
    "name": "Argnou (Ayent)",
    "kind": "place",
    "ele": null,
    "lat": 46.2616995,
    "lng": 7.3992545
+  },
+  {
+   "name": "Ô Palais Kinh Do",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2293218,
+   "lng": 7.3576979
+  },
+  {
+   "name": "La Bodega",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.231185,
+   "lng": 7.3579598
+  },
+  {
+   "name": "Persico",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2319988,
+   "lng": 7.3642061
+  },
+  {
+   "name": "Burgerlution",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2319812,
+   "lng": 7.3619149
+  },
+  {
+   "name": "Rong Town",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2281427,
+   "lng": 7.3584028
   },
   {
    "name": "Signèse (Ayent)",
@@ -251,11 +580,599 @@
    "lng": 7.3716819
   },
   {
+   "name": "L'Osteria",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.251793,
+   "lng": 7.4083
+  },
+  {
+   "name": "La Regalette",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2349454,
+   "lng": 7.360336
+  },
+  {
+   "name": "Le Grotto de la Fontaine",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2345964,
+   "lng": 7.3603195
+  },
+  {
+   "name": "Au Cheval Blanc",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2347221,
+   "lng": 7.3603244
+  },
+  {
+   "name": "Croix",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.283556,
+   "lng": 7.3499328
+  },
+  {
+   "name": "Les Chenevières",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2132052,
+   "lng": 7.3979812
+  },
+  {
+   "name": "Café de la Place",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2113071,
+   "lng": 7.3984528
+  },
+  {
+   "name": "Le Coq en Pâte",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2331545,
+   "lng": 7.3600828
+  },
+  {
+   "name": "Al-Beirout",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2289116,
+   "lng": 7.3630929
+  },
+  {
+   "name": "Le Ticino",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2306349,
+   "lng": 7.3612076
+  },
+  {
+   "name": "Gourmandises d'Asie",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2281682,
+   "lng": 7.3582942
+  },
+  {
+   "name": "Taquin Restaurant",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2329739,
+   "lng": 7.3588933
+  },
+  {
+   "name": "Pinte Contheysanne",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2333776,
+   "lng": 7.359861
+  },
+  {
+   "name": "Le Trait d'union",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2311385,
+   "lng": 7.3555334
+  },
+  {
+   "name": "Abyssinia",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2353384,
+   "lng": 7.3581357
+  },
+  {
+   "name": "Ritz Lounge Bar",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2357527,
+   "lng": 7.3597649
+  },
+  {
+   "name": "Luigia",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2294603,
+   "lng": 7.3664112
+  },
+  {
+   "name": "Alex",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2330696,
+   "lng": 7.3592668
+  },
+  {
+   "name": "Chez Chou",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2315555,
+   "lng": 7.3601233
+  },
+  {
+   "name": "Les Brasseurs Sion",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2321729,
+   "lng": 7.3582459
+  },
+  {
+   "name": "Arte Pizza",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2288845,
+   "lng": 7.3629853
+  },
+  {
+   "name": "Taverne sédunoise",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2320366,
+   "lng": 7.3615716
+  },
+  {
+   "name": "Parking des Roches Brunes",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2320081,
+   "lng": 7.368688
+  },
+  {
+   "name": "Le Rive Gauche",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2328844,
+   "lng": 7.3603137
+  },
+  {
+   "name": "L'Escale",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2274794,
+   "lng": 7.3668595
+  },
+  {
+   "name": "Café Restaurant de l’Union",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2506375,
+   "lng": 7.3490772
+  },
+  {
+   "name": "Café Restaurant La Channe",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2508361,
+   "lng": 7.3492132
+  },
+  {
+   "name": "Colonie italienne",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.234747,
+   "lng": 7.3615383
+  },
+  {
+   "name": "Verso l'Alto",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2303458,
+   "lng": 7.3507659
+  },
+  {
+   "name": "C ça",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.232633,
+   "lng": 7.3617188
+  },
+  {
+   "name": "La Fabrik",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.232754,
+   "lng": 7.3611255
+  },
+  {
+   "name": "L'Atelier des Gourmets",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2766193,
+   "lng": 7.4057055
+  },
+  {
+   "name": "Le Cube Varone",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2472448,
+   "lng": 7.3822184
+  },
+  {
+   "name": "Relai du Simplon",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2250061,
+   "lng": 7.3174822
+  },
+  {
+   "name": "La Rose de l'ouest",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2302719,
+   "lng": 7.3499228
+  },
+  {
+   "name": "Jo Pizza",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2298474,
+   "lng": 7.348248
+  },
+  {
+   "name": "Crêperie Sédunoise",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2327523,
+   "lng": 7.3592748
+  },
+  {
+   "name": "Chez Chander",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2306713,
+   "lng": 7.3523418
+  },
+  {
+   "name": "La Sangria",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2300931,
+   "lng": 7.4024562
+  },
+  {
+   "name": "Ateps Sion",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2182523,
+   "lng": 7.3481535
+  },
+  {
+   "name": "Twin Fin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2136938,
+   "lng": 7.3231368
+  },
+  {
+   "name": "Pavillon des sports",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2278341,
+   "lng": 7.3728533
+  },
+  {
+   "name": "Windows Fai Fast Food",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2277749,
+   "lng": 7.3735131
+  },
+  {
+   "name": "10'dieci",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.229202,
+   "lng": 7.3631208
+  },
+  {
+   "name": "Ferme-Asile",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2297993,
+   "lng": 7.3724221
+  },
+  {
+   "name": "Toto Chez Franco",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2315891,
+   "lng": 7.3596933
+  },
+  {
+   "name": "Délices",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2337051,
+   "lng": 7.3608857
+  },
+  {
+   "name": "Le 505 alt.",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2335862,
+   "lng": 7.3602438
+  },
+  {
+   "name": "Café de Paris",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2333068,
+   "lng": 7.3596842
+  },
+  {
+   "name": "Aux Dix Vins",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2315538,
+   "lng": 7.4039375
+  },
+  {
+   "name": "Suchada",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2420464,
+   "lng": 7.3385329
+  },
+  {
+   "name": "Pizzeria Da Luiggi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2509055,
+   "lng": 7.3489583
+  },
+  {
+   "name": "Les Voisins & Co",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2354624,
+   "lng": 7.3604386
+  },
+  {
+   "name": "O Pescador",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2267191,
+   "lng": 7.366856
+  },
+  {
+   "name": "Chez Paolo",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2320653,
+   "lng": 7.3606179
+  },
+  {
+   "name": "Nobilis",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2296964,
+   "lng": 7.3586977
+  },
+  {
+   "name": "La Riante",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2833555,
+   "lng": 7.4124433
+  },
+  {
+   "name": "Pasta Connection",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2283731,
+   "lng": 7.3553408
+  },
+  {
+   "name": "La Croix Fédérale",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.234087,
+   "lng": 7.3603102
+  },
+  {
+   "name": "Brasserie Roches Brunes",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2322811,
+   "lng": 7.3682903
+  },
+  {
+   "name": "Restaurant de l'Aéroport",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2226758,
+   "lng": 7.3381408
+  },
+  {
+   "name": "Beaupérier",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2027937,
+   "lng": 7.3391424
+  },
+  {
+   "name": "Izakaya",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2316051,
+   "lng": 7.3588701
+  },
+  {
+   "name": "Opéra",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2287998,
+   "lng": 7.3544411
+  },
+  {
    "name": "Prabé",
    "kind": "peak",
    "ele": 2041,
    "lat": 46.2844862,
    "lng": 7.350095
+  },
+  {
+   "name": "Happy Bowl Sion",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2308923,
+   "lng": 7.3542359
+  },
+  {
+   "name": "Lormey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2641839,
+   "lng": 7.4127859
+  },
+  {
+   "name": "Manau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2547886,
+   "lng": 7.4040888
+  },
+  {
+   "name": "Beulet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2675675,
+   "lng": 7.4091747
+  },
+  {
+   "name": "Plan-Signèse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.253038,
+   "lng": 7.3999426
+  },
+  {
+   "name": "Lombardon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2881313,
+   "lng": 7.4013832
+  },
+  {
+   "name": "Chang Thai Noi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2325741,
+   "lng": 7.3606043
+  },
+  {
+   "name": "Îles Bourgeoisiales",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2120845,
+   "lng": 7.3254269
+  },
+  {
+   "name": "Centre Gallego",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2369284,
+   "lng": 7.3587723
+  },
+  {
+   "name": "Bon du Milieu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2867888,
+   "lng": 7.3301149
+  },
+  {
+   "name": "Bon d'en Bas",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2844014,
+   "lng": 7.3307774
+  },
+  {
+   "name": "Brac",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.283178,
+   "lng": 7.3329124
+  },
+  {
+   "name": "Chalet du Prabé",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2813152,
+   "lng": 7.3470988
+  },
+  {
+   "name": "Malerne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2526306,
+   "lng": 7.3315193
+  },
+  {
+   "name": "Parking Cour de Gare",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2282586,
+   "lng": 7.3627969
+  },
+  {
+   "name": "Relais du Mont d'Orge",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2347241,
+   "lng": 7.3400873
+  },
+  {
+   "name": "Gilles Varone",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.250099,
+   "lng": 7.3507803
+  },
+  {
+   "name": "Damien Germaniers",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.232576,
+   "lng": 7.3659769
+  },
+  {
+   "name": "Relais des Mayens de Sion",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2029692,
+   "lng": 7.3864498
+  },
+  {
+   "name": "Asia Good",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2286491,
+   "lng": 7.3741908
   },
   {
    "name": "Château de la Soie",
@@ -265,11 +1182,60 @@
    "lng": 7.3266483
   },
   {
+   "name": "Cheeky Boys",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2288768,
+   "lng": 7.358743
+  },
+  {
+   "name": "Dix-neuf 09",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2280344,
+   "lng": 7.3616835
+  },
+  {
+   "name": "Dix-neuf 09",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2280344,
+   "lng": 7.3616835
+  },
+  {
+   "name": "Umamido Ramen",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2283255,
+   "lng": 7.3608691
+  },
+  {
+   "name": "Coucou Sushi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2280689,
+   "lng": 7.3605389
+  },
+  {
    "name": "Tourbillon",
    "kind": "peak",
    "ele": 652,
    "lat": 46.2364622,
    "lng": 7.3668733
+  },
+  {
+   "name": "Kaixin Sushi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2325441,
+   "lng": 7.3627293
+  },
+  {
+   "name": "Digregorio",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.233121,
+   "lng": 7.3713485
   }
  ]
 }

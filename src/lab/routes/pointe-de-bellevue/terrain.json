@@ -20,6 +20,27 @@
    "lng": 6.8581016
   },
   {
+   "name": "Foilleuse",
+   "kind": "station",
+   "ele": 1350,
+   "lat": 46.2366924,
+   "lng": 6.858124
+  },
+  {
+   "name": "Foilleuse",
+   "kind": "station",
+   "ele": 1819,
+   "lat": 46.2250285,
+   "lng": 6.8612753
+  },
+  {
+   "name": "Chaux",
+   "kind": "station",
+   "ele": 1870,
+   "lat": 46.2236475,
+   "lng": 6.8594097
+  },
+  {
    "name": "Troistorrents",
    "kind": "place",
    "ele": null,
@@ -27,11 +48,53 @@
    "lng": 6.9161978
   },
   {
+   "name": "Croix-du-Nant",
+   "kind": "station",
+   "ele": 762,
+   "lat": 46.2396939,
+   "lng": 6.9274746
+  },
+  {
    "name": "Châtel",
    "kind": "place",
    "ele": null,
    "lat": 46.2671987,
    "lng": 6.8412678
+  },
+  {
+   "name": "Les Neys",
+   "kind": "station",
+   "ele": 764,
+   "lat": 46.2360316,
+   "lng": 6.9247688
+  },
+  {
+   "name": "Onnaz",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2810084,
+   "lng": 6.8718915
+  },
+  {
+   "name": "Onnaz",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2837517,
+   "lng": 6.8646188
+  },
+  {
+   "name": "Chaux Longe",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2844353,
+   "lng": 6.8641905
+  },
+  {
+   "name": "Wine Yours",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2657356,
+   "lng": 6.8414207
   },
   {
    "name": "Pointe de Bellevue",
@@ -48,11 +111,277 @@
    "lng": 6.8577582
   },
   {
+   "name": "Col de Folière",
+   "kind": "pass",
+   "ele": 1908,
+   "lat": 46.2786185,
+   "lng": 6.8631366
+  },
+  {
    "name": "Pointe des Ombrieux",
    "kind": "peak",
    "ele": 1981,
    "lat": 46.280033,
    "lng": 6.864865
+  },
+  {
+   "name": "Cantine de They",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.221007,
+   "lng": 6.8350266
+  },
+  {
+   "name": "Chaux",
+   "kind": "station",
+   "ele": 1534,
+   "lat": 46.2205425,
+   "lng": 6.8712131
+  },
+  {
+   "name": "Corbeau",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2411369,
+   "lng": 6.8542416
+  },
+  {
+   "name": "Corbeau",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.248533,
+   "lng": 6.8645903
+  },
+  {
+   "name": "Écottis",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2489812,
+   "lng": 6.8647367
+  },
+  {
+   "name": "Chermeu",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.272696,
+   "lng": 6.871206
+  },
+  {
+   "name": "Écottis",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2476912,
+   "lng": 6.8710536
+  },
+  {
+   "name": "Coqs 2",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2632436,
+   "lng": 6.8602163
+  },
+  {
+   "name": "Coqs 1",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2633452,
+   "lng": 6.8602157
+  },
+  {
+   "name": "Corbeau",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2647894,
+   "lng": 6.8604557
+  },
+  {
+   "name": "Coqs 2",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2663514,
+   "lng": 6.8530656
+  },
+  {
+   "name": "Coqs 1",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2664367,
+   "lng": 6.8530751
+  },
+  {
+   "name": "Terrasse de Morclan",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2673339,
+   "lng": 6.8576098
+  },
+  {
+   "name": "Super-Châtel",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2675721,
+   "lng": 6.8572178
+  },
+  {
+   "name": "Morclan",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2680415,
+   "lng": 6.8566538
+  },
+  {
+   "name": "Morclan",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2761846,
+   "lng": 6.8595294
+  },
+  {
+   "name": "Super-Châtel",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2666962,
+   "lng": 6.8423985
+  },
+  {
+   "name": "Bossons",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2615608,
+   "lng": 6.8596949
+  },
+  {
+   "name": "Corbeau",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2619813,
+   "lng": 6.8638712
+  },
+  {
+   "name": "Chermeu",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2698406,
+   "lng": 6.8647675
+  },
+  {
+   "name": "Petit Châtel",
+   "kind": "station",
+   "ele": 2277,
+   "lat": 46.282523,
+   "lng": 6.8426298
+  },
+  {
+   "name": "Barbossine",
+   "kind": "station",
+   "ele": 2277,
+   "lat": 46.2826304,
+   "lng": 6.8421554
+  },
+  {
+   "name": "Petit Châtel",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2772552,
+   "lng": 6.8367783
+  },
+  {
+   "name": "Géant",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2371432,
+   "lng": 6.8511036
+  },
+  {
+   "name": "Géant",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2375228,
+   "lng": 6.8460366
+  },
+  {
+   "name": "Troistorrents",
+   "kind": "station",
+   "ele": 770,
+   "lat": 46.2281276,
+   "lng": 6.9157857
+  },
+  {
+   "name": "Route de Morgins",
+   "kind": "station",
+   "ele": 767,
+   "lat": 46.2322222,
+   "lng": 6.9214535
+  },
+  {
+   "name": "Chalets de Barbossine",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2836956,
+   "lng": 6.8535753
+  },
+  {
+   "name": "Barbossine Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.28251,
+   "lng": 6.8406767
+  },
+  {
+   "name": "Wood Café",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2665399,
+   "lng": 6.8415415
+  },
+  {
+   "name": "Le Vieux Four",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.267663,
+   "lng": 6.8417196
+  },
+  {
+   "name": "Le Fiacre",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2666529,
+   "lng": 6.84152
+  },
+  {
+   "name": "Portes de Culet",
+   "kind": "pass",
+   "ele": 1787,
+   "lat": 46.2582438,
+   "lng": 6.8731329
+  },
+  {
+   "name": "Pas de Morgins",
+   "kind": "pass",
+   "ele": 1371,
+   "lat": 46.2497016,
+   "lng": 6.8458901
+  },
+  {
+   "name": "Col de l'Abréviau",
+   "kind": "pass",
+   "ele": 1628,
+   "lat": 46.2281701,
+   "lng": 6.8751882
+  },
+  {
+   "name": "Sur le Crêt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2719491,
+   "lng": 6.847211
+  },
+  {
+   "name": "La Louennaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2797704,
+   "lng": 6.8440255
   },
   {
    "name": "Le Ryz",
@@ -76,11 +405,228 @@
    "lng": 6.8350662
   },
   {
+   "name": "Col de Fécon",
+   "kind": "pass",
+   "ele": 1825,
+   "lat": 46.2352654,
+   "lng": 6.8315828
+  },
+  {
+   "name": "Lac de Morgins",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2495571,
+   "lng": 6.8458205
+  },
+  {
+   "name": "Les Plagnons",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2626194,
+   "lng": 6.8333339
+  },
+  {
    "name": "Le Tô",
    "kind": "place",
    "ele": null,
    "lat": 46.2211534,
    "lng": 6.9221972
+  },
+  {
+   "name": "Coquelets",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2662616,
+   "lng": 6.8577323
+  },
+  {
+   "name": "Coquelets",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2656279,
+   "lng": 6.8595974
+  },
+  {
+   "name": "Poussinets",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2685474,
+   "lng": 6.8579438
+  },
+  {
+   "name": "Poussinets",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2687958,
+   "lng": 6.8589737
+  },
+  {
+   "name": "Débutants",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2679281,
+   "lng": 6.8588396
+  },
+  {
+   "name": "Débutants",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2676073,
+   "lng": 6.8609559
+  },
+  {
+   "name": "Poussins",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2678613,
+   "lng": 6.8581127
+  },
+  {
+   "name": "Poussins",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2684083,
+   "lng": 6.859368
+  },
+  {
+   "name": "Super Châtel",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2692519,
+   "lng": 6.8568441
+  },
+  {
+   "name": "Super-Châtel",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2679819,
+   "lng": 6.8576836
+  },
+  {
+   "name": "Pré-la-Vieille",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2725685,
+   "lng": 6.8719621
+  },
+  {
+   "name": "Pré-la-Vieille",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2682337,
+   "lng": 6.8694382
+  },
+  {
+   "name": "Gabelou",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2524624,
+   "lng": 6.8311569
+  },
+  {
+   "name": "Portes du Soleil",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2661735,
+   "lng": 6.8523057
+  },
+  {
+   "name": "Gabelou",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2548604,
+   "lng": 6.8430504
+  },
+  {
+   "name": "Truche",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2245486,
+   "lng": 6.8620107
+  },
+  {
+   "name": "Truche",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2236704,
+   "lng": 6.8596797
+  },
+  {
+   "name": "Gourtet",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2248449,
+   "lng": 6.863119
+  },
+  {
+   "name": "Gourtet",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2252361,
+   "lng": 6.8620329
+  },
+  {
+   "name": "Culet 2",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2554364,
+   "lng": 6.8675564
+  },
+  {
+   "name": "Snowly",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2371108,
+   "lng": 6.8508744
+  },
+  {
+   "name": "Snowly",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2372314,
+   "lng": 6.8491738
+  },
+  {
+   "name": "Chalet Neuf 1",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2677757,
+   "lng": 6.8707829
+  },
+  {
+   "name": "Chalet Neuf 2",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2677714,
+   "lng": 6.8708261
+  },
+  {
+   "name": "Chalet Neuf 2",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2549463,
+   "lng": 6.8687462
+  },
+  {
+   "name": "Chalet Neuf 1",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2549621,
+   "lng": 6.8686478
+  },
+  {
+   "name": "Loy",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2584927,
+   "lng": 6.8321379
+  },
+  {
+   "name": "Loy",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.257924,
+   "lng": 6.8330349
   },
   {
    "name": "Le Clos du Tour",
@@ -95,6 +641,13 @@
    "ele": null,
    "lat": 46.2732677,
    "lng": 6.8308934
+  },
+  {
+   "name": "Les Grandes Mouilles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2730786,
+   "lng": 6.8347344
   },
   {
    "name": "La Vorraz",
@@ -132,6 +685,20 @@
    "lng": 6.8333458
   },
   {
+   "name": "Sur le Bé",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.278918,
+   "lng": 6.8485538
+  },
+  {
+   "name": "Les Ramines",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2836884,
+   "lng": 6.8480652
+  },
+  {
    "name": "Sur l'Ortaz",
    "kind": "place",
    "ele": null,
@@ -139,11 +706,39 @@
    "lng": 6.8552484
   },
   {
+   "name": "Sur le Bord",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.258315,
+   "lng": 6.8502142
+  },
+  {
    "name": "Rocher de la Tête Noire",
    "kind": "peak",
    "ele": 1688,
    "lat": 46.2615141,
    "lng": 6.8581049
+  },
+  {
+   "name": "Chalets de Conche",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2663355,
+   "lng": 6.8523567
+  },
+  {
+   "name": "Super Châtel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2680863,
+   "lng": 6.857807
+  },
+  {
+   "name": "Vers le Saix",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.285261,
+   "lng": 6.8307753
   },
   {
    "name": "Flammet",
@@ -167,11 +762,60 @@
    "lng": 6.8552314
   },
   {
+   "name": "Chalets de Dréveneuse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2655713,
+   "lng": 6.8901334
+  },
+  {
    "name": "Pointe de Dréveneuse",
    "kind": "peak",
    "ele": 2009,
    "lat": 46.2627695,
    "lng": 6.8949021
+  },
+  {
+   "name": "Chalet de Savolayre C.A.S",
+   "kind": "hut",
+   "ele": null,
+   "lat": 46.2282518,
+   "lng": 6.8772691
+  },
+  {
+   "name": "Les Câvoués",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2573715,
+   "lng": 6.9127338
+  },
+  {
+   "name": "Frasses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2596281,
+   "lng": 6.9151944
+  },
+  {
+   "name": "Sur les Sex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2598622,
+   "lng": 6.9165883
+  },
+  {
+   "name": "Chalet Neuf",
+   "kind": "place",
+   "ele": 1692,
+   "lat": 46.2626908,
+   "lng": 6.8710925
+  },
+  {
+   "name": "Portes du Soleil",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2550995,
+   "lng": 6.8436736
   },
   {
    "name": "L'Essert",
@@ -181,6 +825,13 @@
    "lng": 6.9153532
   },
   {
+   "name": "Les Fontaines Blanches",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2368967,
+   "lng": 6.8575544
+  },
+  {
    "name": "Bec du Corbeau",
    "kind": "peak",
    "ele": 1992,
@@ -188,11 +839,291 @@
    "lng": 6.8629669
   },
   {
+   "name": "Le Chesery",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2673713,
+   "lng": 6.8414029
+  },
+  {
+   "name": "Le 1200",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2667462,
+   "lng": 6.8415236
+  },
+  {
+   "name": "La galettiere",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2645114,
+   "lng": 6.8406006
+  },
+  {
+   "name": "La Bocca",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2651893,
+   "lng": 6.8415031
+  },
+  {
+   "name": "La Poya",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2654168,
+   "lng": 6.8414799
+  },
+  {
+   "name": "Belalp",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2638247,
+   "lng": 6.8412168
+  },
+  {
+   "name": "Le Dzeuron",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2785592,
+   "lng": 6.9274829
+  },
+  {
+   "name": "La Treille",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2782471,
+   "lng": 6.9260034
+  },
+  {
+   "name": "Portes d'Onnaz",
+   "kind": "place",
+   "ele": 1910,
+   "lat": 46.2845467,
+   "lng": 6.8633292
+  },
+  {
+   "name": "Chermillion",
+   "kind": "place",
+   "ele": 1740,
+   "lat": 46.2708587,
+   "lng": 6.8640301
+  },
+  {
+   "name": "Chalets de Conche",
+   "kind": "place",
+   "ele": 1680,
+   "lat": 46.2652111,
+   "lng": 6.8646822
+  },
+  {
+   "name": "Pré Fleuri",
+   "kind": "place",
+   "ele": 1807,
+   "lat": 46.2698305,
+   "lng": 6.8866635
+  },
+  {
+   "name": "Dreveneuse d'en Haut",
+   "kind": "place",
+   "ele": 1745,
+   "lat": 46.2664825,
+   "lng": 6.8895577
+  },
+  {
+   "name": "Pierre à Buis",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.280427,
+   "lng": 6.9059521
+  },
+  {
+   "name": "Dreveneuse d'en Bas",
+   "kind": "place",
+   "ele": 1587,
+   "lat": 46.2736832,
+   "lng": 6.8910559
+  },
+  {
+   "name": "La Cheminée",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2670443,
+   "lng": 6.8419747
+  },
+  {
+   "name": "Le Grizzly",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2653586,
+   "lng": 6.8415031
+  },
+  {
+   "name": "Savolaire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2332539,
+   "lng": 6.8789457
+  },
+  {
+   "name": "Lac",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2664172,
+   "lng": 6.8598107
+  },
+  {
+   "name": "Lac",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2660547,
+   "lng": 6.8621865
+  },
+  {
+   "name": "Conches",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2704377,
+   "lng": 6.8468603
+  },
+  {
+   "name": "Conches",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.2698958,
+   "lng": 6.8626265
+  },
+  {
+   "name": "Méjaille",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2614029,
+   "lng": 6.8430975
+  },
+  {
+   "name": "Les Fioles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2591113,
+   "lng": 6.8448104
+  },
+  {
+   "name": "Les Ramines",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.255343,
+   "lng": 6.8328869
+  },
+  {
+   "name": "Les Blattes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2508645,
+   "lng": 6.8323887
+  },
+  {
+   "name": "Butt Fioles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2458803,
+   "lng": 6.8329448
+  },
+  {
+   "name": "Plan des Mitres",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2404648,
+   "lng": 6.8336345
+  },
+  {
+   "name": "Pici Pasta",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2683434,
+   "lng": 6.840736
+  },
+  {
+   "name": "Macchi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2639997,
+   "lng": 6.8400745
+  },
+  {
+   "name": "Le Crêt",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2706958,
+   "lng": 6.8464369
+  },
+  {
+   "name": "Le Di.Vins",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2381467,
+   "lng": 6.8532745
+  },
+  {
+   "name": "La Pive",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2377165,
+   "lng": 6.8539702
+  },
+  {
    "name": "Pointe du Midi",
    "kind": "peak",
    "ele": 1850,
    "lat": 46.244899,
    "lng": 6.8378398
+  },
+  {
+   "name": "Portes d'Onne",
+   "kind": "pass",
+   "ele": 1911,
+   "lat": 46.2835839,
+   "lng": 6.8642701
+  },
+  {
+   "name": "Le Hors Piste",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2670557,
+   "lng": 6.8411497
+  },
+  {
+   "name": "La Truche",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2227755,
+   "lng": 6.8564279
+  },
+  {
+   "name": "Le Crétian",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2226575,
+   "lng": 6.9282805
+  },
+  {
+   "name": "L'escale",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2678901,
+   "lng": 6.8571707
+  },
+  {
+   "name": "Au 17 la Buvette",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2377717,
+   "lng": 6.8578893
+  },
+  {
+   "name": "Sur le Bord",
+   "kind": "view",
+   "ele": 1670,
+   "lat": 46.2608008,
+   "lng": 6.8500735
   }
  ]
 }

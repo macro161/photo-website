@@ -90,6 +90,13 @@
    "lng": 7.3046433
   },
   {
+   "name": "Col de la Gouille",
+   "kind": "pass",
+   "ele": 3150,
+   "lat": 45.9039693,
+   "lng": 7.2610409
+  },
+  {
    "name": "Dappey du Ritord",
    "kind": "peak",
    "ele": 3329,
@@ -102,6 +109,13 @@
    "ele": 3588,
    "lat": 45.9201047,
    "lng": 7.297819
+  },
+  {
+   "name": "Col du Sonadon",
+   "kind": "pass",
+   "ele": 3520,
+   "lat": 45.9287088,
+   "lng": 7.2964156
   },
   {
    "name": "Aiguille du Croissant",
@@ -139,6 +153,20 @@
    "lng": 7.238285
   },
   {
+   "name": "Col de l'Epée",
+   "kind": "pass",
+   "ele": 3550,
+   "lat": 45.9545635,
+   "lng": 7.2646194
+  },
+  {
+   "name": "Col de Panossière",
+   "kind": "pass",
+   "ele": 3459,
+   "lat": 45.9682433,
+   "lng": 7.2718821
+  },
+  {
    "name": "Aiguille de Boveire",
    "kind": "peak",
    "ele": 3629,
@@ -151,6 +179,13 @@
    "ele": 4184,
    "lat": 45.9380133,
    "lng": 7.2901919
+  },
+  {
+   "name": "Bivouac Napoléon",
+   "kind": "poi",
+   "ele": null,
+   "lat": 45.9561654,
+   "lng": 7.2100311
   },
   {
    "name": "Creux du Mâ",
@@ -167,6 +202,20 @@
    "lng": 7.2055861
   },
   {
+   "name": "Auberge Au Petit Vélan",
+   "kind": "poi",
+   "ele": null,
+   "lat": 45.9501578,
+   "lng": 7.2078772
+  },
+  {
+   "name": "Hôtel du Vieux Moulin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 45.9480653,
+   "lng": 7.2093907
+  },
+  {
    "name": "La Niord",
    "kind": "place",
    "ele": null,
@@ -181,11 +230,88 @@
    "lng": 7.1927073
   },
   {
+   "name": "Tsa de la Commune",
+   "kind": "place",
+   "ele": 2304,
+   "lat": 45.8973767,
+   "lng": 7.3081738
+  },
+  {
+   "name": "Col du Meitin",
+   "kind": "pass",
+   "ele": 3610,
+   "lat": 45.9366063,
+   "lng": 7.2816381
+  },
+  {
+   "name": "Mur de la Côte",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9423067,
+   "lng": 7.3015752
+  },
+  {
+   "name": "Azerin",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9597287,
+   "lng": 7.2202974
+  },
+  {
+   "name": "Challand d'en haut",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9577705,
+   "lng": 7.2250268
+  },
+  {
+   "name": "Hôtel Restaurant du Crêt",
+   "kind": "poi",
+   "ele": null,
+   "lat": 45.9512919,
+   "lng": 7.2095393
+  },
+  {
+   "name": "Creux de la Niord",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9674664,
+   "lng": 7.2018589
+  },
+  {
+   "name": "Col de Valsorey",
+   "kind": "pass",
+   "ele": 3106,
+   "lat": 45.9002681,
+   "lng": 7.2736675
+  },
+  {
+   "name": "Col de Chamois",
+   "kind": "pass",
+   "ele": 3259,
+   "lat": 45.8965766,
+   "lng": 7.2665977
+  },
+  {
    "name": "Mount Cordine",
    "kind": "peak",
    "ele": 3329,
    "lat": 45.8972875,
    "lng": 7.268475
+  },
+  {
+   "name": "Col de Proz",
+   "kind": "pass",
+   "ele": null,
+   "lat": 45.9043548,
+   "lng": 7.2243182
+  },
+  {
+   "name": "Col de Montorge",
+   "kind": "pass",
+   "ele": null,
+   "lat": 45.9102542,
+   "lng": 7.2294801
   },
   {
    "name": "L'Epée",
@@ -202,11 +328,39 @@
    "lng": 7.233757
   },
   {
+   "name": "Bivouac Napoléon",
+   "kind": "poi",
+   "ele": null,
+   "lat": 45.9559143,
+   "lng": 7.2100239
+  },
+  {
    "name": "Cordonne",
    "kind": "place",
    "ele": 1854,
    "lat": 45.9398957,
    "lng": 7.2210955
+  },
+  {
+   "name": "Le Tomeley",
+   "kind": "place",
+   "ele": 1718,
+   "lat": 45.9821858,
+   "lng": 7.1713726
+  },
+  {
+   "name": "Col des Maisons Blanches",
+   "kind": "pass",
+   "ele": 3404,
+   "lat": 45.9412508,
+   "lng": 7.2775769
+  },
+  {
+   "name": "Brèche des Molaires",
+   "kind": "pass",
+   "ele": 3206,
+   "lat": 45.9017433,
+   "lng": 7.2772904
   },
   {
    "name": "Mont Trois Frères",
@@ -244,11 +398,32 @@
    "lng": 7.294374
   },
   {
+   "name": "Col Vert",
+   "kind": "pass",
+   "ele": 3394,
+   "lat": 45.9201013,
+   "lng": 7.29029
+  },
+  {
+   "name": "Col d'Amiante",
+   "kind": "pass",
+   "ele": 3311,
+   "lat": 45.9175813,
+   "lng": 7.300922
+  },
+  {
    "name": "Aiguille Verte de Valsorey",
    "kind": "peak",
    "ele": 3490,
    "lat": 45.917475,
    "lng": 7.2893764
+  },
+  {
+   "name": "Col du Pic d'Amiante",
+   "kind": "pass",
+   "ele": 3512,
+   "lat": 45.9215147,
+   "lng": 7.2935218
   },
   {
    "name": "Les Champignons",
@@ -265,11 +440,32 @@
    "lng": 7.2857366
   },
   {
+   "name": "Fenêtre du Mont Percé",
+   "kind": "pass",
+   "ele": 3320,
+   "lat": 45.9138109,
+   "lng": 7.28494
+  },
+  {
    "name": "Piccola Testa di By",
    "kind": "peak",
    "ele": 3291,
    "lat": 45.913392,
    "lng": 7.2999698
+  },
+  {
+   "name": "Sella del Sonadon",
+   "kind": "pass",
+   "ele": 3540,
+   "lat": 45.9211583,
+   "lng": 7.2963676
+  },
+  {
+   "name": "Col des Champignons",
+   "kind": "pass",
+   "ele": 3290,
+   "lat": 45.9174712,
+   "lng": 7.3037893
   },
   {
    "name": "Sphinx du Valsorey",
@@ -298,6 +494,41 @@
    "ele": 2987,
    "lat": 45.9101129,
    "lng": 7.3039026
+  },
+  {
+   "name": "Breghe Farinet",
+   "kind": "pass",
+   "ele": 2941,
+   "lat": 45.9094586,
+   "lng": 7.3031362
+  },
+  {
+   "name": "Pas du Bidon",
+   "kind": "pass",
+   "ele": null,
+   "lat": 45.9103591,
+   "lng": 7.3027652
+  },
+  {
+   "name": "Col des Tetes de By",
+   "kind": "pass",
+   "ele": 3248,
+   "lat": 45.9158022,
+   "lng": 7.2995261
+  },
+  {
+   "name": "Col de Boveire",
+   "kind": "pass",
+   "ele": 3487,
+   "lat": 45.9622762,
+   "lng": 7.2634381
+  },
+  {
+   "name": "Col de Corbassière",
+   "kind": "pass",
+   "ele": 3563,
+   "lat": 45.9761705,
+   "lng": 7.270782
   },
   {
    "name": "Le Mérignier",
@@ -363,6 +594,125 @@
    "lng": 7.2649428
   },
   {
+   "name": "Le Château",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9475723,
+   "lng": 7.2074804
+  },
+  {
+   "name": "Bourg-Saint-Bernard",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9003783,
+   "lng": 7.1953086
+  },
+  {
+   "name": "Les Teppes",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9078683,
+   "lng": 7.19889
+  },
+  {
+   "name": "Croix Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9596939,
+   "lng": 7.209495
+  },
+  {
+   "name": "Forêt de la Croix",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9614428,
+   "lng": 7.2088512
+  },
+  {
+   "name": "La Condémine",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.951325,
+   "lng": 7.2061797
+  },
+  {
+   "name": "La Ponteille",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9552821,
+   "lng": 7.2106054
+  },
+  {
+   "name": "La Tade",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9442344,
+   "lng": 7.2121343
+  },
+  {
+   "name": "La Tsinte",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9478731,
+   "lng": 7.2092187
+  },
+  {
+   "name": "Cabane du Valsorey CAS",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9301717,
+   "lng": 7.2718392
+  },
+  {
+   "name": "Les Six Rodzes",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9275579,
+   "lng": 7.2507951
+  },
+  {
+   "name": "Chalet d'Amont",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9296058,
+   "lng": 7.2463896
+  },
+  {
+   "name": "Chalet d'en Bas",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9335496,
+   "lng": 7.2365834
+  },
+  {
+   "name": "Les Grands Plans",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9244329,
+   "lng": 7.2555955
+  },
+  {
+   "name": "Les Areuses",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9373404,
+   "lng": 7.2325344
+  },
+  {
+   "name": "Cabane du Vélan CAS",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9164119,
+   "lng": 7.245487
+  },
+  {
+   "name": "La Chaux de Jean Ma",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9217822,
+   "lng": 7.2347801
+  },
+  {
    "name": "Bonhomme de Tsalevey",
    "kind": "peak",
    "ele": 2730,
@@ -398,6 +748,20 @@
    "lng": 7.221439
   },
   {
+   "name": "Tsalevey",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9331566,
+   "lng": 7.2148572
+  },
+  {
+   "name": "Tsousse",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9279831,
+   "lng": 7.2149364
+  },
+  {
    "name": "Le Mourin",
    "kind": "peak",
    "ele": 2766,
@@ -424,6 +788,76 @@
    "ele": 1648,
    "lat": 45.9541912,
    "lng": 7.2055553
+  },
+  {
+   "name": "Col du Moine",
+   "kind": "pass",
+   "ele": 3417,
+   "lat": 45.9467951,
+   "lng": 7.269533
+  },
+  {
+   "name": "Col de Tseudet",
+   "kind": "pass",
+   "ele": 3169,
+   "lat": 45.9041855,
+   "lng": 7.2378525
+  },
+  {
+   "name": "Col du Mérignier",
+   "kind": "pass",
+   "ele": 3198,
+   "lat": 45.9694258,
+   "lng": 7.2515312
+  },
+  {
+   "name": "Plan du Jeu",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9023386,
+   "lng": 7.2049871
+  },
+  {
+   "name": "Tsanlontset",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.966368,
+   "lng": 7.1876144
+  },
+  {
+   "name": "Challand",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9541243,
+   "lng": 7.2212701
+  },
+  {
+   "name": "Le Plan du Pey",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9476025,
+   "lng": 7.2136295
+  },
+  {
+   "name": "Tsapi",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9743807,
+   "lng": 7.2203262
+  },
+  {
+   "name": "Follié",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9773623,
+   "lng": 7.228811
+  },
+  {
+   "name": "Relais du barrage des Toules",
+   "kind": "poi",
+   "ele": null,
+   "lat": 45.9276676,
+   "lng": 7.1984605
   }
  ]
 }

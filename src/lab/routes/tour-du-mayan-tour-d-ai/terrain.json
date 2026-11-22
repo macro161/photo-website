@@ -20,11 +20,46 @@
    "lng": 7.0019672
   },
   {
+   "name": "Aigle",
+   "kind": "place",
+   "ele": 415,
+   "lat": 46.3179006,
+   "lng": 6.9688929
+  },
+  {
+   "name": "Grand Chamossaire",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.3265788,
+   "lng": 7.0617777
+  },
+  {
+   "name": "Combe d'Orsay",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.3228217,
+   "lng": 7.0645206
+  },
+  {
+   "name": "Roc d'Orsay",
+   "kind": "station",
+   "ele": 1952,
+   "lat": 46.3220721,
+   "lng": 7.0638476
+  },
+  {
    "name": "Le Chamossaire",
    "kind": "peak",
    "ele": 2112,
    "lat": 46.3268229,
    "lng": 7.061344
+  },
+  {
+   "name": "Aigle-Château",
+   "kind": "station",
+   "ele": 440,
+   "lat": 46.3168346,
+   "lng": 6.9789028
   },
   {
    "name": "Leysin",
@@ -34,6 +69,13 @@
    "lng": 7.0148403
   },
   {
+   "name": "Lac Noir - Bretaye",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.321655,
+   "lng": 7.0641619
+  },
+  {
    "name": "Roc d'Orsay",
    "kind": "peak",
    "ele": 1976,
@@ -41,11 +83,102 @@
    "lng": 7.0645092
   },
   {
+   "name": "Col du Luissel",
+   "kind": "pass",
+   "ele": null,
+   "lat": 46.3557414,
+   "lng": 7.001185
+  },
+  {
+   "name": "Aigle-Place-du-Marché",
+   "kind": "station",
+   "ele": 415,
+   "lat": 46.3167068,
+   "lng": 6.9704811
+  },
+  {
+   "name": "Leysin",
+   "kind": "station",
+   "ele": 1316,
+   "lat": 46.347434,
+   "lng": 7.017398
+  },
+  {
+   "name": "Berneuse",
+   "kind": "station",
+   "ele": 2041,
+   "lat": 46.3595072,
+   "lng": 7.0029321
+  },
+  {
    "name": "Berneuse",
    "kind": "peak",
    "ele": 2048,
    "lat": 46.3597739,
    "lng": 7.0017835
+  },
+  {
+   "name": "Leysin-Grand-Hôtel",
+   "kind": "station",
+   "ele": 1450,
+   "lat": 46.3456106,
+   "lng": 7.0067438
+  },
+  {
+   "name": "Versmont",
+   "kind": "station",
+   "ele": 1327,
+   "lat": 46.3415527,
+   "lng": 7.0070291
+  },
+  {
+   "name": "Leysin",
+   "kind": "station",
+   "ele": 1332,
+   "lat": 46.347693,
+   "lng": 7.0176021
+  },
+  {
+   "name": "Tête d'Aï",
+   "kind": "station",
+   "ele": 1916,
+   "lat": 46.3651904,
+   "lng": 7.0085433
+  },
+  {
+   "name": "Leysin Tresseleire",
+   "kind": "station",
+   "ele": 1461,
+   "lat": 46.3549202,
+   "lng": 7.018271
+  },
+  {
+   "name": "Les Fers",
+   "kind": "station",
+   "ele": 1701,
+   "lat": 46.3731809,
+   "lng": 7.0294753
+  },
+  {
+   "name": "Aigle-Dépôt",
+   "kind": "station",
+   "ele": 430,
+   "lat": 46.3182786,
+   "lng": 6.9754535
+  },
+  {
+   "name": "Aigle-Place-du-Marché",
+   "kind": "station",
+   "ele": 415,
+   "lat": 46.3178419,
+   "lng": 6.971088
+  },
+  {
+   "name": "Café de la Poste",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3187018,
+   "lng": 6.9872962
   },
   {
    "name": "Sex des Nombrieux",
@@ -69,6 +202,62 @@
    "lng": 7.0339418
   },
   {
+   "name": "Luan",
+   "kind": "poi",
+   "ele": 1230,
+   "lat": 46.3598536,
+   "lng": 6.9775532
+  },
+  {
+   "name": "Pont-de-Drapel",
+   "kind": "station",
+   "ele": 616,
+   "lat": 46.3198695,
+   "lng": 6.986488
+  },
+  {
+   "name": "Fontanney",
+   "kind": "station",
+   "ele": 548,
+   "lat": 46.318229,
+   "lng": 6.9822443
+  },
+  {
+   "name": "Buffet de la Gare",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3169115,
+   "lng": 6.9645775
+  },
+  {
+   "name": "La Nonna",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3183097,
+   "lng": 6.9647246
+  },
+  {
+   "name": "La Fontaine",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3192798,
+   "lng": 6.9715941
+  },
+  {
+   "name": "Café Restaurant du Marché",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3177087,
+   "lng": 6.9692034
+  },
+  {
+   "name": "Les Alpes",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3191824,
+   "lng": 6.9683104
+  },
+  {
    "name": "Drapel",
    "kind": "place",
    "ele": null,
@@ -81,6 +270,118 @@
    "ele": null,
    "lat": 46.3185884,
    "lng": 6.9861503
+  },
+  {
+   "name": "Wing Long",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3171524,
+   "lng": 6.9703207
+  },
+  {
+   "name": "Solacyre",
+   "kind": "poi",
+   "ele": 1827,
+   "lat": 46.3495661,
+   "lng": 6.9984917
+  },
+  {
+   "name": "Leysin-Village",
+   "kind": "station",
+   "ele": 1269,
+   "lat": 46.3392841,
+   "lng": 7.0060422
+  },
+  {
+   "name": "Berneuse",
+   "kind": "station",
+   "ele": 2044,
+   "lat": 46.3601312,
+   "lng": 7.0019481
+  },
+  {
+   "name": "Aï",
+   "kind": "station",
+   "ele": 1895,
+   "lat": 46.3640048,
+   "lng": 7.0032953
+  },
+  {
+   "name": "Chaux-de-Mont",
+   "kind": "station",
+   "ele": 2198,
+   "lat": 46.3720861,
+   "lng": 6.9984469
+  },
+  {
+   "name": "Mayen",
+   "kind": "station",
+   "ele": 1849,
+   "lat": 46.3661329,
+   "lng": 7.0150862
+  },
+  {
+   "name": "Les Fers",
+   "kind": "station",
+   "ele": 1704,
+   "lat": 46.3736552,
+   "lng": 7.029226
+  },
+  {
+   "name": "Choulet",
+   "kind": "station",
+   "ele": 1444,
+   "lat": 46.3716268,
+   "lng": 7.0420258
+  },
+  {
+   "name": "Solepraz (exit)",
+   "kind": "station",
+   "ele": 1663,
+   "lat": 46.37787,
+   "lng": 7.0342171
+  },
+  {
+   "name": "Solepraz",
+   "kind": "station",
+   "ele": 1328,
+   "lat": 46.3762029,
+   "lng": 7.0492575
+  },
+  {
+   "name": "Chalet-Restaurant de Prafandaz",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3420715,
+   "lng": 6.9911703
+  },
+  {
+   "name": "Chaux-de-Mont",
+   "kind": "station",
+   "ele": 1894,
+   "lat": 46.3645612,
+   "lng": 7.0038201
+  },
+  {
+   "name": "La Roulaz",
+   "kind": "station",
+   "ele": 1048,
+   "lat": 46.3313544,
+   "lng": 7.001504
+  },
+  {
+   "name": "Plambuit",
+   "kind": "station",
+   "ele": 798,
+   "lat": 46.3271447,
+   "lng": 7.0237739
+  },
+  {
+   "name": "Exergillod",
+   "kind": "station",
+   "ele": 863,
+   "lat": 46.3369975,
+   "lng": 7.0382892
   },
   {
    "name": "Plambuit",
@@ -97,11 +398,74 @@
    "lng": 7.0379896
   },
   {
+   "name": "Salins",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3203606,
+   "lng": 7.0183629
+  },
+  {
+   "name": "Prafandaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3422771,
+   "lng": 6.9907512
+  },
+  {
    "name": "Le Sépey",
    "kind": "place",
    "ele": null,
    "lat": 46.3611362,
    "lng": 7.051225
+  },
+  {
+   "name": "Le Kuklos",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.3598205,
+   "lng": 7.0015296
+  },
+  {
+   "name": "Café de Luan",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3602332,
+   "lng": 6.97735
+  },
+  {
+   "name": "Roc de Veyges",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.3293969,
+   "lng": 6.9795176
+  },
+  {
+   "name": "Pierre du Moëllé",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3918514,
+   "lng": 7.0465161
+  },
+  {
+   "name": "Rennaz",
+   "kind": "station",
+   "ele": 918,
+   "lat": 46.3273447,
+   "lng": 7.0007962
+  },
+  {
+   "name": "Col d'Argnaules",
+   "kind": "pass",
+   "ele": 1814,
+   "lat": 46.3184746,
+   "lng": 7.0552041
+  },
+  {
+   "name": "Leysin-Feydey",
+   "kind": "station",
+   "ele": 1398,
+   "lat": 46.3446474,
+   "lng": 7.0085409
   },
   {
    "name": "Veyges",
@@ -111,6 +475,20 @@
    "lng": 6.9907122
   },
   {
+   "name": "Nid d'Aigle",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.3352021,
+   "lng": 6.9806424
+  },
+  {
+   "name": "Le Leysin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3415545,
+   "lng": 7.0128284
+  },
+  {
    "name": "Crettaz",
    "kind": "place",
    "ele": null,
@@ -118,11 +496,46 @@
    "lng": 7.0285913
   },
   {
+   "name": "Combe de Brion",
+   "kind": "station",
+   "ele": 1581,
+   "lat": 46.3697872,
+   "lng": 7.027035
+  },
+  {
+   "name": "Le Lynx",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.345888,
+   "lng": 7.0106469
+  },
+  {
+   "name": "La Grande Crevasse",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.3364889,
+   "lng": 6.9823901
+  },
+  {
    "name": "Luan",
    "kind": "place",
    "ele": null,
    "lat": 46.3591901,
    "lng": 6.9759425
+  },
+  {
+   "name": "Davinda Lounge",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3451708,
+   "lng": 7.009602
+  },
+  {
+   "name": "Station Rock Café",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3444071,
+   "lng": 7.0085748
   },
   {
    "name": "Chaux de Tompey",
@@ -139,11 +552,25 @@
    "lng": 6.971485
   },
   {
+   "name": "Les Afforêts",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3207851,
+   "lng": 6.9976375
+  },
+  {
    "name": "Le Village de Cergnat",
    "kind": "place",
    "ele": null,
    "lat": 46.3571308,
    "lng": 7.0424598
+  },
+  {
+   "name": "En Ayerne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3951575,
+   "lng": 6.9774563
   },
   {
    "name": "Tour de Famelon",
@@ -174,6 +601,13 @@
    "lng": 6.9669797
   },
   {
+   "name": "La Lorraine",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3431963,
+   "lng": 7.0125227
+  },
+  {
    "name": "La Riondaz",
    "kind": "peak",
    "ele": 1981,
@@ -188,6 +622,48 @@
    "lng": 7.0130896
   },
   {
+   "name": "Restaurant La Fromagerie",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3416104,
+   "lng": 7.0130409
+  },
+  {
+   "name": "L'Essentiel",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3462462,
+   "lng": 7.0171815
+  },
+  {
+   "name": "Le QG",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.342114,
+   "lng": 7.0134892
+  },
+  {
+   "name": "Petit Chamossaire",
+   "kind": "view",
+   "ele": 2024,
+   "lat": 46.3315826,
+   "lng": 7.0668231
+  },
+  {
+   "name": "La Crêpe Normande",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3430709,
+   "lng": 7.0129934
+  },
+  {
+   "name": "Restaurant de la Patinoire",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3411605,
+   "lng": 7.0196148
+  },
+  {
    "name": "Malatraix",
    "kind": "peak",
    "ele": 1768,
@@ -195,11 +671,165 @@
    "lng": 6.9641957
   },
   {
+   "name": "La Calabre",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3407413,
+   "lng": 7.0116682
+  },
+  {
+   "name": "Les Planches (Aigle)",
+   "kind": "station",
+   "ele": 943,
+   "lat": 46.3546719,
+   "lng": 7.0554301
+  },
+  {
+   "name": "Le Commerce",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3189544,
+   "lng": 6.9683549
+  },
+  {
+   "name": "Xianglong",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3183061,
+   "lng": 6.9688645
+  },
+  {
+   "name": "Tête d'Aï",
+   "kind": "station",
+   "ele": 1912,
+   "lat": 46.3653189,
+   "lng": 7.0087879
+  },
+  {
+   "name": "Relais de Vuargny",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.335944,
+   "lng": 7.0288969
+  },
+  {
+   "name": "Le Sépey",
+   "kind": "station",
+   "ele": 975,
+   "lat": 46.3613867,
+   "lng": 7.0521157
+  },
+  {
+   "name": "Igloos",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3408882,
+   "lng": 7.0224329
+  },
+  {
+   "name": "Au Fond de Plambuit",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3282015,
+   "lng": 7.0358892
+  },
+  {
+   "name": "En Vuargniez",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3362962,
+   "lng": 7.0289991
+  },
+  {
+   "name": "kaixin-sushi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3186057,
+   "lng": 6.9664444
+  },
+  {
    "name": "Chaux de Mont",
    "kind": "peak",
    "ele": 2206,
    "lat": 46.3722484,
    "lng": 6.9980657
+  },
+  {
+   "name": "Le Rouge et le Noir",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3429248,
+   "lng": 7.0130943
+  },
+  {
+   "name": "Grand-Chamossaire",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.3268571,
+   "lng": 7.0612535
+  },
+  {
+   "name": "Pizza Passione",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3193606,
+   "lng": 6.9683874
+  },
+  {
+   "name": "En Hautaz Crettaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3347145,
+   "lng": 7.0416563
+  },
+  {
+   "name": "La Magnénaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3260522,
+   "lng": 6.9668742
+  },
+  {
+   "name": "Vers-Chenaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3368458,
+   "lng": 6.9644844
+  },
+  {
+   "name": "Vers-Monthey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3332058,
+   "lng": 6.9651979
+  },
+  {
+   "name": "Restaurant Tour d'AÏ",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3421751,
+   "lng": 7.0142868
+  },
+  {
+   "name": "La Combe",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3600806,
+   "lng": 7.0594437
+  },
+  {
+   "name": "Trétorrent",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3594253,
+   "lng": 7.0595671
+  },
+  {
+   "name": "Les Plans",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3582555,
+   "lng": 7.0541491
   },
   {
    "name": "Cergnat",
@@ -214,6 +844,132 @@
    "ele": null,
    "lat": 46.3585054,
    "lng": 7.0437977
+  },
+  {
+   "name": "Pied de Crétaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.350308,
+   "lng": 7.031127
+  },
+  {
+   "name": "En Renne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3261484,
+   "lng": 7.0007122
+  },
+  {
+   "name": "Mansonnette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3476642,
+   "lng": 7.0254192
+  },
+  {
+   "name": "En Rouvenne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3617005,
+   "lng": 7.0324457
+  },
+  {
+   "name": "Les Mex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3573846,
+   "lng": 7.0306413
+  },
+  {
+   "name": "Le Fer",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3760873,
+   "lng": 7.0353271
+  },
+  {
+   "name": "La Cucule",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3733558,
+   "lng": 7.0375963
+  },
+  {
+   "name": "Gare du Grand-Hôtel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.345604,
+   "lng": 7.0065821
+  },
+  {
+   "name": "La Berneuse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3592098,
+   "lng": 7.0018934
+  },
+  {
+   "name": "La Roule",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3325958,
+   "lng": 7.0022689
+  },
+  {
+   "name": "La Roulaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3315661,
+   "lng": 7.0019202
+  },
+  {
+   "name": "Les Placettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3278619,
+   "lng": 6.984561
+  },
+  {
+   "name": "Cuénix",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.326628,
+   "lng": 6.9794874
+  },
+  {
+   "name": "Le Torrentet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3395592,
+   "lng": 6.9933955
+  },
+  {
+   "name": "Mayen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3657516,
+   "lng": 7.0146021
+  },
+  {
+   "name": "Solacyre",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3493616,
+   "lng": 6.9985799
+  },
+  {
+   "name": "Temeley",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3516573,
+   "lng": 7.0079193
+  },
+  {
+   "name": "Velard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3354446,
+   "lng": 7.0144001
   },
   {
    "name": "Geteillon",
@@ -242,6 +998,104 @@
    "ele": 1866,
    "lat": 46.3739022,
    "lng": 6.9782553
+  },
+  {
+   "name": "Col de Tompey",
+   "kind": "pass",
+   "ele": 1754,
+   "lat": 46.3697497,
+   "lng": 6.9813445
+  },
+  {
+   "name": "Col d'Ayerne",
+   "kind": "pass",
+   "ele": 1460,
+   "lat": 46.3971745,
+   "lng": 6.9930879
+  },
+  {
+   "name": "Kirin Sushi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3173648,
+   "lng": 6.9651106
+  },
+  {
+   "name": "La Chenau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3271538,
+   "lng": 7.023284
+  },
+  {
+   "name": "Crétallet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.327617,
+   "lng": 7.0237093
+  },
+  {
+   "name": "La Douve",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3271236,
+   "lng": 7.0161156
+  },
+  {
+   "name": "En Thy",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3327634,
+   "lng": 7.0400581
+  },
+  {
+   "name": "Le Bouillet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.34621,
+   "lng": 7.0530597
+  },
+  {
+   "name": "Le Cerf",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3763649,
+   "lng": 7.0431688
+  },
+  {
+   "name": "Le Séléry",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.347521,
+   "lng": 7.0527487
+  },
+  {
+   "name": "Les Ravaires",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3462466,
+   "lng": 7.0590282
+  },
+  {
+   "name": "Le Village du Sépey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3588255,
+   "lng": 7.0544588
+  },
+  {
+   "name": "Rocco Cantina Italiana",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3220664,
+   "lng": 7.0641318
+  },
+  {
+   "name": "Little Bamee",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.3189158,
+   "lng": 6.9684054
   }
  ]
 }

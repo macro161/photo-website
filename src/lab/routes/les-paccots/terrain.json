@@ -34,6 +34,13 @@
    "lng": 7.0029754
   },
   {
+   "name": "Les Sciernes",
+   "kind": "station",
+   "ele": 881,
+   "lat": 46.4916117,
+   "lng": 7.0346151
+  },
+  {
    "name": "Le Molard",
    "kind": "peak",
    "ele": 1752,
@@ -62,6 +69,13 @@
    "lng": 6.9873005
   },
   {
+   "name": "Le Creux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4873401,
+   "lng": 7.0024963
+  },
+  {
    "name": "Lys Derrey",
    "kind": "peak",
    "ele": 1864,
@@ -88,6 +102,48 @@
    "ele": 2002,
    "lat": 46.5489446,
    "lng": 7.0171352
+  },
+  {
+   "name": "Radzi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5184686,
+   "lng": 6.9629247
+  },
+  {
+   "name": "La cascade",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5226686,
+   "lng": 6.9667453
+  },
+  {
+   "name": "Le Sommet",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5471724,
+   "lng": 7.0182144
+  },
+  {
+   "name": "Le Moléson",
+   "kind": "station",
+   "ele": 1978,
+   "lat": 46.5472467,
+   "lng": 7.0181344
+  },
+  {
+   "name": "Vieille Chaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5295528,
+   "lng": 7.002872
+  },
+  {
+   "name": "Belle Chaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5280043,
+   "lng": 6.9969688
   },
   {
    "name": "Grand Pra",
@@ -132,6 +188,41 @@
    "lng": 6.9146837
   },
   {
+   "name": "Bains de l'Alliaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4810986,
+   "lng": 6.9268007
+  },
+  {
+   "name": "Motalles",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4898855,
+   "lng": 6.9134364
+  },
+  {
+   "name": "La Cuvette",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4837007,
+   "lng": 6.9104038
+  },
+  {
+   "name": "Motalles",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4879097,
+   "lng": 6.9193434
+  },
+  {
+   "name": "La Cuvette",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4852339,
+   "lng": 6.9130344
+  },
+  {
    "name": "Teysachaux",
    "kind": "peak",
    "ele": 1909,
@@ -153,6 +244,517 @@
    "lng": 6.910487
   },
   {
+   "name": "Auberge des Préalpes",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4982617,
+   "lng": 7.0371371
+  },
+  {
+   "name": "Col de Soladier",
+   "kind": "pass",
+   "ele": 1577,
+   "lat": 46.4765715,
+   "lng": 6.9672609
+  },
+  {
+   "name": "A l'Eterpa",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5189688,
+   "lng": 6.9212599
+  },
+  {
+   "name": "Au Haut du Mont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5160507,
+   "lng": 6.9207303
+  },
+  {
+   "name": "Bailles des Pueys",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5234026,
+   "lng": 6.964157
+  },
+  {
+   "name": "Belmont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.541685,
+   "lng": 6.9253477
+  },
+  {
+   "name": "Bon Riaux Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5266131,
+   "lng": 6.9504309
+  },
+  {
+   "name": "Bon Riaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5310345,
+   "lng": 6.9536786
+  },
+  {
+   "name": "Chaudereire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5395,
+   "lng": 6.9282016
+  },
+  {
+   "name": "Cheresaula Devant",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.482671,
+   "lng": 6.9765342
+  },
+  {
+   "name": "Cheresaula",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4953534,
+   "lng": 6.9776641
+  },
+  {
+   "name": "Cheresauletta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4886769,
+   "lng": 6.9798036
+  },
+  {
+   "name": "Cierne Lambert",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5473874,
+   "lng": 6.9277852
+  },
+  {
+   "name": "Cierne Lambert",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5491577,
+   "lng": 6.9293246
+  },
+  {
+   "name": "Cierne au Bocliou",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5035614,
+   "lng": 6.9492584
+  },
+  {
+   "name": "Cierne des Paccots",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5197138,
+   "lng": 6.9438013
+  },
+  {
+   "name": "Cierne es Lambert",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5479868,
+   "lng": 6.9300073
+  },
+  {
+   "name": "Cierne à Besson",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5213421,
+   "lng": 6.9288295
+  },
+  {
+   "name": "Cierne à Guillaume",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5391353,
+   "lng": 6.9187974
+  },
+  {
+   "name": "Comba des Paquiers",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5039881,
+   "lng": 6.9415441
+  },
+  {
+   "name": "Corbetta Derrey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5155173,
+   "lng": 6.9324749
+  },
+  {
+   "name": "Corbetta devant",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5125516,
+   "lng": 6.9431293
+  },
+  {
+   "name": "Crau Gindroz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5113978,
+   "lng": 6.9839848
+  },
+  {
+   "name": "Creux de l'Ours",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5382739,
+   "lng": 6.9837026
+  },
+  {
+   "name": "Creux des Tables",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5186007,
+   "lng": 6.9715932
+  },
+  {
+   "name": "Crêt Mory",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5430476,
+   "lng": 6.9258251
+  },
+  {
+   "name": "Crêt des Rochettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5251253,
+   "lng": 6.9140523
+  },
+  {
+   "name": "Crêt à l'Ogy",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.521317,
+   "lng": 6.9220959
+  },
+  {
+   "name": "Côte à Rami",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5465122,
+   "lng": 6.9415044
+  },
+  {
+   "name": "Devin des Dailles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5215523,
+   "lng": 6.9595507
+  },
+  {
+   "name": "Devin du Bon Riaux Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.52718,
+   "lng": 6.961871
+  },
+  {
+   "name": "En Crey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5322331,
+   "lng": 6.9110937
+  },
+  {
+   "name": "En Fégire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.513546,
+   "lng": 6.9095875
+  },
+  {
+   "name": "En Villard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5406243,
+   "lng": 6.9085578
+  },
+  {
+   "name": "Entre deux Crêts",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5274863,
+   "lng": 6.9157526
+  },
+  {
+   "name": "Errouvena",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5382598,
+   "lng": 6.9633867
+  },
+  {
+   "name": "Es Fossalons",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5145747,
+   "lng": 6.918055
+  },
+  {
+   "name": "Es Lances",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5113095,
+   "lng": 6.9183295
+  },
+  {
+   "name": "Essert Monnard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5401374,
+   "lng": 6.9518703
+  },
+  {
+   "name": "Essertex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5226579,
+   "lng": 6.9209274
+  },
+  {
+   "name": "Eterpis",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5384579,
+   "lng": 6.942002
+  },
+  {
+   "name": "Ferrage",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5447578,
+   "lng": 6.9113257
+  },
+  {
+   "name": "Fioladzou",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.545294,
+   "lng": 6.9171767
+  },
+  {
+   "name": "Freidivue",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5223903,
+   "lng": 6.9317379
+  },
+  {
+   "name": "Goille au Cerf",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5063968,
+   "lng": 6.9793038
+  },
+  {
+   "name": "Grand Praz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5098151,
+   "lng": 6.9885557
+  },
+  {
+   "name": "Grande Mollie",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5347589,
+   "lng": 6.9469881
+  },
+  {
+   "name": "Grandes Ciernes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5182153,
+   "lng": 6.9319871
+  },
+  {
+   "name": "Grevalla",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5029019,
+   "lng": 6.9692125
+  },
+  {
+   "name": "Gros Mology",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5229503,
+   "lng": 6.9962219
+  },
+  {
+   "name": "Gros Niremont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.543039,
+   "lng": 6.9656245
+  },
+  {
+   "name": "Grosse Chaudereire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5430441,
+   "lng": 6.9354791
+  },
+  {
+   "name": "Grosses Preises",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4988997,
+   "lng": 6.9663854
+  },
+  {
+   "name": "Haut des Preises",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5002305,
+   "lng": 6.9696492
+  },
+  {
+   "name": "Huguonin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4900355,
+   "lng": 6.9865955
+  },
+  {
+   "name": "In Pertet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5251386,
+   "lng": 6.9166725
+  },
+  {
+   "name": "Jordanna des Joncs",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5092141,
+   "lng": 6.9428098
+  },
+  {
+   "name": "Joux Verte Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5162323,
+   "lng": 6.9921523
+  },
+  {
+   "name": "Joux Verte Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5079115,
+   "lng": 6.997561
+  },
+  {
+   "name": "L'Aberge",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4903775,
+   "lng": 6.9766062
+  },
+  {
+   "name": "L'Arzelier",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5489679,
+   "lng": 6.9113576
+  },
+  {
+   "name": "La Borbuintse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5101146,
+   "lng": 6.9587307
+  },
+  {
+   "name": "La Briaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5130576,
+   "lng": 6.9205191
+  },
+  {
+   "name": "La Cagne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5001257,
+   "lng": 6.9574745
+  },
+  {
+   "name": "La Cailletta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5460751,
+   "lng": 6.9330662
+  },
+  {
+   "name": "La Caquerette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4969591,
+   "lng": 6.9878336
+  },
+  {
+   "name": "La Casa Derrey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5379654,
+   "lng": 6.97227
+  },
+  {
+   "name": "La Cergne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5330844,
+   "lng": 6.9389335
+  },
+  {
+   "name": "La Cergnetta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5215012,
+   "lng": 6.9252951
+  },
+  {
+   "name": "La Cierne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5486302,
+   "lng": 6.9236487
+  },
+  {
+   "name": "La Comba",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5024539,
+   "lng": 6.9356274
+  },
+  {
+   "name": "La Crosa",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5101392,
+   "lng": 6.9230847
+  },
+  {
+   "name": "La Cuva",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5170592,
+   "lng": 6.9791455
+  },
+  {
    "name": "La Frasse",
    "kind": "place",
    "ele": null,
@@ -160,11 +762,613 @@
    "lng": 6.9343875
   },
   {
+   "name": "La Lecheire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5341259,
+   "lng": 6.9257745
+  },
+  {
+   "name": "La Lévanche",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.546769,
+   "lng": 6.9253729
+  },
+  {
+   "name": "La Ponderèche",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5193873,
+   "lng": 6.9215335
+  },
+  {
+   "name": "La Saira",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5180491,
+   "lng": 6.9405621
+  },
+  {
+   "name": "La Tornare",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5080118,
+   "lng": 6.9439133
+  },
+  {
+   "name": "Le Berry",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.505123,
+   "lng": 6.9794338
+  },
+  {
+   "name": "Le Gros Chalet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.534311,
+   "lng": 6.9682158
+  },
+  {
+   "name": "Le Lanciau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5472795,
+   "lng": 6.9480229
+  },
+  {
+   "name": "Le Perry",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5430757,
+   "lng": 6.956975
+  },
+  {
+   "name": "Le Pralet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5062297,
+   "lng": 6.9741478
+  },
+  {
+   "name": "Le Rotse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5314797,
+   "lng": 6.9275002
+  },
+  {
+   "name": "Le Villard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.540791,
+   "lng": 6.989888
+  },
+  {
+   "name": "Les Biolettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.54704,
+   "lng": 6.9320448
+  },
+  {
+   "name": "Les Braseyres",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.525872,
+   "lng": 6.9451496
+  },
+  {
+   "name": "Les Crauses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5292747,
+   "lng": 6.9245697
+  },
+  {
+   "name": "Les Crêtes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5077541,
+   "lng": 6.9540283
+  },
+  {
+   "name": "Les Frasses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5321501,
+   "lng": 6.9294427
+  },
+  {
+   "name": "Les Joncs",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5128034,
+   "lng": 6.9482072
+  },
+  {
+   "name": "Les Mayens",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5263872,
+   "lng": 6.9367177
+  },
+  {
+   "name": "Les Mollies",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5265659,
+   "lng": 6.9390777
+  },
+  {
+   "name": "Les Planches",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5194695,
+   "lng": 6.9166306
+  },
+  {
+   "name": "Les Praz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5494252,
+   "lng": 6.9164087
+  },
+  {
+   "name": "Les Pueys",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5300862,
+   "lng": 6.9737944
+  },
+  {
+   "name": "Les Pâquiers",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5072457,
+   "lng": 6.9373788
+  },
+  {
+   "name": "Les Rosalys",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5142595,
+   "lng": 6.9667776
+  },
+  {
+   "name": "Les Rouvena",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5325152,
+   "lng": 6.9628523
+  },
+  {
+   "name": "Les Terraux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5323604,
+   "lng": 6.919827
+  },
+  {
+   "name": "Les Vérollys",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5161014,
+   "lng": 6.955944
+  },
+  {
+   "name": "Marais Ginnet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5431413,
+   "lng": 6.9196851
+  },
+  {
+   "name": "Mayetta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5112568,
+   "lng": 6.9370396
+  },
+  {
+   "name": "Modzounaire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5153838,
+   "lng": 6.9747463
+  },
+  {
+   "name": "Moille de Crey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5322495,
+   "lng": 6.9476176
+  },
+  {
+   "name": "Mollie Etalon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5389633,
+   "lng": 6.9448228
+  },
+  {
+   "name": "Molliertson",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5287756,
+   "lng": 6.9656314
+  },
+  {
+   "name": "Montgevin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5348039,
+   "lng": 6.9295152
+  },
+  {
+   "name": "Moulin à Cantin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5290943,
+   "lng": 6.9159733
+  },
+  {
+   "name": "Petit Mology",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5218776,
+   "lng": 6.9821497
+  },
+  {
+   "name": "Petit Niremont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5444069,
+   "lng": 6.9473905
+  },
+  {
+   "name": "Petites Preises",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4972211,
+   "lng": 6.9694163
+  },
+  {
+   "name": "Plan Cuénoud",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5454535,
+   "lng": 6.9270909
+  },
+  {
+   "name": "Planche Grélion",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5404355,
+   "lng": 6.9149797
+  },
+  {
+   "name": "Pontet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5061891,
+   "lng": 6.9840678
+  },
+  {
+   "name": "Pra Berlan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5410431,
+   "lng": 6.9197442
+  },
+  {
+   "name": "Pra Gremy",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.522933,
+   "lng": 6.9182858
+  },
+  {
+   "name": "Pra de la Chaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5365125,
+   "lng": 6.922844
+  },
+  {
+   "name": "Pra de la Chaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.537778,
+   "lng": 6.9293354
+  },
+  {
+   "name": "Pralet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5091992,
+   "lng": 6.9756728
+  },
+  {
+   "name": "Praz Cochard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5434097,
+   "lng": 6.9290353
+  },
+  {
+   "name": "Praz Modju",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5178774,
+   "lng": 6.922047
+  },
+  {
+   "name": "Praz Saudan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5158719,
+   "lng": 6.9704181
+  },
+  {
+   "name": "Praz du Village",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5196555,
+   "lng": 6.9593651
+  },
+  {
+   "name": "Pré Chambard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5486273,
+   "lng": 6.9214352
+  },
+  {
+   "name": "Radsy Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5130876,
+   "lng": 6.9694713
+  },
+  {
+   "name": "Radsy Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5099713,
+   "lng": 6.9692714
+  },
+  {
+   "name": "Radsy",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5124112,
+   "lng": 6.976578
+  },
+  {
+   "name": "Rathvel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5438163,
+   "lng": 6.9751389
+  },
+  {
+   "name": "Riondouneire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5247608,
+   "lng": 6.9219934
+  },
+  {
+   "name": "Roussillon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5147014,
+   "lng": 6.9257231
+  },
+  {
+   "name": "Saletta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5171245,
+   "lng": 6.9939888
+  },
+  {
+   "name": "Sautery",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5226655,
+   "lng": 6.9240103
+  },
+  {
+   "name": "Sous le Sce",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5115085,
+   "lng": 6.9139233
+  },
+  {
+   "name": "Sous les Routes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5159182,
+   "lng": 6.9123322
+  },
+  {
+   "name": "Suplia",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.519777,
+   "lng": 6.9336827
+  },
+  {
+   "name": "Supéla",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5114262,
+   "lng": 6.9292876
+  },
+  {
+   "name": "Sur le Vilou",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.545342,
+   "lng": 6.9851094
+  },
+  {
+   "name": "Teysachaux Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5339936,
+   "lng": 6.98623
+  },
+  {
+   "name": "Vieux Gite",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5233165,
+   "lng": 6.9722605
+  },
+  {
+   "name": "Vuichouda",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5098934,
+   "lng": 6.9368518
+  },
+  {
+   "name": "Vuipay Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5199878,
+   "lng": 6.9874489
+  },
+  {
+   "name": "Vuipay",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5248704,
+   "lng": 6.9894056
+  },
+  {
+   "name": "Véresse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5272686,
+   "lng": 6.9450052
+  },
+  {
+   "name": "Zebou",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5054519,
+   "lng": 6.9434538
+  },
+  {
    "name": "Prayoud",
    "kind": "place",
    "ele": null,
    "lat": 46.5428873,
    "lng": 6.914071
+  },
+  {
+   "name": "Prantin",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.493769,
+   "lng": 6.9142178
+  },
+  {
+   "name": "Prantin",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4951138,
+   "lng": 6.91944
+  },
+  {
+   "name": "Les Rosalys",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5174765,
+   "lng": 6.9607181
+  },
+  {
+   "name": "Lally",
+   "kind": "station",
+   "ele": 1235,
+   "lat": 46.4794833,
+   "lng": 6.9140473
+  },
+  {
+   "name": "Plan Châtel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4768704,
+   "lng": 6.9430779
+  },
+  {
+   "name": "Bivouac",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4803686,
+   "lng": 6.9421536
+  },
+  {
+   "name": "Chessy",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4825167,
+   "lng": 6.963234
+  },
+  {
+   "name": "Grand Caudon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4797815,
+   "lng": 6.97004
+  },
+  {
+   "name": "Petit Caudon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4897408,
+   "lng": 6.9693321
+  },
+  {
+   "name": "Grand Bonavau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4888454,
+   "lng": 6.9588398
+  },
+  {
+   "name": "Fontanna David",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4950704,
+   "lng": 6.9413486
+  },
+  {
+   "name": "Les Mossettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4963065,
+   "lng": 6.9303291
+  },
+  {
+   "name": "Présemavau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.494582,
+   "lng": 6.9344198
+  },
+  {
+   "name": "Les Pléiades",
+   "kind": "station",
+   "ele": 1348,
+   "lat": 46.4832444,
+   "lng": 6.9099203
   },
   {
    "name": "Corbetta",
@@ -188,6 +1392,83 @@
    "lng": 6.9802229
   },
   {
+   "name": "Motélon d'Amont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4791755,
+   "lng": 7.0073965
+  },
+  {
+   "name": "Motélon d'Avau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4789797,
+   "lng": 7.0113822
+  },
+  {
+   "name": "Orgevaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4752006,
+   "lng": 7.0042905
+  },
+  {
+   "name": "L'Aberge",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4902626,
+   "lng": 6.9736628
+  },
+  {
+   "name": "Châbloz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4943758,
+   "lng": 7.027288
+  },
+  {
+   "name": "Biron",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4982024,
+   "lng": 7.0197721
+  },
+  {
+   "name": "Teraula d'Amont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.500893,
+   "lng": 7.0096463
+  },
+  {
+   "name": "Entre les Champs",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4808729,
+   "lng": 7.0156444
+  },
+  {
+   "name": "Essercurons d'Avau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4759298,
+   "lng": 7.0326438
+  },
+  {
+   "name": "Pra de Corjon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4748828,
+   "lng": 7.0260176
+  },
+  {
+   "name": "Turquibaud",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4889942,
+   "lng": 7.0184428
+  },
+  {
    "name": "Niremont",
    "kind": "peak",
    "ele": 1514,
@@ -195,11 +1476,95 @@
    "lng": 6.9568202
   },
   {
+   "name": "La Châ 1",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.5000087,
+   "lng": 6.9119159
+  },
+  {
+   "name": "La Châ 1",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4924037,
+   "lng": 6.9137491
+  },
+  {
+   "name": "La Châ 2",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.492347,
+   "lng": 6.9137811
+  },
+  {
+   "name": "La Châ 2",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4893847,
+   "lng": 6.9128225
+  },
+  {
    "name": "Petit Niremont",
    "kind": "peak",
    "ele": 1493,
    "lat": 46.5455223,
    "lng": 6.9470819
+  },
+  {
+   "name": "Petit-Moléson",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5494652,
+   "lng": 7.0298281
+  },
+  {
+   "name": "Tsermont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5485503,
+   "lng": 7.035965
+  },
+  {
+   "name": "Gros-Moléson",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5442852,
+   "lng": 7.0258155
+  },
+  {
+   "name": "Au Mormotey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5412925,
+   "lng": 6.995686
+  },
+  {
+   "name": "Tremetta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5390786,
+   "lng": 7.0005998
+  },
+  {
+   "name": "Villard Bony",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5426061,
+   "lng": 6.9963941
+  },
+  {
+   "name": "Le Villard Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5427832,
+   "lng": 6.9938728
+  },
+  {
+   "name": "Col de Lys",
+   "kind": "pass",
+   "ele": 1779,
+   "lat": 46.5019215,
+   "lng": 6.9917035
   },
   {
    "name": "Haut des Preises",
@@ -221,6 +1586,825 @@
    "ele": 1907,
    "lat": 46.5116542,
    "lng": 7.0126653
+  },
+  {
+   "name": "Buvette d'alpage de Rathvel",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5440114,
+   "lng": 6.9772201
+  },
+  {
+   "name": "Le Choutsa",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5423202,
+   "lng": 7.0341975
+  },
+  {
+   "name": "La Petite Orausa",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5391986,
+   "lng": 7.0348519
+  },
+  {
+   "name": "Les Traverses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5376119,
+   "lng": 7.0322341
+  },
+  {
+   "name": "La Challa",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5387927,
+   "lng": 7.0266873
+  },
+  {
+   "name": "Pétère",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5401359,
+   "lng": 7.0244664
+  },
+  {
+   "name": "Orgevau d'Urqui",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4768459,
+   "lng": 7.0003412
+  },
+  {
+   "name": "La Cernia des Polys",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4819068,
+   "lng": 7.0199321
+  },
+  {
+   "name": "La Seila",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4796017,
+   "lng": 7.0233009
+  },
+  {
+   "name": "Pra du Pont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4770454,
+   "lng": 7.0203076
+  },
+  {
+   "name": "Combe à Jean d'Amont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4803036,
+   "lng": 7.0255004
+  },
+  {
+   "name": "Les Raves",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4850095,
+   "lng": 7.0288478
+  },
+  {
+   "name": "Le Bourgoz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4852828,
+   "lng": 7.0319269
+  },
+  {
+   "name": "Vers les Jordan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4835616,
+   "lng": 7.0316051
+  },
+  {
+   "name": "Routsetta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4824017,
+   "lng": 7.0360683
+  },
+  {
+   "name": "Belle Gîte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4939162,
+   "lng": 7.018549
+  },
+  {
+   "name": "La Ravère",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4918332,
+   "lng": 7.0233018
+  },
+  {
+   "name": "Le Bugnon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4933917,
+   "lng": 7.0305223
+  },
+  {
+   "name": "Les Planis",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.497321,
+   "lng": 7.0289345
+  },
+  {
+   "name": "La Chia",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4989237,
+   "lng": 7.0273466
+  },
+  {
+   "name": "Grosse Côte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5026975,
+   "lng": 7.0180876
+  },
+  {
+   "name": "Petite Côte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4998025,
+   "lng": 7.0168002
+  },
+  {
+   "name": "Teraula du Milieu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4997582,
+   "lng": 7.0129056
+  },
+  {
+   "name": "Teraula d'Avau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4961245,
+   "lng": 7.0149441
+  },
+  {
+   "name": "Chenalette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4962058,
+   "lng": 7.0066721
+  },
+  {
+   "name": "Osseire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4930741,
+   "lng": 7.0073802
+  },
+  {
+   "name": "En Lys",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4980374,
+   "lng": 6.9959218
+  },
+  {
+   "name": "Vudèche",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5031258,
+   "lng": 7.0036037
+  },
+  {
+   "name": "Chenau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4910467,
+   "lng": 6.9963937
+  },
+  {
+   "name": "La Chia",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4898809,
+   "lng": 7.0072205
+  },
+  {
+   "name": "Le Clos",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4877388,
+   "lng": 7.0122201
+  },
+  {
+   "name": "Les Cergnettes Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4870592,
+   "lng": 7.018593
+  },
+  {
+   "name": "Les Gissettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.48635,
+   "lng": 7.0164687
+  },
+  {
+   "name": "Les Majons",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4848351,
+   "lng": 7.0134372
+  },
+  {
+   "name": "Soréblia",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4846874,
+   "lng": 7.015367
+  },
+  {
+   "name": "Les Botsets",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.483448,
+   "lng": 7.0100786
+  },
+  {
+   "name": "Petite Orgevalette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4845533,
+   "lng": 7.0076917
+  },
+  {
+   "name": "Grosse Orgevalette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4841415,
+   "lng": 6.9996776
+  },
+  {
+   "name": "Chèveresse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5069592,
+   "lng": 7.020792
+  },
+  {
+   "name": "Cuvigné",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5098906,
+   "lng": 7.0230557
+  },
+  {
+   "name": "Grosses Frasses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5079929,
+   "lng": 7.0278408
+  },
+  {
+   "name": "Gîte au Chasseur",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5060287,
+   "lng": 7.0309629
+  },
+  {
+   "name": "Saucisson",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5053937,
+   "lng": 7.0289888
+  },
+  {
+   "name": "Petites Frasses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5064423,
+   "lng": 7.0337309
+  },
+  {
+   "name": "L'Allex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5077271,
+   "lng": 7.0359625
+  },
+  {
+   "name": "Servan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5100236,
+   "lng": 7.0322074
+  },
+  {
+   "name": "Petit Pra",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5115151,
+   "lng": 7.0340099
+  },
+  {
+   "name": "Pra Chablex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5130509,
+   "lng": 7.0339992
+  },
+  {
+   "name": "Beaucu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5029419,
+   "lng": 7.0358016
+  },
+  {
+   "name": "Les Ecureuils",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5015942,
+   "lng": 7.0377757
+  },
+  {
+   "name": "La Cernia",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4995577,
+   "lng": 7.0350613
+  },
+  {
+   "name": "L'Ombriau d'en Bas",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5195436,
+   "lng": 7.0331356
+  },
+  {
+   "name": "L'Ombriau du Milieu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5191967,
+   "lng": 7.0305017
+  },
+  {
+   "name": "L'Ombriau d'en Haut",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5171664,
+   "lng": 7.0284203
+  },
+  {
+   "name": "Grande Ecosalla",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5141264,
+   "lng": 7.025663
+  },
+  {
+   "name": "Petite Ecosalla",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5128934,
+   "lng": 7.0226696
+  },
+  {
+   "name": "La Gîte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5018976,
+   "lng": 7.0218174
+  },
+  {
+   "name": "Mytha Derrey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4913283,
+   "lng": 7.0186407
+  },
+  {
+   "name": "Champ Derrey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4939548,
+   "lng": 7.0287775
+  },
+  {
+   "name": "Combe à la Loge",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4965952,
+   "lng": 7.0310467
+  },
+  {
+   "name": "Gros Planis",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5005021,
+   "lng": 7.0330905
+  },
+  {
+   "name": "La Combetta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.491257,
+   "lng": 7.0263046
+  },
+  {
+   "name": "Le Bas",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4957812,
+   "lng": 7.0367729
+  },
+  {
+   "name": "La Martse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5157698,
+   "lng": 7.0025761
+  },
+  {
+   "name": "Le Creux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5199928,
+   "lng": 7.0024902
+  },
+  {
+   "name": "Chalet ancien d'Amont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5188706,
+   "lng": 7.0112825
+  },
+  {
+   "name": "Chalet ancien d'Avau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5216069,
+   "lng": 7.0096583
+  },
+  {
+   "name": "Chalets anciens",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5136353,
+   "lng": 7.0088912
+  },
+  {
+   "name": "Tsarouda Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5202652,
+   "lng": 7.0170451
+  },
+  {
+   "name": "Tsarouda Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.524473,
+   "lng": 7.0156504
+  },
+  {
+   "name": "Le Gobalet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5234559,
+   "lng": 7.0066306
+  },
+  {
+   "name": "Cernia Derrey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5259436,
+   "lng": 7.0095596
+  },
+  {
+   "name": "Pra Catillaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5274938,
+   "lng": 7.01354
+  },
+  {
+   "name": "Le Marais",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5291767,
+   "lng": 7.0176598
+  },
+  {
+   "name": "Cernia",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5310737,
+   "lng": 7.0230028
+  },
+  {
+   "name": "Les Albuives",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5332141,
+   "lng": 7.0244727
+  },
+  {
+   "name": "Plan Maro",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5326753,
+   "lng": 7.0290324
+  },
+  {
+   "name": "Les Parties Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5300182,
+   "lng": 7.031382
+  },
+  {
+   "name": "Le Plan Carré",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5345279,
+   "lng": 7.0307276
+  },
+  {
+   "name": "Les Trouriaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5346238,
+   "lng": 7.0344397
+  },
+  {
+   "name": "Tsuatsau Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5376572,
+   "lng": 7.0182499
+  },
+  {
+   "name": "Balla Lanza",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5430001,
+   "lng": 7.0208785
+  },
+  {
+   "name": "Chourlettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5448449,
+   "lng": 7.0203421
+  },
+  {
+   "name": "Tsuatsau Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.542668,
+   "lng": 7.0120916
+  },
+  {
+   "name": "Odzon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.538124,
+   "lng": 7.009345
+  },
+  {
+   "name": "Belles Rayes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5351718,
+   "lng": 7.0041522
+  },
+  {
+   "name": "Mifori",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5320793,
+   "lng": 7.009227
+  },
+  {
+   "name": "Par au Boeuf",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5311789,
+   "lng": 7.0135185
+  },
+  {
+   "name": "Les Moilles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5276027,
+   "lng": 7.0065662
+  },
+  {
+   "name": "Les Charbonnières",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5279625,
+   "lng": 7.0322645
+  },
+  {
+   "name": "Les Cerniaules",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5283242,
+   "lng": 7.0262241
+  },
+  {
+   "name": "Planey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5276894,
+   "lng": 7.0213103
+  },
+  {
+   "name": "Creux de l'Enfer",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4768412,
+   "lng": 7.0382278
+  },
+  {
+   "name": "Delevey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4782645,
+   "lng": 7.0369196
+  },
+  {
+   "name": "La Tine",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4757789,
+   "lng": 7.0355299
+  },
+  {
+   "name": "Champ Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4782429,
+   "lng": 7.0339661
+  },
+  {
+   "name": "Essercurons d'Amont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4764328,
+   "lng": 7.0311015
+  },
+  {
+   "name": "Chaux du Gros Orgevau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4797436,
+   "lng": 7.0005948
+  },
+  {
+   "name": "Gîte à Moret",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4747701,
+   "lng": 7.0299341
+  },
+  {
+   "name": "Gîte des Raves",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4836744,
+   "lng": 7.0264055
+  },
+  {
+   "name": "La Cernia de la Joux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4868369,
+   "lng": 7.0293449
+  },
+  {
+   "name": "Les Braules",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4858691,
+   "lng": 7.0339798
+  },
+  {
+   "name": "Les Golettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4865044,
+   "lng": 7.0357286
+  },
+  {
+   "name": "La Gaula",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4873318,
+   "lng": 7.0360665
+  },
+  {
+   "name": "Les Combes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.487088,
+   "lng": 7.0337706
+  },
+  {
+   "name": "Les Ratiers",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4777463,
+   "lng": 7.0271133
+  },
+  {
+   "name": "Les Cergnettes Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4852177,
+   "lng": 7.019208
+  },
+  {
+   "name": "La Cuvigne Devant",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4747318,
+   "lng": 7.0237865
+  },
+  {
+   "name": "Pré Fleuri",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4804683,
+   "lng": 6.9902064
+  },
+  {
+   "name": "Cabane du Petit Oiseau",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5433212,
+   "lng": 6.9773508
+  },
+  {
+   "name": "La Chaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5311554,
+   "lng": 6.9890272
+  },
+  {
+   "name": "Corbetta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.51116,
+   "lng": 6.935225
+  },
+  {
+   "name": "Niremont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5488091,
+   "lng": 6.9588263
+  },
+  {
+   "name": "Le Spot",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5208923,
+   "lng": 6.950694
+  },
+  {
+   "name": "Le Bistro d'Aimé",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5228461,
+   "lng": 6.9444574
+  },
+  {
+   "name": "Place des Motalles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4859233,
+   "lng": 6.9200171
+  },
+  {
+   "name": "Buvette Le Vuipay",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5269695,
+   "lng": 6.9911993
   }
  ]
 }

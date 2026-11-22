@@ -69,11 +69,39 @@
    "lng": 6.5956886
   },
   {
+   "name": "Vuiteboeuf",
+   "kind": "station",
+   "ele": 589,
+   "lat": 46.8038394,
+   "lng": 6.553631
+  },
+  {
+   "name": "Les Cernets Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8663746,
+   "lng": 6.5710379
+  },
+  {
+   "name": "La Croix Fédérale",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8237764,
+   "lng": 6.5776587
+  },
+  {
    "name": "Le Chasseron",
    "kind": "peak",
    "ele": 1607,
    "lat": 46.851796,
    "lng": 6.5382542
+  },
+  {
+   "name": "La Casba",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8347258,
+   "lng": 6.5203156
   },
   {
    "name": "Bullet",
@@ -104,6 +132,20 @@
    "lng": 6.5607341
   },
   {
+   "name": "Mont de Baulmes",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.8031794,
+   "lng": 6.5131962
+  },
+  {
+   "name": "La Robella",
+   "kind": "station",
+   "ele": 1222,
+   "lat": 46.8760184,
+   "lng": 6.5487467
+  },
+  {
    "name": "Peney",
    "kind": "place",
    "ele": null,
@@ -111,11 +153,39 @@
    "lng": 6.561092
   },
   {
+   "name": "Mont de la Maya",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8457184,
+   "lng": 6.5149643
+  },
+  {
+   "name": "La Calame",
+   "kind": "place",
+   "ele": 1210,
+   "lat": 46.8618063,
+   "lng": 6.5901285
+  },
+  {
+   "name": "La Cruchaude",
+   "kind": "place",
+   "ele": 1223,
+   "lat": 46.8583104,
+   "lng": 6.5827763
+  },
+  {
    "name": "Refuge de Champvent",
    "kind": "hut",
    "ele": null,
    "lat": 46.7837067,
    "lng": 6.5503536
+  },
+  {
+   "name": "Les Planets",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8303352,
+   "lng": 6.542547
   },
   {
    "name": "Le Cochet",
@@ -174,11 +244,151 @@
    "lng": 6.5479361
   },
   {
+   "name": "Les Praz-Bûchons",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8306321,
+   "lng": 6.5306093
+  },
+  {
    "name": "Petites Roches Dessous",
    "kind": "place",
    "ele": null,
    "lat": 46.8240717,
    "lng": 6.5274754
+  },
+  {
+   "name": "Hôtel du Jura",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.7901533,
+   "lng": 6.5242867
+  },
+  {
+   "name": "L'Auberge",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.7892633,
+   "lng": 6.5211453
+  },
+  {
+   "name": "Les Crosats",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8373486,
+   "lng": 6.5593839
+  },
+  {
+   "name": "Hôtel Restaurant du Centre",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8231158,
+   "lng": 6.5011474
+  },
+  {
+   "name": "Cercle Espagnol",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8194709,
+   "lng": 6.5018593
+  },
+  {
+   "name": "Les Roches Éboulées",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.8625371,
+   "lng": 6.5429511
+  },
+  {
+   "name": "Brelingard Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8480565,
+   "lng": 6.592777
+  },
+  {
+   "name": "Granges Champod",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8445916,
+   "lng": 6.5868897
+  },
+  {
+   "name": "Pré Bornoz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8503233,
+   "lng": 6.5659031
+  },
+  {
+   "name": "Mont de Baulmes d'en Bas",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8065831,
+   "lng": 6.5237632
+  },
+  {
+   "name": "Sainte-Croix",
+   "kind": "station",
+   "ele": 1066,
+   "lat": 46.819548,
+   "lng": 6.5006419
+  },
+  {
+   "name": "Baulmes",
+   "kind": "station",
+   "ele": 631,
+   "lat": 46.7887894,
+   "lng": 6.5241906
+  },
+  {
+   "name": "Essert-sous-Champvent",
+   "kind": "station",
+   "ele": 507,
+   "lat": 46.7953341,
+   "lng": 6.5799027
+  },
+  {
+   "name": "Les Charrières",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8074238,
+   "lng": 6.5555997
+  },
+  {
+   "name": "Les Avattes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8368069,
+   "lng": 6.5255743
+  },
+  {
+   "name": "Sous la Joux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8429627,
+   "lng": 6.5401803
+  },
+  {
+   "name": "Crêt Bionnay",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8297874,
+   "lng": 6.5458674
+  },
+  {
+   "name": "Bas-de-la-Fin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8238357,
+   "lng": 6.5592188
+  },
+  {
+   "name": "Le Bochet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7850061,
+   "lng": 6.5432541
   },
   {
    "name": "Roches Blanches",
@@ -195,11 +405,32 @@
    "lng": 6.5279479
   },
   {
+   "name": "Café-Restaurant des Cluds",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8423445,
+   "lng": 6.560209
+  },
+  {
    "name": "Les Charrières",
    "kind": "place",
    "ele": null,
    "lat": 46.8192632,
    "lng": 6.5831608
+  },
+  {
+   "name": "Les Conches",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8039444,
+   "lng": 6.5922405
+  },
+  {
+   "name": "Longeville",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.81519,
+   "lng": 6.5849167
   },
   {
    "name": "Montavaux",
@@ -209,11 +440,102 @@
    "lng": 6.5850312
   },
   {
+   "name": "Piauliauses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7988886,
+   "lng": 6.5468182
+  },
+  {
+   "name": "La Cruchaude",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8549975,
+   "lng": 6.5746492
+  },
+  {
+   "name": "Le Rocher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8386379,
+   "lng": 6.5456863
+  },
+  {
+   "name": "Les Granges-Champod",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8455941,
+   "lng": 6.5855661
+  },
+  {
+   "name": "Les Illards",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8600977,
+   "lng": 6.5655312
+  },
+  {
+   "name": "Les Pequeux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8183646,
+   "lng": 6.5447614
+  },
+  {
+   "name": "Les Tempêteries",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8572998,
+   "lng": 6.5529336
+  },
+  {
+   "name": "Hôtel du Chasseron",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8503308,
+   "lng": 6.5390076
+  },
+  {
+   "name": "Grand Beauregard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8770229,
+   "lng": 6.5686233
+  },
+  {
+   "name": "Châtillon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7866853,
+   "lng": 6.5492156
+  },
+  {
+   "name": "Le Coucou",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8293704,
+   "lng": 6.5407272
+  },
+  {
+   "name": "Wok Cuisine Asiatique",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8217504,
+   "lng": 6.5032172
+  },
+  {
    "name": "Crêt des Gouilles",
    "kind": "peak",
    "ele": null,
    "lat": 46.8464144,
    "lng": 6.5375524
+  },
+  {
+   "name": "La Grandsonnaz dessus",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.859554,
+   "lng": 6.5516487
   },
   {
    "name": "La Broutire",
@@ -237,11 +559,466 @@
    "lng": 6.5203569
   },
   {
+   "name": "Chez la Leuba",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8771889,
+   "lng": 6.5159009
+  },
+  {
+   "name": "Deux dragons",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8025446,
+   "lng": 6.5616647
+  },
+  {
+   "name": "Café Central",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8305404,
+   "lng": 6.5541938
+  },
+  {
+   "name": "La Grande-Robella",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8702658,
+   "lng": 6.5355922
+  },
+  {
+   "name": "Brama-Fam",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8754989,
+   "lng": 6.5619314
+  },
+  {
+   "name": "Les Lisières",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.873757,
+   "lng": 6.5544637
+  },
+  {
+   "name": "Chez Bénet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8766976,
+   "lng": 6.5094629
+  },
+  {
+   "name": "La Grangette Addor",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8268539,
+   "lng": 6.5119203
+  },
+  {
+   "name": "La Grangette Mermod",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8262116,
+   "lng": 6.5124192
+  },
+  {
+   "name": "La Casba",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.824971,
+   "lng": 6.5215602
+  },
+  {
+   "name": "Vy Jaccard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8481984,
+   "lng": 6.5037005
+  },
+  {
+   "name": "Noirvaux-Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8465676,
+   "lng": 6.5072571
+  },
+  {
+   "name": "Chalet de Noirvaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8472573,
+   "lng": 6.5081744
+  },
+  {
+   "name": "La Commune",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8442175,
+   "lng": 6.5041135
+  },
+  {
+   "name": "Le Mont-de-la-Maya",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8453403,
+   "lng": 6.5151964
+  },
+  {
+   "name": "Le Solier",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8437928,
+   "lng": 6.5217652
+  },
+  {
+   "name": "Dénériaz Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8523409,
+   "lng": 6.5264903
+  },
+  {
+   "name": "Les Cornes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.83817,
+   "lng": 6.5027366
+  },
+  {
+   "name": "Le Bois de Ban",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8259223,
+   "lng": 6.5260776
+  },
+  {
+   "name": "Quartier de la Joux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8262148,
+   "lng": 6.4993984
+  },
+  {
+   "name": "Le Crêt-Junod",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8273831,
+   "lng": 6.5325217
+  },
+  {
+   "name": "Petites Roches Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8254411,
+   "lng": 6.5267441
+  },
+  {
+   "name": "Les Rocailles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8232425,
+   "lng": 6.5282515
+  },
+  {
+   "name": "Mont-Cochet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8255899,
+   "lng": 6.506228
+  },
+  {
+   "name": "Mont-Feloux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8123334,
+   "lng": 6.5257457
+  },
+  {
+   "name": "Les Henriolettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8237161,
+   "lng": 6.5314052
+  },
+  {
+   "name": "Sur les Carrières",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8201373,
+   "lng": 6.5334831
+  },
+  {
+   "name": "Sur les Carrières",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8175468,
+   "lng": 6.5415185
+  },
+  {
+   "name": "Le Chalet du Rocher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8205423,
+   "lng": 6.5219491
+  },
+  {
+   "name": "Vers-chez-Jaccard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8191042,
+   "lng": 6.5144041
+  },
+  {
+   "name": "Vers-chez-la-Besse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8173222,
+   "lng": 6.5140333
+  },
+  {
+   "name": "Les Avattes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.836144,
+   "lng": 6.5236712
+  },
+  {
+   "name": "La Casba",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8344678,
+   "lng": 6.5205572
+  },
+  {
+   "name": "La Grandsonne Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8704938,
+   "lng": 6.5582838
+  },
+  {
+   "name": "Les Preisettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8721734,
+   "lng": 6.5644958
+  },
+  {
+   "name": "Vers chez Cretenet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8666029,
+   "lng": 6.5003145
+  },
+  {
+   "name": "Planfet-Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8684147,
+   "lng": 6.5048635
+  },
+  {
+   "name": "Le Grand Planfet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8677472,
+   "lng": 6.5096379
+  },
+  {
+   "name": "Petit-Planfet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8643436,
+   "lng": 6.511966
+  },
+  {
+   "name": "Derrière le Crêt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8614386,
+   "lng": 6.5011835
+  },
+  {
+   "name": "Là Dernier",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8548505,
+   "lng": 6.5021384
+  },
+  {
    "name": "Les Leuba",
    "kind": "place",
    "ele": null,
    "lat": 46.8735541,
    "lng": 6.5018998
+  },
+  {
+   "name": "Chez-Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8717115,
+   "lng": 6.5041747
+  },
+  {
+   "name": "Noirvaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8552609,
+   "lng": 6.5145091
+  },
+  {
+   "name": "Grand Suvagnier",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8593456,
+   "lng": 6.5188167
+  },
+  {
+   "name": "Panneville",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7915564,
+   "lng": 6.5389917
+  },
+  {
+   "name": "Gare de Trois Villes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8001511,
+   "lng": 6.5316195
+  },
+  {
+   "name": "Aubaz Fontannaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.782512,
+   "lng": 6.5620273
+  },
+  {
+   "name": "Zone Industrielle Les Russilles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7846687,
+   "lng": 6.5882926
+  },
+  {
+   "name": "La Crochère d'en Bas",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8327254,
+   "lng": 6.5709028
+  },
+  {
+   "name": "Nogi kawa sushi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8244728,
+   "lng": 6.5004442
+  },
+  {
+   "name": "La Bullatonne-Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8547276,
+   "lng": 6.5635151
+  },
+  {
+   "name": "La Saussarde",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8461922,
+   "lng": 6.5925586
+  },
+  {
+   "name": "La Grandsonne Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8592998,
+   "lng": 6.5517677
+  },
+  {
+   "name": "Les Ages",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7801244,
+   "lng": 6.5117054
+  },
+  {
+   "name": "Grange-la-Côte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8121309,
+   "lng": 6.5514287
+  },
+  {
+   "name": "Mont de Baulmes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8079614,
+   "lng": 6.5239807
+  },
+  {
+   "name": "Mont de Baulmes d'en Haut",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8053312,
+   "lng": 6.5136894
+  },
+  {
+   "name": "Petit-Planfet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8682448,
+   "lng": 6.517122
+  },
+  {
+   "name": "Ô la Vache",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.8246169,
+   "lng": 6.5009672
+  },
+  {
+   "name": "Sur la Ville",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.783341,
+   "lng": 6.5706993
+  },
+  {
+   "name": "Oches Thomas",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7835502,
+   "lng": 6.5697168
+  },
+  {
+   "name": "Le Trésy",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7888949,
+   "lng": 6.5526572
+  },
+  {
+   "name": "Châtillon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7862107,
+   "lng": 6.5481618
+  },
+  {
+   "name": "Le Bochet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7854868,
+   "lng": 6.5441869
+  },
+  {
+   "name": "Clos des Ponts",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7918192,
+   "lng": 6.5800058
   }
  ]
 }

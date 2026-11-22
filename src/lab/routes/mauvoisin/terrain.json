@@ -69,6 +69,13 @@
    "lng": 7.2997576
   },
   {
+   "name": "Le Tongne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0424407,
+   "lng": 7.2557469
+  },
+  {
    "name": "Grand Laget",
    "kind": "peak",
    "ele": 3133,
@@ -83,11 +90,25 @@
    "lng": 7.2398939
   },
   {
+   "name": "Col des Avouillons",
+   "kind": "pass",
+   "ele": 2649,
+   "lat": 46.0068889,
+   "lng": 7.2799363
+  },
+  {
    "name": "Becca de Sery",
    "kind": "peak",
    "ele": 2863,
    "lat": 46.0113116,
    "lng": 7.2808515
+  },
+  {
+   "name": "Restaurant de Mauvoisin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.0030187,
+   "lng": 7.3430019
   },
   {
    "name": "Le Plamproz",
@@ -139,6 +160,27 @@
    "lng": 7.3061662
   },
   {
+   "name": "Vasevay",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.0197945,
+   "lng": 7.3419157
+  },
+  {
+   "name": "Café de la promenade",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.0213631,
+   "lng": 7.3285708
+  },
+  {
+   "name": "Col de Panossière",
+   "kind": "pass",
+   "ele": 3459,
+   "lat": 45.9682433,
+   "lng": 7.2718821
+  },
+  {
    "name": "Aiguille de Boveire",
    "kind": "peak",
    "ele": 3629,
@@ -146,11 +188,39 @@
    "lng": 7.2672548
   },
   {
+   "name": "Col de Lâne",
+   "kind": "pass",
+   "ele": 3030,
+   "lat": 45.9908176,
+   "lng": 7.2466958
+  },
+  {
    "name": "Tournelon Blanc",
    "kind": "peak",
    "ele": 3707,
    "lat": 45.969683,
    "lng": 7.3218121
+  },
+  {
+   "name": "Ecuries de Sery",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0247301,
+   "lng": 7.2705782
+  },
+  {
+   "name": "Sovereu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0417437,
+   "lng": 7.3182397
+  },
+  {
+   "name": "Col des Otanes",
+   "kind": "pass",
+   "ele": 2864,
+   "lat": 45.9971635,
+   "lng": 7.3096029
   },
   {
    "name": "(Les Otanes)",
@@ -174,11 +244,200 @@
    "lng": 7.3144298
   },
   {
+   "name": "Le Mazot",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.0324723,
+   "lng": 7.3073175
+  },
+  {
    "name": "Tavé des Chasseurs",
    "kind": "peak",
    "ele": 3165,
    "lat": 45.9894306,
    "lng": 7.3168082
+  },
+  {
+   "name": "Fionnay",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.0330347,
+   "lng": 7.3065918
+  },
+  {
+   "name": "Plan du Tsenau",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.0423953,
+   "lng": 7.3047825
+  },
+  {
+   "name": "Les Tsezès",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0474982,
+   "lng": 7.2787609
+  },
+  {
+   "name": "Gietroz",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9886191,
+   "lng": 7.35819
+  },
+  {
+   "name": "Téléski du Dzora",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.0499572,
+   "lng": 7.265998
+  },
+  {
+   "name": "Les Clous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0489464,
+   "lng": 7.2675693
+  },
+  {
+   "name": "Les Zires",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0486845,
+   "lng": 7.2699921
+  },
+  {
+   "name": "La Creuse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0491964,
+   "lng": 7.2773789
+  },
+  {
+   "name": "Les Grands Tsantons",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0240813,
+   "lng": 7.3064739
+  },
+  {
+   "name": "La Daige",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0219944,
+   "lng": 7.3113391
+  },
+  {
+   "name": "Le Fioeu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0209265,
+   "lng": 7.3183857
+  },
+  {
+   "name": "Plan Chalet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.019878,
+   "lng": 7.3274724
+  },
+  {
+   "name": "Tsantons de Madzeria",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0069505,
+   "lng": 7.3358036
+  },
+  {
+   "name": "Madzeria",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0099939,
+   "lng": 7.338789
+  },
+  {
+   "name": "La Tseumette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0023079,
+   "lng": 7.3267708
+  },
+  {
+   "name": "Plan de la Dzeu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0150116,
+   "lng": 7.3383765
+  },
+  {
+   "name": "Le Vasero",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0177807,
+   "lng": 7.3408409
+  },
+  {
+   "name": "Boutzes du Pleureur",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0127858,
+   "lng": 7.3542223
+  },
+  {
+   "name": "Pierre-à-Vire",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9963018,
+   "lng": 7.3404047
+  },
+  {
+   "name": "Grenier de Bocheresse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0083146,
+   "lng": 7.3269806
+  },
+  {
+   "name": "La Ba Lui",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0150965,
+   "lng": 7.3195305
+  },
+  {
+   "name": "Les Quarts",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0226535,
+   "lng": 7.3266288
+  },
+  {
+   "name": "Les Mayentzons",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0241848,
+   "lng": 7.3247628
+  },
+  {
+   "name": "Le Crêt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0292916,
+   "lng": 7.3348542
+  },
+  {
+   "name": "Le Bourroz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.011632,
+   "lng": 7.3328169
+  },
+  {
+   "name": "La Dent",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0312614,
+   "lng": 7.3201403
   },
   {
    "name": "Bec de la Lya",
@@ -195,11 +454,109 @@
    "lng": 7.3240553
   },
   {
+   "name": "Col de Bocheresse",
+   "kind": "pass",
+   "ele": 3100,
+   "lat": 45.9843461,
+   "lng": 7.3169022
+  },
+  {
+   "name": "Le Chantier d'Elmer",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.0004903,
+   "lng": 7.3362308
+  },
+  {
+   "name": "Les Tsezès d'en haut",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0472494,
+   "lng": 7.2809515
+  },
+  {
+   "name": "Le Sarvin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0463102,
+   "lng": 7.2794323
+  },
+  {
    "name": "La Ruine",
    "kind": "place",
    "ele": null,
    "lat": 46.0503709,
    "lng": 7.2648426
+  },
+  {
+   "name": "Les Prairo",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0483766,
+   "lng": 7.2742125
+  },
+  {
+   "name": "Quin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0148191,
+   "lng": 7.2886827
+  },
+  {
+   "name": "La Maye",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0212059,
+   "lng": 7.2819423
+  },
+  {
+   "name": "Tsanton d'Ernai",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0405235,
+   "lng": 7.2860811
+  },
+  {
+   "name": "Couloir du Talin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0382484,
+   "lng": 7.2866003
+  },
+  {
+   "name": "Grenier de Corbassière",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0269739,
+   "lng": 7.2903489
+  },
+  {
+   "name": "Béré",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0277723,
+   "lng": 7.2881208
+  },
+  {
+   "name": "La Lui Jaune",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0136255,
+   "lng": 7.3462604
+  },
+  {
+   "name": "Lui du Veya",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0074166,
+   "lng": 7.3330236
+  },
+  {
+   "name": "Bec d-Aigle",
+   "kind": "pass",
+   "ele": 2567,
+   "lat": 46.0469048,
+   "lng": 7.3166327
   },
   {
    "name": "Pointe du Crêt",
@@ -216,11 +573,39 @@
    "lng": 7.3736071
   },
   {
+   "name": "Col du Crêt",
+   "kind": "pass",
+   "ele": 3144,
+   "lat": 46.0449046,
+   "lng": 7.3576292
+  },
+  {
    "name": "Le Brecholey",
    "kind": "place",
    "ele": null,
    "lat": 46.0244228,
    "lng": 7.3203334
+  },
+  {
+   "name": "Buvette de Pindin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.0165655,
+   "lng": 7.2652593
+  },
+  {
+   "name": "Le Mayen du Revers",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.033531,
+   "lng": 7.296104
+  },
+  {
+   "name": "Col de Corbassière",
+   "kind": "pass",
+   "ele": 3563,
+   "lat": 45.9761705,
+   "lng": 7.270782
   },
   {
    "name": "La Torbesse",
@@ -263,6 +648,34 @@
    "ele": 2989,
    "lat": 45.9980151,
    "lng": 7.2320593
+  },
+  {
+   "name": "Col du Giétro",
+   "kind": "pass",
+   "ele": 3105,
+   "lat": 45.9975842,
+   "lng": 7.3732368
+  },
+  {
+   "name": "Oujets de Bagnes",
+   "kind": "pass",
+   "ele": 3064,
+   "lat": 45.9980712,
+   "lng": 7.2381641
+  },
+  {
+   "name": "Col du Vasevay",
+   "kind": "pass",
+   "ele": 3234,
+   "lat": 46.0299826,
+   "lng": 7.3679153
+  },
+  {
+   "name": "Col du Mérignier",
+   "kind": "pass",
+   "ele": 3198,
+   "lat": 45.9694258,
+   "lng": 7.2515312
   }
  ]
 }

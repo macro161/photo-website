@@ -20,11 +20,25 @@
    "lng": 8.3983261
   },
   {
+   "name": "Stans",
+   "kind": "place",
+   "ele": 452,
+   "lat": 46.9570611,
+   "lng": 8.3661026
+  },
+  {
    "name": "Ennetbürgen",
    "kind": "place",
    "ele": 435,
    "lat": 46.9851867,
    "lng": 8.4128263
+  },
+  {
+   "name": "Horw",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0185008,
+   "lng": 8.3107797
   },
   {
    "name": "Ennetmoos",
@@ -39,6 +53,139 @@
    "ele": 435,
    "lat": 46.9739978,
    "lng": 8.4205883
+  },
+  {
+   "name": "Kehrsiten-Bürgenstock",
+   "kind": "station",
+   "ele": 435,
+   "lat": 47.0028862,
+   "lng": 8.3824282
+  },
+  {
+   "name": "Bürgenstock Resort",
+   "kind": "station",
+   "ele": 874,
+   "lat": 46.9968478,
+   "lng": 8.3786671
+  },
+  {
+   "name": "Talstation Standseilbahn Stanserhorn-Bahn",
+   "kind": "station",
+   "ele": 451,
+   "lat": 46.9583878,
+   "lng": 8.3633902
+  },
+  {
+   "name": "Gasthaus Trogen",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9946678,
+   "lng": 8.3929894
+  },
+  {
+   "name": "Seeblick",
+   "kind": "view",
+   "ele": null,
+   "lat": 47.0279677,
+   "lng": 8.3272564
+  },
+  {
+   "name": "Winkelbadi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 47.0095503,
+   "lng": 8.3188697
+  },
+  {
+   "name": "Chänzeli",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.9998001,
+   "lng": 8.4078475
+  },
+  {
+   "name": "Chrüztrichter",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.019214,
+   "lng": 8.3678472
+  },
+  {
+   "name": "Vitznauerbecken",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0148894,
+   "lng": 8.4301256
+  },
+  {
+   "name": "Horwerbucht",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0038085,
+   "lng": 8.3158538
+  },
+  {
+   "name": "Uf der Egg",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9899647,
+   "lng": 8.3942745
+  },
+  {
+   "name": "La Fontana",
+   "kind": "poi",
+   "ele": null,
+   "lat": 47.0146222,
+   "lng": 8.3109156
+  },
+  {
+   "name": "Engel",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9575431,
+   "lng": 8.3659503
+  },
+  {
+   "name": "Linde",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9567735,
+   "lng": 8.3663536
+  },
+  {
+   "name": "Boutique-Hotel Schlüssel",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9678598,
+   "lng": 8.4598677
+  },
+  {
+   "name": "Kreuzgarten",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9742452,
+   "lng": 8.4247492
+  },
+  {
+   "name": "Zum Hirschen",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9729312,
+   "lng": 8.4204634
+  },
+  {
+   "name": "Brasserie le Mirage",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9681998,
+   "lng": 8.3545069
+  },
+  {
+   "name": "Farah",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9583688,
+   "lng": 8.3644883
   },
   {
    "name": "St. Niklausen",
@@ -69,11 +216,123 @@
    "lng": 8.3855966
   },
   {
+   "name": "Steiböckli",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9586035,
+   "lng": 8.3638473
+  },
+  {
+   "name": "Allmendhuisli",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9681704,
+   "lng": 8.3816558
+  },
+  {
+   "name": "zum Briggli",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9579945,
+   "lng": 8.3625904
+  },
+  {
+   "name": "Melachere",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.956165,
+   "lng": 8.3676735
+  },
+  {
+   "name": "Der Italiener im Tell",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9568811,
+   "lng": 8.3669462
+  },
+  {
+   "name": "Oberdeck",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.957843,
+   "lng": 8.3658471
+  },
+  {
+   "name": "zur Rosenburg Höfli",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9577635,
+   "lng": 8.3653589
+  },
+  {
    "name": "Drachenflue",
    "kind": "peak",
    "ele": 860,
    "lat": 46.9546641,
    "lng": 8.3195658
+  },
+  {
+   "name": "Parkhaus Grossmatt/Loppersaal",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9913016,
+   "lng": 8.3123999
+  },
+  {
+   "name": "Seehotel Pilatus",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9862493,
+   "lng": 8.3122707
+  },
+  {
+   "name": "Adler",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9814844,
+   "lng": 8.3109671
+  },
+  {
+   "name": "Brünig",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9835508,
+   "lng": 8.3114075
+  },
+  {
+   "name": "Nabucco",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9843634,
+   "lng": 8.3108922
+  },
+  {
+   "name": "Schlüssel",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9976324,
+   "lng": 8.3112709
+  },
+  {
+   "name": "Seehus",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9895312,
+   "lng": 8.3151551
+  },
+  {
+   "name": "Fischmatt",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9757309,
+   "lng": 8.4232634
+  },
+  {
+   "name": "Nidwaldnerhof",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9696659,
+   "lng": 8.4705054
   },
   {
    "name": "Rotzberg",
@@ -83,11 +342,88 @@
    "lng": 8.336595
   },
   {
+   "name": "Ristorante Pizzeria Da Pippo",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9577725,
+   "lng": 8.3415597
+  },
+  {
+   "name": "Nidair",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.980938,
+   "lng": 8.4023391
+  },
+  {
    "name": "Stansstad",
    "kind": "place",
    "ele": 436,
    "lat": 46.979741,
    "lng": 8.3373667
+  },
+  {
+   "name": "Oberfeld",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.9722028,
+   "lng": 8.3492481
+  },
+  {
+   "name": "Stöckmatt",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.9726676,
+   "lng": 8.3517607
+  },
+  {
+   "name": "Mekong",
+   "kind": "poi",
+   "ele": null,
+   "lat": 47.0173266,
+   "lng": 8.3111752
+  },
+  {
+   "name": "Eintracht",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9580966,
+   "lng": 8.3860671
+  },
+  {
+   "name": "Mittelpunkt der Zentralschweiz",
+   "kind": "view",
+   "ele": 538,
+   "lat": 46.9677251,
+   "lng": 8.4200263
+  },
+  {
+   "name": "zum Beck",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9791135,
+   "lng": 8.337998
+  },
+  {
+   "name": "Schäfli",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9712405,
+   "lng": 8.4604185
+  },
+  {
+   "name": "Seerausch",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9715297,
+   "lng": 8.4589025
+  },
+  {
+   "name": "Stärtenegg",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.959396,
+   "lng": 8.4699747
   },
   {
    "name": "Ächerli",
@@ -104,11 +440,39 @@
    "lng": 8.4081043
   },
   {
+   "name": "Da Gianni",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9636871,
+   "lng": 8.3553697
+  },
+  {
    "name": "Fronhofen",
    "kind": "place",
    "ele": null,
    "lat": 46.969946,
    "lng": 8.3510347
+  },
+  {
+   "name": "Mittlerfeld",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9736292,
+   "lng": 8.3453569
+  },
+  {
+   "name": "Restaurant Cockpit",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9770665,
+   "lng": 8.3906707
+  },
+  {
+   "name": "La Pergola",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9618248,
+   "lng": 8.3853725
   },
   {
    "name": "Trogen",
@@ -118,11 +482,249 @@
    "lng": 8.3935359
   },
   {
+   "name": "Stansstad",
+   "kind": "station",
+   "ele": 438,
+   "lat": 46.976305,
+   "lng": 8.3366916
+  },
+  {
+   "name": "Bahnhof Stansstad",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.977469,
+   "lng": 8.3358556
+  },
+  {
+   "name": "Stans",
+   "kind": "station",
+   "ele": 454,
+   "lat": 46.9584591,
+   "lng": 8.366564
+  },
+  {
+   "name": "Hergiswil Matt",
+   "kind": "station",
+   "ele": 445,
+   "lat": 46.9937212,
+   "lng": 8.312718
+  },
+  {
+   "name": "Ennerberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9656152,
+   "lng": 8.4027123
+  },
+  {
+   "name": "Stalden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9553478,
+   "lng": 8.3485992
+  },
+  {
+   "name": "Sternen",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9837375,
+   "lng": 8.4142073
+  },
+  {
+   "name": "RIO churrasco",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9755411,
+   "lng": 8.3424957
+  },
+  {
+   "name": "Rotzloch",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9630541,
+   "lng": 8.3315826
+  },
+  {
    "name": "Betti",
    "kind": "place",
    "ele": null,
    "lat": 46.9596504,
    "lng": 8.3339792
+  },
+  {
+   "name": "Burg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9626175,
+   "lng": 8.3366181
+  },
+  {
+   "name": "Vorder Rüti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9606569,
+   "lng": 8.3230508
+  },
+  {
+   "name": "Der Italiener",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9751298,
+   "lng": 8.425615
+  },
+  {
+   "name": "Seerestaurant Schlüssel",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9873022,
+   "lng": 8.4190305
+  },
+  {
+   "name": "Felmis",
+   "kind": "poi",
+   "ele": null,
+   "lat": 47.0212435,
+   "lng": 8.3258526
+  },
+  {
+   "name": "Feld",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9574604,
+   "lng": 8.3525508
+  },
+  {
+   "name": "Gruebried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9615697,
+   "lng": 8.3514258
+  },
+  {
+   "name": "Rotzberghostatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9606935,
+   "lng": 8.3438379
+  },
+  {
+   "name": "Ober Schilt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9863585,
+   "lng": 8.3557001
+  },
+  {
+   "name": "Unter Schilt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9856998,
+   "lng": 8.3539191
+  },
+  {
+   "name": "Acheregg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9785834,
+   "lng": 8.3313566
+  },
+  {
+   "name": "Steinstücki",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9921163,
+   "lng": 8.4153502
+  },
+  {
+   "name": "Grossmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9862638,
+   "lng": 8.4038745
+  },
+  {
+   "name": "Kleinmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9879334,
+   "lng": 8.4048818
+  },
+  {
+   "name": "Seeweid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9901099,
+   "lng": 8.4275575
+  },
+  {
+   "name": "Dössli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9892871,
+   "lng": 8.4242528
+  },
+  {
+   "name": "Oberleh",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9951479,
+   "lng": 8.4387071
+  },
+  {
+   "name": "Unterleh",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9940338,
+   "lng": 8.4389485
+  },
+  {
+   "name": "Vorder Spis",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9940033,
+   "lng": 8.441942
+  },
+  {
+   "name": "Hinter Spis",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9948175,
+   "lng": 8.4463153
+  },
+  {
+   "name": "Acherchönzili",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.9773437,
+   "lng": 8.3287948
+  },
+  {
+   "name": "Parkhaus",
+   "kind": "poi",
+   "ele": null,
+   "lat": 47.0199641,
+   "lng": 8.3107987
+  },
+  {
+   "name": "Villa Honegg",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9947477,
+   "lng": 8.4029939
+  },
+  {
+   "name": "AIOLA al Porto",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9818591,
+   "lng": 8.345898
+  },
+  {
+   "name": "Hartmanix",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9564919,
+   "lng": 8.4715927
   },
   {
    "name": "Schwibogen",
@@ -132,11 +734,123 @@
    "lng": 8.3684777
   },
   {
+   "name": "Pastarazzi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9561219,
+   "lng": 8.3679524
+  },
+  {
+   "name": "Kreuzlistei",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9577208,
+   "lng": 8.4276062
+  },
+  {
+   "name": "Obersassi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.96236,
+   "lng": 8.4514455
+  },
+  {
+   "name": "Verbena",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9969203,
+   "lng": 8.3855915
+  },
+  {
+   "name": "Bamboos",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.976004,
+   "lng": 8.4184912
+  },
+  {
+   "name": "Taverne 1879",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9969785,
+   "lng": 8.3820691
+  },
+  {
+   "name": "Slice",
+   "kind": "poi",
+   "ele": null,
+   "lat": 47.0207281,
+   "lng": 8.3258852
+  },
+  {
+   "name": "Aawasseregg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9782188,
+   "lng": 8.4246314
+  },
+  {
+   "name": "Seewli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9791804,
+   "lng": 8.3558963
+  },
+  {
+   "name": "Migros Restaurant",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9646151,
+   "lng": 8.3560735
+  },
+  {
+   "name": "EnnEt",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9856806,
+   "lng": 8.4144853
+  },
+  {
    "name": "Oeli",
    "kind": "place",
    "ele": null,
    "lat": 46.9680929,
    "lng": 8.3409606
+  },
+  {
+   "name": "Culinarium Alpinum",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.955503,
+   "lng": 8.3694364
+  },
+  {
+   "name": "Swisstasty",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9678333,
+   "lng": 8.3560215
+  },
+  {
+   "name": "Riedsort",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0238331,
+   "lng": 8.457478
+  },
+  {
+   "name": "spices",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.996722,
+   "lng": 8.3790587
+  },
+  {
+   "name": "Restaurant Seeblick",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9803942,
+   "lng": 8.3372819
   },
   {
    "name": "Weingärtli",
@@ -146,11 +860,459 @@
    "lng": 8.4241751
   },
   {
+   "name": "Coop Restaurant",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9582469,
+   "lng": 8.3685164
+  },
+  {
+   "name": "Oberwil",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0190139,
+   "lng": 8.3316933
+  },
+  {
+   "name": "Gügerzi",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0133149,
+   "lng": 8.3182203
+  },
+  {
+   "name": "Oberbreiten",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0029214,
+   "lng": 8.3301047
+  },
+  {
+   "name": "Unterbreiten",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0028227,
+   "lng": 8.3300367
+  },
+  {
+   "name": "Unterbächen",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.013605,
+   "lng": 8.3306683
+  },
+  {
+   "name": "Berghof",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0055254,
+   "lng": 8.328713
+  },
+  {
+   "name": "Berghus",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.005375,
+   "lng": 8.3292293
+  },
+  {
+   "name": "Hinterberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0056452,
+   "lng": 8.3322027
+  },
+  {
+   "name": "Juchweid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9840367,
+   "lng": 8.4007785
+  },
+  {
+   "name": "Kilix",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9830032,
+   "lng": 8.4003161
+  },
+  {
+   "name": "Rüti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9826049,
+   "lng": 8.3989338
+  },
+  {
+   "name": "Obere Öltrotte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9822035,
+   "lng": 8.4010073
+  },
+  {
    "name": "Ächerli",
    "kind": "place",
    "ele": null,
    "lat": 46.9766489,
    "lng": 8.3834509
+  },
+  {
+   "name": "Seerestaurant Belvedere",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9833623,
+   "lng": 8.3120108
+  },
+  {
+   "name": "Hüttenort",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9927081,
+   "lng": 8.3558295
+  },
+  {
+   "name": "Rüteli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9950301,
+   "lng": 8.3618598
+  },
+  {
+   "name": "Mattliweid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9956265,
+   "lng": 8.3627342
+  },
+  {
+   "name": "Nasmattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9952324,
+   "lng": 8.4504084
+  },
+  {
+   "name": "Kirchfeld",
+   "kind": "view",
+   "ele": null,
+   "lat": 47.0222639,
+   "lng": 8.3144538
+  },
+  {
+   "name": "La Piazzetta",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9735351,
+   "lng": 8.4211023
+  },
+  {
+   "name": "Romy's Seebeizli",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9777128,
+   "lng": 8.424319
+  },
+  {
+   "name": "Sonnigwinkel",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0181267,
+   "lng": 8.3363365
+  },
+  {
+   "name": "Pulverturm",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9580648,
+   "lng": 8.3604932
+  },
+  {
+   "name": "Vorder Feld",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9571128,
+   "lng": 8.3569527
+  },
+  {
+   "name": "Ober Wirzboden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9581783,
+   "lng": 8.3558101
+  },
+  {
+   "name": "Wang",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9563256,
+   "lng": 8.3527577
+  },
+  {
+   "name": "Christenmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9548134,
+   "lng": 8.354544
+  },
+  {
+   "name": "Bergli Rotzberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9626571,
+   "lng": 8.3428712
+  },
+  {
+   "name": "Bergli Rotzberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9620274,
+   "lng": 8.3421845
+  },
+  {
+   "name": "Klostermatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9544692,
+   "lng": 8.3679926
+  },
+  {
+   "name": "Bitzi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9642906,
+   "lng": 8.353321
+  },
+  {
+   "name": "Unter Milchbrunnen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9642796,
+   "lng": 8.3661526
+  },
+  {
+   "name": "Mürggli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9655481,
+   "lng": 8.3691299
+  },
+  {
+   "name": "Gross Milchbrunnen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.965248,
+   "lng": 8.3714902
+  },
+  {
+   "name": "Breiten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9628171,
+   "lng": 8.3791614
+  },
+  {
+   "name": "Klein Milchbrunnen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9667068,
+   "lng": 8.3794135
+  },
+  {
+   "name": "Öltrotte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9664469,
+   "lng": 8.3781314
+  },
+  {
+   "name": "Risismühle",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9686726,
+   "lng": 8.3632934
+  },
+  {
+   "name": "Am Bergli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9686763,
+   "lng": 8.3611584
+  },
+  {
+   "name": "Allmend",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.985,
+   "lng": 8.3705927
+  },
+  {
+   "name": "Grabacher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.988557,
+   "lng": 8.3697774
+  },
+  {
+   "name": "Kilchbüel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9907598,
+   "lng": 8.3730496
+  },
+  {
+   "name": "Wil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9905988,
+   "lng": 8.3810426
+  },
+  {
+   "name": "Boden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9920625,
+   "lng": 8.3809353
+  },
+  {
+   "name": "Lehmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9919673,
+   "lng": 8.3850767
+  },
+  {
+   "name": "Ober Grabacher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9900939,
+   "lng": 8.371215
+  },
+  {
+   "name": "Gruobli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9836862,
+   "lng": 8.3806242
+  },
+  {
+   "name": "Etschenried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9827493,
+   "lng": 8.381976
+  },
+  {
+   "name": "Niederwil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9850622,
+   "lng": 8.3651532
+  },
+  {
+   "name": "Salacher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9861967,
+   "lng": 8.3668162
+  },
+  {
+   "name": "Dönnimatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9821199,
+   "lng": 8.3607115
+  },
+  {
+   "name": "Dorf",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.981666,
+   "lng": 8.3618166
+  },
+  {
+   "name": "Unter Stöckmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9727003,
+   "lng": 8.3518489
+  },
+  {
+   "name": "Hohbüel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.998659,
+   "lng": 8.3667352
+  },
+  {
+   "name": "Schwand",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0002102,
+   "lng": 8.3698894
+  },
+  {
+   "name": "Widen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9995297,
+   "lng": 8.367851
+  },
+  {
+   "name": "Mettlen",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0001919,
+   "lng": 8.3741273
+  },
+  {
+   "name": "Etzmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0013736,
+   "lng": 8.3764608
+  },
+  {
+   "name": "Vorderberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0025333,
+   "lng": 8.375447
+  },
+  {
+   "name": "Weingarten",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0028004,
+   "lng": 8.3691545
+  },
+  {
+   "name": "Müliortegg",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0031662,
+   "lng": 8.3682586
+  },
+  {
+   "name": "Spichermatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0015931,
+   "lng": 8.3675559
+  },
+  {
+   "name": "Mattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.99897,
+   "lng": 8.3653082
+  },
+  {
+   "name": "Baumgarten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9976529,
+   "lng": 8.365158
   },
   {
    "name": "Obbürgen",
@@ -160,11 +1322,1922 @@
    "lng": 8.3626639
   },
   {
+   "name": "Lochmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9809795,
+   "lng": 8.3566125
+  },
+  {
+   "name": "Seewliweid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9796436,
+   "lng": 8.3572401
+  },
+  {
+   "name": "Oberhuis",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9773158,
+   "lng": 8.351924
+  },
+  {
+   "name": "Klausmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9773195,
+   "lng": 8.3507599
+  },
+  {
+   "name": "Stegmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9763423,
+   "lng": 8.3502396
+  },
+  {
+   "name": "Weid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9785072,
+   "lng": 8.3486624
+  },
+  {
+   "name": "Harissen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9815376,
+   "lng": 8.3459158
+  },
+  {
+   "name": "Bürgenstock",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.99378,
+   "lng": 8.3737786
+  },
+  {
+   "name": "Rotzloch",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9666878,
+   "lng": 8.3313193
+  },
+  {
+   "name": "Unter Honegg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9951201,
+   "lng": 8.4050693
+  },
+  {
+   "name": "Honegg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9951572,
+   "lng": 8.4032816
+  },
+  {
+   "name": "Ober Honegg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9970451,
+   "lng": 8.4056259
+  },
+  {
+   "name": "Zinggli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9940339,
+   "lng": 8.4058458
+  },
+  {
+   "name": "Hammetschwand",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0004842,
+   "lng": 8.3961945
+  },
+  {
+   "name": "Obermisli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9954656,
+   "lng": 8.3871279
+  },
+  {
+   "name": "Untermisli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9945436,
+   "lng": 8.3848749
+  },
+  {
    "name": "Bürgenstock",
    "kind": "place",
    "ele": null,
    "lat": 46.9961754,
    "lng": 8.3812807
+  },
+  {
+   "name": "Ober Trogen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.993638,
+   "lng": 8.3910493
+  },
+  {
+   "name": "Unter Trogen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9943405,
+   "lng": 8.3949332
+  },
+  {
+   "name": "Hasli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9942875,
+   "lng": 8.4107689
+  },
+  {
+   "name": "Riedmattweid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9958608,
+   "lng": 8.4130542
+  },
+  {
+   "name": "Huseli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9942728,
+   "lng": 8.4141056
+  },
+  {
+   "name": "Husen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9943972,
+   "lng": 8.4159724
+  },
+  {
+   "name": "Schlinggismatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9964023,
+   "lng": 8.4179143
+  },
+  {
+   "name": "Loh",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9955535,
+   "lng": 8.4200172
+  },
+  {
+   "name": "Niedermättli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.993863,
+   "lng": 8.4192984
+  },
+  {
+   "name": "Alträtsch",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.990504,
+   "lng": 8.413537
+  },
+  {
+   "name": "Frongadmen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9919165,
+   "lng": 8.4135584
+  },
+  {
+   "name": "Steinstücki",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9927727,
+   "lng": 8.414921
+  },
+  {
+   "name": "Neuhaus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9909431,
+   "lng": 8.4180967
+  },
+  {
+   "name": "Hostatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9914188,
+   "lng": 8.419588
+  },
+  {
+   "name": "Grossbiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9926336,
+   "lng": 8.4219698
+  },
+  {
+   "name": "Tuschmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9932849,
+   "lng": 8.4206931
+  },
+  {
+   "name": "Mürgg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9947851,
+   "lng": 8.4215621
+  },
+  {
+   "name": "Grossbielweid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9942582,
+   "lng": 8.4242658
+  },
+  {
+   "name": "Helgenried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9954803,
+   "lng": 8.4272806
+  },
+  {
+   "name": "St. Jost",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9966648,
+   "lng": 8.4319638
+  },
+  {
+   "name": "Scharti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.996464,
+   "lng": 8.4433068
+  },
+  {
+   "name": "Spis",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9949127,
+   "lng": 8.4418906
+  },
+  {
+   "name": "Oberbaumgarten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9945431,
+   "lng": 8.4362741
+  },
+  {
+   "name": "Hinterblatti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9931601,
+   "lng": 8.4349061
+  },
+  {
+   "name": "Hostettli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.993848,
+   "lng": 8.4346486
+  },
+  {
+   "name": "Vorder Grosshostatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9939138,
+   "lng": 8.4337528
+  },
+  {
+   "name": "Hinter Grosshostatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9944224,
+   "lng": 8.4351261
+  },
+  {
+   "name": "Vorder Lussmani",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9925783,
+   "lng": 8.4311028
+  },
+  {
+   "name": "Hinter Lussmani",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9933247,
+   "lng": 8.4325726
+  },
+  {
+   "name": "Vorderblatti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9927759,
+   "lng": 8.4338118
+  },
+  {
+   "name": "Regenrüti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.991733,
+   "lng": 8.4319074
+  },
+  {
+   "name": "Unter Baumgarten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9932223,
+   "lng": 8.4371592
+  },
+  {
+   "name": "Bistro Novum",
+   "kind": "poi",
+   "ele": null,
+   "lat": 47.0195955,
+   "lng": 8.3111198
+  },
+  {
+   "name": "Allmend",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9776995,
+   "lng": 8.410624
+  },
+  {
+   "name": "Ribikäppeli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9640114,
+   "lng": 8.4222353
+  },
+  {
+   "name": "Flugplatz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9715312,
+   "lng": 8.4013704
+  },
+  {
+   "name": "Unter Faden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9688334,
+   "lng": 8.4030226
+  },
+  {
+   "name": "Ober Faden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9680573,
+   "lng": 8.4036449
+  },
+  {
+   "name": "Eggertsbiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9671348,
+   "lng": 8.4000883
+  },
+  {
+   "name": "Bürg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9651982,
+   "lng": 8.4036449
+  },
+  {
+   "name": "Äussere Bürg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9647955,
+   "lng": 8.4050557
+  },
+  {
+   "name": "Wallisfuhr",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9635068,
+   "lng": 8.4025559
+  },
+  {
+   "name": "Muacher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9623204,
+   "lng": 8.405163
+  },
+  {
+   "name": "Gross Bächli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9634517,
+   "lng": 8.4075234
+  },
+  {
+   "name": "Klein Bächli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9636714,
+   "lng": 8.4096852
+  },
+  {
+   "name": "Unter Erliziel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9610537,
+   "lng": 8.4061823
+  },
+  {
+   "name": "Ober Erliziel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9591901,
+   "lng": 8.4075717
+  },
+  {
+   "name": "Langentannen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.958531,
+   "lng": 8.4105489
+  },
+  {
+   "name": "Lättchänel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9568212,
+   "lng": 8.4090683
+  },
+  {
+   "name": "Stöckmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9568578,
+   "lng": 8.4144435
+  },
+  {
+   "name": "Hüttenmattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9581429,
+   "lng": 8.4156719
+  },
+  {
+   "name": "Ober Agglistal",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9591864,
+   "lng": 8.4146259
+  },
+  {
+   "name": "Unter Agglistal",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9607608,
+   "lng": 8.4130434
+  },
+  {
+   "name": "Feld West",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9622838,
+   "lng": 8.41373
+  },
+  {
+   "name": "Hofuhr",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9583222,
+   "lng": 8.4074241
+  },
+  {
+   "name": "Mürg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9617832,
+   "lng": 8.4177936
+  },
+  {
+   "name": "Egglibiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9605238,
+   "lng": 8.4182012
+  },
+  {
+   "name": "Buggenried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9593448,
+   "lng": 8.4196282
+  },
+  {
+   "name": "Bannwald",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9627351,
+   "lng": 8.420744
+  },
+  {
+   "name": "Hundachen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9635845,
+   "lng": 8.4168172
+  },
+  {
+   "name": "Bächli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9643093,
+   "lng": 8.412633
+  },
+  {
+   "name": "Unter Bächli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9658835,
+   "lng": 8.4130299
+  },
+  {
+   "name": "Städelimatte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9654882,
+   "lng": 8.4166348
+  },
+  {
+   "name": "Hugen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9668061,
+   "lng": 8.4163773
+  },
+  {
+   "name": "Rübimattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9666889,
+   "lng": 8.4192849
+  },
+  {
+   "name": "Ebnet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9626106,
+   "lng": 8.4244025
+  },
+  {
+   "name": "Gumpertsbiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9644631,
+   "lng": 8.4269452
+  },
+  {
+   "name": "Paradies",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9654076,
+   "lng": 8.4245313
+  },
+  {
+   "name": "Rotimatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.963438,
+   "lng": 8.4294129
+  },
+  {
+   "name": "Holzhaus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9660593,
+   "lng": 8.4279538
+  },
+  {
+   "name": "Grafital",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9665425,
+   "lng": 8.4307969
+  },
+  {
+   "name": "Holzhausweid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9659348,
+   "lng": 8.433683
+  },
+  {
+   "name": "Ober Obfuhr",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9669891,
+   "lng": 8.4345413
+  },
+  {
+   "name": "Unter Obfuhr",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9686071,
+   "lng": 8.4349382
+  },
+  {
+   "name": "Ober Acheri",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9684241,
+   "lng": 8.431902
+  },
+  {
+   "name": "Mittel Acheri",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9681752,
+   "lng": 8.4300995
+  },
+  {
+   "name": "Unter Acheri",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9693686,
+   "lng": 8.4298957
+  },
+  {
+   "name": "Zillern",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9678604,
+   "lng": 8.427074
+  },
+  {
+   "name": "Hinter Zillern",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9682704,
+   "lng": 8.4265805
+  },
+  {
+   "name": "Hinter Wissibach",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9676554,
+   "lng": 8.4245098
+  },
+  {
+   "name": "Vorder Wissibach",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9671795,
+   "lng": 8.422997
+  },
+  {
+   "name": "Hostatt Ost",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9694198,
+   "lng": 8.4238446
+  },
+  {
+   "name": "Unter Wissibächli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9694564,
+   "lng": 8.4220314
+  },
+  {
+   "name": "Rainegg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9698371,
+   "lng": 8.4217632
+  },
+  {
+   "name": "Rain",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9691782,
+   "lng": 8.4205723
+  },
+  {
+   "name": "Rainhof",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9688854,
+   "lng": 8.4184051
+  },
+  {
+   "name": "Hostatt West",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9684754,
+   "lng": 8.4136093
+  },
+  {
+   "name": "Herti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9672307,
+   "lng": 8.411839
+  },
+  {
+   "name": "Hinter Obgass",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9690171,
+   "lng": 8.4098757
+  },
+  {
+   "name": "Muoltenmattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9676334,
+   "lng": 8.4100151
+  },
+  {
+   "name": "Innere Bürg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9665352,
+   "lng": 8.4089959
+  },
+  {
+   "name": "Wyden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9676627,
+   "lng": 8.4071505
+  },
+  {
+   "name": "Hinter Städeli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9700714,
+   "lng": 8.406657
+  },
+  {
+   "name": "Vorder Städeli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9706424,
+   "lng": 8.409822
+  },
+  {
+   "name": "Schürmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.972275,
+   "lng": 8.4135449
+  },
+  {
+   "name": "Moosbiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9697346,
+   "lng": 8.4171284
+  },
+  {
+   "name": "Oberbreitli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9699469,
+   "lng": 8.4265376
+  },
+  {
+   "name": "Ober Agglisbrunnen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9710524,
+   "lng": 8.4297884
+  },
+  {
+   "name": "Unter Agglisbrunnen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9721432,
+   "lng": 8.4281576
+  },
+  {
+   "name": "Ober Linden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9725093,
+   "lng": 8.4327495
+  },
+  {
+   "name": "Hinter Linden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9736952,
+   "lng": 8.4348095
+  },
+  {
+   "name": "Unter Stigli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9732194,
+   "lng": 8.4381247
+  },
+  {
+   "name": "Vorder Hobiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9739515,
+   "lng": 8.438232
+  },
+  {
+   "name": "Hinter Hobiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9741198,
+   "lng": 8.4409249
+  },
+  {
+   "name": "Hinter Loren",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.970496,
+   "lng": 8.4456027
+  },
+  {
+   "name": "Vorder Loren",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9709792,
+   "lng": 8.44306
+  },
+  {
+   "name": "Feld Ost",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9687902,
+   "lng": 8.4451414
+  },
+  {
+   "name": "Bannholz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.96808,
+   "lng": 8.4419978
+  },
+  {
+   "name": "Unter Isnerts",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9670403,
+   "lng": 8.4450984
+  },
+  {
+   "name": "Ober Isnerts",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9654735,
+   "lng": 8.4440685
+  },
+  {
+   "name": "Schüpferi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9680507,
+   "lng": 8.4384144
+  },
+  {
+   "name": "Bisibiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.969105,
+   "lng": 8.4397233
+  },
+  {
+   "name": "Unter Bisibiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9700201,
+   "lng": 8.4401846
+  },
+  {
+   "name": "Riedmattweid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.96931,
+   "lng": 8.4356249
+  },
+  {
+   "name": "Hubeli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9701153,
+   "lng": 8.4353567
+  },
+  {
+   "name": "Riedmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.971111,
+   "lng": 8.4353137
+  },
+  {
+   "name": "Ober Stigli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9712354,
+   "lng": 8.4376204
+  },
+  {
+   "name": "Stutzboden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9557777,
+   "lng": 8.4232062
+  },
+  {
+   "name": "Isnerts",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9658934,
+   "lng": 8.4464747
+  },
+  {
+   "name": "Ifängi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9656298,
+   "lng": 8.4491247
+  },
+  {
+   "name": "Ober Sassi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9637738,
+   "lng": 8.4501654
+  },
+  {
+   "name": "Halten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9612842,
+   "lng": 8.4526062
+  },
+  {
+   "name": "Sassi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9670864,
+   "lng": 8.4520322
+  },
+  {
+   "name": "Hinter Sassi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9678259,
+   "lng": 8.44994
+  },
+  {
+   "name": "Mittler Sassi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9674525,
+   "lng": 8.453738
+  },
+  {
+   "name": "Tal",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9676795,
+   "lng": 8.4558623
+  },
+  {
+   "name": "Hostettli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9671743,
+   "lng": 8.4584909
+  },
+  {
+   "name": "Sprengi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9633011,
+   "lng": 8.4575575
+  },
+  {
+   "name": "Steinmattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9622247,
+   "lng": 8.4564953
+  },
+  {
+   "name": "Weid",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9615584,
+   "lng": 8.4575039
+  },
+  {
+   "name": "Gerzmettlen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9609946,
+   "lng": 8.456034
+  },
+  {
+   "name": "Ried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9601012,
+   "lng": 8.4577292
+  },
+  {
+   "name": "Oberried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9593836,
+   "lng": 8.4586626
+  },
+  {
+   "name": "Hüsli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9573113,
+   "lng": 8.4544783
+  },
+  {
+   "name": "Rüti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9573552,
+   "lng": 8.4572893
+  },
+  {
+   "name": "Berg Wil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9542722,
+   "lng": 8.4539204
+  },
+  {
+   "name": "Bodenberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9550045,
+   "lng": 8.4650677
+  },
+  {
+   "name": "Ober Hartmanix",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9543674,
+   "lng": 8.4699386
+  },
+  {
+   "name": "Berg Hag",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9579484,
+   "lng": 8.46628
+  },
+  {
+   "name": "Hinteregg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9600719,
+   "lng": 8.4617203
+  },
+  {
+   "name": "Ernital",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9616609,
+   "lng": 8.4597998
+  },
+  {
+   "name": "Loh",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9638282,
+   "lng": 8.4626108
+  },
+  {
+   "name": "Biel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9651242,
+   "lng": 8.4635549
+  },
+  {
+   "name": "Sittlismatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9678186,
+   "lng": 8.4639733
+  },
+  {
+   "name": "Untergass",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9687594,
+   "lng": 8.4637802
+  },
+  {
+   "name": "Sagen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9716952,
+   "lng": 8.4653413
+  },
+  {
+   "name": "Strandbad",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.971708,
+   "lng": 8.4658643
+  },
+  {
+   "name": "Sack",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9657189,
+   "lng": 8.4693109
+  },
+  {
+   "name": "Lielibach",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9644193,
+   "lng": 8.4684258
+  },
+  {
+   "name": "Acheri",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9639909,
+   "lng": 8.4717518
+  },
+  {
+   "name": "Erligholz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9633356,
+   "lng": 8.4719556
+  },
+  {
+   "name": "Stärten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.961333,
+   "lng": 8.4704804
+  },
+  {
+   "name": "Stärtenmattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.961311,
+   "lng": 8.4680718
+  },
+  {
+   "name": "Ober Ifang",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9621641,
+   "lng": 8.4682542
+  },
+  {
+   "name": "Kellermatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9632624,
+   "lng": 8.4666126
+  },
+  {
+   "name": "Rohnenmattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9630171,
+   "lng": 8.4657597
+  },
+  {
+   "name": "Arschad",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9616112,
+   "lng": 8.464837
+  },
+  {
+   "name": "Unter Etschenried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9832046,
+   "lng": 8.3865295
+  },
+  {
+   "name": "Etschenried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9843061,
+   "lng": 8.3904295
+  },
+  {
+   "name": "Hüslen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9864543,
+   "lng": 8.3944259
+  },
+  {
+   "name": "Hinteregg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9880461,
+   "lng": 8.3913575
+  },
+  {
+   "name": "Holzen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.987929,
+   "lng": 8.3979075
+  },
+  {
+   "name": "Kleinbiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9897879,
+   "lng": 8.3983259
+  },
+  {
+   "name": "Vorderegg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9907393,
+   "lng": 8.3948658
+  },
+  {
+   "name": "Hinterbiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.989363,
+   "lng": 8.4041624
+  },
+  {
+   "name": "Ober Massholtern",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9912731,
+   "lng": 8.4050099
+  },
+  {
+   "name": "Unter Massholtern",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9907535,
+   "lng": 8.407499
+  },
+  {
+   "name": "Riedmattberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9911194,
+   "lng": 8.4102885
+  },
+  {
+   "name": "Hinterbreiten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9886165,
+   "lng": 8.41031
+  },
+  {
+   "name": "Vorderbreiten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.98888,
+   "lng": 8.4115223
+  },
+  {
+   "name": "Stadel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.987892,
+   "lng": 8.4109644
+  },
+  {
+   "name": "Juch",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9875919,
+   "lng": 8.4069948
+  },
+  {
+   "name": "Breitholz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9894216,
+   "lng": 8.4151058
+  },
+  {
+   "name": "Schür",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9899265,
+   "lng": 8.4221868
+  },
+  {
+   "name": "Weingärtli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9906584,
+   "lng": 8.4248905
+  },
+  {
+   "name": "Stalden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9915073,
+   "lng": 8.427739
+  },
+  {
+   "name": "Birchen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9942369,
+   "lng": 8.429992
+  },
+  {
+   "name": "Trogenalp",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9965552,
+   "lng": 8.3974032
+  },
+  {
+   "name": "Holzeli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9853057,
+   "lng": 8.3977626
+  },
+  {
+   "name": "Blattengstellen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9858729,
+   "lng": 8.4011744
+  },
+  {
+   "name": "Höpperli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.987183,
+   "lng": 8.4020488
+  },
+  {
+   "name": "Kastell",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9914007,
+   "lng": 8.4262477
+  },
+  {
+   "name": "Kropfgasshaus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9909214,
+   "lng": 8.423603
+  },
+  {
+   "name": "Mittlere Oeltrotte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9836714,
+   "lng": 8.4044279
+  },
+  {
+   "name": "Obfuhr",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9924278,
+   "lng": 8.4250676
+  },
+  {
+   "name": "Bünt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9545955,
+   "lng": 8.3799294
+  },
+  {
+   "name": "Siglital",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9598533,
+   "lng": 8.3913663
+  },
+  {
+   "name": "Hergisacher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.95937,
+   "lng": 8.3941237
+  },
+  {
+   "name": "Weingarten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9571586,
+   "lng": 8.3936087
+  },
+  {
+   "name": "Ober Schinhalten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9577444,
+   "lng": 8.3918062
+  },
+  {
+   "name": "Laubachen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9554523,
+   "lng": 8.3964196
+  },
+  {
+   "name": "Rain",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9542586,
+   "lng": 8.3940271
+  },
+  {
+   "name": "Winterswil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9552619,
+   "lng": 8.4050885
+  },
+  {
+   "name": "Käppeli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9597288,
+   "lng": 8.3971492
+  },
+  {
+   "name": "Ennerberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9651361,
+   "lng": 8.3944026
+  },
+  {
+   "name": "Vorder Ennerberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.962277,
+   "lng": 8.3888665
+  },
+  {
+   "name": "Breiten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9611421,
+   "lng": 8.3794359
+  },
+  {
+   "name": "Krummenacher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9587549,
+   "lng": 8.3798436
+  },
+  {
+   "name": "Kleinlehli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9580666,
+   "lng": 8.3753697
+  },
+  {
+   "name": "Oberfondlen",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0154213,
+   "lng": 8.3211005
+  },
+  {
+   "name": "Mättihalden",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0130282,
+   "lng": 8.320171
+  },
+  {
+   "name": "Obermatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0019232,
+   "lng": 8.431511
+  },
+  {
+   "name": "Ober Lehmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9929216,
+   "lng": 8.3863773
+  },
+  {
+   "name": "Mattgrat",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9978354,
+   "lng": 8.4173922
+  },
+  {
+   "name": "Vorderbiel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9891602,
+   "lng": 8.4062466
+  },
+  {
+   "name": "Massholtern",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9901991,
+   "lng": 8.407065
+  },
+  {
+   "name": "Gotthardlistalden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9540826,
+   "lng": 8.347525
+  },
+  {
+   "name": "Windleten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9547893,
+   "lng": 8.3405406
+  },
+  {
+   "name": "Ober Hostatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9558163,
+   "lng": 8.3447195
+  },
+  {
+   "name": "Hostatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9574494,
+   "lng": 8.3446148
+  },
+  {
+   "name": "Löwengrube",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9593743,
+   "lng": 8.3462778
+  },
+  {
+   "name": "Feld",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9590997,
+   "lng": 8.3423779
+  },
+  {
+   "name": "Vorder Rotzberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9602311,
+   "lng": 8.3389983
+  },
+  {
+   "name": "Hinter Rotzberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9638849,
+   "lng": 8.3398083
+  },
+  {
+   "name": "Rotzberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9621431,
+   "lng": 8.341415
+  },
+  {
+   "name": "Schroten",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9610626,
+   "lng": 8.3352365
+  },
+  {
+   "name": "Oedwil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9592393,
+   "lng": 8.3366634
+  },
+  {
+   "name": "Hinterbach",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9593199,
+   "lng": 8.330886
+  },
+  {
+   "name": "Ober Hinterbach",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9612603,
+   "lng": 8.3296521
+  },
+  {
+   "name": "Rieden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.963252,
+   "lng": 8.3279999
+  },
+  {
+   "name": "Rotzloch",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9654778,
+   "lng": 8.3299257
+  },
+  {
+   "name": "Hinter Rüti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9593492,
+   "lng": 8.3196529
+  },
+  {
+   "name": "Ober Rüti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9588439,
+   "lng": 8.3231397
+  },
+  {
+   "name": "Bergisrüti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9559358,
+   "lng": 8.338457
+  },
+  {
+   "name": "UniQuisine Atelier",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9756402,
+   "lng": 8.3423095
+  },
+  {
+   "name": "Brougier-Park",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0194464,
+   "lng": 8.471017
+  },
+  {
+   "name": "Frohmattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.970381,
+   "lng": 8.4225771
+  },
+  {
+   "name": "Ober Bächli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.962017,
+   "lng": 8.4097157
+  },
+  {
+   "name": "Kallenbach",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9691528,
+   "lng": 8.4477519
+  },
+  {
+   "name": "Neu Bächli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9644747,
+   "lng": 8.4146518
+  },
+  {
+   "name": "Fröschenacher",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9608966,
+   "lng": 8.3464857
+  },
+  {
+   "name": "Adlerried",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9608891,
+   "lng": 8.3496992
+  },
+  {
+   "name": "Fuhr",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9593882,
+   "lng": 8.3522009
+  },
+  {
+   "name": "Mittler Milchbrunnen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9638028,
+   "lng": 8.370226
+  },
+  {
+   "name": "Schmittenbrugg",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9671074,
+   "lng": 8.3508788
+  },
+  {
+   "name": "Kapellmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9928613,
+   "lng": 8.3777176
+  },
+  {
+   "name": "Ober Stöckmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9733664,
+   "lng": 8.3577022
+  },
+  {
+   "name": "Stuidenhütte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9719284,
+   "lng": 8.3699939
+  },
+  {
+   "name": "Schöntal",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9824514,
+   "lng": 8.362562
+  },
+  {
+   "name": "Moos",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9924867,
+   "lng": 8.3822189
+  },
+  {
+   "name": "Bürgenberg",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0017504,
+   "lng": 8.3969872
+  },
+  {
+   "name": "Untermatt am Bürgenstock",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0012978,
+   "lng": 8.4202275
+  },
+  {
+   "name": "Felsenegg",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0155974,
+   "lng": 8.3186429
+  },
+  {
+   "name": "Längacherhock",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0157771,
+   "lng": 8.3193317
+  },
+  {
+   "name": "Oberknolligen",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0155029,
+   "lng": 8.3246897
+  },
+  {
+   "name": "Unterknolligen",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0151537,
+   "lng": 8.3263011
+  },
+  {
+   "name": "Unterfondlen",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0136407,
+   "lng": 8.3225847
+  },
+  {
+   "name": "Leimi",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0131791,
+   "lng": 8.3240672
+  },
+  {
+   "name": "Mättiwil",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0210502,
+   "lng": 8.3343153
+  },
+  {
+   "name": "Schulhaus Mattli",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0127617,
+   "lng": 8.3339273
+  },
+  {
+   "name": "Steinibachried",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0113601,
+   "lng": 8.3113203
+  },
+  {
+   "name": "Gerbi",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9662424,
+   "lng": 8.3507627
+  },
+  {
+   "name": "Kehrsiten (Bootshafen)",
+   "kind": "station",
+   "ele": null,
+   "lat": 47.0022966,
+   "lng": 8.3714937
+  },
+  {
+   "name": "Bootshafen",
+   "kind": "station",
+   "ele": null,
+   "lat": 47.0032374,
+   "lng": 8.3712241
+  },
+  {
+   "name": "Goldboden",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.990836,
+   "lng": 8.3670666
+  },
+  {
+   "name": "Kreuzmatt",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0134717,
+   "lng": 8.3357156
+  },
+  {
+   "name": "Mekong Asia",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.9593146,
+   "lng": 8.3622179
   }
  ]
 }

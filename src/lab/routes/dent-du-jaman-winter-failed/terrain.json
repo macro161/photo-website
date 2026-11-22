@@ -20,6 +20,34 @@
    "lng": 6.976051
   },
   {
+   "name": "Montreux",
+   "kind": "place",
+   "ele": 390,
+   "lat": 46.4310831,
+   "lng": 6.9129921
+  },
+  {
+   "name": "Belmont-sur-Montreux",
+   "kind": "station",
+   "ele": 465,
+   "lat": 46.4420987,
+   "lng": 6.9059653
+  },
+  {
+   "name": "Les Avants",
+   "kind": "station",
+   "ele": 970,
+   "lat": 46.4536346,
+   "lng": 6.9434565
+  },
+  {
+   "name": "Vuarennes",
+   "kind": "station",
+   "ele": 442,
+   "lat": 46.4391384,
+   "lng": 6.9109929
+  },
+  {
    "name": "Veytaux",
    "kind": "place",
    "ele": 438,
@@ -27,11 +55,67 @@
    "lng": 6.9275648
   },
   {
+   "name": "Chantemerle",
+   "kind": "station",
+   "ele": 660,
+   "lat": 46.4617883,
+   "lng": 6.9057202
+  },
+  {
+   "name": "Vers-chez-Robert",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.460869,
+   "lng": 6.9119199
+  },
+  {
+   "name": "Cornaux",
+   "kind": "station",
+   "ele": 710,
+   "lat": 46.4570452,
+   "lng": 6.9094926
+  },
+  {
+   "name": "Glion-Alpes",
+   "kind": "station",
+   "ele": 707,
+   "lat": 46.4338338,
+   "lng": 6.9258292
+  },
+  {
+   "name": "Col de Chaude",
+   "kind": "pass",
+   "ele": 1621,
+   "lat": 46.4217732,
+   "lng": 6.997642
+  },
+  {
    "name": "Pointe d'Aveneyre",
    "kind": "peak",
    "ele": 2026,
    "lat": 46.4173368,
    "lng": 7.004657
+  },
+  {
+   "name": "Rochers de Naye",
+   "kind": "station",
+   "ele": 1970,
+   "lat": 46.4318411,
+   "lng": 6.9788166
+  },
+  {
+   "name": "Plein Roc",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4325256,
+   "lng": 6.9759297
+  },
+  {
+   "name": "Auberge de Sonchaux",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4161858,
+   "lng": 6.9482956
   },
   {
    "name": "Les Coursis",
@@ -48,6 +132,62 @@
    "lng": 6.9747987
   },
   {
+   "name": "La Perche",
+   "kind": "station",
+   "ele": 1799,
+   "lat": 46.4364296,
+   "lng": 6.9750765
+  },
+  {
+   "name": "Crêt-d'y-Bau",
+   "kind": "station",
+   "ele": 1286,
+   "lat": 46.4352058,
+   "lng": 6.9555069
+  },
+  {
+   "name": "Parking de la Gare de Montreux",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4354981,
+   "lng": 6.9111147
+  },
+  {
+   "name": "Sonloup",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4585793,
+   "lng": 6.9397039
+  },
+  {
+   "name": "Le Signal",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4657019,
+   "lng": 6.9044963
+  },
+  {
+   "name": "Signal",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4653915,
+   "lng": 6.904743
+  },
+  {
+   "name": "Le Palais Oriental",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4307074,
+   "lng": 6.9091456
+  },
+  {
+   "name": "Sallauscex",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.4501145,
+   "lng": 6.9222589
+  },
+  {
    "name": "Le Merdasson",
    "kind": "peak",
    "ele": 1860,
@@ -55,11 +195,74 @@
    "lng": 6.9730589
   },
   {
+   "name": "La Montagnard",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4598255,
+   "lng": 6.9269365
+  },
+  {
+   "name": "Buvette de Jaman",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4415263,
+   "lng": 6.9768256
+  },
+  {
+   "name": "Les Avants (funi)",
+   "kind": "station",
+   "ele": 970,
+   "lat": 46.4541321,
+   "lng": 6.9436648
+  },
+  {
+   "name": "Sonloup",
+   "kind": "station",
+   "ele": 1154,
+   "lat": 46.4570886,
+   "lng": 6.9390099
+  },
+  {
    "name": "Le Cubly",
    "kind": "peak",
    "ele": 1188,
    "lat": 46.4531096,
    "lng": 6.9247764
+  },
+  {
+   "name": "Azot",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4482181,
+   "lng": 6.9231726
+  },
+  {
+   "name": "Saumont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4593215,
+   "lng": 6.92667
+  },
+  {
+   "name": "Cubly Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4519663,
+   "lng": 6.9183184
+  },
+  {
+   "name": "Les Prévondes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4566683,
+   "lng": 6.932251
+  },
+  {
+   "name": "Cubly Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4558237,
+   "lng": 6.9223539
   },
   {
    "name": "Les Avants",
@@ -81,6 +284,13 @@
    "ele": null,
    "lat": 46.4486358,
    "lng": 6.9140278
+  },
+  {
+   "name": "Cergniaule",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4651792,
+   "lng": 6.9468129
   },
   {
    "name": "Caux",
@@ -125,11 +335,305 @@
    "lng": 6.9469676
   },
   {
+   "name": "Collonge (funi)",
+   "kind": "station",
+   "ele": 461,
+   "lat": 46.4282861,
+   "lng": 6.9235288
+  },
+  {
+   "name": "Les Echets",
+   "kind": "station",
+   "ele": 1100,
+   "lat": 46.4320053,
+   "lng": 6.9447922
+  },
+  {
+   "name": "Paccot",
+   "kind": "station",
+   "ele": 1430,
+   "lat": 46.4377004,
+   "lng": 6.9636101
+  },
+  {
+   "name": "Sendy-Sollard",
+   "kind": "station",
+   "ele": 875,
+   "lat": 46.4471615,
+   "lng": 6.9301965
+  },
+  {
+   "name": "Montreux-Les Planches",
+   "kind": "station",
+   "ele": 450,
+   "lat": 46.4332751,
+   "lng": 6.9173482
+  },
+  {
+   "name": "Toveyre",
+   "kind": "station",
+   "ele": 576,
+   "lat": 46.427891,
+   "lng": 6.9285684
+  },
+  {
+   "name": "Valmont",
+   "kind": "station",
+   "ele": 637,
+   "lat": 46.4285383,
+   "lng": 6.9293905
+  },
+  {
+   "name": "Le Tremblex",
+   "kind": "station",
+   "ele": 817,
+   "lat": 46.4359414,
+   "lng": 6.9326309
+  },
+  {
+   "name": "Haut-de-Caux",
+   "kind": "station",
+   "ele": 1140,
+   "lat": 46.4342828,
+   "lng": 6.9475692
+  },
+  {
+   "name": "La Bavaria",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4299812,
+   "lng": 6.9133201
+  },
+  {
+   "name": "Col de Jaman",
+   "kind": "pass",
+   "ele": 1512,
+   "lat": 46.4515055,
+   "lng": 6.9772582
+  },
+  {
+   "name": "Croix de Fer",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4649657,
+   "lng": 7.0056545
+  },
+  {
+   "name": "Sautodoz",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.4284807,
+   "lng": 6.9719731
+  },
+  {
+   "name": "Auberge de Chaulin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4536919,
+   "lng": 6.9087911
+  },
+  {
+   "name": "Buffet de la Gare",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4311714,
+   "lng": 6.9380903
+  },
+  {
+   "name": "Col de Bonaudon",
+   "kind": "pass",
+   "ele": 1755,
+   "lat": 46.4396675,
+   "lng": 6.9843033
+  },
+  {
+   "name": "La Cascade",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4241344,
+   "lng": 6.9255423
+  },
+  {
+   "name": "Tango Restaurante Grill Argentin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4243919,
+   "lng": 6.9251502
+  },
+  {
+   "name": "Les Cerisiers",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4387158,
+   "lng": 6.9320512
+  },
+  {
    "name": "Tête du Paccot",
    "kind": "peak",
    "ele": 1514,
    "lat": 46.4414791,
    "lng": 6.9613618
+  },
+  {
+   "name": "Chamossale",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4365042,
+   "lng": 6.9680764
+  },
+  {
+   "name": "Le Paccot",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.440346,
+   "lng": 6.9643394
+  },
+  {
+   "name": "Montagne d'Amont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4414867,
+   "lng": 6.9804112
+  },
+  {
+   "name": "Montreux-Collège",
+   "kind": "station",
+   "ele": 426,
+   "lat": 46.4360734,
+   "lng": 6.9126678
+  },
+  {
+   "name": "Montreux",
+   "kind": "station",
+   "ele": 395,
+   "lat": 46.4358597,
+   "lng": 6.9103688
+  },
+  {
+   "name": "Glion",
+   "kind": "station",
+   "ele": 688,
+   "lat": 46.4319287,
+   "lng": 6.9240596
+  },
+  {
+   "name": "Caux",
+   "kind": "station",
+   "ele": 1054,
+   "lat": 46.4311481,
+   "lng": 6.9385239
+  },
+  {
+   "name": "Territet",
+   "kind": "station",
+   "ele": 386,
+   "lat": 46.4264148,
+   "lng": 6.9227327
+  },
+  {
+   "name": "Chernex",
+   "kind": "station",
+   "ele": 600,
+   "lat": 46.4463674,
+   "lng": 6.9095592
+  },
+  {
+   "name": "Chamby",
+   "kind": "station",
+   "ele": 736,
+   "lat": 46.4493209,
+   "lng": 6.9135244
+  },
+  {
+   "name": "Fontanivent",
+   "kind": "station",
+   "ele": 556,
+   "lat": 46.4527988,
+   "lng": 6.9022556
+  },
+  {
+   "name": "Veytaux-Chillon",
+   "kind": "station",
+   "ele": 380,
+   "lat": 46.4176111,
+   "lng": 6.9277389
+  },
+  {
+   "name": "Les Cases",
+   "kind": "station",
+   "ele": 1113,
+   "lat": 46.4559407,
+   "lng": 6.9978476
+  },
+  {
+   "name": "Jor",
+   "kind": "station",
+   "ele": 1080,
+   "lat": 46.4546413,
+   "lng": 6.9651467
+  },
+  {
+   "name": "Jaman",
+   "kind": "station",
+   "ele": 1742,
+   "lat": 46.4414736,
+   "lng": 6.9769435
+  },
+  {
+   "name": "Plan d'Oran",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4152815,
+   "lng": 6.9357495
+  },
+  {
+   "name": "Liboson d'en Bas",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4288538,
+   "lng": 6.955206
+  },
+  {
+   "name": "Combarrosse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4255233,
+   "lng": 6.9444747
+  },
+  {
+   "name": "Sautodoz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4288774,
+   "lng": 6.9716871
+  },
+  {
+   "name": "Nermont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4469128,
+   "lng": 6.9489073
+  },
+  {
+   "name": "Au Bas-de-Nan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4458643,
+   "lng": 6.9405669
+  },
+  {
+   "name": "Vaux de Sonzier",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4359647,
+   "lng": 6.9232653
+  },
+  {
+   "name": "Au Cimetière",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4074743,
+   "lng": 6.9578041
   },
   {
    "name": "En Plancudrey",
@@ -139,11 +643,263 @@
    "lng": 6.9487871
   },
   {
+   "name": "En Chaude",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4274375,
+   "lng": 7.0029982
+  },
+  {
+   "name": "En Borgettan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4057106,
+   "lng": 6.9551262
+  },
+  {
+   "name": "En Herniaulaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4208026,
+   "lng": 6.9811222
+  },
+  {
+   "name": "En Moillesaulaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.406711,
+   "lng": 6.9557548
+  },
+  {
+   "name": "En Tinière",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4119393,
+   "lng": 6.961631
+  },
+  {
+   "name": "En Vuadens",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4157036,
+   "lng": 6.9670744
+  },
+  {
+   "name": "Les Troncs",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4151607,
+   "lng": 6.9614329
+  },
+  {
+   "name": "Les Collondeires",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4199215,
+   "lng": 6.972801
+  },
+  {
+   "name": "Les Clavons",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4136637,
+   "lng": 6.9705988
+  },
+  {
+   "name": "Le Lavanchy",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4349079,
+   "lng": 7.0069225
+  },
+  {
+   "name": "Le Creux à la Cierge",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4189326,
+   "lng": 6.9552437
+  },
+  {
+   "name": "La Joux-Devant",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4184237,
+   "lng": 6.9767393
+  },
+  {
+   "name": "La Jorette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4246014,
+   "lng": 6.9797232
+  },
+  {
+   "name": "La Chevalleyre",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4119019,
+   "lng": 6.9657362
+  },
+  {
+   "name": "Jor",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4560138,
+   "lng": 6.9629177
+  },
+  {
+   "name": "Echerègnes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.441294,
+   "lng": 6.9368005
+  },
+  {
+   "name": "Les Gresaleys",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4479796,
+   "lng": 6.9578879
+  },
+  {
+   "name": "La Preise",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4522125,
+   "lng": 6.9662834
+  },
+  {
+   "name": "Sauderan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.451121,
+   "lng": 6.9624772
+  },
+  {
+   "name": "Brison",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4590251,
+   "lng": 6.9190304
+  },
+  {
+   "name": "Haut-de-Caux (bas)",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4349138,
+   "lng": 6.9452876
+  },
+  {
+   "name": "Haut-de-Caux (haut)",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.434755,
+   "lng": 6.9475298
+  },
+  {
+   "name": "Le Contretemps",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4262037,
+   "lng": 6.9226427
+  },
+  {
    "name": "Chaulin",
    "kind": "place",
    "ele": null,
    "lat": 46.4534426,
    "lng": 6.9084139
+  },
+  {
+   "name": "Belcrêt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4178185,
+   "lng": 6.9423231
+  },
+  {
+   "name": "Bonaudon du Milieu",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4430126,
+   "lng": 6.9975425
+  },
+  {
+   "name": "La Case Bonaudon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4408409,
+   "lng": 6.9918047
+  },
+  {
+   "name": "Naye d'en Bas",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4406673,
+   "lng": 7.0000907
+  },
+  {
+   "name": "Naye d'en Haut",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4355918,
+   "lng": 6.9862825
+  },
+  {
+   "name": "Plan d'Areine",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4319722,
+   "lng": 6.9889869
+  },
+  {
+   "name": "Liboson d'en Haut",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4313846,
+   "lng": 6.961642
+  },
+  {
+   "name": "En Jaman",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4536993,
+   "lng": 6.9749787
+  },
+  {
+   "name": "Chenaussanne",
+   "kind": "place",
+   "ele": 1237,
+   "lat": 46.45278,
+   "lng": 7.0003563
+  },
+  {
+   "name": "La Cheyta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4586024,
+   "lng": 7.0025209
+  },
+  {
+   "name": "La Joux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4512703,
+   "lng": 6.9859744
+  },
+  {
+   "name": "Les Cases",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4549314,
+   "lng": 6.992702
+  },
+  {
+   "name": "Villaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4606788,
+   "lng": 7.0073312
   },
   {
    "name": "Dent de Hautadon",
@@ -153,6 +909,27 @@
    "lng": 6.9888389
   },
   {
+   "name": "Gros Rotey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4617998,
+   "lng": 7.0005012
+  },
+  {
+   "name": "Le Quartissot",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4612538,
+   "lng": 7.0039263
+  },
+  {
+   "name": "Les Clous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4597932,
+   "lng": 6.990813
+  },
+  {
    "name": "Grande Chaux de Naye",
    "kind": "peak",
    "ele": 1982,
@@ -160,11 +937,53 @@
    "lng": 6.9839705
   },
   {
+   "name": "Longevaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4345349,
+   "lng": 7.0027219
+  },
+  {
+   "name": "Chaux d'Avau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4658218,
+   "lng": 7.000243
+  },
+  {
+   "name": "La Case",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4637655,
+   "lng": 6.9854211
+  },
+  {
    "name": "Les Béviaux",
    "kind": "place",
    "ele": 1366,
    "lat": 46.4646449,
    "lng": 6.9680847
+  },
+  {
+   "name": "Le Museum",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4340958,
+   "lng": 6.9136516
+  },
+  {
+   "name": "Les Seitours",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.458733,
+   "lng": 7.0028108
+  },
+  {
+   "name": "Refuge du Petit-Tour",
+   "kind": "hut",
+   "ele": 1486,
+   "lat": 46.4124814,
+   "lng": 6.9830699
   },
   {
    "name": "Pallens",
@@ -181,6 +1000,279 @@
    "lng": 6.9152676
   },
   {
+   "name": "Tramontana Café",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4536774,
+   "lng": 6.9445482
+  },
+  {
+   "name": "Chez Bilia",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4318056,
+   "lng": 6.9126778
+  },
+  {
+   "name": "Chez Chorn",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4247626,
+   "lng": 6.9242254
+  },
+  {
+   "name": "Glion-Collège",
+   "kind": "station",
+   "ele": 747,
+   "lat": 46.4347779,
+   "lng": 6.9287316
+  },
+  {
+   "name": "Pizzeria Molino Montreux",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4315775,
+   "lng": 6.9093662
+  },
+  {
+   "name": "Chamby-Musée",
+   "kind": "station",
+   "ele": 725,
+   "lat": 46.4537588,
+   "lng": 6.9122994
+  },
+  {
+   "name": "Buffet de la Gare",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4319685,
+   "lng": 6.9238918
+  },
+  {
+   "name": "Taverne du Château de Chillon",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4153357,
+   "lng": 6.9283548
+  },
+  {
+   "name": "Leman Bae",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4156249,
+   "lng": 6.9283759
+  },
+  {
+   "name": "Pho Ardoise",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.422233,
+   "lng": 6.9255515
+  },
+  {
+   "name": "Le Pavois",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4233769,
+   "lng": 6.9252175
+  },
+  {
+   "name": "Chez John The Roadhouse",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4240649,
+   "lng": 6.9256042
+  },
+  {
+   "name": "M&J Spécialités Syriennes et Libanaises",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4242613,
+   "lng": 6.925368
+  },
+  {
+   "name": "Huit Shushi Bar",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4301142,
+   "lng": 6.9141757
+  },
+  {
+   "name": "Chinos Wing Wah",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4301401,
+   "lng": 6.9140655
+  },
+  {
+   "name": "Pinseria Italian Food",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4301205,
+   "lng": 6.9128478
+  },
+  {
+   "name": "Le Basilic",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4307423,
+   "lng": 6.9100283
+  },
+  {
+   "name": "Dolce Vita",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4313794,
+   "lng": 6.9103242
+  },
+  {
+   "name": "Caveau St-Vincent",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4331177,
+   "lng": 6.9170836
+  },
+  {
+   "name": "Restaurant Du Pont",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4338904,
+   "lng": 6.9165847
+  },
+  {
+   "name": "San Luca",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4309107,
+   "lng": 6.9116925
+  },
+  {
+   "name": "Beijing Town",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.431094,
+   "lng": 6.9109024
+  },
+  {
+   "name": "Bev & Co.",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4329493,
+   "lng": 6.9103634
+  },
+  {
+   "name": "Istanbul Pizza",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4315259,
+   "lng": 6.9110187
+  },
+  {
+   "name": "La Rouvenaz",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4334355,
+   "lng": 6.9104257
+  },
+  {
+   "name": "Au Parc",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4336334,
+   "lng": 6.910344
+  },
+  {
+   "name": "1820",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4349518,
+   "lng": 6.9100764
+  },
+  {
+   "name": "Fuji",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4354815,
+   "lng": 6.9097872
+  },
+  {
+   "name": "Restaurant 45",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4359401,
+   "lng": 6.9098334
+  },
+  {
+   "name": "Caveau des Vignerons",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4335357,
+   "lng": 6.9132848
+  },
+  {
+   "name": "Chez Gaston",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4304719,
+   "lng": 6.9095146
+  },
+  {
+   "name": "Restaurant Panda",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4351846,
+   "lng": 6.9099649
+  },
+  {
+   "name": "Sonzier",
+   "kind": "station",
+   "ele": 664,
+   "lat": 46.4393239,
+   "lng": 6.9215129
+  },
+  {
+   "name": "Le Coucou",
+   "kind": "poi",
+   "ele": 1150,
+   "lat": 46.434075,
+   "lng": 6.9456291
+  },
+  {
+   "name": "Marché-Forum",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4312207,
+   "lng": 6.9093216
+  },
+  {
+   "name": "La Brasserie",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.430512,
+   "lng": 6.9121522
+  },
+  {
+   "name": "Big One Burger",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4332784,
+   "lng": 6.9108703
+  },
+  {
+   "name": "Glion (funi)",
+   "kind": "station",
+   "ele": 686,
+   "lat": 46.4319328,
+   "lng": 6.923771
+  },
+  {
+   "name": "Territet (funi)",
+   "kind": "station",
+   "ele": 388,
+   "lat": 46.4267686,
+   "lng": 6.9234471
+  },
+  {
    "name": "Le Débandit",
    "kind": "peak",
    "ele": 1529,
@@ -188,11 +1280,39 @@
    "lng": 6.9514771
   },
   {
+   "name": "Miyazaki",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4350897,
+   "lng": 6.9099721
+  },
+  {
+   "name": "Maison Décotterd",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4324622,
+   "lng": 6.9215793
+  },
+  {
+   "name": "Café Bellagio",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4399279,
+   "lng": 6.9028384
+  },
+  {
    "name": "Les Mosses",
    "kind": "peak",
    "ele": 1508,
    "lat": 46.4598006,
    "lng": 6.9591229
+  },
+  {
+   "name": "Pizzeria Antica Roma",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4336589,
+   "lng": 6.9133127
   },
   {
    "name": "Les Dentaux",
@@ -207,6 +1327,139 @@
    "ele": 1932,
    "lat": 46.4095912,
    "lng": 6.9946763
+  },
+  {
+   "name": "Pertuis d'Aveneyre",
+   "kind": "pass",
+   "ele": 1846,
+   "lat": 46.4127561,
+   "lng": 6.9942602
+  },
+  {
+   "name": "Aveneire",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4607199,
+   "lng": 6.996287
+  },
+  {
+   "name": "Le Gourney",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.455495,
+   "lng": 6.9907365
+  },
+  {
+   "name": "Les Fonds",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4576791,
+   "lng": 6.998413
+  },
+  {
+   "name": "Basnaudon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4572098,
+   "lng": 7.005081
+  },
+  {
+   "name": "Pra des Cases",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4660357,
+   "lng": 7.0040534
+  },
+  {
+   "name": "Hautaudon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4458575,
+   "lng": 6.9926295
+  },
+  {
+   "name": "Ouclio",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4605395,
+   "lng": 6.9893695
+  },
+  {
+   "name": "La Taluse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4137993,
+   "lng": 6.9439737
+  },
+  {
+   "name": "La Côte-à-Tavel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4641761,
+   "lng": 6.933634
+  },
+  {
+   "name": "Sentier Plan-au-Rey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4396369,
+   "lng": 6.940136
+  },
+  {
+   "name": "Rochers-de-Naye",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4366984,
+   "lng": 6.9904435
+  },
+  {
+   "name": "Hameau du Signal",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.465791,
+   "lng": 6.9051017
+  },
+  {
+   "name": "Bistrot du Soldat",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4145491,
+   "lng": 6.9292194
+  },
+  {
+   "name": "La Table de Montreux",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4319478,
+   "lng": 6.9113225
+  },
+  {
+   "name": "Hanabi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.436338,
+   "lng": 6.9095564
+  },
+  {
+   "name": "BAOLAB",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4362786,
+   "lng": 6.9095999
+  },
+  {
+   "name": "Café du Globe",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4312636,
+   "lng": 6.9113639
+  },
+  {
+   "name": "DOTORI",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4317777,
+   "lng": 6.9118118
   }
  ]
 }

@@ -91,10 +91,20 @@ const bounds = { south: unpy(y0 + ch * step), north: unpy(y0), west: unpx(x0), e
 const meta = { width: cw, height: ch, unit: UNIT, bounds, metersPerPx: mPerSrcPx * step, minEle: Math.round(minEle), maxEle: Math.round(maxEle) }
 console.log(`DEM ${cw}x${ch}, ${meta.metersPerPx.toFixed(1)} m/px, ${Math.round(minEle)}-${Math.round(maxEle)} m`)
 
+const kindOf = (t) =>
+  t.natural === 'peak' ? 'peak'
+    : t.natural === 'saddle' || t.mountain_pass ? 'pass'
+    : t.tourism === 'alpine_hut' || t.tourism === 'wilderness_hut' ? 'hut'
+    : t.tourism === 'viewpoint' ? 'view'
+    : t.railway || t.aerialway ? 'station'
+    : t.amenity ? 'poi'
+    : 'place'
+
 // Named peaks and huts from OpenStreetMap (Overpass), baked in so the page never calls it.
 let peaks = []
 try {
-  const q = `[out:json][timeout:30];(node["natural"="peak"]["name"](${bounds.south},${bounds.west},${bounds.north},${bounds.east});node["tourism"="alpine_hut"]["name"](${bounds.south},${bounds.west},${bounds.north},${bounds.east});node["place"~"village|hamlet"]["name"](${bounds.south},${bounds.west},${bounds.north},${bounds.east}););out;`
+  const B = `(${bounds.south},${bounds.west},${bounds.north},${bounds.east})`
+  const q = `[out:json][timeout:60];(node["natural"~"^(peak|saddle)$"]["name"]${B};node["mountain_pass"="yes"]["name"]${B};node["tourism"~"^(alpine_hut|wilderness_hut|viewpoint)$"]["name"]${B};node["place"~"^(village|hamlet|locality|isolated_dwelling|town)$"]["name"]${B};node["railway"~"^(station|halt)$"]["name"]${B};node["amenity"~"^(restaurant|parking)$"]["name"]${B};node["aerialway"="station"]["name"]${B};node["natural"="peak"]["name"]${B};);out;`
   let j
   for (const host of ['https://overpass.openstreetmap.fr', 'https://overpass-api.de', 'https://overpass.kumi.systems']) {
     try {
@@ -104,7 +114,7 @@ try {
     } catch (e) { console.warn(host, e.message) }
   }
   if (!j) throw new Error('no Overpass host answered')
-  peaks = j.elements.map((e) => ({ name: e.tags.name, kind: e.tags.natural === 'peak' ? 'peak' : e.tags.tourism === 'alpine_hut' ? 'hut' : 'place', ele: e.tags.ele ? Math.round(+e.tags.ele) : null, lat: e.lat, lng: e.lon }))
+  peaks = j.elements.map((e) => ({ name: e.tags.name, kind: kindOf(e.tags), ele: e.tags.ele ? Math.round(+e.tags.ele) : null, lat: e.lat, lng: e.lon }))
   console.log(`${peaks.length} named points`)
 } catch (e) {
   console.warn('Overpass failed, no labels:', e.message)

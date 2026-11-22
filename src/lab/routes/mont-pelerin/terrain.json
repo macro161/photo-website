@@ -62,11 +62,151 @@
    "lng": 6.8414194
   },
   {
+   "name": "Mont-Pèlerin",
+   "kind": "station",
+   "ele": 806,
+   "lat": 46.4818357,
+   "lng": 6.8315472
+  },
+  {
+   "name": "Corseaux",
+   "kind": "station",
+   "ele": 441,
+   "lat": 46.4717142,
+   "lng": 6.8357207
+  },
+  {
+   "name": "Chardonne-Jongny",
+   "kind": "station",
+   "ele": 592,
+   "lat": 46.4770456,
+   "lng": 6.8330528
+  },
+  {
+   "name": "Vevey (funi)",
+   "kind": "station",
+   "ele": 389,
+   "lat": 46.468564,
+   "lng": 6.835994
+  },
+  {
    "name": "Puidoux",
    "kind": "place",
    "ele": 663,
    "lat": 46.5008111,
    "lng": 6.7823914
+  },
+  {
+   "name": "Beau-Site",
+   "kind": "station",
+   "ele": 511,
+   "lat": 46.473791,
+   "lng": 6.8351659
+  },
+  {
+   "name": "La Baume",
+   "kind": "station",
+   "ele": 700,
+   "lat": 46.4790189,
+   "lng": 6.8324318
+  },
+  {
+   "name": "Château-d'Hauteville",
+   "kind": "station",
+   "ele": 515,
+   "lat": 46.468511,
+   "lng": 6.8652866
+  },
+  {
+   "name": "Hauteville",
+   "kind": "station",
+   "ele": 501,
+   "lat": 46.4663078,
+   "lng": 6.8610114
+  },
+  {
+   "name": "China House",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4610845,
+   "lng": 6.8413267
+  },
+  {
+   "name": "Manora",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4630321,
+   "lng": 6.8407118
+  },
+  {
+   "name": "Noix de Coco",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4661287,
+   "lng": 6.8375486
+  },
+  {
+   "name": "Café Restaurant La Clef",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4606503,
+   "lng": 6.8427725
+  },
+  {
+   "name": "Pizzeria Ristorante Molino",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4612394,
+   "lng": 6.8434204
+  },
+  {
+   "name": "Tao Yuan",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4616411,
+   "lng": 6.8436472
+  },
+  {
+   "name": "Brasserie Historique 1912",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4625876,
+   "lng": 6.8431229
+  },
+  {
+   "name": "Le National",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4602965,
+   "lng": 6.8409917
+  },
+  {
+   "name": "Café du Centre",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.472228,
+   "lng": 6.8755198
+  },
+  {
+   "name": "Domaine de la Buritaz",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4874976,
+   "lng": 6.8051527
+  },
+  {
+   "name": "La Trattoria de Vevey-Corseaux Plage",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4680138,
+   "lng": 6.8331165
+  },
+  {
+   "name": "Saint-Légier-Gare",
+   "kind": "station",
+   "ele": 533,
+   "lat": 46.4705017,
+   "lng": 6.8719988
   },
   {
    "name": "Mont Chesau",
@@ -76,11 +216,53 @@
    "lng": 6.8165145
   },
   {
+   "name": "Café du Raisin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4728449,
+   "lng": 6.7967619
+  },
+  {
+   "name": "Le Colibri",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4704642,
+   "lng": 6.8505588
+  },
+  {
    "name": "Mont Pèlerin",
    "kind": "peak",
    "ele": 1079,
    "lat": 46.4968692,
    "lng": 6.8192773
+  },
+  {
+   "name": "Café de la Place",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.472421,
+   "lng": 6.8748028
+  },
+  {
+   "name": "Auberge de Rivaz",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4742462,
+   "lng": 6.7831659
+  },
+  {
+   "name": "Moreillon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5073003,
+   "lng": 6.7848257
+  },
+  {
+   "name": "A la Valsainte",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4588566,
+   "lng": 6.8488389
   },
   {
    "name": "Le Monteiller",
@@ -111,11 +293,74 @@
    "lng": 6.7803021
   },
   {
+   "name": "Le Syrien",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4593147,
+   "lng": 6.8442522
+  },
+  {
+   "name": "Pizza Taxi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.458335,
+   "lng": 6.8451539
+  },
+  {
+   "name": "Ichioshi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4602518,
+   "lng": 6.8438189
+  },
+  {
    "name": "Mont Vuarat",
    "kind": "peak",
    "ele": 984,
    "lat": 46.5075267,
    "lng": 6.870648
+  },
+  {
+   "name": "Moreillon",
+   "kind": "station",
+   "ele": 657,
+   "lat": 46.5086272,
+   "lng": 6.785916
+  },
+  {
+   "name": "Rivaz",
+   "kind": "station",
+   "ele": 377,
+   "lat": 46.4742105,
+   "lng": 6.784594
+  },
+  {
+   "name": "Saint-Saphorin",
+   "kind": "station",
+   "ele": 376,
+   "lat": 46.4725351,
+   "lng": 6.7970244
+  },
+  {
+   "name": "Corseaux-Cornalles",
+   "kind": "station",
+   "ele": 420,
+   "lat": 46.4707111,
+   "lng": 6.824199
+  },
+  {
+   "name": "Vevey",
+   "kind": "station",
+   "ele": 386,
+   "lat": 46.4629482,
+   "lng": 6.843389
+  },
+  {
+   "name": "La Tour-de-Peilz",
+   "kind": "station",
+   "ele": 390,
+   "lat": 46.4553772,
+   "lng": 6.8595876
   },
   {
    "name": "Lignières",
@@ -125,11 +370,88 @@
    "lng": 6.7924928
   },
   {
+   "name": "Crêperie de l'Ancien Port",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4590472,
+   "lng": 6.8445239
+  },
+  {
    "name": "Fenil",
    "kind": "place",
    "ele": null,
    "lat": 46.4861966,
    "lng": 6.8691363
+  },
+  {
+   "name": "Les Rueyres",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4778234,
+   "lng": 6.7991345
+  },
+  {
+   "name": "L'Armailli",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4600014,
+   "lng": 6.8439988
+  },
+  {
+   "name": "Vevey",
+   "kind": "place",
+   "ele": 383,
+   "lat": 46.4602978,
+   "lng": 6.8418655
+  },
+  {
+   "name": "Le Burgoz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4909183,
+   "lng": 6.861363
+  },
+  {
+   "name": "Les Curnilles",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4761976,
+   "lng": 6.8077014
+  },
+  {
+   "name": "Ogoz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4763772,
+   "lng": 6.799093
+  },
+  {
+   "name": "Le Défiran",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4943963,
+   "lng": 6.8167333
+  },
+  {
+   "name": "Paully",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.494829,
+   "lng": 6.8103494
+  },
+  {
+   "name": "Ramberia",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.461654,
+   "lng": 6.8441667
+  },
+  {
+   "name": "La Maison Blanche",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5097827,
+   "lng": 6.8212975
   },
   {
    "name": "Les Toulayes",
@@ -139,6 +461,55 @@
    "lng": 6.8637444
   },
   {
+   "name": "Les Espersiers",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4990948,
+   "lng": 6.8698063
+  },
+  {
+   "name": "La Jauguettaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4817025,
+   "lng": 6.8534335
+  },
+  {
+   "name": "Les Trois Sifflets",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4593872,
+   "lng": 6.8459964
+  },
+  {
+   "name": "Les Faverges",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.475856,
+   "lng": 6.7938277
+  },
+  {
+   "name": "La Chaudette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4911813,
+   "lng": 6.8557099
+  },
+  {
+   "name": "Veneto",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4555375,
+   "lng": 6.8549253
+  },
+  {
+   "name": "La Pichette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4700613,
+   "lng": 6.8097462
+  },
+  {
    "name": "La Lôche-Dessus",
    "kind": "place",
    "ele": null,
@@ -146,11 +517,522 @@
    "lng": 6.7914089
   },
   {
+   "name": "Le Daley",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5019708,
+   "lng": 6.800048
+  },
+  {
+   "name": "Longchamp",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5051661,
+   "lng": 6.7956688
+  },
+  {
+   "name": "Drugex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5214493,
+   "lng": 6.7951949
+  },
+  {
+   "name": "Le Mont",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5098618,
+   "lng": 6.8112261
+  },
+  {
+   "name": "Botonnet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5121549,
+   "lng": 6.7903621
+  },
+  {
+   "name": "Mont Chesau",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.515553,
+   "lng": 6.8165488
+  },
+  {
+   "name": "Restaurant du Commerce",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4667603,
+   "lng": 6.8443169
+  },
+  {
+   "name": "L'Onde",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4732572,
+   "lng": 6.7960168
+  },
+  {
+   "name": "Prelyire",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4758857,
+   "lng": 6.779926
+  },
+  {
+   "name": "Les Bains Payes",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4643679,
+   "lng": 6.8342507
+  },
+  {
+   "name": "Gueuleton",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4581185,
+   "lng": 6.8469994
+  },
+  {
+   "name": "KJU",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4580668,
+   "lng": 6.8472041
+  },
+  {
+   "name": "L'Altro Mondo",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4628979,
+   "lng": 6.8376241
+  },
+  {
+   "name": "Le Cep d'Or",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4599478,
+   "lng": 6.843043
+  },
+  {
+   "name": "Le Kashmir",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4592672,
+   "lng": 6.8462166
+  },
+  {
+   "name": "Le Rubis",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4588018,
+   "lng": 6.8465561
+  },
+  {
+   "name": "Café Restaurant du Port",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4579019,
+   "lng": 6.8508077
+  },
+  {
+   "name": "Sushi Kaiten",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4628964,
+   "lng": 6.8435348
+  },
+  {
+   "name": "Ma Cocotte",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4580245,
+   "lng": 6.8473549
+  },
+  {
+   "name": "Pummaro pizzas",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4586372,
+   "lng": 6.847696
+  },
+  {
+   "name": "La Brasserie du Carré",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4587491,
+   "lng": 6.8433624
+  },
+  {
+   "name": "Erawan Thai Restaurant",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4642804,
+   "lng": 6.8404146
+  },
+  {
+   "name": "Swagat",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4595596,
+   "lng": 6.8456742
+  },
+  {
+   "name": "Sakura Sushi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4624414,
+   "lng": 6.8435522
+  },
+  {
+   "name": "Chez Fer-ro",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4637908,
+   "lng": 6.8403066
+  },
+  {
+   "name": "Palais Indien",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4592447,
+   "lng": 6.8440141
+  },
+  {
+   "name": "KymèM à Venise",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4618919,
+   "lng": 6.8407237
+  },
+  {
+   "name": "Nem Nem",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4598865,
+   "lng": 6.8442021
+  },
+  {
+   "name": "Zeugma",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.46473,
+   "lng": 6.8419715
+  },
+  {
+   "name": "Chef Xu",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4617216,
+   "lng": 6.8440317
+  },
+  {
+   "name": "Les Ateliers",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4640383,
+   "lng": 6.842656
+  },
+  {
+   "name": "Le Lotus",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4592037,
+   "lng": 6.8449637
+  },
+  {
+   "name": "Bla Bla Vevey",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4599212,
+   "lng": 6.8413936
+  },
+  {
+   "name": "Maison Viet",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4603746,
+   "lng": 6.841165
+  },
+  {
+   "name": "Mezzé & Co",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4600929,
+   "lng": 6.8414263
+  },
+  {
+   "name": "Filumé",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4579609,
+   "lng": 6.8491761
+  },
+  {
+   "name": "Le Pacific",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4601979,
+   "lng": 6.8447623
+  },
+  {
+   "name": "Café de la Poste",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4806362,
+   "lng": 6.7809837
+  },
+  {
+   "name": "Sawasdee",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4595019,
+   "lng": 6.8457929
+  },
+  {
+   "name": "La Chaumière",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.457521,
+   "lng": 6.8581023
+  },
+  {
+   "name": "TomSab Thai Restaurant",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4579262,
+   "lng": 6.8514747
+  },
+  {
+   "name": "Le Central Nocente",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4595138,
+   "lng": 6.8452485
+  },
+  {
+   "name": "An Arvor",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4610109,
+   "lng": 6.8409639
+  },
+  {
+   "name": "Bistrot des Cèdres",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4683242,
+   "lng": 6.8456264
+  },
+  {
+   "name": "Le restaurant N° 6",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4633862,
+   "lng": 6.8445757
+  },
+  {
+   "name": "Grill House Vevey",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4655992,
+   "lng": 6.8383415
+  },
+  {
+   "name": "Vecchia Napoli",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4639035,
+   "lng": 6.8451498
+  },
+  {
+   "name": "La Cierne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5198629,
+   "lng": 6.824166
+  },
+  {
+   "name": "Café de l'Avenir",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4675184,
+   "lng": 6.8425869
+  },
+  {
+   "name": "Seuil d'Attalens",
+   "kind": "pass",
+   "ele": null,
+   "lat": 46.4893878,
+   "lng": 6.8522873
+  },
+  {
+   "name": "Le Moose",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4597666,
+   "lng": 6.8444535
+  },
+  {
+   "name": "Le 11ème",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4587321,
+   "lng": 6.8460086
+  },
+  {
+   "name": "Saveurs du coeur",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4678263,
+   "lng": 6.8371217
+  },
+  {
+   "name": "Fatouch",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4654839,
+   "lng": 6.8385286
+  },
+  {
+   "name": "Sofra",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4601401,
+   "lng": 6.8487968
+  },
+  {
+   "name": "Botane",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4591683,
+   "lng": 6.8461636
+  },
+  {
+   "name": "Vevey Vignerons",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4692091,
+   "lng": 6.8528667
+  },
+  {
+   "name": "Le Lab",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4684153,
+   "lng": 6.8345277
+  },
+  {
+   "name": "Le Creux-Guillod",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4959367,
+   "lng": 6.8597884
+  },
+  {
    "name": "Rombuet",
    "kind": "place",
    "ele": null,
    "lat": 46.5116651,
    "lng": 6.8605979
+  },
+  {
+   "name": "Le Nation Café",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.460106,
+   "lng": 6.8408974
+  },
+  {
+   "name": "Café Bar La Condémine",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.5098991,
+   "lng": 6.8483545
+  },
+  {
+   "name": "Ratatouille",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4601973,
+   "lng": 6.8435513
+  },
+  {
+   "name": "Chisana Sushi",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4616917,
+   "lng": 6.8425692
+  },
+  {
+   "name": "Là-Haut",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4766623,
+   "lng": 6.8286218
+  },
+  {
+   "name": "La Veyre-d'En-Haut",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4785472,
+   "lng": 6.8620505
+  },
+  {
+   "name": "Gingembre Café",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4603792,
+   "lng": 6.8450983
+  },
+  {
+   "name": "Funiculì Funiculà",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4684908,
+   "lng": 6.8359826
+  },
+  {
+   "name": "KAISEKI BY MANABU",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4584472,
+   "lng": 6.8478499
+  },
+  {
+   "name": "EMOTIONS by Guy Ravet",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4578065,
+   "lng": 6.8518435
+  },
+  {
+   "name": "Parking Parcours Vita Chardonne-Mt. Pèlerin",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4847293,
+   "lng": 6.8273948
+  },
+  {
+   "name": "Vevey MVR",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.4632449,
+   "lng": 6.8437654
+  },
+  {
+   "name": "Mamacita",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4679217,
+   "lng": 6.8330361
+  },
+  {
+   "name": "Sushi Shop",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.4592376,
+   "lng": 6.8429755
   }
  ]
 }

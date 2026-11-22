@@ -41,6 +41,62 @@
    "lng": 7.5830688
   },
   {
+   "name": "Da Claudio",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1758547,
+   "lng": 7.5733302
+  },
+  {
+   "name": "Bendolla",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.1818357,
+   "lng": 7.5582863
+  },
+  {
+   "name": "Tsarva",
+   "kind": "station",
+   "ele": 2366,
+   "lat": 46.186874,
+   "lng": 7.5468398
+  },
+  {
+   "name": "Les Becs-de-Bossons",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.1824403,
+   "lng": 7.5328493
+  },
+  {
+   "name": "Buvette Orzival Burger",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1840998,
+   "lng": 7.5324444
+  },
+  {
+   "name": "Étable du Marais",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1852047,
+   "lng": 7.5590224
+  },
+  {
+   "name": "Bendolla",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1801944,
+   "lng": 7.5579817
+  },
+  {
+   "name": "Bendolla",
+   "kind": "station",
+   "ele": 2136,
+   "lat": 46.1806288,
+   "lng": 7.5579562
+  },
+  {
    "name": "Corne de Sorebois",
    "kind": "peak",
    "ele": 2895,
@@ -53,6 +109,13 @@
    "ele": null,
    "lat": 46.2127182,
    "lng": 7.5779647
+  },
+  {
+   "name": "Observatoire",
+   "kind": "view",
+   "ele": null,
+   "lat": 46.1674102,
+   "lng": 7.5643856
   },
   {
    "name": "Les Lauchellets",
@@ -90,11 +153,39 @@
    "lng": 7.5514476
   },
   {
+   "name": "Grimentz",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.1762121,
+   "lng": 7.5734962
+  },
+  {
+   "name": "La Vouarda",
+   "kind": "station",
+   "ele": 2691,
+   "lat": 46.1504724,
+   "lng": 7.5952329
+  },
+  {
+   "name": "Grimentz",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.1762904,
+   "lng": 7.5739486
+  },
+  {
    "name": "Mission",
    "kind": "place",
    "ele": null,
    "lat": 46.1899788,
    "lng": 7.5924995
+  },
+  {
+   "name": "La Gougra",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.197645,
+   "lng": 7.5861187
   },
   {
    "name": "La Combaz",
@@ -118,6 +209,48 @@
    "lng": 7.5897967
   },
   {
+   "name": "Les Luisannes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2078956,
+   "lng": 7.5647243
+  },
+  {
+   "name": "Avoin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1859658,
+   "lng": 7.5674494
+  },
+  {
+   "name": "Les Moyes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.189427,
+   "lng": 7.6089379
+  },
+  {
+   "name": "Les Frayés",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1864192,
+   "lng": 7.6093091
+  },
+  {
+   "name": "Les Tsougdires",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2003218,
+   "lng": 7.564859
+  },
+  {
+   "name": "Les Bouesses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2095068,
+   "lng": 7.5702926
+  },
+  {
    "name": "La Cretta",
    "kind": "place",
    "ele": null,
@@ -125,11 +258,172 @@
    "lng": 7.575024
   },
   {
+   "name": "Orzival",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2096479,
+   "lng": 7.5547787
+  },
+  {
+   "name": "Bendolla",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1804836,
+   "lng": 7.5538729
+  },
+  {
+   "name": "Le Marais",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.186274,
+   "lng": 7.5557872
+  },
+  {
+   "name": "Tsirouc",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1703432,
+   "lng": 7.5946662
+  },
+  {
+   "name": "Café Restaurant des Alpes",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.2150512,
+   "lng": 7.5854308
+  },
+  {
+   "name": "Les Pralics",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.200318,
+   "lng": 7.6011467
+  },
+  {
+   "name": "Le Biolec",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1619092,
+   "lng": 7.6027109
+  },
+  {
+   "name": "Les Morasses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1789868,
+   "lng": 7.5931
+  },
+  {
+   "name": "Grands Plans",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.189354,
+   "lng": 7.5522694
+  },
+  {
+   "name": "Corne de Sorebois",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.1480312,
+   "lng": 7.5948328
+  },
+  {
+   "name": "Corne de Sorebois",
+   "kind": "station",
+   "ele": null,
+   "lat": 46.1507172,
+   "lng": 7.5877779
+  },
+  {
+   "name": "Tsarva",
+   "kind": "station",
+   "ele": 2366,
+   "lat": 46.1867594,
+   "lng": 7.5466295
+  },
+  {
+   "name": "Copaté",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1924177,
+   "lng": 7.6082713
+  },
+  {
+   "name": "Gillou",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.207875,
+   "lng": 7.6035125
+  },
+  {
+   "name": "A La Claire Fontaine",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1784614,
+   "lng": 7.5747456
+  },
+  {
+   "name": "Col du Pouce",
+   "kind": "station",
+   "ele": 2701,
+   "lat": 46.176316,
+   "lng": 7.5325044
+  },
+  {
+   "name": "Col du Pouce",
+   "kind": "station",
+   "ele": 2094,
+   "lat": 46.1796518,
+   "lng": 7.5588973
+  },
+  {
+   "name": "La Vouarda",
+   "kind": "station",
+   "ele": 2687,
+   "lat": 46.1502633,
+   "lng": 7.5958463
+  },
+  {
+   "name": "L'Arella",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1867265,
+   "lng": 7.6153761
+  },
+  {
+   "name": "Flocons de Neige",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1760204,
+   "lng": 7.5743214
+  },
+  {
+   "name": "Hotel de Moiry",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1801476,
+   "lng": 7.5759028
+  },
+  {
+   "name": "Templum",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1800781,
+   "lng": 7.5764908
+  },
+  {
    "name": "Sex de la Brinta",
    "kind": "peak",
    "ele": 2693,
    "lat": 46.2043824,
    "lng": 7.5290309
+  },
+  {
+   "name": "Basset de Lona",
+   "kind": "pass",
+   "ele": 2791,
+   "lat": 46.1481276,
+   "lng": 7.547765
   },
   {
    "name": "Pointe de Tsirouc",
@@ -144,6 +438,34 @@
    "ele": 2931,
    "lat": 46.1643914,
    "lng": 7.5381005
+  },
+  {
+   "name": "Col de la Brinta",
+   "kind": "pass",
+   "ele": 2600,
+   "lat": 46.2125868,
+   "lng": 7.5309572
+  },
+  {
+   "name": "Col du Tsan",
+   "kind": "pass",
+   "ele": 2748,
+   "lat": 46.1928586,
+   "lng": 7.5320122
+  },
+  {
+   "name": "Espace Weisshorn",
+   "kind": "poi",
+   "ele": null,
+   "lat": 46.1503802,
+   "lng": 7.5953339
+  },
+  {
+   "name": "Margueroula",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2065009,
+   "lng": 7.6016066
   }
  ]
 }

@@ -1,0 +1,15 @@
+{
+ "_about": "Hand-checked landmark names, used by scripts/build-routes.mjs where OpenStreetMap has no good match. Each comes from the AllTrails activity title in src/lab/activities.json. Keys: start, top, end.",
+ "cabane-de-valsorey": {
+  "start": "Bourg-Saint-Pierre"
+ },
+ "la-montagnette": {
+  "top": "La Montagnetta"
+ },
+ "le-grammot": {
+  "start": "Miex"
+ },
+ "les-paccots": {
+  "top": "Dent de Lys"
+ }
+}
