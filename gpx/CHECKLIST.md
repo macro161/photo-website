@@ -16,13 +16,13 @@ Row numbers match `n` in `src/lab/activities.json`. Titles on AllTrails sometime
 | [x] | 6 | 2026-09-13 | Bisse du Ro - Cry d'Er | 12.2 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-bisse-du-ro-cry-d-er-8ad567e) |
 | [x] | 7 | 2026-09-12 | Lavaux Vineyard Terraces: St-Saphorin - Lutry | 19.8 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-lavaux-vineyard-terraces-st-saphorin-lutry-884e314) |
 | [x] | 8 | 2026-09-06 | Tour de l'Argentine | 18.8 | [open](https://www.alltrails.com/explore/recording/evening-paddle-at-tour-de-l-argentine-0b28cb6) |
-| [ ] | 9 | 2026-08-22 | Rochers de Naye via Dent de Jaman | 4.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-rochers-de-naye-via-dent-de-jaman-d715b0c) |
-| [ ] | 10 | 2026-08-20 | Noiraigue - L'Areuse Canyon - Boudry | 12.1 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-noiraigue-l-areuse-canyon-boudry-c460b99) |
-| [ ] | 11 | 2026-08-18 | Üssers Barrhorn | 22.1 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-ussers-barrhorn-042c66d) |
-| [ ] | 12 | 2026-08-14 | Canal del Texu Trail | 20.7 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-canal-del-texu-trail-3e78e75) |
-| [ ] | 13 | 2026-08-02 | Bourg-St-Pierre - Valsorey Hut - Pointe de Penne | 7.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-bourge-saint-pierre-valsorey-hut-pointe-de-penne-adbc20c) |
-| [ ] | 14 | 2026-08-01 | Bourg-St-Pierre - Valsorey Hut - Pointe de Penne | 8.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-bourge-saint-pierre-valsorey-hut-pointe-de-penne-3c8ad03) |
-| [ ] | 15 | 2026-07-25 | Schnapsbrunnenweg 1 (evening) | 11.3 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-schnapsbrunnenweg-1-d2e8ab4) |
+| [x] | 9 | 2026-08-22 | Rochers de Naye via Dent de Jaman | 4.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-rochers-de-naye-via-dent-de-jaman-d715b0c) |
+| [x] | 10 | 2026-08-20 | Noiraigue - L'Areuse Canyon - Boudry | 12.1 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-noiraigue-l-areuse-canyon-boudry-c460b99) |
+| [x] | 11 | 2026-08-18 | Üssers Barrhorn | 22.1 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-ussers-barrhorn-042c66d) |
+| [x] | 12 | 2026-08-14 | Canal del Texu Trail | 20.7 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-canal-del-texu-trail-3e78e75) |
+| [x] | 13 | 2026-08-02 | Bourg-St-Pierre - Valsorey Hut - Pointe de Penne | 7.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-bourge-saint-pierre-valsorey-hut-pointe-de-penne-adbc20c) |
+| [x] | 14 | 2026-08-01 | Bourg-St-Pierre - Valsorey Hut - Pointe de Penne | 8.4 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-bourge-saint-pierre-valsorey-hut-pointe-de-penne-3c8ad03) |
+| [x] | 15 | 2026-07-25 | Schnapsbrunnenweg 1 (evening) | 11.3 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-schnapsbrunnenweg-1-d2e8ab4) |
 | [ ] | 16 | 2026-07-19 | Üssers Barrhorn (short) | 5.5 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-ussers-barrhorn-37ba8cf) |
 | [ ] | 17 | 2026-07-19 | Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (evening) | 4.4 | [open](https://www.alltrails.com/explore/recording/evening-hike-at-alpine-passes-trail-stage-31-mauvoisin-cabane-de-brunet-hut-ccbbb2a) |
 | [ ] | 18 | 2026-07-19 | Alpine Passes Trail, Stage 31: Mauvoisin - Cabane de Brunet Hut (afternoon) | 7.1 | [open](https://www.alltrails.com/explore/recording/afternoon-hike-at-alpine-passes-trail-stage-31-mauvoisin-cabane-de-brunet-hut-185923e) |
@@ -52,4 +52,4 @@ Row numbers match `n` in `src/lab/activities.json`. Titles on AllTrails sometime
 | [x] | 42 | 2025-06-23 | Boucle Chexbres - Epesses | 11.1 | [open](https://www.alltrails.com/explore/recording/activity-june-23-2025-05425f5-2) |
 | [ ] | 43 | 2025-06-21 | Siviez - Lac de Cleuson | 7.5 | [open](https://www.alltrails.com/explore/recording/activity-june-21-2025-5658477-4) |
 
-`[x]` = already in `gpx/` (n=1 Enney - Vudalla, n=42 Boucle Chexbres - Epesses).
+`[x]` = already in `gpx/` and converted to `src/lab/tracks/<n>.json`.
