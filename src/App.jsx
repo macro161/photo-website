@@ -1,4 +1,4 @@
-import { useState, useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
+import { lazy, Suspense, useState, useCallback, useEffect, useLayoutEffect, useMemo, useRef } from 'react'
 import catalogIndex from './generated/index.json'
 import config from '../site.config.json'
 import { buildCatalogsFromIndex, withPhotos } from './catalogs.js'
@@ -9,6 +9,8 @@ import Lab from './lab/Lab.jsx'
 import NotFound from './components/NotFound.jsx'
 import { rollInfo, rollLine } from './rolls.js'
 import hikeAlbums from './lab/hikeAlbums.json'
+
+const RouteBackdrop = lazy(() => import('./lab/valsorey/Backdrop.jsx'))
 import albumLinks from './albumLinks.json'
 import DateFilter from './components/DateFilter.jsx'
 import { openPhoto, closePhoto } from './viewTransition.js'
@@ -453,7 +455,13 @@ export default function App() {
               </p>
             </section>
           ) : view === 'album' ? (
-            <section className="catalog-view">
+            <>
+            {hikeAlbums[`${catalog.slug}/${album.slug}`] && (
+              <Suspense fallback={null}>
+                <RouteBackdrop slug={album.slug} />
+              </Suspense>
+            )}
+            <section className="catalog-view" style={hikeAlbums[`${catalog.slug}/${album.slug}`] ? { position: 'relative', zIndex: 1 } : undefined}>
               <button
                 className="back-link"
                 onClick={() => goBack(`/c/${catalog.slug}`)}
@@ -485,11 +493,12 @@ export default function App() {
               )}
               {notice && <p className="notice">{notice}</p>}
               {ready ? (
-                <Gallery items={album.items} onOpen={open} />
+                <Gallery items={album.items} onOpen={open} gutterScale={hikeAlbums[`${catalog.slug}/${album.slug}`] ? 2.3 : 1} />
               ) : (
-                <GallerySkeleton count={album.count} />
+                <GallerySkeleton count={album.count} gutterScale={hikeAlbums[`${catalog.slug}/${album.slug}`] ? 2.3 : 1} />
               )}
             </section>
+            </>
           ) : view === 'catalog' ? (
             <section className="catalog-view">
               <button className="back-link" onClick={() => goBack('/')}>
