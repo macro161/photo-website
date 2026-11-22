@@ -1,0 +1,247 @@
+{
+ "width": 375,
+ "height": 547,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.7793244336716,
+  "north": 46.87759999999999,
+  "west": 6.499040000000008,
+  "east": 6.5975127771355915
+ },
+ "metersPerPx": 20,
+ "minEle": 432,
+ "maxEle": 1573,
+ "peaks": [
+  {
+   "name": "Sainte-Croix",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.822522,
+   "lng": 6.5009286
+  },
+  {
+   "name": "Baulmes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7903981,
+   "lng": 6.5212523
+  },
+  {
+   "name": "Essert-sous-Champvent",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7924911,
+   "lng": 6.5841572
+  },
+  {
+   "name": "Orges",
+   "kind": "place",
+   "ele": 560,
+   "lat": 46.8082337,
+   "lng": 6.5875293
+  },
+  {
+   "name": "Vugelles",
+   "kind": "place",
+   "ele": 520,
+   "lat": 46.8239401,
+   "lng": 6.5757152
+  },
+  {
+   "name": "Villars-sous-Champvent",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7861393,
+   "lng": 6.583353
+  },
+  {
+   "name": "Champvent",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.7828052,
+   "lng": 6.5726094
+  },
+  {
+   "name": "Novalles",
+   "kind": "place",
+   "ele": 571,
+   "lat": 46.8284542,
+   "lng": 6.5956886
+  },
+  {
+   "name": "Le Chasseron",
+   "kind": "peak",
+   "ele": 1607,
+   "lat": 46.851796,
+   "lng": 6.5382542
+  },
+  {
+   "name": "Bullet",
+   "kind": "place",
+   "ele": 1143,
+   "lat": 46.8309314,
+   "lng": 6.5546431
+  },
+  {
+   "name": "Les Rasses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8292221,
+   "lng": 6.5402244
+  },
+  {
+   "name": "Vuiteboeuf",
+   "kind": "place",
+   "ele": 589,
+   "lat": 46.807388,
+   "lng": 6.5493754
+  },
+  {
+   "name": "Les Cluds",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.842624,
+   "lng": 6.5607341
+  },
+  {
+   "name": "Peney",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8026753,
+   "lng": 6.561092
+  },
+  {
+   "name": "Refuge de Champvent",
+   "kind": "hut",
+   "ele": null,
+   "lat": 46.7837067,
+   "lng": 6.5503536
+  },
+  {
+   "name": "Le Cochet",
+   "kind": "peak",
+   "ele": 1483,
+   "lat": 46.8340292,
+   "lng": 6.5170065
+  },
+  {
+   "name": "La Villette",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.818951,
+   "lng": 6.5291007
+  },
+  {
+   "name": "Les Replans",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8247325,
+   "lng": 6.5193023
+  },
+  {
+   "name": "Le Château-de-Ste-Croix",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8187889,
+   "lng": 6.534769
+  },
+  {
+   "name": "La Sagne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8162235,
+   "lng": 6.4994643
+  },
+  {
+   "name": "Les Praises",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8348596,
+   "lng": 6.5080227
+  },
+  {
+   "name": "La Mothe",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.81927,
+   "lng": 6.5676637
+  },
+  {
+   "name": "La Petite-Robella",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8752631,
+   "lng": 6.5479361
+  },
+  {
+   "name": "Petites Roches Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8240717,
+   "lng": 6.5274754
+  },
+  {
+   "name": "Roches Blanches",
+   "kind": "peak",
+   "ele": 1470,
+   "lat": 46.8603589,
+   "lng": 6.5306065
+  },
+  {
+   "name": "Petites Roches",
+   "kind": "peak",
+   "ele": 1583,
+   "lat": 46.8429313,
+   "lng": 6.5279479
+  },
+  {
+   "name": "Les Charrières",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8192632,
+   "lng": 6.5831608
+  },
+  {
+   "name": "Montavaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8108934,
+   "lng": 6.5850312
+  },
+  {
+   "name": "Crêt des Gouilles",
+   "kind": "peak",
+   "ele": null,
+   "lat": 46.8464144,
+   "lng": 6.5375524
+  },
+  {
+   "name": "La Broutire",
+   "kind": "peak",
+   "ele": 1264,
+   "lat": 46.8350076,
+   "lng": 6.501873
+  },
+  {
+   "name": "Le Praisot",
+   "kind": "peak",
+   "ele": 1389,
+   "lat": 46.8385687,
+   "lng": 6.5129864
+  },
+  {
+   "name": "Mont de la Maya",
+   "kind": "peak",
+   "ele": 1466,
+   "lat": 46.8463914,
+   "lng": 6.5203569
+  },
+  {
+   "name": "Les Leuba",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.8735541,
+   "lng": 6.5018998
+  }
+ ]
+}

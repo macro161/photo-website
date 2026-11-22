@@ -1,12 +1,11 @@
 /**
- * Cabane de Valsorey with its GPS tracks (ascent 1 Aug 2026, descent 2 Aug 2026).
+ * A hike album with its GPS recording(s): #/lab/route/<album>.
  * Photos mode: the album's gallery, photos first, with the terrain and the route as a calm greyscale backdrop (a flat hairline route until the 3D scene is ready, or where it can't run).
  * Route mode: the same scene comes forward as a map (2D or tilted 3D) with labels, stats, an elevation profile you can scrub, and the photos as a strip.
- * Track data comes from scripts/gpx-detail.mjs (src/lab/valsorey/detail.json); the relief from scripts/bake-terrain.mjs.
+ * Everything per album (track stats, baked relief, landmark names) is built by scripts/build-routes.mjs into src/lab/routes/<album>/.
  */
-import { lazy, Suspense, useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react'
-import detail from '../valsorey/detail.json'
-import activities from '../activities.json'
+import { createContext, lazy, Suspense, useContext, useEffect, useLayoutEffect, useMemo, useRef, useState, useCallback } from 'react'
+import hikeAlbums from '../hikeAlbums.json'
 import { projectTracks, toPath, valueAt, xyAt, gradeAt, clock, duration } from '../valsorey/geo.js'
 import Gallery, { GallerySkeleton } from '../../components/Gallery.jsx'
 import Lightbox from '../../components/Lightbox.jsx'
@@ -15,34 +14,53 @@ import '../valsorey/valsorey.css'
 
 const Scene = lazy(() => import('../valsorey/Scene.jsx'))
 
-const TRACKS = detail.tracks // [ascent, descent]
-const MINUTES = { ascent: activities.find((a) => a.n === 14)?.minutes, descent: activities.find((a) => a.n === 13)?.minutes }
 const DATE_FMT = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', day: 'numeric', month: 'long', year: 'numeric' })
-const TOTAL_KM = TRACKS.reduce((s, t) => s + t.stats.km, 0)
-
+const SHORT_FMT = new Intl.DateTimeFormat('en-GB', { timeZone: 'Europe/Zurich', day: 'numeric', month: 'short' })
 const BG = { W: 1000, H: 700 }
-const bgGeo = projectTracks(TRACKS, BG.W, BG.H, 70)
-const bgPaths = bgGeo.paths.map(toPath)
+const MAP = { W: 800, H: 600 }
 
-/** The two tracks laid end to end, as one journey: distance along it -> which track and km on it. */
-const journey = (u) => (u < TRACKS[0].stats.km ? [0, u] : [1, Math.min(u - TRACKS[0].stats.km, TRACKS[1].stats.km)])
+const detailFiles = import.meta.glob('../routes/*/detail.json')
+const terrainFiles = import.meta.glob('../routes/*/terrain.json')
+/** Albums that have a route page, as [catalog, album] by album slug. */
+const ROUTES = Object.fromEntries(Object.keys(hikeAlbums).map((k) => [k.split('/')[1], k.split('/')[0]]))
 
-function useAlbum() {
+const RouteCtx = createContext(null)
+
+/** Everything derived from the loaded tracks, computed once per page. */
+function buildModel(detail, meta, slug) {
+  const TRACKS = detail.tracks
+  const bgGeo = projectTracks(TRACKS, BG.W, BG.H, 70)
+  const mapGeo = projectTracks(TRACKS, MAP.W, MAP.H, 50)
+  const TOTAL_KM = TRACKS.reduce((s, t) => s + t.stats.km, 0)
+  /** The tracks laid end to end, as one journey: distance along it -> which track and km on it. */
+  const journey = (u) => {
+    let left = u
+    for (let i = 0; i < TRACKS.length; i++) {
+      if (left <= TRACKS[i].stats.km || i === TRACKS.length - 1) return [i, Math.min(left, TRACKS[i].stats.km)]
+      left -= TRACKS[i].stats.km
+    }
+    return [0, 0]
+  }
+  return { slug, detail, meta, demUrl: `/lab/routes/${slug}/dem.bin`, TRACKS, bgGeo, bgPaths: bgGeo.paths.map(toPath), mapGeo, mapPaths: mapGeo.paths.map(toPath), TOTAL_KM, journey }
+}
+
+function useAlbum(catalog, albumSlug) {
   const [photos, setPhotos] = useState(null)
   const [failed, setFailed] = useState(false)
   useEffect(() => {
     let live = true
-    import('../../generated/catalogs/swiss.json').then(
-      (m) => live && setPhotos((m.default || m).filter((p) => p.albumSlug === 'cabane-de-valsorey')),
+    import(`../../generated/catalogs/${catalog}.json`).then(
+      (m) => live && setPhotos((m.default || m).filter((p) => p.albumSlug === albumSlug)),
       () => live && setFailed(true),
     )
     return () => { live = false }
-  }, [])
+  }, [catalog, albumSlug])
   return { photos, failed }
 }
 
 /* ---------- Background: the route, barely there, filling in as you scroll ---------- */
 function Background({ off }) {
+  const { TRACKS, TOTAL_KM, journey, bgGeo, bgPaths } = useContext(RouteCtx)
   const doneRefs = useRef([])
   const dot = useRef(null)
 
@@ -70,7 +88,7 @@ function Background({ off }) {
       window.removeEventListener('resize', onScroll)
       if (raf) cancelAnimationFrame(raf)
     }
-  }, [])
+  }, [TRACKS, TOTAL_KM, journey, bgGeo])
 
   return (
     <div className={`vt-bg${off ? ' is-off' : ''}`} aria-hidden="true">
@@ -88,16 +106,15 @@ function Background({ off }) {
 }
 
 /* ---------- Route mode: map, stats, profile ---------- */
-const MAP = { W: 800, H: 600 }
-const mapGeo = projectTracks(TRACKS, MAP.W, MAP.H, 50)
-const mapPaths = mapGeo.paths.map(toPath)
-
 const PROF = { W: 800, H: 240, l: 46, r: 14, t: 12, b: 28 }
 const cls = (i) => (i === 0 ? 'is-ascent' : 'is-descent')
 
 function Profile({ shown, scrub, setScrub }) {
-  const lo = Math.floor(Math.min(...shown.map((i) => TRACKS[i].stats.minEle)) / 100) * 100
-  const hi = Math.ceil(Math.max(...shown.map((i) => TRACKS[i].stats.maxEle)) / 100) * 100
+  const { TRACKS } = useContext(RouteCtx)
+  const rawLo = Math.min(...shown.map((i) => TRACKS[i].stats.minEle)), rawHi = Math.max(...shown.map((i) => TRACKS[i].stats.maxEle))
+  const eStep = rawHi - rawLo < 250 ? 50 : rawHi - rawLo < 700 ? 100 : rawHi - rawLo < 1500 ? 250 : 500
+  const lo = Math.floor(rawLo / eStep) * eStep
+  const hi = Math.max(Math.ceil(rawHi / eStep) * eStep, lo + eStep)
   const maxKm = Math.max(...shown.map((i) => TRACKS[i].stats.km))
   const iw = PROF.W - PROF.l - PROF.r, ih = PROF.H - PROF.t - PROF.b
   const X = (km) => PROF.l + (km / maxKm) * iw
@@ -110,9 +127,10 @@ function Profile({ shown, scrub, setScrub }) {
     setScrub(Math.min(maxKm, Math.max(0, ((px - PROF.l) / iw) * maxKm)))
   }
   const eleTicks = []
-  for (let e = Math.ceil(lo / 500) * 500; e <= hi; e += 500) eleTicks.push(e)
+  for (let e = lo; e <= hi; e += eStep) eleTicks.push(e)
   const kmTicks = []
-  for (let k = 0; k <= maxKm; k += 1) kmTicks.push(k)
+  const kStep = maxKm > 24 ? 5 : maxKm > 12 ? 2 : 1
+  for (let k = 0; k <= maxKm; k += kStep) kmTicks.push(k)
 
   return (
     <svg
@@ -175,9 +193,10 @@ function LineSample({ index }) {
 }
 
 function StatsCard({ index }) {
+  const { TRACKS } = useContext(RouteCtx)
   const t = TRACKS[index]
   const s = t.stats
-  const rec = MINUTES[t.id]
+  const rec = t.minutes
   const dateLabel = DATE_FMT.format(new Date(t.start))
   return (
     <section className="vt-card">
@@ -199,6 +218,7 @@ function StatsCard({ index }) {
 }
 
 function Readout({ scrub, shown }) {
+  const { TRACKS } = useContext(RouteCtx)
   if (scrub == null) return <p className="vt-hint">Move across the profile to follow the route.</p>
   return (
     <div className="vt-readout" aria-live="off">
@@ -217,6 +237,7 @@ function Readout({ scrub, shown }) {
 
 /** The flat vector map: shown while the terrain loads or when WebGL / the elevation file is unavailable. */
 function FlatMap({ shown, scrub }) {
+  const { TRACKS, mapGeo, mapPaths } = useContext(RouteCtx)
   const scale = mapGeo.kmPx
   return (
     <svg className="vt-map" viewBox={`0 0 ${MAP.W} ${MAP.H}`} role="img" aria-label="Route map, north up">
@@ -224,15 +245,15 @@ function FlatMap({ shown, scrub }) {
         <path key={i} d={d} className={`vt-map-line ${cls(i)}${shown.includes(i) ? ' is-on' : ''}`} />
       ))}
       {shown.map((i) => {
-        if (shown.length > 1 && i === 1) return null
+        if (shown.length > 1 && i > 0) return null
         const p = mapGeo.paths[i]
         const a = p[0], b = p[p.length - 1]
         return (
           <g key={i}>
             <circle cx={a[0]} cy={a[1]} r="6" className="vt-end" />
-            <text x={a[0] + 11} y={a[1] + 4} className="vt-label">{i === 0 ? 'Start' : 'Top'}</text>
+            <text x={a[0] + 11} y={a[1] + 4} className="vt-label">Start</text>
             <circle cx={b[0]} cy={b[1]} r="6" className="vt-end is-fill" />
-            <text x={b[0] + 11} y={b[1] + 4} className="vt-label">{i === 0 ? 'Top' : 'Bottom'}</text>
+            <text x={b[0] + 11} y={b[1] + 4} className="vt-label">Finish</text>
           </g>
         )
       })}
@@ -253,17 +274,21 @@ function FlatMap({ shown, scrub }) {
 }
 
 function RouteView({ photos, onOpen, ctl, setMapSlot, sceneFailed }) {
+  const { TRACKS } = useContext(RouteCtx)
   const { which, setWhich, scrub, view, setView, playing, setPlaying, onProfile, terrain } = ctl
-  const shown = useMemo(() => (which === 'both' ? [0, 1] : [which === 'ascent' ? 0 : 1]), [which])
+  const shown = useMemo(() => showing(which, TRACKS.length), [which, TRACKS.length])
+  const tabs = TRACKS.length > 1 ? [...TRACKS.map((t, i) => [String(i), `${t.label} · ${SHORT_FMT.format(new Date(t.start))}`]), ['both', 'Both']] : []
 
   return (
     <div className="vt-route">
       <div className="vt-toolbar">
-        <div className="vt-tabs" role="group" aria-label="Which track">
-          {[['ascent', 'Ascent · 1 Aug'], ['descent', 'Descent · 2 Aug'], ['both', 'Both']].map(([k, label]) => (
-            <button key={k} className={which === k ? 'is-on' : ''} aria-pressed={which === k} onClick={() => { setWhich(k); setPlaying(false) }}>{label}</button>
-          ))}
-        </div>
+        {tabs.length > 0 ? (
+          <div className="vt-tabs" role="group" aria-label="Which track">
+            {tabs.map(([k, label]) => (
+              <button key={k} className={which === k ? 'is-on' : ''} aria-pressed={which === k} onClick={() => { setWhich(k); setPlaying(false) }}>{label}</button>
+            ))}
+          </div>
+        ) : <span />}
         <div className="vt-tools">
           {!sceneFailed && (
             <div className="vt-tabs" role="group" aria-label="Map view">
@@ -307,7 +332,7 @@ function RouteView({ photos, onOpen, ctl, setMapSlot, sceneFailed }) {
         </div>
       )}
       <p className="vt-note">
-        Routes are the AllTrails recordings (ascent 1 Aug, descent 2 Aug 2026), draped on the terrain model; the ascent is the black line and the descent the grey one.
+        {TRACKS.length > 1 ? 'Routes are the AllTrails recordings' : 'The route is the AllTrails recording'} ({TRACKS.map((t) => `${t.label.toLowerCase()} ${SHORT_FMT.format(new Date(t.start))}`).join(', ')}), draped on the terrain model{TRACKS.length > 1 ? '; the first is the black line and the second the grey one' : ''}.
         Climb and descent are summed with a 10 m filter, so they differ slightly from AllTrails' own totals.
         Photos are not placed on the route: the scans carry no capture time.
       </p>
@@ -322,9 +347,39 @@ const lowPower = () => {
 }
 
 /* ---------- Page ---------- */
-export default function ValsoreyTrack() {
+const showing = (which, n) => (which === 'both' ? Array.from({ length: n }, (_, i) => i) : [Number(which)])
+
+/** #/lab/route/<album>: loads that album's route data, then the page. */
+export default function RouteTrack({ slug }) {
+  const [state, setState] = useState({ slug: null, model: null, error: false })
+  useEffect(() => {
+    let live = true
+    const d = detailFiles[`../routes/${slug}/detail.json`], t = terrainFiles[`../routes/${slug}/terrain.json`]
+    if (!d || !t) { setState({ slug, model: null, error: true }); return undefined }
+    Promise.all([d(), t()]).then(
+      ([a, b]) => live && setState({ slug, model: buildModel(a.default || a, b.default || b, slug), error: false }),
+      () => live && setState({ slug, model: null, error: true }),
+    )
+    return () => { live = false }
+  }, [slug])
+  if (state.slug !== slug) return <p style={{ padding: '2rem', minHeight: '100vh' }}>Loading…</p>
+  if (state.error) return (
+    <section className="lab-index">
+      <a className="back-link" href="#/lab">← Lab</a>
+      <p className="notice">No route page for “{slug}”.</p>
+    </section>
+  )
+  return (
+    <RouteCtx.Provider value={state.model}>
+      <RoutePage key={slug} catalog={ROUTES[slug]} albumSlug={slug} />
+    </RouteCtx.Provider>
+  )
+}
+
+function RoutePage({ catalog, albumSlug }) {
+  const { TRACKS, detail, meta, demUrl } = useContext(RouteCtx)
   const [mode, setMode] = useState('photos')
-  const { photos, failed } = useAlbum()
+  const { photos, failed } = useAlbum(catalog, albumSlug)
   const [active, setActive] = useState(null)
   const items = useMemo(() => (photos || []).map((photo, index) => ({ photo, index })), [photos])
   const total = items.length
@@ -335,7 +390,7 @@ export default function ValsoreyTrack() {
   const [view, setView] = useState('3d')
   const [playing, setPlaying] = useState(false)
   const terrain = useRef(null)
-  const shown = useMemo(() => (which === 'both' ? [0, 1] : [which === 'ascent' ? 0 : 1]), [which])
+  const shown = useMemo(() => showing(which, TRACKS.length), [which, TRACKS.length])
   const maxKm = Math.max(...shown.map((i) => TRACKS[i].stats.km))
   const onProfile = useCallback((v) => { setPlaying(false); setScrub(v) }, [])
 
@@ -410,6 +465,9 @@ export default function ValsoreyTrack() {
           <Scene
             ref={terrain}
             tracks={TRACKS}
+            meta={meta}
+            demUrl={demUrl}
+            labels={detail.labels}
             mode={mode}
             bgSlot={bg3d ? bgSlot : null}
             mapSlot={mapSlot}
@@ -426,9 +484,9 @@ export default function ValsoreyTrack() {
       <div className="vt-content">
         <a className="back-link" href="#/lab">← Lab</a>
         <header className="vt-head">
-          <h2>Cabane de Valsorey</h2>
+          <h2>{photos?.[0]?.album || albumSlug}</h2>
           <p className="vt-sub">
-            1–2 August 2026 · Bourg-Saint-Pierre to the Valsorey hut and back · {TRACKS[0].stats.km.toFixed(1)} km up, {TRACKS[1].stats.km.toFixed(1)} km down
+            {[...new Set(TRACKS.map((t) => DATE_FMT.format(new Date(t.start))))].join(' · ')} · {TRACKS.length > 1 ? TRACKS.map((t) => `${t.stats.km.toFixed(1)} km ${t.label.toLowerCase()}`).join(', ') : `${TRACKS[0].stats.km.toFixed(1)} km`} · {TRACKS[0].stats.gain.toLocaleString('en-US')} m climbed
           </p>
           <div className="vt-modes" role="group" aria-label="View">
             <button className={mode === 'photos' ? 'is-on' : ''} aria-pressed={mode === 'photos'} onClick={() => setMode('photos')}>Photos</button>

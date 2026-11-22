@@ -1,0 +1,170 @@
+{
+ "width": 612,
+ "height": 417,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.95402053029165,
+  "north": 47.02893999999999,
+  "west": 8.31076999999999,
+  "east": 8.471967236431055
+ },
+ "metersPerPx": 20,
+ "minEle": 412,
+ "maxEle": 1478,
+ "peaks": [
+  {
+   "name": "Bürgenstock",
+   "kind": "peak",
+   "ele": 1127,
+   "lat": 47.0003117,
+   "lng": 8.3983261
+  },
+  {
+   "name": "Ennetbürgen",
+   "kind": "place",
+   "ele": 435,
+   "lat": 46.9851867,
+   "lng": 8.4128263
+  },
+  {
+   "name": "Ennetmoos",
+   "kind": "place",
+   "ele": 521,
+   "lat": 46.9569495,
+   "lng": 8.3374027
+  },
+  {
+   "name": "Buochs",
+   "kind": "place",
+   "ele": 435,
+   "lat": 46.9739978,
+   "lng": 8.4205883
+  },
+  {
+   "name": "St. Niklausen",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0187042,
+   "lng": 8.3399883
+  },
+  {
+   "name": "Winkel",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0126143,
+   "lng": 8.3167357
+  },
+  {
+   "name": "Kastanienbaum",
+   "kind": "place",
+   "ele": null,
+   "lat": 47.0089303,
+   "lng": 8.3371986
+  },
+  {
+   "name": "Oberdorf NW",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9575638,
+   "lng": 8.3855966
+  },
+  {
+   "name": "Drachenflue",
+   "kind": "peak",
+   "ele": 860,
+   "lat": 46.9546641,
+   "lng": 8.3195658
+  },
+  {
+   "name": "Rotzberg",
+   "kind": "peak",
+   "ele": 672,
+   "lat": 46.9642955,
+   "lng": 8.336595
+  },
+  {
+   "name": "Stansstad",
+   "kind": "place",
+   "ele": 436,
+   "lat": 46.979741,
+   "lng": 8.3373667
+  },
+  {
+   "name": "Ächerli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.976708,
+   "lng": 8.385265
+  },
+  {
+   "name": "Heggli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9868206,
+   "lng": 8.4081043
+  },
+  {
+   "name": "Fronhofen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.969946,
+   "lng": 8.3510347
+  },
+  {
+   "name": "Trogen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9943315,
+   "lng": 8.3935359
+  },
+  {
+   "name": "Betti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9596504,
+   "lng": 8.3339792
+  },
+  {
+   "name": "Schwibogen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9686104,
+   "lng": 8.3684777
+  },
+  {
+   "name": "Oeli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9680929,
+   "lng": 8.3409606
+  },
+  {
+   "name": "Weingärtli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9911299,
+   "lng": 8.4241751
+  },
+  {
+   "name": "Ächerli",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9766489,
+   "lng": 8.3834509
+  },
+  {
+   "name": "Obbürgen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9826206,
+   "lng": 8.3626639
+  },
+  {
+   "name": "Bürgenstock",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.9961754,
+   "lng": 8.3812807
+  }
+ ]
+}

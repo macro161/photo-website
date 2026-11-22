@@ -1,0 +1,198 @@
+{
+ "width": 381,
+ "height": 373,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.22034575657941,
+  "north": 46.28736000000001,
+  "west": 6.830070000000006,
+  "east": 6.9290650471365325
+ },
+ "metersPerPx": 20,
+ "minEle": 382,
+ "maxEle": 2014,
+ "peaks": [
+  {
+   "name": "Morgins",
+   "kind": "place",
+   "ele": 1333,
+   "lat": 46.2376589,
+   "lng": 6.8581016
+  },
+  {
+   "name": "Troistorrents",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2285806,
+   "lng": 6.9161978
+  },
+  {
+   "name": "Châtel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2671987,
+   "lng": 6.8412678
+  },
+  {
+   "name": "Pointe de Bellevue",
+   "kind": "peak",
+   "ele": 2042,
+   "lat": 46.2576793,
+   "lng": 6.8876347
+  },
+  {
+   "name": "Le Morclan",
+   "kind": "peak",
+   "ele": 1970,
+   "lat": 46.2768929,
+   "lng": 6.8577582
+  },
+  {
+   "name": "Pointe des Ombrieux",
+   "kind": "peak",
+   "ele": 1981,
+   "lat": 46.280033,
+   "lng": 6.864865
+  },
+  {
+   "name": "Le Ryz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.282201,
+   "lng": 6.8333278
+  },
+  {
+   "name": "Muraz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2786355,
+   "lng": 6.9266288
+  },
+  {
+   "name": "Plan des Mûres",
+   "kind": "peak",
+   "ele": 1895,
+   "lat": 46.2393825,
+   "lng": 6.8350662
+  },
+  {
+   "name": "Le Tô",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2211534,
+   "lng": 6.9221972
+  },
+  {
+   "name": "Le Clos du Tour",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2697152,
+   "lng": 6.8327164
+  },
+  {
+   "name": "Les Vorres",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2732677,
+   "lng": 6.8308934
+  },
+  {
+   "name": "La Vorraz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2769329,
+   "lng": 6.8409523
+  },
+  {
+   "name": "Le Yéti",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2790889,
+   "lng": 6.8361812
+  },
+  {
+   "name": "Sur la Côte",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2796154,
+   "lng": 6.8351432
+  },
+  {
+   "name": "Le Petit Châtel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2789091,
+   "lng": 6.8355294
+  },
+  {
+   "name": "Le Roitet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.276659,
+   "lng": 6.8333458
+  },
+  {
+   "name": "Sur l'Ortaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2704369,
+   "lng": 6.8552484
+  },
+  {
+   "name": "Rocher de la Tête Noire",
+   "kind": "peak",
+   "ele": 1688,
+   "lat": 46.2615141,
+   "lng": 6.8581049
+  },
+  {
+   "name": "Flammet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2846827,
+   "lng": 6.8384465
+  },
+  {
+   "name": "La Foilleuse",
+   "kind": "peak",
+   "ele": 1820,
+   "lat": 46.2276949,
+   "lng": 6.8672263
+  },
+  {
+   "name": "La Truche",
+   "kind": "peak",
+   "ele": 1901,
+   "lat": 46.2226335,
+   "lng": 6.8552314
+  },
+  {
+   "name": "Pointe de Dréveneuse",
+   "kind": "peak",
+   "ele": 2009,
+   "lat": 46.2627695,
+   "lng": 6.8949021
+  },
+  {
+   "name": "L'Essert",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2749515,
+   "lng": 6.9153532
+  },
+  {
+   "name": "Bec du Corbeau",
+   "kind": "peak",
+   "ele": 1992,
+   "lat": 46.25377,
+   "lng": 6.8629669
+  },
+  {
+   "name": "Pointe du Midi",
+   "kind": "peak",
+   "ele": 1850,
+   "lat": 46.244899,
+   "lng": 6.8378398
+  }
+ ]
+}

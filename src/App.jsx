@@ -8,6 +8,7 @@ import Lightbox from './components/Lightbox.jsx'
 import Lab from './lab/Lab.jsx'
 import NotFound from './components/NotFound.jsx'
 import { rollInfo, rollLine } from './rolls.js'
+import hikeAlbums from './lab/hikeAlbums.json'
 import DateFilter from './components/DateFilter.jsx'
 import { openPhoto, closePhoto } from './viewTransition.js'
 import { dateFor, inRange, formatRange, formatHike, yearsFor, sortByDate } from './dates.js'
@@ -39,7 +40,7 @@ function parseHash(hash) {
   }
   const parts = path.split('/').filter(Boolean).map(decode)
   if (parts[0] === 'lab') {
-    return { view: 'lab', labSlug: parts[1] || null, catalog: null, album: null, photo: null }
+    return { view: 'lab', labSlug: parts[1] || null, labArg: parts[2] || null, catalog: null, album: null, photo: null }
   }
   if (parts[0] === 'c' && parts[1]) {
     let rest = parts.slice(2)
@@ -407,7 +408,7 @@ export default function App() {
           key={pageKey}
         >
           {view === 'lab' ? (
-            <Lab slug={route.labSlug} />
+            <Lab slug={route.labSlug} arg={route.labArg} />
           ) : view === 'notfound' ? (
             <NotFound
               message={
@@ -464,6 +465,11 @@ export default function App() {
               </h2>
               <DateLine entry={album.date} />
               <RollLine info={rollInfo(catalog.slug, album.slug)} />
+              {hikeAlbums[`${catalog.slug}/${album.slug}`] && (
+                <p className="roll-line">
+                  <a href={`#/lab/route/${album.slug}`}>Route and track →</a>
+                </p>
+              )}
               {notice && <p className="notice">{notice}</p>}
               {ready ? (
                 <Gallery items={album.items} onOpen={open} />

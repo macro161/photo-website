@@ -1,0 +1,226 @@
+{
+ "width": 499,
+ "height": 422,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.47398224428909,
+  "north": 46.549800000000005,
+  "west": 6.908260000000013,
+  "east": 7.038529251587903
+ },
+ "metersPerPx": 20,
+ "minEle": 771,
+ "maxEle": 1958,
+ "peaks": [
+  {
+   "name": "Les Paccots",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5220308,
+   "lng": 6.9465972
+  },
+  {
+   "name": "Les Pléiades",
+   "kind": "peak",
+   "ele": 1360,
+   "lat": 46.4820859,
+   "lng": 6.9092392
+  },
+  {
+   "name": "Dent de Lys",
+   "kind": "peak",
+   "ele": 2014,
+   "lat": 46.5076805,
+   "lng": 7.0029754
+  },
+  {
+   "name": "Le Molard",
+   "kind": "peak",
+   "ele": 1752,
+   "lat": 46.4839919,
+   "lng": 6.9602151
+  },
+  {
+   "name": "Folliu Borna",
+   "kind": "peak",
+   "ele": 1848,
+   "lat": 46.4920308,
+   "lng": 6.9922476
+  },
+  {
+   "name": "Le Folly",
+   "kind": "peak",
+   "ele": 1730,
+   "lat": 46.4799693,
+   "lng": 6.951611
+  },
+  {
+   "name": "Vanil des Artses",
+   "kind": "peak",
+   "ele": 1992,
+   "lat": 46.4823208,
+   "lng": 6.9873005
+  },
+  {
+   "name": "Lys Derrey",
+   "kind": "peak",
+   "ele": 1864,
+   "lat": 46.5039338,
+   "lng": 6.9956812
+  },
+  {
+   "name": "Grosse Côte",
+   "kind": "peak",
+   "ele": 1791,
+   "lat": 46.5067227,
+   "lng": 7.0112969
+  },
+  {
+   "name": "Vanil Blanc",
+   "kind": "peak",
+   "ele": 1827,
+   "lat": 46.5177537,
+   "lng": 7.0179847
+  },
+  {
+   "name": "Le Moléson",
+   "kind": "peak",
+   "ele": 2002,
+   "lat": 46.5489446,
+   "lng": 7.0171352
+  },
+  {
+   "name": "Grand Pra",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5065188,
+   "lng": 6.989566
+  },
+  {
+   "name": "Joux Verte Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5116764,
+   "lng": 6.9948133
+  },
+  {
+   "name": "Paccot-Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.504718,
+   "lng": 6.982563
+  },
+  {
+   "name": "Paccot-Dessous",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5009427,
+   "lng": 6.9789076
+  },
+  {
+   "name": "Guedères",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4930914,
+   "lng": 6.9700744
+  },
+  {
+   "name": "Lally",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4793464,
+   "lng": 6.9146837
+  },
+  {
+   "name": "Teysachaux",
+   "kind": "peak",
+   "ele": 1909,
+   "lat": 46.534054,
+   "lng": 6.996342
+  },
+  {
+   "name": "Crête du Moléson",
+   "kind": "peak",
+   "ele": 1938,
+   "lat": 46.545762,
+   "lng": 7.0107741
+  },
+  {
+   "name": "Fruence",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.52192,
+   "lng": 6.910487
+  },
+  {
+   "name": "La Frasse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5309661,
+   "lng": 6.9343875
+  },
+  {
+   "name": "Prayoud",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5428873,
+   "lng": 6.914071
+  },
+  {
+   "name": "Corbetta",
+   "kind": "peak",
+   "ele": 1401,
+   "lat": 46.5122819,
+   "lng": 6.9350326
+  },
+  {
+   "name": "Les Sciernes-d'Albeuve",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4968808,
+   "lng": 7.0350776
+  },
+  {
+   "name": "Le Pila",
+   "kind": "peak",
+   "ele": 1892,
+   "lat": 46.4744266,
+   "lng": 6.9802229
+  },
+  {
+   "name": "Niremont",
+   "kind": "peak",
+   "ele": 1514,
+   "lat": 46.5481497,
+   "lng": 6.9568202
+  },
+  {
+   "name": "Petit Niremont",
+   "kind": "peak",
+   "ele": 1493,
+   "lat": 46.5455223,
+   "lng": 6.9470819
+  },
+  {
+   "name": "Haut des Preises",
+   "kind": "peak",
+   "ele": 1604,
+   "lat": 46.5008807,
+   "lng": 6.9702298
+  },
+  {
+   "name": "Le Barlattey",
+   "kind": "peak",
+   "ele": 1630,
+   "lat": 46.5042851,
+   "lng": 6.9733921
+  },
+  {
+   "name": "Grand Sex",
+   "kind": "peak",
+   "ele": 1907,
+   "lat": 46.5116542,
+   "lng": 7.0126653
+  }
+ ]
+}

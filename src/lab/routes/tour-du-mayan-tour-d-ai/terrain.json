@@ -1,0 +1,247 @@
+{
+ "width": 396,
+ "height": 484,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.316693229130536,
+  "north": 46.403649999999985,
+  "west": 6.964010000000002,
+  "east": 7.067102483367421
+ },
+ "metersPerPx": 20,
+ "minEle": 404,
+ "maxEle": 2232,
+ "peaks": [
+  {
+   "name": "Tour d'Aï",
+   "kind": "peak",
+   "ele": 2330,
+   "lat": 46.3721033,
+   "lng": 7.0019672
+  },
+  {
+   "name": "Le Chamossaire",
+   "kind": "peak",
+   "ele": 2112,
+   "lat": 46.3268229,
+   "lng": 7.061344
+  },
+  {
+   "name": "Leysin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3438701,
+   "lng": 7.0148403
+  },
+  {
+   "name": "Roc d'Orsay",
+   "kind": "peak",
+   "ele": 1976,
+   "lat": 46.3225582,
+   "lng": 7.0645092
+  },
+  {
+   "name": "Berneuse",
+   "kind": "peak",
+   "ele": 2048,
+   "lat": 46.3597739,
+   "lng": 7.0017835
+  },
+  {
+   "name": "Sex des Nombrieux",
+   "kind": "peak",
+   "ele": 1805,
+   "lat": 46.3648788,
+   "lng": 6.9650402
+  },
+  {
+   "name": "Tour de Mayen",
+   "kind": "peak",
+   "ele": 2326,
+   "lat": 46.3746567,
+   "lng": 7.0082818
+  },
+  {
+   "name": "Aussemont",
+   "kind": "peak",
+   "ele": 1793,
+   "lat": 46.4005489,
+   "lng": 7.0339418
+  },
+  {
+   "name": "Drapel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3205856,
+   "lng": 6.9829368
+  },
+  {
+   "name": "Fontanney",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3185884,
+   "lng": 6.9861503
+  },
+  {
+   "name": "Plambuit",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3243785,
+   "lng": 7.0293353
+  },
+  {
+   "name": "Exergillod",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3369124,
+   "lng": 7.0379896
+  },
+  {
+   "name": "Le Sépey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3611362,
+   "lng": 7.051225
+  },
+  {
+   "name": "Veyges",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3295833,
+   "lng": 6.9907122
+  },
+  {
+   "name": "Crettaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3479587,
+   "lng": 7.0285913
+  },
+  {
+   "name": "Luan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3591901,
+   "lng": 6.9759425
+  },
+  {
+   "name": "Chaux de Tompey",
+   "kind": "peak",
+   "ele": 2015,
+   "lat": 46.3710891,
+   "lng": 6.987263
+  },
+  {
+   "name": "Sex des Paccots",
+   "kind": "peak",
+   "ele": 1806,
+   "lat": 46.3685484,
+   "lng": 6.971485
+  },
+  {
+   "name": "Le Village de Cergnat",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3571308,
+   "lng": 7.0424598
+  },
+  {
+   "name": "Tour de Famelon",
+   "kind": "peak",
+   "ele": 2143,
+   "lat": 46.3827943,
+   "lng": 7.023565
+  },
+  {
+   "name": "Mont d'Or",
+   "kind": "peak",
+   "ele": 2175,
+   "lat": 46.3883568,
+   "lng": 7.0601466
+  },
+  {
+   "name": "Vers la Ryt",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.330898,
+   "lng": 6.9692344
+  },
+  {
+   "name": "Plan d'Essert",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3346301,
+   "lng": 6.9669797
+  },
+  {
+   "name": "La Riondaz",
+   "kind": "peak",
+   "ele": 1981,
+   "lat": 46.3524708,
+   "lng": 6.9993725
+  },
+  {
+   "name": "Les Truex",
+   "kind": "peak",
+   "ele": 2195,
+   "lat": 46.3796421,
+   "lng": 7.0130896
+  },
+  {
+   "name": "Malatraix",
+   "kind": "peak",
+   "ele": 1768,
+   "lat": 46.3942799,
+   "lng": 6.9641957
+  },
+  {
+   "name": "Chaux de Mont",
+   "kind": "peak",
+   "ele": 2206,
+   "lat": 46.3722484,
+   "lng": 6.9980657
+  },
+  {
+   "name": "Cergnat",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3552751,
+   "lng": 7.0371278
+  },
+  {
+   "name": "Le Verney",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3585054,
+   "lng": 7.0437977
+  },
+  {
+   "name": "Geteillon",
+   "kind": "peak",
+   "ele": 2017,
+   "lat": 46.3573001,
+   "lng": 7.0042647
+  },
+  {
+   "name": "Sex des Placettes",
+   "kind": "peak",
+   "ele": 1906,
+   "lat": 46.3875588,
+   "lng": 7.0081819
+  },
+  {
+   "name": "Le Moëllé",
+   "kind": "peak",
+   "ele": 1872,
+   "lat": 46.3747342,
+   "lng": 7.0259725
+  },
+  {
+   "name": "Sex du Parc aux Feyes",
+   "kind": "peak",
+   "ele": 1866,
+   "lat": 46.3739022,
+   "lng": 6.9782553
+  }
+ ]
+}

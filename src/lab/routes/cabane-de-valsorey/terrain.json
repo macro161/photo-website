@@ -1,15 +1,15 @@
 {
- "width": 541,
- "height": 500,
+ "width": 554,
+ "height": 493,
  "unit": 0.5,
  "bounds": {
-  "south": 45.8851686369884,
-  "north": 45.97499999999999,
-  "west": 7.169999999999959,
-  "east": 7.309744912059045
+  "south": 45.89588624147767,
+  "north": 45.98446,
+  "west": 7.1677899999999966,
+  "east": 7.310919014101103
  },
  "metersPerPx": 20,
- "minEle": 1404,
+ "minEle": 1298,
  "maxEle": 4271,
  "peaks": [
   {
@@ -20,18 +20,25 @@
    "lng": 7.2992242
   },
   {
-   "name": "Mont Vélan",
-   "kind": "peak",
-   "ele": 3727,
-   "lat": 45.8919362,
-   "lng": 7.2514708
-  },
-  {
    "name": "Bourg-Saint-Pierre",
    "kind": "place",
    "ele": 1632,
    "lat": 45.9489252,
    "lng": 7.2088271
+  },
+  {
+   "name": "Petit-Combin",
+   "kind": "peak",
+   "ele": 3663,
+   "lat": 45.9838415,
+   "lng": 7.2677215
+  },
+  {
+   "name": "Combin de Corbassière",
+   "kind": "peak",
+   "ele": 3716,
+   "lat": 45.9781287,
+   "lng": 7.2804638
   },
   {
    "name": "Le Ritord",
@@ -132,6 +139,13 @@
    "lng": 7.238285
   },
   {
+   "name": "Aiguille de Boveire",
+   "kind": "peak",
+   "ele": 3629,
+   "lat": 45.976784,
+   "lng": 7.2672548
+  },
+  {
    "name": "Combin de Valsorey",
    "kind": "peak",
    "ele": 4184,
@@ -153,13 +167,6 @@
    "lng": 7.2055861
   },
   {
-   "name": "Testa Grisa",
-   "kind": "peak",
-   "ele": 3060,
-   "lat": 45.8919395,
-   "lng": 7.2282496
-  },
-  {
    "name": "La Niord",
    "kind": "place",
    "ele": null,
@@ -167,11 +174,11 @@
    "lng": 7.1984324
   },
   {
-   "name": "Corni del Velan",
-   "kind": "peak",
-   "ele": 3621,
-   "lat": 45.8882044,
-   "lng": 7.2568202
+   "name": "Palasuit",
+   "kind": "place",
+   "ele": null,
+   "lat": 45.9830959,
+   "lng": 7.1927073
   },
   {
    "name": "Mount Cordine",
@@ -179,13 +186,6 @@
    "ele": 3329,
    "lat": 45.8972875,
    "lng": 7.268475
-  },
-  {
-   "name": "Pointe du Capucin",
-   "kind": "peak",
-   "ele": 3396,
-   "lat": 45.8937394,
-   "lng": 7.2646703
   },
   {
    "name": "L'Epée",
@@ -209,53 +209,11 @@
    "lng": 7.2210955
   },
   {
-   "name": "Aiguille du Dejeuner",
-   "kind": "peak",
-   "ele": 3341,
-   "lat": 45.8900418,
-   "lng": 7.2405307
-  },
-  {
-   "name": "Punta di Moline Ovest",
-   "kind": "peak",
-   "ele": 3020,
-   "lat": 45.8903302,
-   "lng": 7.2230749
-  },
-  {
-   "name": "Punta di Moline Est",
-   "kind": "peak",
-   "ele": 3025,
-   "lat": 45.890996,
-   "lng": 7.2267736
-  },
-  {
-   "name": "Punta di Moline Centrale",
-   "kind": "peak",
-   "ele": 3032,
-   "lat": 45.8897729,
-   "lng": 7.2258523
-  },
-  {
-   "name": "Punta di Crête Sèche",
-   "kind": "peak",
-   "ele": 2951,
-   "lat": 45.8888208,
-   "lng": 7.2164029
-  },
-  {
    "name": "Mont Trois Frères",
    "kind": "peak",
    "ele": 3250,
    "lat": 45.9008881,
    "lng": 7.2769164
-  },
-  {
-   "name": "Doigt du Velan",
-   "kind": "peak",
-   "ele": 3296,
-   "lat": 45.8954266,
-   "lng": 7.2666594
   },
   {
    "name": "Le Râteau",
@@ -328,6 +286,13 @@
    "lng": 7.2930832
   },
   {
+   "name": "Pointe Patti",
+   "kind": "peak",
+   "ele": 2871,
+   "lat": 45.906207,
+   "lng": 7.3102883
+  },
+  {
    "name": "Pointe Farinet",
    "kind": "peak",
    "ele": 2987,
@@ -361,13 +326,6 @@
    "ele": 3330,
    "lat": 45.9021677,
    "lng": 7.2390751
-  },
-  {
-   "name": "Tête de Riondet",
-   "kind": "peak",
-   "ele": 3484,
-   "lat": 45.8907063,
-   "lng": 7.26159
   },
   {
    "name": "Petite Aiguille",
@@ -466,13 +424,6 @@
    "ele": 1648,
    "lat": 45.9541912,
    "lng": 7.2055553
-  },
-  {
-   "name": "L'Hospitalet",
-   "kind": "place",
-   "ele": 2120,
-   "lat": 45.8862819,
-   "lng": 7.1870071
   }
  ]
 }

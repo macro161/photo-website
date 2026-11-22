@@ -1,0 +1,268 @@
+{
+ "width": 578,
+ "height": 465,
+ "unit": 0.5,
+ "bounds": {
+  "south": 45.96696682028863,
+  "north": 46.05051,
+  "west": 7.231869999999958,
+  "east": 7.38138450728664
+ },
+ "metersPerPx": 20,
+ "minEle": 1063,
+ "maxEle": 3670,
+ "peaks": [
+  {
+   "name": "Lourtier",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0498853,
+   "lng": 7.264773
+  },
+  {
+   "name": "Fionnay",
+   "kind": "place",
+   "ele": 1491,
+   "lat": 46.032922,
+   "lng": 7.3076779
+  },
+  {
+   "name": "Le Pleureur",
+   "kind": "peak",
+   "ele": 3703,
+   "lat": 46.0162844,
+   "lng": 7.3691106
+  },
+  {
+   "name": "Petit-Combin",
+   "kind": "peak",
+   "ele": 3663,
+   "lat": 45.9838415,
+   "lng": 7.2677215
+  },
+  {
+   "name": "Combin de Corbassière",
+   "kind": "peak",
+   "ele": 3716,
+   "lat": 45.9781287,
+   "lng": 7.2804638
+  },
+  {
+   "name": "Bonatchiesse",
+   "kind": "place",
+   "ele": 1577,
+   "lat": 46.0215426,
+   "lng": 7.3286521
+  },
+  {
+   "name": "Cabane Brunet",
+   "kind": "hut",
+   "ele": 2104,
+   "lat": 46.0303392,
+   "lng": 7.274198
+  },
+  {
+   "name": "Cabane FXB Panossière",
+   "kind": "hut",
+   "ele": 2641,
+   "lat": 45.9987224,
+   "lng": 7.2997576
+  },
+  {
+   "name": "Grand Laget",
+   "kind": "peak",
+   "ele": 3133,
+   "lat": 46.0042603,
+   "lng": 7.2361505
+  },
+  {
+   "name": "Pointe de Boveire",
+   "kind": "peak",
+   "ele": 3212,
+   "lat": 45.9945509,
+   "lng": 7.2398939
+  },
+  {
+   "name": "Becca de Sery",
+   "kind": "peak",
+   "ele": 2863,
+   "lat": 46.0113116,
+   "lng": 7.2808515
+  },
+  {
+   "name": "Le Plamproz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0357123,
+   "lng": 7.294526
+  },
+  {
+   "name": "La Sâle",
+   "kind": "peak",
+   "ele": 3646,
+   "lat": 46.0235106,
+   "lng": 7.3720351
+  },
+  {
+   "name": "Le Parrain",
+   "kind": "peak",
+   "ele": 3259,
+   "lat": 46.0458435,
+   "lng": 7.3513303
+  },
+  {
+   "name": "Pointe des Chamois",
+   "kind": "peak",
+   "ele": 3384,
+   "lat": 46.0355986,
+   "lng": 7.3668183
+  },
+  {
+   "name": "Pointe du Vasevay",
+   "kind": "peak",
+   "ele": 3356,
+   "lat": 46.0311783,
+   "lng": 7.3660429
+  },
+  {
+   "name": "Refuge Igloo des Pantalons Blancs",
+   "kind": "hut",
+   "ele": 3280,
+   "lat": 46.0405376,
+   "lng": 7.3685212
+  },
+  {
+   "name": "Becca de Corbassière",
+   "kind": "peak",
+   "ele": 2690,
+   "lat": 46.0177985,
+   "lng": 7.3061662
+  },
+  {
+   "name": "Aiguille de Boveire",
+   "kind": "peak",
+   "ele": 3629,
+   "lat": 45.976784,
+   "lng": 7.2672548
+  },
+  {
+   "name": "Tournelon Blanc",
+   "kind": "peak",
+   "ele": 3707,
+   "lat": 45.969683,
+   "lng": 7.3218121
+  },
+  {
+   "name": "(Les Otanes)",
+   "kind": "peak",
+   "ele": 2880,
+   "lat": 45.9969917,
+   "lng": 7.3082172
+  },
+  {
+   "name": "Mauvoisin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0028406,
+   "lng": 7.3423019
+  },
+  {
+   "name": "Grand Tavé",
+   "kind": "peak",
+   "ele": 3158,
+   "lat": 45.9932855,
+   "lng": 7.3144298
+  },
+  {
+   "name": "Tavé des Chasseurs",
+   "kind": "peak",
+   "ele": 3165,
+   "lat": 45.9894306,
+   "lng": 7.3168082
+  },
+  {
+   "name": "Bec de la Lya",
+   "kind": "peak",
+   "ele": 3454,
+   "lat": 45.9807088,
+   "lng": 7.3193398
+  },
+  {
+   "name": "Aiguille de Bocheresse",
+   "kind": "peak",
+   "ele": 3345,
+   "lat": 45.9823611,
+   "lng": 7.3240553
+  },
+  {
+   "name": "La Ruine",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0503709,
+   "lng": 7.2648426
+  },
+  {
+   "name": "Pointe du Crêt",
+   "kind": "peak",
+   "ele": 3322,
+   "lat": 46.0389598,
+   "lng": 7.3650885
+  },
+  {
+   "name": "Rochers du Bouc",
+   "kind": "peak",
+   "ele": 3314,
+   "lat": 46.0435251,
+   "lng": 7.3736071
+  },
+  {
+   "name": "Le Brecholey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.0244228,
+   "lng": 7.3203334
+  },
+  {
+   "name": "La Torbesse",
+   "kind": "peak",
+   "ele": 3053,
+   "lat": 46.0410117,
+   "lng": 7.3398136
+  },
+  {
+   "name": "Le Mérignier",
+   "kind": "peak",
+   "ele": 3159,
+   "lat": 45.9716073,
+   "lng": 7.2475575
+  },
+  {
+   "name": "Tête du Sarshlau",
+   "kind": "peak",
+   "ele": 2656,
+   "lat": 46.0365004,
+   "lng": 7.3295847
+  },
+  {
+   "name": "Becca Miedzo",
+   "kind": "peak",
+   "ele": 2785,
+   "lat": 46.0198494,
+   "lng": 7.2382646
+  },
+  {
+   "name": "La Rogneuse",
+   "kind": "peak",
+   "ele": 2573,
+   "lat": 46.0447071,
+   "lng": 7.3150225
+  },
+  {
+   "name": "Pointe du Parc",
+   "kind": "peak",
+   "ele": 2989,
+   "lat": 45.9980151,
+   "lng": 7.2320593
+  }
+ ]
+}

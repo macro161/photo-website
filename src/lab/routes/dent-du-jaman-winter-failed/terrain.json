@@ -1,0 +1,212 @@
+{
+ "width": 410,
+ "height": 347,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.403936944570006,
+  "north": 46.46628,
+  "west": 6.90218999999999,
+  "east": 7.009073974713601
+ },
+ "metersPerPx": 20,
+ "minEle": 370,
+ "maxEle": 1992,
+ "peaks": [
+  {
+   "name": "Rochers de Naye",
+   "kind": "peak",
+   "ele": 2042,
+   "lat": 46.4318192,
+   "lng": 6.976051
+  },
+  {
+   "name": "Veytaux",
+   "kind": "place",
+   "ele": 438,
+   "lat": 46.4215725,
+   "lng": 6.9275648
+  },
+  {
+   "name": "Pointe d'Aveneyre",
+   "kind": "peak",
+   "ele": 2026,
+   "lat": 46.4173368,
+   "lng": 7.004657
+  },
+  {
+   "name": "Les Coursis",
+   "kind": "peak",
+   "ele": 1864,
+   "lat": 46.4589064,
+   "lng": 6.9801064
+  },
+  {
+   "name": "Dent de Jaman",
+   "kind": "peak",
+   "ele": 1875,
+   "lat": 46.4449527,
+   "lng": 6.9747987
+  },
+  {
+   "name": "Le Merdasson",
+   "kind": "peak",
+   "ele": 1860,
+   "lat": 46.4376428,
+   "lng": 6.9730589
+  },
+  {
+   "name": "Le Cubly",
+   "kind": "peak",
+   "ele": 1188,
+   "lat": 46.4531096,
+   "lng": 6.9247764
+  },
+  {
+   "name": "Les Avants",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4536817,
+   "lng": 6.943758
+  },
+  {
+   "name": "Fontanivent",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4527426,
+   "lng": 6.9031529
+  },
+  {
+   "name": "Chamby",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4486358,
+   "lng": 6.9140278
+  },
+  {
+   "name": "Caux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4324672,
+   "lng": 6.9377262
+  },
+  {
+   "name": "Territet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4249698,
+   "lng": 6.9246438
+  },
+  {
+   "name": "Glion",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4334429,
+   "lng": 6.9265504
+  },
+  {
+   "name": "Sonzier",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4387939,
+   "lng": 6.920973
+  },
+  {
+   "name": "Chernex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4456342,
+   "lng": 6.9088409
+  },
+  {
+   "name": "Sonchaux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4151495,
+   "lng": 6.9469676
+  },
+  {
+   "name": "Tête du Paccot",
+   "kind": "peak",
+   "ele": 1514,
+   "lat": 46.4414791,
+   "lng": 6.9613618
+  },
+  {
+   "name": "En Plancudrey",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.405408,
+   "lng": 6.9487871
+  },
+  {
+   "name": "Chaulin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4534426,
+   "lng": 6.9084139
+  },
+  {
+   "name": "Dent de Hautadon",
+   "kind": "peak",
+   "ele": 1871,
+   "lat": 46.4449673,
+   "lng": 6.9888389
+  },
+  {
+   "name": "Grande Chaux de Naye",
+   "kind": "peak",
+   "ele": 1982,
+   "lat": 46.4379194,
+   "lng": 6.9839705
+  },
+  {
+   "name": "Les Béviaux",
+   "kind": "place",
+   "ele": 1366,
+   "lat": 46.4646449,
+   "lng": 6.9680847
+  },
+  {
+   "name": "Pallens",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4362825,
+   "lng": 6.9150279
+  },
+  {
+   "name": "Pertit",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4392743,
+   "lng": 6.9152676
+  },
+  {
+   "name": "Le Débandit",
+   "kind": "peak",
+   "ele": 1529,
+   "lat": 46.4631476,
+   "lng": 6.9514771
+  },
+  {
+   "name": "Les Mosses",
+   "kind": "peak",
+   "ele": 1508,
+   "lat": 46.4598006,
+   "lng": 6.9591229
+  },
+  {
+   "name": "Les Dentaux",
+   "kind": "peak",
+   "ele": 1715,
+   "lat": 46.4245471,
+   "lng": 6.9648546
+  },
+  {
+   "name": "Pointe à l'Aiguille",
+   "kind": "peak",
+   "ele": 1932,
+   "lat": 46.4095912,
+   "lng": 6.9946763
+  }
+ ]
+}

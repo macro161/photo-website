@@ -1,0 +1,275 @@
+{
+ "width": 367,
+ "height": 496,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.19967719072011,
+  "north": 46.28879,
+  "west": 7.317450000000008,
+  "east": 7.4127907631820165
+ },
+ "metersPerPx": 20,
+ "minEle": 468,
+ "maxEle": 2109,
+ "peaks": [
+  {
+   "name": "Les Agettes",
+   "kind": "place",
+   "ele": 1002,
+   "lat": 46.2081821,
+   "lng": 7.3752716
+  },
+  {
+   "name": "La Soie",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2542342,
+   "lng": 7.3517279
+  },
+  {
+   "name": "Salins",
+   "kind": "place",
+   "ele": 842,
+   "lat": 46.2110679,
+   "lng": 7.35707
+  },
+  {
+   "name": "Vex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2113825,
+   "lng": 7.3983622
+  },
+  {
+   "name": "Bramois",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2321819,
+   "lng": 7.4038983
+  },
+  {
+   "name": "Arbaz",
+   "kind": "place",
+   "ele": 1146,
+   "lat": 46.273328,
+   "lng": 7.3834555
+  },
+  {
+   "name": "Les Prasses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2062861,
+   "lng": 7.3958926
+  },
+  {
+   "name": "Savièse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2535351,
+   "lng": 7.3477598
+  },
+  {
+   "name": "Chandolin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2484962,
+   "lng": 7.3186247
+  },
+  {
+   "name": "Mont d'Orge",
+   "kind": "peak",
+   "ele": 786,
+   "lat": 46.2304405,
+   "lng": 7.3340714
+  },
+  {
+   "name": "Baar (Nendaz)",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.203733,
+   "lng": 7.3291669
+  },
+  {
+   "name": "Grimisuat",
+   "kind": "place",
+   "ele": 882,
+   "lat": 46.2606742,
+   "lng": 7.385846
+  },
+  {
+   "name": "Champlan",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.246295,
+   "lng": 7.370919
+  },
+  {
+   "name": "Saint-Germain",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2507131,
+   "lng": 7.3502056
+  },
+  {
+   "name": "Molignon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2504276,
+   "lng": 7.3923715
+  },
+  {
+   "name": "Les Fermes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2520545,
+   "lng": 7.3824828
+  },
+  {
+   "name": "Coméraz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.250656,
+   "lng": 7.3731659
+  },
+  {
+   "name": "Ypresse",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2111142,
+   "lng": 7.3847268
+  },
+  {
+   "name": "La Place (Ayent)",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2747886,
+   "lng": 7.4116949
+  },
+  {
+   "name": "Botyre (Ayent)",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2765866,
+   "lng": 7.4049818
+  },
+  {
+   "name": "St-Romain (Ayent)",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2835364,
+   "lng": 7.4119491
+  },
+  {
+   "name": "Saxonne (Ayent)",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2795301,
+   "lng": 7.4063329
+  },
+  {
+   "name": "Blignou (Ayent)",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2726827,
+   "lng": 7.3991498
+  },
+  {
+   "name": "Granois",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2496052,
+   "lng": 7.3361957
+  },
+  {
+   "name": "Roumaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2468245,
+   "lng": 7.3481543
+  },
+  {
+   "name": "Arvillard",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2112046,
+   "lng": 7.3463733
+  },
+  {
+   "name": "Turin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2155035,
+   "lng": 7.3557962
+  },
+  {
+   "name": "Pravidondaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2118585,
+   "lng": 7.3539537
+  },
+  {
+   "name": "Drône",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2606,
+   "lng": 7.3672415
+  },
+  {
+   "name": "La Vernaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2105891,
+   "lng": 7.3740439
+  },
+  {
+   "name": "Crête-à-l'Oeil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2115348,
+   "lng": 7.3704076
+  },
+  {
+   "name": "Argnou (Ayent)",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2616995,
+   "lng": 7.3992545
+  },
+  {
+   "name": "Signèse (Ayent)",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2574879,
+   "lng": 7.4024801
+  },
+  {
+   "name": "Les Mayens de Sion",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2029648,
+   "lng": 7.3716819
+  },
+  {
+   "name": "Prabé",
+   "kind": "peak",
+   "ele": 2041,
+   "lat": 46.2844862,
+   "lng": 7.350095
+  },
+  {
+   "name": "Château de la Soie",
+   "kind": "peak",
+   "ele": 873,
+   "lat": 46.2435286,
+   "lng": 7.3266483
+  },
+  {
+   "name": "Tourbillon",
+   "kind": "peak",
+   "ele": 652,
+   "lat": 46.2364622,
+   "lng": 7.3668733
+  }
+ ]
+}

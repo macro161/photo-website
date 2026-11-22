@@ -352,7 +352,7 @@ export async function createTerrain(canvas, meta, H, tracks) {
     const wpx = state.dpr * 2.6 * (1 - calm.v * 0.3)
     const calmA = 1 - calm.v * 0.3
     // The descent is drawn first (thinner, mid grey) so the ascent's black line sits on top where the two share the trail.
-    ;[1, 0].forEach((i) => {
+    ;lines.map((_, i) => lines.length - 1 - i).forEach((i) => {
       const l = lines[i]
       const a = state.alpha[i] * calmA
       if (a < 0.01) return

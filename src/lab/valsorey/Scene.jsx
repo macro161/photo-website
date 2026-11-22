@@ -1,23 +1,16 @@
 /**
- * The terrain scene for the Valsorey page. One WebGL canvas for the whole page: behind the photos it is a calm
+ * The terrain scene for the lab route pages. One WebGL canvas for the whole page: behind the photos it is a calm
  * backdrop (just the relief and the route); in Route mode the same canvas moves into the map card and brings up
  * labels, contours and controls. Nothing is rebuilt on the way, so there is no reload flash.
  * Elevation: AWS Terrain Tiles baked into dem.bin; names: OpenStreetMap (see scripts/bake-terrain.mjs).
  */
 import { forwardRef, useEffect, useImperativeHandle, useLayoutEffect, useRef, useState } from 'react'
 import { createPortal } from 'react-dom'
-import meta from './terrain.json'
-
-const DEM_URL = '/lab/valsorey/dem.bin'
 const fmt = (n) => Math.round(n).toLocaleString('en-US')
 
-/** Which named places to print: the route's own landmarks first, then the highest peaks around it, spaced apart. */
-function pickLabels(engine, tracks) {
-  const a = tracks[0].points, first = a[0], last = a[a.length - 1]
-  const out = [
-    { key: 'start', text: 'Bourg-Saint-Pierre', sub: `${fmt(first[2])} m`, kind: 'place', world: engine.pointAt(0, 0) },
-    { key: 'hut', text: 'Cabane de Valsorey', sub: `${fmt(last[2])} m`, kind: 'hut', world: engine.pointAt(0, 1e9) },
-  ]
+/** Which named places to print: the route's own landmarks (from build-routes) first, then the highest peaks around it, spaced apart. */
+function pickLabels(engine, tracks, meta, landmarks) {
+  const out = landmarks.map((l) => ({ key: l.key, text: l.text.replace(/[()]/g, ''), sub: `${fmt(l.ele)} m`, kind: l.kind, world: engine.toWorld(l.lat, l.lng) }))
   const lats = tracks.flatMap((t) => t.points.map((p) => p[0])), lngs = tracks.flatMap((t) => t.points.map((p) => p[1]))
   const bb = { s: Math.min(...lats) - 0.034, n: Math.max(...lats) + 0.034, w: Math.min(...lngs) - 0.052, e: Math.max(...lngs) + 0.052 }
   const peaks = meta.peaks
@@ -25,6 +18,7 @@ function pickLabels(engine, tracks) {
     .sort((x, y) => y.ele - x.ele)
   const chosen = []
   for (const p of peaks) {
+    if (out.some((o) => o.text === p.name)) continue
     const world = engine.toWorld(p.lat, p.lng)
     if ([...chosen, ...out].every((c) => Math.hypot(c.world[0] - world[0], c.world[2] - world[2]) > 1500)) chosen.push({ key: p.name, text: p.name, sub: `${fmt(p.ele)} m`, kind: 'peak', world })
     if (chosen.length >= 9) break
@@ -37,7 +31,7 @@ function pickLabels(engine, tracks) {
  * @param bgSlot   element to sit in behind the photos (null = keep the backdrop off, e.g. low-power devices)
  * @param mapSlot  element inside the map card, once Route mode has rendered it
  */
-const Scene = forwardRef(function Scene({ tracks, mode, bgSlot, mapSlot, shown, view, scrub, fly, onUserMove, onFail, onReady }, ref) {
+const Scene = forwardRef(function Scene({ tracks, meta, demUrl, labels: landmarks, mode, bgSlot, mapSlot, shown, view, scrub, fly, onUserMove, onFail, onReady }, ref) {
   const [host] = useState(() => {
     const wrap = document.createElement('div')
     wrap.className = 'vt-3d vt-3d-host'
@@ -93,7 +87,7 @@ const Scene = forwardRef(function Scene({ tracks, mode, bgSlot, mapSlot, shown, 
     ;(async () => {
       try {
         const mod = await import('./terrain-gl.js')
-        const H = await mod.loadElevation(DEM_URL, meta)
+        const H = await mod.loadElevation(demUrl, meta)
         if (dead) return
         engine = await mod.createTerrain(host.canvas, meta, H, tracks)
         if (dead) { engine.dispose(); engine = null; return }
@@ -103,7 +97,7 @@ const Scene = forwardRef(function Scene({ tracks, mode, bgSlot, mapSlot, shown, 
         engine.setReducedMotion(mq.matches)
         onMq = () => engine.setReducedMotion(mq.matches)
         mq.addEventListener?.('change', onMq)
-        setLabels(pickLabels(engine, tracks))
+        setLabels(pickLabels(engine, tracks, meta, landmarks))
         off = engine.onFrame(paint)
         setReady(true)
         cb.current.onReady?.()
@@ -171,7 +165,7 @@ const Scene = forwardRef(function Scene({ tracks, mode, bgSlot, mapSlot, shown, 
   }, [ready, mode, bgSlot])
 
   useEffect(() => { if (mode === 'route') engineRef.current?.setMode(view) }, [view, mode, ready])
-  useEffect(() => { engineRef.current?.setShown(mode === 'route' ? shown : [0, 1]) }, [shown, mode, ready])
+  useEffect(() => { engineRef.current?.setShown(mode === 'route' ? shown : tracks.map((_, i) => i)) }, [shown, mode, ready])
   useEffect(() => {
     const e = engineRef.current
     if (!e || mode !== 'route') return

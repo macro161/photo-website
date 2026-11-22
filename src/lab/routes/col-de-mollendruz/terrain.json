@@ -1,0 +1,142 @@
+{
+ "width": 452,
+ "height": 448,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.62196106214516,
+  "north": 46.70245000000002,
+  "west": 6.326449999999966,
+  "east": 6.444776993217289
+ },
+ "metersPerPx": 20,
+ "minEle": 607,
+ "maxEle": 1444,
+ "peaks": [
+  {
+   "name": "Vaulion",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.6883547,
+   "lng": 6.3894066
+  },
+  {
+   "name": "Mont-la-Ville",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.645546,
+   "lng": 6.4077926
+  },
+  {
+   "name": "Cuarnens",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.6248084,
+   "lng": 6.4382631
+  },
+  {
+   "name": "La Praz",
+   "kind": "place",
+   "ele": 873,
+   "lat": 46.6675257,
+   "lng": 6.4272029
+  },
+  {
+   "name": "Dent de Vaulion",
+   "kind": "peak",
+   "ele": 1483,
+   "lat": 46.6840409,
+   "lng": 6.351073
+  },
+  {
+   "name": "Les Mousses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.6283849,
+   "lng": 6.425333
+  },
+  {
+   "name": "Châtel",
+   "kind": "peak",
+   "ele": 1432,
+   "lat": 46.6243501,
+   "lng": 6.3554084
+  },
+  {
+   "name": "La Pièce",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.6440965,
+   "lng": 6.390014
+  },
+  {
+   "name": "La Coudre",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.6388857,
+   "lng": 6.4028543
+  },
+  {
+   "name": "Grand Boutavent",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.6687392,
+   "lng": 6.3834859
+  },
+  {
+   "name": "Pré-de-Joux",
+   "kind": "place",
+   "ele": 1200,
+   "lat": 46.6557729,
+   "lng": 6.3750754
+  },
+  {
+   "name": "Nidau",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.6978123,
+   "lng": 6.4239644
+  },
+  {
+   "name": "Le Mont d'Orzeires",
+   "kind": "peak",
+   "ele": 1083,
+   "lat": 46.6917848,
+   "lng": 6.3380399
+  },
+  {
+   "name": "Crêt Mal Rond",
+   "kind": "peak",
+   "ele": 1155,
+   "lat": 46.6868055,
+   "lng": 6.3391347
+  },
+  {
+   "name": "Crêt des Alouettes",
+   "kind": "peak",
+   "ele": 1068,
+   "lat": 46.6959436,
+   "lng": 6.3480448
+  },
+  {
+   "name": "Les Agouillons",
+   "kind": "peak",
+   "ele": 1216,
+   "lat": 46.6737792,
+   "lng": 6.3329392
+  },
+  {
+   "name": "L'Aouille",
+   "kind": "peak",
+   "ele": 1147,
+   "lat": 46.6637418,
+   "lng": 6.3351332
+  },
+  {
+   "name": "Haut du Mollendruz",
+   "kind": "peak",
+   "ele": 1440,
+   "lat": 46.6420489,
+   "lng": 6.3465116
+  }
+ ]
+}

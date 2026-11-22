@@ -1,0 +1,156 @@
+{
+ "width": 368,
+ "height": 392,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.45381213622634,
+  "north": 46.524240000000006,
+  "west": 6.779500000000013,
+  "east": 6.875529908247188
+ },
+ "metersPerPx": 20,
+ "minEle": 369,
+ "maxEle": 1085,
+ "peaks": [
+  {
+   "name": "Attalens",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5110996,
+   "lng": 6.8489696
+  },
+  {
+   "name": "Bossonnens",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5217291,
+   "lng": 6.8495191
+  },
+  {
+   "name": "Saint-Saphorin",
+   "kind": "place",
+   "ele": 384,
+   "lat": 46.4731819,
+   "lng": 6.7959554
+  },
+  {
+   "name": "Corsier-sur-Vevey",
+   "kind": "place",
+   "ele": 420,
+   "lat": 46.4705779,
+   "lng": 6.8436858
+  },
+  {
+   "name": "Chardonne",
+   "kind": "place",
+   "ele": 586,
+   "lat": 46.4770903,
+   "lng": 6.8271259
+  },
+  {
+   "name": "Corseaux",
+   "kind": "place",
+   "ele": 445,
+   "lat": 46.4722747,
+   "lng": 6.8320071
+  },
+  {
+   "name": "Jongny",
+   "kind": "place",
+   "ele": 639,
+   "lat": 46.4785042,
+   "lng": 6.8414194
+  },
+  {
+   "name": "Puidoux",
+   "kind": "place",
+   "ele": 663,
+   "lat": 46.5008111,
+   "lng": 6.7823914
+  },
+  {
+   "name": "Mont Chesau",
+   "kind": "peak",
+   "ele": 982,
+   "lat": 46.5156619,
+   "lng": 6.8165145
+  },
+  {
+   "name": "Mont Pèlerin",
+   "kind": "peak",
+   "ele": 1079,
+   "lat": 46.4968692,
+   "lng": 6.8192773
+  },
+  {
+   "name": "Le Monteiller",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.47637,
+   "lng": 6.7839612
+  },
+  {
+   "name": "Le Mont-Pèlerin",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4823378,
+   "lng": 6.8319462
+  },
+  {
+   "name": "Cremières",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4819178,
+   "lng": 6.796462
+  },
+  {
+   "name": "Chexbres",
+   "kind": "place",
+   "ele": 565,
+   "lat": 46.4809505,
+   "lng": 6.7803021
+  },
+  {
+   "name": "Mont Vuarat",
+   "kind": "peak",
+   "ele": 984,
+   "lat": 46.5075267,
+   "lng": 6.870648
+  },
+  {
+   "name": "Lignières",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4809252,
+   "lng": 6.7924928
+  },
+  {
+   "name": "Fenil",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4861966,
+   "lng": 6.8691363
+  },
+  {
+   "name": "Les Toulayes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.4889694,
+   "lng": 6.8637444
+  },
+  {
+   "name": "La Lôche-Dessus",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5180785,
+   "lng": 6.7914089
+  },
+  {
+   "name": "Rombuet",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.5116651,
+   "lng": 6.8605979
+  }
+ ]
+}

@@ -4,17 +4,28 @@
  * src/lab/pages/ so the main gallery bundle is not affected.
  */
 import { lazy, Suspense } from 'react'
+import hikeAlbums from './hikeAlbums.json'
+
+const titleCase = (slug) => slug.split('-').map((w) => w[0].toUpperCase() + w.slice(1)).join(' ')
 
 export const LAB_PAGES = [
   { slug: 'elevation', title: 'Elevation contact sheet', blurb: 'Each hike as an elevation profile, with its frames along the climb.', Page: lazy(() => import('./pages/Elevation.jsx')) },
   { slug: 'strip', title: 'Film-edge stat strips', blurb: 'Hike stats printed like the edge of a 35mm negative.', Page: lazy(() => import('./pages/Strip.jsx')) },
   { slug: 'map', title: 'Map of everything', blurb: 'Every hike on one map, pinned with its cover photo.', Page: lazy(() => import('./pages/MapPage.jsx')) },
   { slug: 'vertical', title: 'Vertical meters', blurb: 'All the climbing stacked into one tower you scroll up.', Page: lazy(() => import('./pages/Vertical.jsx')) },
-  { slug: 'valsorey-track', title: 'Valsorey with its track', blurb: 'The Cabane de Valsorey photos over their GPS ascent and descent, with a route view and stats.', Page: lazy(() => import('./pages/ValsoreyTrack.jsx')) },
   { slug: 'walkthrough', title: 'Trail walkthrough', blurb: 'Scroll along a route as its photos appear.', Page: lazy(() => import('./pages/Walkthrough.jsx')) },
 ]
 
-export default function Lab({ slug }) {
+const RouteTrack = lazy(() => import('./pages/RouteTrack.jsx'))
+
+export default function Lab({ slug, arg }) {
+  if (slug === 'route' || slug === 'valsorey-track') {
+    return (
+      <Suspense fallback={<p style={{ padding: '2rem', minHeight: '100vh' }}>Loading…</p>}>
+        <RouteTrack slug={slug === 'route' ? arg : 'cabane-de-valsorey'} />
+      </Suspense>
+    )
+  }
   const page = LAB_PAGES.find((p) => p.slug === slug)
   if (!page) {
     return (
@@ -26,6 +37,13 @@ export default function Lab({ slug }) {
             <li key={p.slug}>
               <a href={`#/lab/${p.slug}`}>{p.title}</a> — {p.blurb}
             </li>
+          ))}
+        </ul>
+        <h3>Routes</h3>
+        <p>Each hike album over its GPS track: the terrain behind the photos, and a route view with stats.</p>
+        <ul>
+          {Object.keys(hikeAlbums).map((k) => k.split('/')[1]).map((a) => (
+            <li key={a}><a href={`#/lab/route/${a}`}>{titleCase(a)}</a></li>
           ))}
         </ul>
       </section>

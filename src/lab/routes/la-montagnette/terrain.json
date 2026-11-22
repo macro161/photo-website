@@ -1,0 +1,149 @@
+{
+ "width": 345,
+ "height": 389,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.14744108533035,
+  "north": 46.21733,
+  "west": 7.527500000000003,
+  "east": 7.617024674294015
+ },
+ "metersPerPx": 20,
+ "minEle": 1077,
+ "maxEle": 2919,
+ "peaks": [
+  {
+   "name": "Vissoie",
+   "kind": "place",
+   "ele": 1204,
+   "lat": 46.2153165,
+   "lng": 7.5853597
+  },
+  {
+   "name": "St-Jean VS",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1960916,
+   "lng": 7.5855687
+  },
+  {
+   "name": "Grimentz",
+   "kind": "place",
+   "ele": 1564,
+   "lat": 46.1802947,
+   "lng": 7.573834
+  },
+  {
+   "name": "Mayoux",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2102226,
+   "lng": 7.5830688
+  },
+  {
+   "name": "Corne de Sorebois",
+   "kind": "peak",
+   "ele": 2895,
+   "lat": 46.1508701,
+   "lng": 7.5866098
+  },
+  {
+   "name": "Les Frasses",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2127182,
+   "lng": 7.5779647
+  },
+  {
+   "name": "Les Lauchellets",
+   "kind": "peak",
+   "ele": 2178,
+   "lat": 46.1568227,
+   "lng": 7.5696866
+  },
+  {
+   "name": "Roc d'Orzival",
+   "kind": "peak",
+   "ele": 2852,
+   "lat": 46.1952152,
+   "lng": 7.5380426
+  },
+  {
+   "name": "La Brinta",
+   "kind": "peak",
+   "ele": 2658,
+   "lat": 46.21571,
+   "lng": 7.531796
+  },
+  {
+   "name": "Ayer",
+   "kind": "place",
+   "ele": 1476,
+   "lat": 46.1787664,
+   "lng": 7.6032682
+  },
+  {
+   "name": "Sex de Marinda",
+   "kind": "peak",
+   "ele": 2906,
+   "lat": 46.1497242,
+   "lng": 7.5514476
+  },
+  {
+   "name": "Mission",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.1899788,
+   "lng": 7.5924995
+  },
+  {
+   "name": "La Combaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2089085,
+   "lng": 7.5907783
+  },
+  {
+   "name": "Cuimey",
+   "kind": "place",
+   "ele": 1280,
+   "lat": 46.204557,
+   "lng": 7.5909348
+  },
+  {
+   "name": "Les Morands",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2111767,
+   "lng": 7.5897967
+  },
+  {
+   "name": "La Cretta",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.2152383,
+   "lng": 7.575024
+  },
+  {
+   "name": "Sex de la Brinta",
+   "kind": "peak",
+   "ele": 2693,
+   "lat": 46.2043824,
+   "lng": 7.5290309
+  },
+  {
+   "name": "Pointe de Tsirouc",
+   "kind": "peak",
+   "ele": 2777,
+   "lat": 46.1550892,
+   "lng": 7.581162
+  },
+  {
+   "name": "Pointe de Lona",
+   "kind": "peak",
+   "ele": 2931,
+   "lat": 46.1643914,
+   "lng": 7.5381005
+  }
+ ]
+}

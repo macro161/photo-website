@@ -1,0 +1,394 @@
+{
+ "width": 444,
+ "height": 433,
+ "unit": 0.5,
+ "bounds": {
+  "south": 46.30991595532245,
+  "north": 46.38770999999999,
+  "west": 6.7759699999999725,
+  "east": 6.891534622549159
+ },
+ "metersPerPx": 20,
+ "minEle": 369,
+ "maxEle": 2373,
+ "peaks": [
+  {
+   "name": "Vouvry",
+   "kind": "place",
+   "ele": 387,
+   "lat": 46.3372451,
+   "lng": 6.8887175
+  },
+  {
+   "name": "Les Évouettes",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3638187,
+   "lng": 6.8762243
+  },
+  {
+   "name": "Pointe de l'Aritte",
+   "kind": "peak",
+   "ele": 1626,
+   "lat": 46.37536,
+   "lng": 6.7790487
+  },
+  {
+   "name": "Le Bron",
+   "kind": "peak",
+   "ele": 1528,
+   "lat": 46.3786274,
+   "lng": 6.7875367
+  },
+  {
+   "name": "Novel",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3687798,
+   "lng": 6.7885646
+  },
+  {
+   "name": "Grammont",
+   "kind": "peak",
+   "ele": 2172,
+   "lat": 46.3574217,
+   "lng": 6.8211876
+  },
+  {
+   "name": "Sex du Palatieu",
+   "kind": "peak",
+   "ele": 1757,
+   "lat": 46.325577,
+   "lng": 6.8293276
+  },
+  {
+   "name": "Blancsex",
+   "kind": "peak",
+   "ele": 1747,
+   "lat": 46.3267691,
+   "lng": 6.8365384
+  },
+  {
+   "name": "Le Planellet",
+   "kind": "peak",
+   "ele": 1695,
+   "lat": 46.3224908,
+   "lng": 6.8508449
+  },
+  {
+   "name": "Mayen",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3144809,
+   "lng": 6.88279
+  },
+  {
+   "name": "Chambairy",
+   "kind": "peak",
+   "ele": 2202,
+   "lat": 46.3388636,
+   "lng": 6.8168272
+  },
+  {
+   "name": "Miex",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3386603,
+   "lng": 6.8669551
+  },
+  {
+   "name": "Plan du Pré",
+   "kind": "peak",
+   "ele": 1877,
+   "lat": 46.3569429,
+   "lng": 6.7811855
+  },
+  {
+   "name": "Mont Gardy",
+   "kind": "peak",
+   "ele": 2201,
+   "lat": 46.3502083,
+   "lng": 6.7994574
+  },
+  {
+   "name": "Alamont",
+   "kind": "peak",
+   "ele": 1900,
+   "lat": 46.3510605,
+   "lng": 6.8329614
+  },
+  {
+   "name": "Grande Jumelle",
+   "kind": "peak",
+   "ele": 2215,
+   "lat": 46.35233,
+   "lng": 6.814068
+  },
+  {
+   "name": "Petite Jumelle",
+   "kind": "peak",
+   "ele": 2182,
+   "lat": 46.3530166,
+   "lng": 6.8151635
+  },
+  {
+   "name": "Torgon",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3201637,
+   "lng": 6.8765219
+  },
+  {
+   "name": "La Braye",
+   "kind": "peak",
+   "ele": 1788,
+   "lat": 46.3189694,
+   "lng": 6.8398898
+  },
+  {
+   "name": "Le Freney",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3752129,
+   "lng": 6.8024601
+  },
+  {
+   "name": "Revereulaz",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3153915,
+   "lng": 6.8790087
+  },
+  {
+   "name": "Aiguille de Braitaz",
+   "kind": "peak",
+   "ele": 1910,
+   "lat": 46.3121833,
+   "lng": 6.8244192
+  },
+  {
+   "name": "Le Linleu",
+   "kind": "peak",
+   "ele": 2093,
+   "lat": 46.315952,
+   "lng": 6.816693
+  },
+  {
+   "name": "Pointe de Vernaz",
+   "kind": "peak",
+   "ele": 1993,
+   "lat": 46.319553,
+   "lng": 6.801225
+  },
+  {
+   "name": "Pointe d'Arvoin",
+   "kind": "peak",
+   "ele": 2019,
+   "lat": 46.3203953,
+   "lng": 6.8062719
+  },
+  {
+   "name": "Rochers de Chaudin",
+   "kind": "peak",
+   "ele": 2300,
+   "lat": 46.3324029,
+   "lng": 6.7906741
+  },
+  {
+   "name": "Les Cornettes de Bise",
+   "kind": "peak",
+   "ele": 2432,
+   "lat": 46.3325903,
+   "lng": 6.7846014
+  },
+  {
+   "name": "Tête de Lanche Noir",
+   "kind": "peak",
+   "ele": 2350,
+   "lat": 46.336526,
+   "lng": 6.7843906
+  },
+  {
+   "name": "Dent du Loup",
+   "kind": "peak",
+   "ele": 2151,
+   "lat": 46.341999,
+   "lng": 6.7801
+  },
+  {
+   "name": "Chalets de Chevenne",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3123826,
+   "lng": 6.7819602
+  },
+  {
+   "name": "Pic de Blanchard",
+   "kind": "peak",
+   "ele": 1470,
+   "lat": 46.3819762,
+   "lng": 6.7830758
+  },
+  {
+   "name": "Le Bouveret",
+   "kind": "place",
+   "ele": 387,
+   "lat": 46.382908,
+   "lng": 6.8540248
+  },
+  {
+   "name": "Clarive",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3686052,
+   "lng": 6.7946614
+  },
+  {
+   "name": "Tête de l'Avalanche",
+   "kind": "peak",
+   "ele": 1854,
+   "lat": 46.3132158,
+   "lng": 6.8048284
+  },
+  {
+   "name": "La Tour",
+   "kind": "peak",
+   "ele": 2288,
+   "lat": 46.3264055,
+   "lng": 6.7813611
+  },
+  {
+   "name": "Pointe des Troisjeans",
+   "kind": "peak",
+   "ele": 2401,
+   "lat": 46.3300374,
+   "lng": 6.7811883
+  },
+  {
+   "name": "Les Crosats",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3130699,
+   "lng": 6.8788505
+  },
+  {
+   "name": "Taney",
+   "kind": "place",
+   "ele": null,
+   "lat": 46.3442021,
+   "lng": 6.8340764
+  },
+  {
+   "name": "La Vache",
+   "kind": "peak",
+   "ele": 1902,
+   "lat": 46.3244957,
+   "lng": 6.789096
+  },
+  {
+   "name": "Refuge La Vouivre",
+   "kind": "hut",
+   "ele": null,
+   "lat": 46.345086,
+   "lng": 6.8325822
+  },
+  {
+   "name": "La Suche",
+   "kind": "peak",
+   "ele": 1541,
+   "lat": 46.3491519,
+   "lng": 6.8606227
+  },
+  {
+   "name": "Mont Cornin",
+   "kind": "peak",
+   "ele": 1106,
+   "lat": 46.3777197,
+   "lng": 6.8146715
+  },
+  {
+   "name": "Saix de la Calaz",
+   "kind": "peak",
+   "ele": 2179,
+   "lat": 46.3310237,
+   "lng": 6.7965738
+  },
+  {
+   "name": "Pointe de la Chaumény",
+   "kind": "peak",
+   "ele": 2068,
+   "lat": 46.3614757,
+   "lng": 6.8209547
+  },
+  {
+   "name": "Corne de Conches",
+   "kind": "peak",
+   "ele": 1831,
+   "lat": 46.3126831,
+   "lng": 6.8294684
+  },
+  {
+   "name": "Mont Valeur",
+   "kind": "peak",
+   "ele": 2147,
+   "lat": 46.3535716,
+   "lng": 6.8021025
+  },
+  {
+   "name": "Le Tâche",
+   "kind": "peak",
+   "ele": 1691,
+   "lat": 46.344644,
+   "lng": 6.8478146
+  },
+  {
+   "name": "Croix de la Lé",
+   "kind": "peak",
+   "ele": 1872,
+   "lat": 46.364529,
+   "lng": 6.8366563
+  },
+  {
+   "name": "Tête du Praillon",
+   "kind": "peak",
+   "ele": 1632,
+   "lat": 46.3646099,
+   "lng": 6.8434516
+  },
+  {
+   "name": "Sur l'Enfer",
+   "kind": "peak",
+   "ele": 2132,
+   "lat": 46.3365162,
+   "lng": 6.8086798
+  },
+  {
+   "name": "Les Sés du Palatieu",
+   "kind": "peak",
+   "ele": 1786,
+   "lat": 46.3248606,
+   "lng": 6.8255919
+  },
+  {
+   "name": "Le Fratsi",
+   "kind": "peak",
+   "ele": 1764,
+   "lat": 46.3517218,
+   "lng": 6.8400328
+  },
+  {
+   "name": "Grande Miette",
+   "kind": "peak",
+   "ele": 1937,
+   "lat": 46.3523358,
+   "lng": 6.7828143
+  },
+  {
+   "name": "Petite Miette",
+   "kind": "peak",
+   "ele": 1878,
+   "lat": 46.3517346,
+   "lng": 6.7824348
+  }
+ ]
+}
