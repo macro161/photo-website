@@ -10,7 +10,7 @@ import defaultConfig from 'lighthouse/core/config/default-config.js'
 const url = process.argv[2]
 const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'lcpg-'))
 const art = path.join(dir, 'art')
-const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: true, userDataDir: path.join(dir, 'p'), args: ['--no-sandbox', '--no-first-run'] })
+const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: true, userDataDir: path.join(dir, 'p'), args: ['--no-sandbox', '--no-first-run', '--ignore-certificate-errors'] })
 await lighthouse(url, { port: Number(new URL(b.wsEndpoint()).port), output: 'json', onlyCategories: ['performance'], logLevel: 'error', gatherMode: art })
 await b.close()
 const artifacts = JSON.parse(fs.readFileSync(path.join(art, 'artifacts.json'), 'utf8'))

@@ -22,11 +22,11 @@ for (const id of ids) {
   const lcp = [], fcp = [], score = [], cls = []
   for (let i = 0; i < runs; i++) {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'lcpq-'))
-    const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: true, userDataDir: dir, args: ['--no-sandbox', '--no-first-run'] })
+    const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: true, userDataDir: dir, args: ['--no-sandbox', '--no-first-run', '--ignore-certificate-errors'] })
     const r = await lighthouse(base + ALL[id], { port: Number(new URL(b.wsEndpoint()).port), output: 'json', onlyCategories: ['performance'], logLevel: 'error' })
     const a = r.lhr.audits
     lcp.push(a['largest-contentful-paint'].numericValue); fcp.push(a['first-contentful-paint'].numericValue); cls.push(a['cumulative-layout-shift'].numericValue); score.push(r.lhr.categories.performance.score * 100)
-    await b.close(); fs.rmSync(dir, { recursive: true, force: true })
+    fs.writeFileSync('/tmp/claude-1000/lhr-' + id + '.json', JSON.stringify(r.lhr)); await b.close(); fs.rmSync(dir, { recursive: true, force: true })
   }
   out.push(`${id.padEnd(7)} score ${med(score)}  LCP ${(med(lcp) / 1000).toFixed(2)} s  FCP ${(med(fcp) / 1000).toFixed(2)} s  CLS ${med(cls).toFixed(3)}  (LCP runs ${lcp.map((x) => (x / 1000).toFixed(2)).join(' ')})`)
   console.log(out[out.length - 1])

@@ -35,7 +35,7 @@ export function firstScreenLoaded() {
       }
     })
     po.observe({ type: 'largest-contentful-paint', buffered: true })
-    setTimeout(() => { if (!seen) { po.disconnect(); release() } }, 1500)
+    setTimeout(() => { if (!seen) { po.disconnect(); release() } }, 1000)
   } catch {
     requestAnimationFrame(() => requestAnimationFrame(release))
   }

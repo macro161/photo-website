@@ -40,6 +40,10 @@ function firstScreenHints() {
           write: false,
           target: 'es2019',
         })
+        // Font preloads go last in <head>: the page's own script and stylesheet are requested first, so on a slow connection they are not queued behind 57 KB of fonts.
+        const fontPreloads = html.match(/^[ \t]*<link rel="preload"[^>]*href="\/fonts\/[^>]*>\r?\n?/gm) || []
+        for (const l of fontPreloads) html = html.replace(l, '')
+        html = html.replace('</head>', `${fontPreloads.map((l) => l.trim()).join('\n    ')}\n  </head>`)
         return { html, tags: [{ tag: 'script', children: out.outputFiles[0].text, injectTo: 'head' }] }
       },
     },

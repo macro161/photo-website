@@ -5,7 +5,7 @@ const base = process.argv[2].replace(/\/+$/, '')
 const mobile = process.argv[3] === 'mobile'
 const manifest = JSON.parse(fs.readFileSync('src/generated/manifest.json', 'utf8'))
 const deep = manifest.find((p) => p.catalogSlug === 'swiss' && p.albumSlug === 'le-grammot')
-const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: true, args: ['--no-sandbox', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
+const b = await puppeteer.launch({ executablePath: '/usr/bin/google-chrome', headless: true, args: ['--no-sandbox', '--ignore-certificate-errors', '--use-gl=angle', '--use-angle=swiftshader', '--enable-unsafe-swiftshader'] })
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms))
 let fails = 0
 const ok = (cond, msg) => { console.log(cond ? 'ok  ' : 'FAIL', msg); if (!cond) fails++ }
