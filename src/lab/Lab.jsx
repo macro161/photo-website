@@ -10,6 +10,7 @@ export const LAB_PAGES = [
   { slug: 'strip', title: 'Film-edge stat strips', blurb: 'Hike stats printed like the edge of a 35mm negative.', Page: lazy(() => import('./pages/Strip.jsx')) },
   { slug: 'map', title: 'Map of everything', blurb: 'Every hike on one map, pinned with its cover photo.', Page: lazy(() => import('./pages/MapPage.jsx')) },
   { slug: 'vertical', title: 'Vertical meters', blurb: 'All the climbing stacked into one tower you scroll up.', Page: lazy(() => import('./pages/Vertical.jsx')) },
+  { slug: 'valsorey-track', title: 'Valsorey with its track', blurb: 'The Cabane de Valsorey photos over their GPS ascent and descent, with a route view and stats.', Page: lazy(() => import('./pages/ValsoreyTrack.jsx')) },
   { slug: 'walkthrough', title: 'Trail walkthrough', blurb: 'Scroll along a route as its photos appear.', Page: lazy(() => import('./pages/Walkthrough.jsx')) },
 ]
 
@@ -32,7 +33,7 @@ export default function Lab({ slug }) {
   }
   const { Page } = page
   return (
-    <Suspense fallback={<p style={{ padding: '2rem' }}>Loading…</p>}>
+    <Suspense fallback={<p style={{ padding: '2rem', minHeight: '100vh' }}>Loading…</p>}>
       <Page />
     </Suspense>
   )
