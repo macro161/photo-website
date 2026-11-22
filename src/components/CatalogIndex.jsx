@@ -7,13 +7,39 @@
  */
 import { useState, useEffect, useRef } from 'react'
 import Picture from './Picture.jsx'
+import { firstScreenLoaded, whenGateOpen } from '../loadGate.js'
 import { formatRange, formatHike } from '../dates.js'
 
 function CatalogCard({ catalog, onOpen, priority }) {
   const [loaded, setLoaded] = useState(false)
-  // Above-the-fold cards start revealed so the likely LCP image isn't held back by the fade-in.
+  // The first card (the LCP image) starts revealed so it isn't held back by the fade-in; the others load after it (see loadGate.js).
   const [revealed, setRevealed] = useState(!!priority)
+  const [near, setNear] = useState(!!priority)
   const ref = useRef(null)
+
+  // Cards off the first screen load their cover once the first screen has loaded and they are within a short distance (see loadGate.js).
+  useEffect(() => {
+    const el = ref.current
+    if (!el || near) return undefined
+    let io = null
+    const stop = whenGateOpen(() => {
+      io = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setNear(true)
+            io.disconnect()
+          }
+        },
+        { rootMargin: '500px 0px' }
+      )
+      io.observe(el)
+    })
+    return () => {
+      stop()
+      io?.disconnect()
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [])
 
   useEffect(() => {
     const el = ref.current
@@ -41,18 +67,21 @@ function CatalogCard({ catalog, onOpen, priority }) {
       aria-label={`${catalog.name} — ${catalog.label}`}
     >
       <span className="catalog-cover" style={cover?.c ? { backgroundColor: cover.c } : undefined}>
-        {cover ? (
+        {cover && near ? (
           <Picture
             photo={cover}
             sizes="(max-width: 700px) 100vw, 480px"
             alt=""
-            loading={priority ? 'eager' : 'lazy'}
+            loading="eager"
             fetchPriority={priority ? 'high' : undefined}
             decoding="async"
             className={loaded ? 'loaded' : ''}
-            onLoad={() => setLoaded(true)}
+            onLoad={() => {
+              setLoaded(true)
+              if (priority) firstScreenLoaded()
+            }}
           />
-        ) : (
+        ) : cover ? null : (
           <span className="catalog-cover-empty">No photos yet</span>
         )}
       </span>
@@ -76,7 +105,7 @@ export default function CatalogIndex({ catalogs, onOpen }) {
   return (
     <div className="catalog-grid">
       {catalogs.map((catalog, i) => (
-        <CatalogCard key={catalog.slug} catalog={catalog} onOpen={onOpen} priority={i < 3} />
+        <CatalogCard key={catalog.slug} catalog={catalog} onOpen={onOpen} priority={i === 0} />
       ))}
     </div>
   )

@@ -12,6 +12,7 @@ import { useEffect, useRef, useState } from 'react'
 import { rollInfo, rollLine } from '../rolls.js'
 import { imageUrl, hasVariants, srcSet, variantUrl, widthAtMost, supportsAvif } from '../imageUrl.js'
 import { gridSources } from '../viewTransition.js'
+import { firstScreenLoaded, useAfterFirstScreen } from '../loadGate.js'
 
 const MAX_SCALE = 5
 const DOUBLE_TAP_SCALE = 2.5
@@ -22,8 +23,11 @@ const CLOSE_PX = 110
 /** Keep a few Image objects alive so the browser holds on to the preloads. */
 function usePreload(photos) {
   const keep = useRef([])
+  // A photo opened by its link: the neighbours wait until the first photo is on screen (see loadGate.js).
+  const go = useAfterFirstScreen()
   const key = photos.map((p) => p?.src).join('|')
   useEffect(() => {
+    if (!go) return undefined
     let cancelled = false
     supportsAvif().then((avif) => {
       if (cancelled) return
@@ -36,7 +40,7 @@ function usePreload(photos) {
           if (hasVariants(p)) {
             // Same candidates and `sizes` as the displayed <picture>, so this warms the right file.
             img.sizes = '100vw'
-            img.srcset = srcSet(p, avif ? 'avif' : 'webp', 1600, 2400)
+            img.srcset = srcSet(p, avif ? 'avif' : 'webp', 960, 2400)
           } else {
             img.src = imageUrl(p.src)
           }
@@ -48,12 +52,14 @@ function usePreload(photos) {
       cancelled = true
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [key])
+  }, [key, go])
 }
 
 /** Thumbnail first (blurred, same box), full image on top once decoded. */
 function LightboxImage({ photo }) {
   const [full, setFull] = useState(false)
+  // The small placeholder is what first paints (the LCP); the large file is only requested once it has, so the two don't share bandwidth.
+  const afterFirst = useAfterFirstScreen()
   const variants = hasVariants(photo)
   const src = imageUrl(photo.src)
   // With variants: the small WebP is the instant placeholder, the 1600/2400 AVIF/WebP is the real image.
@@ -78,12 +84,14 @@ function LightboxImage({ photo }) {
           alt=""
           aria-hidden="true"
           draggable={false}
+          onLoad={firstScreenLoaded}
         />
       )}
       {variants ? (
+        afterFirst && (
         <picture>
-          <source type="image/avif" srcSet={srcSet(photo, 'avif', 1600, 2400)} sizes="100vw" />
-          <source type="image/webp" srcSet={srcSet(photo, 'webp', 1600, 2400)} sizes="100vw" />
+          <source type="image/avif" srcSet={srcSet(photo, 'avif', 960, 2400)} sizes="100vw" />
+          <source type="image/webp" srcSet={srcSet(photo, 'webp', 960, 2400)} sizes="100vw" />
           <img
             className={`lb-full${!full ? ' pending' : ''}`}
             src={variantUrl(photo, widthAtMost(photo, 1600), 'webp')}
@@ -93,6 +101,7 @@ function LightboxImage({ photo }) {
             onLoad={onLoad}
           />
         </picture>
+        )
       ) : (
         <img
           className={`lb-full${distinct && !full ? ' pending' : ''}`}

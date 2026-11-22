@@ -9,6 +9,7 @@ import Lab from './lab/Lab.jsx'
 import NotFound from './components/NotFound.jsx'
 import { rollInfo, rollLine } from './rolls.js'
 import hikeAlbums from './lab/hikeAlbums.json'
+import { useAfterFirstScreen } from './loadGate.js'
 
 const SwissMap = lazy(() => import('./swissmap/SwissMap.jsx'))
 const HikeRoute = lazy(() => import('./route/HikeRoute.jsx'))
@@ -270,6 +271,8 @@ export default function App() {
   const [notice, setNotice] = useState('')
   // Hike albums: the photo gallery or the route view. Back to the gallery whenever another album opens.
   const [hikeMode, setHikeMode] = useState('photos')
+  // The route layer is decoration behind the photos: its code and data load once the first screen's photo is on screen.
+  const afterFirstScreen = useAfterFirstScreen(hikeMode === 'route')
   useEffect(() => { setHikeMode('photos') }, [route.catalog, route.album])
   // The Swiss catalog page: the album cards, or a map of where they were taken.
   const [swissMode, setSwissMode] = useState('albums')
@@ -488,14 +491,14 @@ export default function App() {
                   ))}
                 </div>
               )}
-              {hikeAlbums[`${catalog.slug}/${album.slug}`] && ready && (
+              {hikeAlbums[`${catalog.slug}/${album.slug}`] && ready && afterFirstScreen && (
                 <Suspense fallback={null}>
                   <HikeRoute slug={album.slug} mode={hikeMode} photos={album.items.map((it) => it.photo)} onOpen={open} />
                 </Suspense>
               )}
               {notice && <p className="notice">{notice}</p>}
               {hikeMode === 'route' && hikeAlbums[`${catalog.slug}/${album.slug}`] ? null : ready ? (
-                <Gallery items={album.items} onOpen={open} gutterScale={hikeAlbums[`${catalog.slug}/${album.slug}`] ? 2.3 : 1} />
+                <Gallery items={album.items} onOpen={open} defer={Boolean(route.photo)} gutterScale={hikeAlbums[`${catalog.slug}/${album.slug}`] ? 2.3 : 1} />
               ) : (
                 <GallerySkeleton count={album.count} gutterScale={hikeAlbums[`${catalog.slug}/${album.slug}`] ? 2.3 : 1} />
               )}
@@ -567,7 +570,7 @@ export default function App() {
                       onHome={() => go('/')}
                     />
                   ) : ready ? (
-                    <Gallery items={catalog.items} onOpen={open} />
+                    <Gallery items={catalog.items} onOpen={open} defer={Boolean(route.photo)} />
                   ) : (
                     <GallerySkeleton count={catalog.looseCount} />
                   )}
